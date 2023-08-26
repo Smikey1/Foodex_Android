@@ -1,0 +1,62 @@
+{
+    "sourceFile": "pubspec.yaml",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1672995186565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1674560048030,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,13 +41,14 @@\n   form_field_validator: ^1.1.0\r\n   flutter_pw_validator: ^1.5.0\r\n   responsive_framework: ^0.2.0\r\n   get: ^4.6.5\r\n-  objectbox: ^1.7.0\r\n-  objectbox_sync_flutter_libs: ^1.7.0\r\n   json_annotation:\r\n+\r\n   path_provider: ^2.0.11\r\n   motion_toast: ^2.6.4\r\n+  google_fonts: ^3.0.1\r\n+  provider: ^6.0.5\r\n \r\n dev_dependencies:\r\n   build_runner: ^2.3.3\r\n   objectbox_generator: ^1.6.2\r\n"
+                },
+                {
+                    "date": 1674560182861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n   provider: ^6.0.5\r\n \r\n dev_dependencies:\r\n   build_runner: ^2.3.3\r\n-  objectbox_generator: ^1.6.2\r\n+  json_serializable\r\n   flutter_test:\r\n     sdk: flutter\r\n \r\n   # The \"flutter_lints\" package below contains a set of recommended lints to\r\n"
+                },
+                {
+                    "date": 1674560190971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,8 +41,10 @@\n   form_field_validator: ^1.1.0\r\n   flutter_pw_validator: ^1.5.0\r\n   responsive_framework: ^0.2.0\r\n   get: ^4.6.5\r\n+  objectbox: ^1.7.0\r\n+  objectbox_sync_flutter_libs: ^1.7.0\r\n   json_annotation:\r\n \r\n   path_provider: ^2.0.11\r\n   motion_toast: ^2.6.4\r\n@@ -50,9 +52,9 @@\n   provider: ^6.0.5\r\n \r\n dev_dependencies:\r\n   build_runner: ^2.3.3\r\n-  json_serializable\r\n+  objectbox_generator: ^1.6.2\r\n   flutter_test:\r\n     sdk: flutter\r\n \r\n   # The \"flutter_lints\" package below contains a set of recommended lints to\r\n"
+                },
+                {
+                    "date": 1674561028060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,17 +44,18 @@\n   get: ^4.6.5\r\n   objectbox: ^1.7.0\r\n   objectbox_sync_flutter_libs: ^1.7.0\r\n   json_annotation:\r\n-\r\n+  image_p\r\n   path_provider: ^2.0.11\r\n   motion_toast: ^2.6.4\r\n   google_fonts: ^3.0.1\r\n   provider: ^6.0.5\r\n \r\n dev_dependencies:\r\n   build_runner: ^2.3.3\r\n   objectbox_generator: ^1.6.2\r\n+  json_serializable:\r\n   flutter_test:\r\n     sdk: flutter\r\n \r\n   # The \"flutter_lints\" package below contains a set of recommended lints to\r\n"
+                },
+                {
+                    "date": 1674561089362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,8 +49,10 @@\n   path_provider: ^2.0.11\r\n   motion_toast: ^2.6.4\r\n   google_fonts: ^3.0.1\r\n   provider: ^6.0.5\r\n+  dio:\r\n+  dio_logging_interceptor\r\n \r\n dev_dependencies:\r\n   build_runner: ^2.3.3\r\n   objectbox_generator: ^1.6.2\r\n"
+                },
+                {
+                    "date": 1674562355006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,19 +44,19 @@\n   get: ^4.6.5\r\n   objectbox: ^1.7.0\r\n   objectbox_sync_flutter_libs: ^1.7.0\r\n   json_annotation:\r\n-  image_p\r\n+  image_picker:\r\n   path_provider: ^2.0.11\r\n   motion_toast: ^2.6.4\r\n   google_fonts: ^3.0.1\r\n   provider: ^6.0.5\r\n   dio:\r\n-  dio_logging_interceptor\r\n+  dio_logging_interceptor:\r\n \r\n dev_dependencies:\r\n   build_runner: ^2.3.3\r\n-  objectbox_generator: ^1.6.2\r\n+\r\n   json_serializable:\r\n   flutter_test:\r\n     sdk: flutter\r\n \r\n"
+                },
+                {
+                    "date": 1674562432670,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,9 +54,8 @@\n   dio_logging_interceptor:\r\n \r\n dev_dependencies:\r\n   build_runner: ^2.3.3\r\n-\r\n   json_serializable:\r\n   flutter_test:\r\n     sdk: flutter\r\n \r\n"
+                },
+                {
+                    "date": 1675101499396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,8 +54,9 @@\n   dio_logging_interceptor:\r\n \r\n dev_dependencies:\r\n   build_runner: ^2.3.3\r\n+  objectbox_generator: ^1.6.2\r\n   json_serializable:\r\n   flutter_test:\r\n     sdk: flutter\r\n \r\n"
+                },
+                {
+                    "date": 1675305238593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,8 +51,10 @@\n   google_fonts: ^3.0.1\r\n   provider: ^6.0.5\r\n   dio:\r\n   dio_logging_interceptor:\r\n+  connectivity_plus: ^3.0.2\r\n+  test_cov_console: ^0.2.2\r\n \r\n dev_dependencies:\r\n   build_runner: ^2.3.3\r\n   objectbox_generator: ^1.6.2\r\n"
+                },
+                {
+                    "date": 1675305246174,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,10 @@\n   objectbox_generator: ^1.6.2\r\n   json_serializable:\r\n   flutter_test:\r\n     sdk: flutter\r\n-  \r\n+  integration_test:\r\n+    sdk: flutter\r\n \r\n   # The \"flutter_lints\" package below contains a set of recommended lints to\r\n   # encourage good coding practices. The lint set provided by the package is\r\n   # activated in the `analysis_options.yaml` file located at the root of your\r\n"
+                },
+                {
+                    "date": 1675362953661,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,9 +85,9 @@\n   assets:\r\n     - assets/images/\r\n     - assets/icons/\r\n     - assets/svg/\r\n-    - assets\r\n+    - assets/\r\n \r\n   # An image asset can refer to one or more resolution-specific \"variants\", see\r\n   # https://flutter.dev/assets-and-images/#resolution-aware\r\n \r\n"
+                }
+            ],
+            "date": 1672995186565,
+            "name": "Commit-0",
+            "content": "name: foodex_app\r\ndescription: A new Flutter project.\r\n\r\n# The following line prevents the package from being accidentally published to\r\n# pub.dev using `flutter pub publish`. This is preferred for private packages.\r\npublish_to: \"none\" # Remove this line if you wish to publish to pub.dev\r\n\r\n# The following defines the version and build number for your application.\r\n# A version number is three numbers separated by dots, like 1.2.43\r\n# followed by an optional build number separated by a +.\r\n# Both the version and the builder number may be overridden in flutter\r\n# build by specifying --build-name and --build-number, respectively.\r\n# In Android, build-name is used as versionName while build-number used as versionCode.\r\n# Read more about Android versioning at https://developer.android.com/studio/publish/versioning\r\n# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.\r\n# Read more about iOS versioning at\r\n# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html\r\n# In Windows, build-name is used as the major, minor, and patch parts\r\n# of the product and file versions while build-number is used as the build suffix.\r\nversion: 1.0.0+1\r\n\r\nenvironment:\r\n  sdk: \">=2.18.5 <3.0.0\"\r\n\r\n# Dependencies specify other packages that your package needs in order to work.\r\n# To automatically upgrade your package dependencies to the latest versions\r\n# consider running `flutter pub upgrade --major-versions`. Alternatively,\r\n# dependencies can be manually updated by changing the version numbers below to\r\n# the latest version available on pub.dev. To see which dependencies have newer\r\n# versions available, run `flutter pub outdated`.\r\ndependencies:\r\n  flutter:\r\n    sdk: flutter\r\n\r\n  # The following adds the Cupertino Icons font to your application.\r\n  # Use with the CupertinoIcons class for iOS style icons.\r\n  cupertino_icons: ^1.0.2\r\n  flutter_verification_code: ^1.1.6\r\n  form_validators: ^0.3.0\r\n  flutter_form_validator: ^0.0.2\r\n  form_field_validator: ^1.1.0\r\n  flutter_pw_validator: ^1.5.0\r\n  responsive_framework: ^0.2.0\r\n  get: ^4.6.5\r\n  objectbox: ^1.7.0\r\n  objectbox_sync_flutter_libs: ^1.7.0\r\n  json_annotation:\r\n  path_provider: ^2.0.11\r\n  motion_toast: ^2.6.4\r\n\r\ndev_dependencies:\r\n  build_runner: ^2.3.3\r\n  objectbox_generator: ^1.6.2\r\n  flutter_test:\r\n    sdk: flutter\r\n\r\n  # The \"flutter_lints\" package below contains a set of recommended lints to\r\n  # encourage good coding practices. The lint set provided by the package is\r\n  # activated in the `analysis_options.yaml` file located at the root of your\r\n  # package. See that file for information about deactivating specific lint\r\n  # rules and activating additional ones.\r\n  flutter_lints: ^2.0.0\r\n\r\n# For information on the generic Dart part of this file, see the\r\n# following page: https://dart.dev/tools/pub/pubspec\r\n\r\n# The following section is specific to Flutter packages.\r\nflutter:\r\n  # The following line ensures that the Material Icons font is\r\n  # included with your application, so that you can use the icons in\r\n  # the material Icons class.\r\n  uses-material-design: true\r\n\r\n  # To add assets to your application, add an assets section, like this:\r\n  assets:\r\n    - assets/images/\r\n    - assets/icons/\r\n    - assets/svg/\r\n\r\n  # An image asset can refer to one or more resolution-specific \"variants\", see\r\n  # https://flutter.dev/assets-and-images/#resolution-aware\r\n\r\n  # For details regarding adding assets from package dependencies, see\r\n  # https://flutter.dev/assets-and-images/#from-packages\r\n\r\n  # To add custom fonts to your application, add a fonts section here,\r\n  # in this \"flutter\" section. Each entry in this list should have a\r\n  # \"family\" key with the font family name, and a \"fonts\" key with a\r\n  # list giving the asset and other descriptors for the font. For\r\n  # example:\r\n  # fonts:\r\n  # - family: RobotoSerif-Black\r\n  #   fonts:\r\n  #     - asset: fonts/RobotoSerif-Black.ttf\r\n\r\n  # - family: RobotoSerif-Bold\r\n  #   fonts:\r\n  #     - asset: fonts/RobotoSerif-Bold.ttf\r\n\r\n  # - family: RobotoSerif-ExtraBold\r\n  #   fonts:\r\n  #     - asset: fonts/RobotoSerif-ExtraBold.ttf\r\n\r\n  # - family: RobotoSerif-Light\r\n  #   fonts:\r\n  #     - asset: fonts/RobotoSerif-Light.ttf\r\n\r\n  # - family: RobotoSerif-Medium\r\n  #   fonts:\r\n  #     - asset: fonts/RobotoSerif-Medium.ttf\r\n\r\n  # - family: RobotoSerif-Regular\r\n  #   fonts:\r\n  #     - asset: fonts/RobotoSerif-Regular.ttf\r\n\r\n  # - family: RobotoSerif-SemiBold\r\n  #   fonts:\r\n  #     - asset: fonts/RobotoSerif-SemiBold.ttf\r\n\r\n  # - family: RobotoSerif-Thin\r\n  #   fonts:\r\n  #     - asset: fonts/RobotoSerif-Thin.ttf\r\n  #\r\n  # For details regarding fonts from package dependencies,\r\n  # see https://flutter.dev/custom-fonts/#from-packages\r\n"
+        }
+    ]
+}

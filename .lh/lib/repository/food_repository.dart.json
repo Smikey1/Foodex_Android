@@ -1,0 +1,106 @@
+{
+    "sourceFile": "lib/repository/food_repository.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 22,
+            "patches": [
+                {
+                    "date": 1674562126060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1674562139770,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import 'dart:io';\r\n-\r\n+import 'package:foodex_app/api/food_api.dart';\r\n import 'package:foodex_app/model/food.dart';\r\n import 'package:foodex_app/response/food_response.dart';\r\n \r\n class FoodRepository {\r\n"
+                },
+                {
+                    "date": 1674650637375,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,12 @@\n import 'dart:io';\r\n import 'package:foodex_app/api/food_api.dart';\r\n import 'package:foodex_app/model/food.dart';\r\n import 'package:foodex_app/response/food_response.dart';\r\n+import 'package:get/get.dart';\r\n \r\n-class FoodRepository {\r\n+class FoodRepository extends GetxService {\r\n+  \r\n   Future<bool> addFood(File? file, Food food) async {\r\n     return await FoodAPI().addFood(file, food);\r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1674650644396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,13 @@\n import 'dart:io';\r\n import 'package:foodex_app/api/food_api.dart';\r\n+import 'package:foodex_app/data/api/api_client.dart';\r\n import 'package:foodex_app/model/food.dart';\r\n import 'package:foodex_app/response/food_response.dart';\r\n import 'package:get/get.dart';\r\n \r\n class FoodRepository extends GetxService {\r\n-  \r\n+  final ApiClient apiClient;\r\n   Future<bool> addFood(File? file, Food food) async {\r\n     return await FoodAPI().addFood(file, food);\r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1674650657124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,10 @@\n import 'package:get/get.dart';\r\n \r\n class FoodRepository extends GetxService {\r\n   final ApiClient apiClient;\r\n+\r\n+  FoodRepository(this.apiClient);\r\n   Future<bool> addFood(File? file, Food food) async {\r\n     return await FoodAPI().addFood(file, food);\r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1674650662627,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,9 @@\n import 'package:get/get.dart';\r\n \r\n class FoodRepository extends GetxService {\r\n   final ApiClient apiClient;\r\n-\r\n-  FoodRepository(this.apiClient);\r\n+  \r\n   Future<bool> addFood(File? file, Food food) async {\r\n     return await FoodAPI().addFood(file, food);\r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1674650668801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n import 'package:get/get.dart';\r\n \r\n class FoodRepository extends GetxService {\r\n   final ApiClient apiClient;\r\n-  \r\n+  FoodRepository({required this.apiClient});\r\n   Future<bool> addFood(File? file, Food food) async {\r\n     return await FoodAPI().addFood(file, food);\r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1674650959147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,10 @@\n import 'package:get/get.dart';\r\n \r\n class FoodRepository extends GetxService {\r\n   final ApiClient apiClient;\r\n-  FoodRepository({required this.apiClient});\r\n+  FoodRepository({this.apiClient});\r\n+\r\n   Future<bool> addFood(File? file, Food food) async {\r\n     return await FoodAPI().addFood(file, food);\r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1674650965603,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n import 'package:get/get.dart';\r\n \r\n class FoodRepository extends GetxService {\r\n   final ApiClient apiClient;\r\n-  FoodRepository({this.apiClient});\r\n+  FoodRepository({required this.apiClient});\r\n \r\n   Future<bool> addFood(File? file, Food food) async {\r\n     return await FoodAPI().addFood(file, food);\r\n   }\r\n"
+                },
+                {
+                    "date": 1674652039371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,7 @@\n     return await FoodAPI().addFood(file, food);\r\n   }\r\n \r\n   Future<FoodResponse?> getAllFood() async {\r\n-    return await FoodAPI().getAllFood();\r\n+    return await FoodAPI().getAllFood()!;\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1674652046929,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,7 @@\n     return await FoodAPI().addFood(file, food);\r\n   }\r\n \r\n   Future<FoodResponse?> getAllFood() async {\r\n-    return await FoodAPI().getAllFood()!;\r\n+    return await FoodAPI()!.getAllFood();\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1674652055642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,7 @@\n     return await FoodAPI().addFood(file, food);\r\n   }\r\n \r\n   Future<FoodResponse?> getAllFood() async {\r\n-    return await FoodAPI()!.getAllFood();\r\n+    return await FoodAPI().getAllFood();\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1674652061177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,8 @@\n   Future<bool> addFood(File? file, Food food) async {\r\n     return await FoodAPI().addFood(file, food);\r\n   }\r\n \r\n-  Future<FoodResponse?> getAllFood() async {\r\n+  Future<FoodResponse> getAllFood() async {\r\n     return await FoodAPI().getAllFood();\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1674652086022,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,8 @@\n   Future<bool> addFood(File? file, Food food) async {\r\n     return await FoodAPI().addFood(file, food);\r\n   }\r\n \r\n-  Future<FoodResponse> getAllFood() async {\r\n+  Future<FoodResponse>? getAllFood() async {\r\n     return await FoodAPI().getAllFood();\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1674652091286,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,8 @@\n   Future<bool> addFood(File? file, Food food) async {\r\n     return await FoodAPI().addFood(file, food);\r\n   }\r\n \r\n-  Future<FoodResponse>? getAllFood() async {\r\n+  Future<FoodResponse?> getAllFood() async {\r\n     return await FoodAPI().getAllFood();\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1674655403668,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import 'package:foodex_app/model/food.dart';\r\n import 'package:foodex_app/response/food_response.dart';\r\n import 'package:get/get.dart';\r\n \r\n-class FoodRepository extends GetxService {\r\n+class FoodRepository {\r\n   final ApiClient apiClient;\r\n   FoodRepository({required this.apiClient});\r\n \r\n   Future<bool> addFood(File? file, Food food) async {\r\n"
+                },
+                {
+                    "date": 1674655409114,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,8 @@\n import 'package:foodex_app/response/food_response.dart';\r\n import 'package:get/get.dart';\r\n \r\n class FoodRepository {\r\n-  final ApiClient apiClient;\r\n-  FoodRepository({required this.apiClient});\r\n-\r\n   Future<bool> addFood(File? file, Food food) async {\r\n     return await FoodAPI().addFood(file, food);\r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1674655540800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,11 @@\n import 'package:foodex_app/response/food_response.dart';\r\n import 'package:get/get.dart';\r\n \r\n class FoodRepository {\r\n+  final ApiClient apiClient;\r\n+  FoodRepository({required this.apiClient});\r\n+\r\n   Future<bool> addFood(File? file, Food food) async {\r\n     return await FoodAPI().addFood(file, food);\r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1674995581906,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,15 +5,17 @@\n import 'package:foodex_app/response/food_response.dart';\r\n import 'package:get/get.dart';\r\n \r\n class FoodRepository {\r\n-  final ApiClient apiClient;\r\n-  FoodRepository({required this.apiClient});\r\n \r\n   Future<bool> addFood(File? file, Food food) async {\r\n     return await FoodAPI().addFood(file, food);\r\n   }\r\n \r\n   Future<FoodResponse?> getAllFood() async {\r\n     return await FoodAPI().getAllFood();\r\n   }\r\n+\r\n+  Future<FoodResponse?> getAllFood() async {\r\n+    return await FoodAPI().getAllFood();\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1674995587317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,8 @@\n   Future<FoodResponse?> getAllFood() async {\r\n     return await FoodAPI().getAllFood();\r\n   }\r\n \r\n-  Future<FoodResponse?> getAllFood() async {\r\n+  Future<FoodResponse?> getSingleFood() async {\r\n     return await FoodAPI().getAllFood();\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1674995597938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,8 @@\n   Future<FoodResponse?> getAllFood() async {\r\n     return await FoodAPI().getAllFood();\r\n   }\r\n \r\n-  Future<FoodResponse?> getSingleFood() async {\r\n-    return await FoodAPI().getAllFood();\r\n+  Future<FoodResponse?> getSingleFood(String foodId) async {\r\n+    return await FoodAPI().getSingleFood();\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1674995608806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,10 @@\n import 'dart:io';\r\n import 'package:foodex_app/api/food_api.dart';\r\n-import 'package:foodex_app/data/api/api_client.dart';\r\n import 'package:foodex_app/model/food.dart';\r\n import 'package:foodex_app/response/food_response.dart';\r\n-import 'package:get/get.dart';\r\n \r\n class FoodRepository {\r\n-\r\n   Future<bool> addFood(File? file, Food food) async {\r\n     return await FoodAPI().addFood(file, food);\r\n   }\r\n \r\n@@ -15,7 +12,7 @@\n     return await FoodAPI().getAllFood();\r\n   }\r\n \r\n   Future<FoodResponse?> getSingleFood(String foodId) async {\r\n-    return await FoodAPI().getSingleFood();\r\n+    return await FoodAPI().getSingleFood(foodId);\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1674995618739,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,8 @@\n   Future<FoodResponse?> getAllFood() async {\r\n     return await FoodAPI().getAllFood();\r\n   }\r\n \r\n-  Future<FoodResponse?> getSingleFood(String foodId) async {\r\n+  Future<SingleFoodResponse?> getSingleFood(String foodId) async {\r\n     return await FoodAPI().getSingleFood(foodId);\r\n   }\r\n }\r\n"
+                }
+            ],
+            "date": 1674562126060,
+            "name": "Commit-0",
+            "content": "import 'dart:io';\r\n\r\nimport 'package:foodex_app/model/food.dart';\r\nimport 'package:foodex_app/response/food_response.dart';\r\n\r\nclass FoodRepository {\r\n  Future<bool> addFood(File? file, Food food) async {\r\n    return await FoodAPI().addFood(file, food);\r\n  }\r\n\r\n  Future<FoodResponse?> getAllFood() async {\r\n    return await FoodAPI().getAllFood();\r\n  }\r\n}\r\n"
+        }
+    ]
+}

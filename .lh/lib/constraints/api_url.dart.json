@@ -1,0 +1,78 @@
+{
+    "sourceFile": "lib/constraints/api_url.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 15,
+            "patches": [
+                {
+                    "date": 1674560904141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1674560911522,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n \r\n const loginUrl = \"user/login\";\r\n const registerUrl = \"user/register\";\r\n const foodUrl = \"products\";\r\n-const categoryUrl = \"category\";\r\n+const foodCcategoryUrl = \"category\";\r\n const orderUrl = \"orders\";\r\n \r\n String? tokenConstant;\r\n"
+                },
+                {
+                    "date": 1674560917848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     \"http://10.0.2.2:3000/api/v1/\"; // --> only for your android (localhost --> 10.0.2.2)\r\n \r\n const loginUrl = \"user/login\";\r\n const registerUrl = \"user/register\";\r\n-const foodUrl = \"products\";\r\n-const foodCcategoryUrl = \"category\";\r\n+const foodUrl = \"food\";\r\n+const foodCategoryUrl = \"category\";\r\n const orderUrl = \"orders\";\r\n \r\n String? tokenConstant;\r\n"
+                },
+                {
+                    "date": 1674560925220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,7 @@\n \r\n const loginUrl = \"user/login\";\r\n const registerUrl = \"user/register\";\r\n const foodUrl = \"food\";\r\n-const foodCategoryUrl = \"category\";\r\n-const orderUrl = \"orders\";\r\n+const foodCategoryUrl = \"food_category\";\r\n \r\n String? tokenConstant;\r\n"
+                },
+                {
+                    "date": 1674560953001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n // const baseUrl = \"http://localhost:3000/api/v1/\";  --> only for your local server\r\n \r\n const baseUrl =\r\n-    \"http://10.0.2.2:3000/api/v1/\"; // --> only for your android (localhost --> 10.0.2.2)\r\n+    \"http://10.0.2.2:5000/api/v1/\"; // --> only for your android (localhost --> 10.0.2.2)\r\n \r\n const loginUrl = \"user/login\";\r\n const registerUrl = \"user/register\";\r\n const foodUrl = \"food\";\r\n"
+                },
+                {
+                    "date": 1674560963812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n-// const baseUrl = \"http://localhost:3000/api/v1/\";  --> only for your local server\r\n+// const baseUrl = \"http://localhost:5000/\";  --> only for your local server\r\n \r\n const baseUrl =\r\n-    \"http://10.0.2.2:5000/api/v1/\"; // --> only for your android (localhost --> 10.0.2.2)\r\n+    \"http://10.0.2.2:5000/\"; // --> only for your android (localhost --> 10.0.2.2)\r\n \r\n const loginUrl = \"user/login\";\r\n const registerUrl = \"user/register\";\r\n const foodUrl = \"food\";\r\n"
+                },
+                {
+                    "date": 1674560969643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n // const baseUrl = \"http://localhost:5000/\";  --> only for your local server\r\n \r\n+    \"http://10.0.2.2:5000/\"; // --> only for your android (localhost --> 10.0.2.2)\r\n const baseUrl =\r\n-    \"http://10.0.2.2:5000/\"; // --> only for your android (localhost --> 10.0.2.2)\r\n \r\n const loginUrl = \"user/login\";\r\n const registerUrl = \"user/register\";\r\n const foodUrl = \"food\";\r\n"
+                },
+                {
+                    "date": 1674560982711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n-// const baseUrl = \"http://localhost:5000/\";  --> only for your local server\r\n+// const baseUrl = \"http://localhost:5000/\";  \r\n+//--> only for your local server\r\n \r\n-    \"http://10.0.2.2:5000/\"; // --> only for your android (localhost --> 10.0.2.2)\r\n-const baseUrl =\r\n+// --> only for your android (localhost --> 10.0.2.2)\r\n+const baseUrl = \"http://10.0.2.2:5000/\";\r\n \r\n const loginUrl = \"user/login\";\r\n const registerUrl = \"user/register\";\r\n const foodUrl = \"food\";\r\n"
+                },
+                {
+                    "date": 1674560996278,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n-// const baseUrl = \"http://localhost:5000/\";  \r\n //--> only for your local server\r\n+// const baseUrl = \"http://localhost:5000/\";\r\n \r\n // --> only for your android (localhost --> 10.0.2.2)\r\n const baseUrl = \"http://10.0.2.2:5000/\";\r\n \r\n+// other urls\r\n const loginUrl = \"user/login\";\r\n const registerUrl = \"user/register\";\r\n const foodUrl = \"food\";\r\n const foodCategoryUrl = \"food_category\";\r\n"
+                },
+                {
+                    "date": 1674561004246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,5 +9,6 @@\n const registerUrl = \"user/register\";\r\n const foodUrl = \"food\";\r\n const foodCategoryUrl = \"food_category\";\r\n \r\n+// for token\r\n String? tokenConstant;\r\n"
+                },
+                {
+                    "date": 1674995471840,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \r\n // other urls\r\n const loginUrl = \"user/login\";\r\n const registerUrl = \"user/register\";\r\n-const foodUrl = \"food\";\r\n+const foodListUrl = \"food\";\r\n const foodCategoryUrl = \"food_category\";\r\n \r\n // for token\r\n String? tokenConstant;\r\n"
+                },
+                {
+                    "date": 1674995477227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n // other urls\r\n const loginUrl = \"user/login\";\r\n const registerUrl = \"user/register\";\r\n const foodListUrl = \"food\";\r\n+const foodListUrl = \"food\";\r\n const foodCategoryUrl = \"food_category\";\r\n \r\n // for token\r\n String? tokenConstant;\r\n"
+                },
+                {
+                    "date": 1674995485674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n // other urls\r\n const loginUrl = \"user/login\";\r\n const registerUrl = \"user/register\";\r\n const foodListUrl = \"food\";\r\n-const foodListUrl = \"food\";\r\n+const singleFoodUrl = \"food\";\r\n const foodCategoryUrl = \"food_category\";\r\n \r\n // for token\r\n String? tokenConstant;\r\n"
+                },
+                {
+                    "date": 1674995509660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,9 @@\n \r\n // other urls\r\n const loginUrl = \"user/login\";\r\n const registerUrl = \"user/register\";\r\n-const foodListUrl = \"food\";\r\n-const singleFoodUrl = \"food\";\r\n+const foodUrl = \"food\";\r\n const foodCategoryUrl = \"food_category\";\r\n \r\n // for token\r\n String? tokenConstant;\r\n"
+                },
+                {
+                    "date": 1674995521279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \r\n // other urls\r\n const loginUrl = \"user/login\";\r\n const registerUrl = \"user/register\";\r\n-const foodUrl = \"food\";\r\n+const foodListUrl = \"food\";\r\n const foodCategoryUrl = \"food_category\";\r\n \r\n // for token\r\n String? tokenConstant;\r\n"
+                },
+                {
+                    "date": 1674995527753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \r\n // other urls\r\n const loginUrl = \"user/login\";\r\n const registerUrl = \"user/register\";\r\n-const foodListUrl = \"food\";\r\n+const foodUrl = \"food\";\r\n const foodCategoryUrl = \"food_category\";\r\n \r\n // for token\r\n String? tokenConstant;\r\n"
+                }
+            ],
+            "date": 1674560904141,
+            "name": "Commit-0",
+            "content": "// const baseUrl = \"http://localhost:3000/api/v1/\";  --> only for your local server\r\n\r\nconst baseUrl =\r\n    \"http://10.0.2.2:3000/api/v1/\"; // --> only for your android (localhost --> 10.0.2.2)\r\n\r\nconst loginUrl = \"user/login\";\r\nconst registerUrl = \"user/register\";\r\nconst foodUrl = \"products\";\r\nconst categoryUrl = \"category\";\r\nconst orderUrl = \"orders\";\r\n\r\nString? tokenConstant;\r\n"
+        }
+    ]
+}

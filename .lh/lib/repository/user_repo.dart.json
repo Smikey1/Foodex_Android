@@ -1,0 +1,26 @@
+{
+    "sourceFile": "lib/repository/user_repo.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1672314686040,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1674563189802,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,16 @@\n import 'package:foodex_app/local_data_source/user_data_source.dart';\r\n import 'package:foodex_app/model/model.dart';\r\n \r\n-abstract class UserRepository {\r\n+abstract class UserRepositoryOB {\r\n   Future<List<User>> getUser();\r\n   Future<int> addUser(User user);\r\n \r\n   // Login\r\n   Future<bool?> loginUser(int phone, String password);\r\n }\r\n \r\n-class UserRepositoryImplementation extends UserRepository {\r\n+class UserRepositoryImplementation extends UserRepositoryOB {\r\n   @override\r\n   Future<int> addUser(User user) {\r\n     return UserDataSource().addUser(user);\r\n   }\r\n"
+                },
+                {
+                    "date": 1675078105961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import 'package:foodex_app/local_data_source/user_data_source.dart';\r\n+import 'package:foodex_app/data/local_data_source/user_data_source.dart';\r\n import 'package:foodex_app/model/model.dart';\r\n \r\n abstract class UserRepositoryOB {\r\n   Future<List<User>> getUser();\r\n"
+                }
+            ],
+            "date": 1672314686040,
+            "name": "Commit-0",
+            "content": "import 'package:foodex_app/local_data_source/user_data_source.dart';\r\nimport 'package:foodex_app/model/model.dart';\r\n\r\nabstract class UserRepository {\r\n  Future<List<User>> getUser();\r\n  Future<int> addUser(User user);\r\n\r\n  // Login\r\n  Future<bool?> loginUser(int phone, String password);\r\n}\r\n\r\nclass UserRepositoryImplementation extends UserRepository {\r\n  @override\r\n  Future<int> addUser(User user) {\r\n    return UserDataSource().addUser(user);\r\n  }\r\n\r\n  @override\r\n  Future<List<User>> getUser() {\r\n    return UserDataSource().getUser();\r\n  }\r\n\r\n  @override\r\n  Future<bool?> loginUser(int phone, String password) {\r\n    return UserDataSource().loginUser(phone, password);\r\n  }\r\n}\r\n"
+        }
+    ]
+}

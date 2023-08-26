@@ -1,0 +1,22 @@
+{
+    "sourceFile": "lib/app/constraints/http_services.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1675078429161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1675497191456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,10 @@\n       // naya dio/ i mean network call garne yuta object banau dio ko\r\n       _dio = Dio(BaseOptions(baseUrl: baseUrl, connectTimeout: 5000));\r\n \r\n       // adding interceptor for developer\r\n-      _dio?.interceptors\r\n-          .add(DioLoggingInterceptor(level: Level.body, compact: false));\r\n+      // _dio?.interceptors\r\n+      //     .add(DioLoggingInterceptor(level: Level.body, compact: false));\r\n \r\n       return _dio!;\r\n     } else {\r\n       return _dio!;\r\n"
+                }
+            ],
+            "date": 1675078429161,
+            "name": "Commit-0",
+            "content": "import 'package:dio/dio.dart';\r\nimport 'package:dio_logging_interceptor/dio_logging_interceptor.dart';\r\nimport 'package:foodex_app/app/constraints/api_url.dart';\r\n\r\nclass HttpServices {\r\n  // private named constructor\r\n  HttpServices._internal();\r\n\r\n  static final HttpServices _instance = HttpServices._internal();\r\n\r\n  factory HttpServices() => _instance;\r\n\r\n  static Dio? _dio; // for network call ko lagi\r\n\r\n  Dio getDioInstance() {\r\n    if (_dio == null) {\r\n      // naya dio/ i mean network call garne yuta object banau dio ko\r\n      _dio = Dio(BaseOptions(baseUrl: baseUrl, connectTimeout: 5000));\r\n\r\n      // adding interceptor for developer\r\n      _dio?.interceptors\r\n          .add(DioLoggingInterceptor(level: Level.body, compact: false));\r\n\r\n      return _dio!;\r\n    } else {\r\n      return _dio!;\r\n    }\r\n  }\r\n}\r\n"
+        }
+    ]
+}

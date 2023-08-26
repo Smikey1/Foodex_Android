@@ -1,0 +1,98 @@
+{
+    "sourceFile": "lib/widgets/expandable_text_widget.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 20,
+            "patches": [
+                {
+                    "date": 1673030892742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1673030898983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n-class name extends StatefulWidget {\r\n-  const name({super.key});\r\n+class ExpandableTextq extends StatefulWidget {\r\n+  const ExpandableTextq({super.key});\r\n \r\n   @override\r\n-  State<name> createState() => _nameState();\r\n+  State<ExpandableTextq> createState() => _ExpandableTextqState();\r\n }\r\n \r\n-class _nameState extends State<name> {\r\n+class _ExpandableTextqState extends State<ExpandableTextq> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container();\r\n   }\r\n"
+                },
+                {
+                    "date": 1673030905299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n-class ExpandableTextq extends StatefulWidget {\r\n-  const ExpandableTextq({super.key});\r\n+class ExpandableTextWidget extends StatefulWidget {\r\n+  const ExpandableTextWidget({super.key});\r\n \r\n   @override\r\n-  State<ExpandableTextq> createState() => _ExpandableTextqState();\r\n+  State<ExpandableTextWidget> createState() => _ExpandableTextWidgetState();\r\n }\r\n \r\n-class _ExpandableTextqState extends State<ExpandableTextq> {\r\n+class _ExpandableTextWidgetState extends State<ExpandableTextWidget> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container();\r\n   }\r\n"
+                },
+                {
+                    "date": 1673030915554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import 'package:flutter/material.dart';\r\n+\r\n class ExpandableTextWidget extends StatefulWidget {\r\n   const ExpandableTextWidget({super.key});\r\n \r\n   @override\r\n"
+                },
+                {
+                    "date": 1673031017972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import 'package:flutter/material.dart';\r\n \r\n class ExpandableTextWidget extends StatefulWidget {\r\n+  final St\r\n   const ExpandableTextWidget({super.key});\r\n \r\n   @override\r\n   State<ExpandableTextWidget> createState() => _ExpandableTextWidgetState();\r\n"
+                },
+                {
+                    "date": 1673031023803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import 'package:flutter/material.dart';\r\n \r\n class ExpandableTextWidget extends StatefulWidget {\r\n-  final St\r\n+  final String text;\r\n   const ExpandableTextWidget({super.key});\r\n \r\n   @override\r\n   State<ExpandableTextWidget> createState() => _ExpandableTextWidgetState();\r\n@@ -12,5 +12,5 @@\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container();\r\n   }\r\n-}\n\\ No newline at end of file\n+}\r\n"
+                },
+                {
+                    "date": 1673031038371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,21 @@\n+// ignore_for_file: public_member_api_docs, sort_constructors_first\r\n import 'package:flutter/material.dart';\r\n \r\n class ExpandableTextWidget extends StatefulWidget {\r\n   final String text;\r\n-  const ExpandableTextWidget({super.key});\r\n+  const ExpandableTextWidget({\r\n+    Key? key,\r\n+    required this.text,\r\n+  }) : super(key: key);\r\n \r\n   @override\r\n   State<ExpandableTextWidget> createState() => _ExpandableTextWidgetState();\r\n }\r\n \r\n class _ExpandableTextWidgetState extends State<ExpandableTextWidget> {\r\n+  \r\n+  \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container();\r\n   }\r\n"
+                },
+                {
+                    "date": 1673031044822,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,10 +12,10 @@\n   State<ExpandableTextWidget> createState() => _ExpandableTextWidgetState();\r\n }\r\n \r\n class _ExpandableTextWidgetState extends State<ExpandableTextWidget> {\r\n+  late \r\n   \r\n-  \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container();\r\n   }\r\n"
+                },
+                {
+                    "date": 1673031052915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   State<ExpandableTextWidget> createState() => _ExpandableTextWidgetState();\r\n }\r\n \r\n class _ExpandableTextWidgetState extends State<ExpandableTextWidget> {\r\n-  late \r\n+  late String firstHalf\r\n   \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container();\r\n"
+                },
+                {
+                    "date": 1673031059393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,10 +12,11 @@\n   State<ExpandableTextWidget> createState() => _ExpandableTextWidgetState();\r\n }\r\n \r\n class _ExpandableTextWidgetState extends State<ExpandableTextWidget> {\r\n-  late String firstHalf\r\n-  \r\n+  late String firstHalf;\r\n+  late string sc\r\n+\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container();\r\n   }\r\n"
+                },
+                {
+                    "date": 1673031066403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n }\r\n \r\n class _ExpandableTextWidgetState extends State<ExpandableTextWidget> {\r\n   late String firstHalf;\r\n-  late string sc\r\n+  late string secondhalf;\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container();\r\n"
+                },
+                {
+                    "date": 1673031073346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n }\r\n \r\n class _ExpandableTextWidgetState extends State<ExpandableTextWidget> {\r\n   late String firstHalf;\r\n-  late string secondhalf;\r\n+  late String secondHalf;\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container();\r\n"
+                },
+                {
+                    "date": 1673031079292,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,10 @@\n class _ExpandableTextWidgetState extends State<ExpandableTextWidget> {\r\n   late String firstHalf;\r\n   late String secondHalf;\r\n \r\n+  bool hidd\r\n+\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container();\r\n   }\r\n"
+                },
+                {
+                    "date": 1673031085346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n class _ExpandableTextWidgetState extends State<ExpandableTextWidget> {\r\n   late String firstHalf;\r\n   late String secondHalf;\r\n \r\n-  bool hidd\r\n+  bool hiddenText = true;\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container();\r\n"
+                },
+                {
+                    "date": 1673031097076,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n // ignore_for_file: public_member_api_docs, sort_constructors_first\r\n import 'package:flutter/material.dart';\r\n+import 'package:foodex_app/utils/dimension.dart';\r\n \r\n class ExpandableTextWidget extends StatefulWidget {\r\n   final String text;\r\n   const ExpandableTextWidget({\r\n@@ -16,8 +17,9 @@\n   late String firstHalf;\r\n   late String secondHalf;\r\n \r\n   bool hiddenText = true;\r\n+  double textHeight = Dimensions()\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container();\r\n"
+                },
+                {
+                    "date": 1673031102885,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n   late String firstHalf;\r\n   late String secondHalf;\r\n \r\n   bool hiddenText = true;\r\n-  double textHeight = Dimensions()\r\n+  double textHeight = Dimensions.screenHeight/\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container();\r\n"
+                },
+                {
+                    "date": 1673031109398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n   late String firstHalf;\r\n   late String secondHalf;\r\n \r\n   bool hiddenText = true;\r\n-  double textHeight = Dimensions.screenHeight/\r\n+  double textHeight = Dimensions.screenHeight / 5.63;\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container();\r\n"
+                },
+                {
+                    "date": 1673031147142,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,10 @@\n \r\n   bool hiddenText = true;\r\n   double textHeight = Dimensions.screenHeight / 5.63;\r\n \r\n+  \r\n+\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container();\r\n   }\r\n"
+                },
+                {
+                    "date": 1673031154771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,10 @@\n \r\n   bool hiddenText = true;\r\n   double textHeight = Dimensions.screenHeight / 5.63;\r\n \r\n-  \r\n+  @override\r\n+  void in\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container();\r\n"
+                },
+                {
+                    "date": 1673031160301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,10 +19,9 @@\n \r\n   bool hiddenText = true;\r\n   double textHeight = Dimensions.screenHeight / 5.63;\r\n \r\n-  @override\r\n-  void @override\r\n+   @override\r\n   void initState() {\r\n     super.initState();\r\n     \r\n   }\r\n"
+                },
+                {
+                    "date": 1673031258080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n   void initState() {\r\n     super.initState();\r\n     if (widget.text.length > textHeight) {\r\n       firstHalf = widget.text.substring(0, textHeight.toInt());\r\n-      secondHalf = widget.text.substring()\r\n+      secondHalf = widget.text.substring(textHeight)\r\n     }\r\n   }\r\n \r\n   @override\r\n"
+                }
+            ],
+            "date": 1673030892742,
+            "name": "Commit-0",
+            "content": "class name extends StatefulWidget {\r\n  const name({super.key});\r\n\r\n  @override\r\n  State<name> createState() => _nameState();\r\n}\r\n\r\nclass _nameState extends State<name> {\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Container();\r\n  }\r\n}"
+        }
+    ]
+}

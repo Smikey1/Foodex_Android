@@ -1,0 +1,30 @@
+{
+    "sourceFile": "lib/repository/remote_repository/food_repository.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1675078556019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1675078715646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import 'dart:io';\r\n-import 'package:foodex_app/app/api/food_api.dart';\r\n+import 'package:foodex_app/data/remote_data_source/api/food_api.dart';\r\n import 'package:foodex_app/model/food.dart';\r\n import 'package:foodex_app/response/food_response.dart';\r\n import 'package:foodex_app/response/single_food_response.dart';\r\n \r\n"
+                },
+                {
+                    "date": 1675090671039,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import 'dart:io';\r\n-import 'package:foodex_app/data/remote_data_source/api/food_api.dart';\r\n+import 'package:foodex_app/helper/api/food_api.dart';\r\n import 'package:foodex_app/model/food.dart';\r\n import 'package:foodex_app/response/food_response.dart';\r\n import 'package:foodex_app/response/single_food_response.dart';\r\n \r\n"
+                },
+                {
+                    "date": 1675090684355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import 'dart:io';\r\n-import 'package:foodex_app/helper/api/food_api.dart';\r\n+import 'package:foodex_app/data/remote_data_source/api/food_api.dart';\r\n import 'package:foodex_app/model/food.dart';\r\n import 'package:foodex_app/response/food_response.dart';\r\n import 'package:foodex_app/response/single_food_response.dart';\r\n \r\n"
+                }
+            ],
+            "date": 1675078556019,
+            "name": "Commit-0",
+            "content": "import 'dart:io';\r\nimport 'package:foodex_app/app/api/food_api.dart';\r\nimport 'package:foodex_app/model/food.dart';\r\nimport 'package:foodex_app/response/food_response.dart';\r\nimport 'package:foodex_app/response/single_food_response.dart';\r\n\r\nclass FoodRepository {\r\n  Future<bool> addFood(File? file, Food food) async {\r\n    return await FoodAPI().addFood(file, food);\r\n  }\r\n\r\n  Future<FoodResponse?> getAllFood() async {\r\n    return await FoodAPI().getAllFood();\r\n  }\r\n\r\n  Future<SingleFoodResponse?> getSingleFood(String foodId) async {\r\n    return await FoodAPI().getSingleFood(foodId);\r\n  }\r\n}\r\n"
+        }
+    ]
+}

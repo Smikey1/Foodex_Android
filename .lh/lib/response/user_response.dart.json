@@ -1,0 +1,34 @@
+{
+    "sourceFile": "lib/response/user_response.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1676182560997,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1676182579107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,19 @@\n \r\n+import 'package:foodex_app/model/food.dart';\r\n+import 'package:json_annotation/json_annotation.dart';\r\n+\r\n+part 'single_food_response.g.dart';\r\n+\r\n+@JsonSerializable()\r\n+class SingleFoodResponse {\r\n+  bool? success;\r\n+  String? message;\r\n+  Food? data;\r\n+\r\n+  SingleFoodResponse({this.success, this.message, this.data});\r\n+\r\n+  factory SingleFoodResponse.fromJson(Map<String, dynamic> json) =>\r\n+      _$SingleFoodResponseFromJson(json);\r\n+\r\n+  Map<String, dynamic> toJson() => _$SingleFoodResponseToJson(this);\r\n+}\r\n"
+                },
+                {
+                    "date": 1676182584161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \r\n import 'package:foodex_app/model/food.dart';\r\n import 'package:json_annotation/json_annotation.dart';\r\n \r\n-part 'single_food_response.g.dart';\r\n+part _response.g.dart';\r\n \r\n @JsonSerializable()\r\n class SingleFoodResponse {\r\n   bool? success;\r\n"
+                },
+                {
+                    "date": 1676182589346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \r\n import 'package:foodex_app/model/food.dart';\r\n import 'package:json_annotation/json_annotation.dart';\r\n \r\n-part 'Use_response.g.dart';\r\n+part '_response.g.dart';\r\n \r\n @JsonSerializable()\r\n class SingleFoodResponse {\r\n   bool? success;\r\n"
+                },
+                {
+                    "date": 1676182685454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,4 @@\n-\r\n-\r\n import 'package:foodex_app/model/export_model.dart';\r\n import 'package:json_annotation/json_annotation.dart';\r\n \r\n part 'user_profile_response.g.dart';\r\n"
+                }
+            ],
+            "date": 1676182560997,
+            "name": "Commit-0",
+            "content": "\r\n"
+        }
+    ]
+}

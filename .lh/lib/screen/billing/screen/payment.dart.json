@@ -1,0 +1,94 @@
+{
+    "sourceFile": "lib/screen/billing/screen/payment.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 19,
+            "patches": [
+                {
+                    "date": 1676888399395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1676888404789,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,13 @@\n-stf\n\\ No newline at end of file\n+class name extends StatefulWidget {\r\n+  const name({super.key});\r\n+\r\n+  @override\r\n+  State<name> createState() => _nameState();\r\n+}\r\n+\r\n+class _nameState extends State<name> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Container();\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676888414551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+class Payment extends StatefulWidget {\r\n+  const Payment({super.key});\r\n+\r\n+  @override\r\n+  State<Payment> createState() => _PaymentState();\r\n+}\r\n+\r\n+class _PaymentState extends State<Payment> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Container();\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676888421991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+import 'package:flutter/material.dart';\r\n+\r\n+class PaymentScreen extends StatefulWidget {\r\n+  const PaymentScreen({super.key});\r\n+\r\n+  @override\r\n+  State<PaymentScreen> createState() => _PaymentScreenState();\r\n+}\r\n+\r\n+class _PaymentScreenState extends State<PaymentScreen> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Container();\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676888427921,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+import 'package:flutter/material.dart';\r\n+\r\n+class PaymentScreen extends StatefulWidget {\r\n+  const PaymentScreen({super.key});\r\n+\r\n+  @override\r\n+  State<PaymentScreen> createState() => _PaymentScreenState();\r\n+}\r\n+\r\n+class _PaymentScreenState extends State<PaymentScreen> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Card(\r\n+      \r\n+    );\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676888435822,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+import 'package:flutter/material.dart';\r\n+\r\n+class PaymentScreen extends StatefulWidget {\r\n+  const PaymentScreen({super.key});\r\n+\r\n+  @override\r\n+  State<PaymentScreen> createState() => _PaymentScreenState();\r\n+}\r\n+\r\n+class _PaymentScreenState extends State<PaymentScreen> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Card(\r\n+      child: Row(\r\n+        children: [\r\n+          \r\n+        ],\r\n+      ),\r\n+    );\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676888443678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,68 +12,16 @@\n   Widget build(BuildContext context) {\r\n     return Card(\r\n       child: Row(\r\n         children: [\r\n-          \r\n+          Radio(\r\n+            value: 1,\r\n+            groupValue: 1,\r\n+            onChanged: (value) {},\r\n+          ),\r\n+          Text('Cash on Delivery'),\r\n         ],\r\n+        ],\r\n       ),\r\n     );\r\n   }\r\n-}\n-import 'package:flutter/material.dart';\r\n-\r\n-class PaymentScreen extends StatefulWidget {\r\n-  const PaymentScreen({super.key});\r\n-\r\n-  @override\r\n-  State<PaymentScreen> createState() => _PaymentScreenState();\r\n-}\r\n-\r\n-class _PaymentScreenState extends State<PaymentScreen> {\r\n-  @override\r\n-  Widget build(BuildContext context) {\r\n-    return Card(\r\n-      \r\n-    );\r\n-  }\r\n-}\n-import 'package:flutter/material.dart';\r\n-\r\n-class PaymentScreen extends StatefulWidget {\r\n-  const PaymentScreen({super.key});\r\n-\r\n-  @override\r\n-  State<PaymentScreen> createState() => _PaymentScreenState();\r\n-}\r\n-\r\n-class _PaymentScreenState extends State<PaymentScreen> {\r\n-  @override\r\n-  Widget build(BuildContext context) {\r\n-    return Container();\r\n-  }\r\n-}\n-class Payment extends StatefulWidget {\r\n-  const Payment({super.key});\r\n-\r\n-  @override\r\n-  State<Payment> createState() => _PaymentState();\r\n-}\r\n-\r\n-class _PaymentState extends State<Payment> {\r\n-  @override\r\n-  Widget build(BuildContext context) {\r\n-    return Container();\r\n-  }\r\n-}\n-class name extends StatefulWidget {\r\n-  const name({super.key});\r\n-\r\n-  @override\r\n-  State<name> createState() => _nameState();\r\n-}\r\n-\r\n-class _nameState extends State<name> {\r\n-  @override\r\n-  Widget build(BuildContext context) {\r\n-    return Container();\r\n-  }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676888500131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,11 +17,16 @@\n             value: 1,\r\n             groupValue: 1,\r\n             onChanged: (value) {},\r\n           ),\r\n-          Text('Cash on Delivery'),\r\n+          const Text('Cash on Delivery'),\r\n+          Radio(\r\n+            value: 1,\r\n+            groupValue: 1,\r\n+            onChanged: (value) {},\r\n+          ),\r\n\\ No newline at end of file\n+          const Text('Cash on Delivery'),\r\n         ],\r\n-        ],\r\n       ),\r\n     );\r\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1676888508158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n             value: 1,\r\n             groupValue: 1,\r\n             onChanged: (value) {},\r\n           ),\r\n-          const Text('Cash on Delivery'),\r\n+          const Text('Py'),\r\n         ],\r\n       ),\r\n     );\r\n   }\r\n"
+                },
+                {
+                    "date": 1676888514070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,32 @@\n+import 'package:flutter/material.dart';\r\n+\r\n+class PaymentScreen extends StatefulWidget {\r\n+  const PaymentScreen({super.key});\r\n+\r\n+  @override\r\n+  State<PaymentScreen> createState() => _PaymentScreenState();\r\n+}\r\n+\r\n+class _PaymentScreenState extends State<PaymentScreen> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Card(\r\n+      child: Row(\r\n+        children: [\r\n+          Radio(\r\n+            value: 1,\r\n+            groupValue: 1,\r\n+            onChanged: (value) {},\r\n+          ),\r\n+          const Text('Cash on Delivery'),\r\n+          Radio(\r\n+            value: 1,\r\n+            groupValue: 1,\r\n+            onChanged: (value) {},\r\n+          ),\r\n+          const Text('Pay with Khalti'),\r\n+        ],\r\n+      ),\r\n+    );\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1676888523734,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n             onChanged: (value) {},\r\n           ),\r\n           const Text('Cash on Delivery'),\r\n           Radio(\r\n-            value: 1,\r\n+            value: ,\r\n             groupValue: 1,\r\n             onChanged: (value) {},\r\n           ),\r\n           const Text('Pay with Khalti'),\r\n@@ -29,36 +29,4 @@\n       ),\r\n     );\r\n   }\r\n }\r\n-import 'package:flutter/material.dart';\r\n-\r\n-class PaymentScreen extends StatefulWidget {\r\n-  const PaymentScreen({super.key});\r\n-\r\n-  @override\r\n-  State<PaymentScreen> createState() => _PaymentScreenState();\r\n-}\r\n-\r\n-class _PaymentScreenState extends State<PaymentScreen> {\r\n-  @override\r\n-  Widget build(BuildContext context) {\r\n-    return Card(\r\n-      child: Row(\r\n-        children: [\r\n-          Radio(\r\n-            value: 1,\r\n-            groupValue: 1,\r\n-            onChanged: (value) {},\r\n-          ),\r\n-          const Text('Cash on Delivery'),\r\n-          Radio(\r\n-            value: 1,\r\n-            groupValue: 1,\r\n-            onChanged: (value) {},\r\n-          ),\r\n-          const Text('Py'),\r\n-        ],\r\n-      ),\r\n-    );\r\n-  }\r\n-}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676888533729,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,10 +18,11 @@\n             groupValue: 1,\r\n             onChanged: (value) {},\r\n           ),\r\n           const Text('Cash on Delivery'),\r\n+          \r\n           Radio(\r\n-            value: ,\r\n+            value: 0,\r\n             groupValue: 1,\r\n             onChanged: (value) {},\r\n           ),\r\n           const Text('Pay with Khalti'),\r\n"
+                },
+                {
+                    "date": 1676888540099,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,33 @@\n+import 'package:flutter/material.dart';\r\n+\r\n+class PaymentScreen extends StatefulWidget {\r\n+  const PaymentScreen({super.key});\r\n+\r\n+  @override\r\n+  State<PaymentScreen> createState() => _PaymentScreenState();\r\n+}\r\n+\r\n+class _PaymentScreenState extends State<PaymentScreen> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Card(\r\n+      child: Row(\r\n+        children: [\r\n+          Radio(\r\n+            value: 1,\r\n+            groupValue: 1,\r\n+            onChanged: (value) {},\r\n+          ),\r\n+          const Text('Cash on Delivery'),\r\n+          Divider\r\n+          Radio(\r\n+            value: 0,\r\n+            groupValue: 1,\r\n+            onChanged: (value) {},\r\n+          ),\r\n+          const Text('Pay with Khalti'),\r\n+        ],\r\n+      ),\r\n+    );\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1676888545738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n             groupValue: 1,\r\n             onChanged: (value) {},\r\n           ),\r\n           const Text('Cash on Delivery'),\r\n-          Divider\r\n+          const Divider(),\r\n           Radio(\r\n             value: 0,\r\n             groupValue: 1,\r\n             onChanged: (value) {},\r\n@@ -30,37 +30,4 @@\n       ),\r\n     );\r\n   }\r\n }\r\n-import 'package:flutter/material.dart';\r\n-\r\n-class PaymentScreen extends StatefulWidget {\r\n-  const PaymentScreen({super.key});\r\n-\r\n-  @override\r\n-  State<PaymentScreen> createState() => _PaymentScreenState();\r\n-}\r\n-\r\n-class _PaymentScreenState extends State<PaymentScreen> {\r\n-  @override\r\n-  Widget build(BuildContext context) {\r\n-    return Card(\r\n-      child: Row(\r\n-        children: [\r\n-          Radio(\r\n-            value: 1,\r\n-            groupValue: 1,\r\n-            onChanged: (value) {},\r\n-          ),\r\n-          const Text('Cash on Delivery'),\r\n-          \r\n-          Radio(\r\n-            value: 0,\r\n-            groupValue: 1,\r\n-            onChanged: (value) {},\r\n-          ),\r\n-          const Text('Pay with Khalti'),\r\n-        ],\r\n-      ),\r\n-    );\r\n-  }\r\n-}\r\n"
+                },
+                {
+                    "date": 1676888555918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n             groupValue: 1,\r\n             onChanged: (value) {},\r\n           ),\r\n           const Text('Cash on Delivery'),\r\n-          const Divider(),\r\n+          \r\n           Radio(\r\n             value: 0,\r\n             groupValue: 1,\r\n             onChanged: (value) {},\r\n"
+                },
+                {
+                    "date": 1676889226406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,15 +12,16 @@\n   Widget build(BuildContext context) {\r\n     return Card(\r\n       child: Row(\r\n         children: [\r\n-          Radio(\r\n-            value: 1,\r\n-            groupValue: 1,\r\n-            onChanged: (value) {},\r\n+          Container(\r\n+            child: Radio(\r\n+              value: 1,\r\n+              groupValue: 1,\r\n+              onChanged: (value) {},\r\n+            ),\r\n           ),\r\n           const Text('Cash on Delivery'),\r\n-          \r\n           Radio(\r\n             value: 0,\r\n             groupValue: 1,\r\n             onChanged: (value) {},\r\n"
+                },
+                {
+                    "date": 1676889233224,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,14 +12,12 @@\n   Widget build(BuildContext context) {\r\n     return Card(\r\n       child: Row(\r\n         children: [\r\n-          Container(\r\n-            child: Radio(\r\n-              value: 1,\r\n-              groupValue: 1,\r\n-              onChanged: (value) {},\r\n-            ),\r\n+          Radio(\r\n+            value: 1,\r\n+            groupValue: 1,\r\n+            onChanged: (value) {},\r\n           ),\r\n           const Text('Cash on Delivery'),\r\n           Radio(\r\n             value: 0,\r\n"
+                },
+                {
+                    "date": 1676889262473,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,9 @@\n             groupValue: 1,\r\n             onChanged: (value) {},\r\n           ),\r\n           const Text('Pay with Khalti'),\r\n+          \r\n         ],\r\n       ),\r\n     );\r\n   }\r\n"
+                },
+                {
+                    "date": 1676889272492,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \r\n class _PaymentScreenState extends State<PaymentScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return widget(\r\n+    return S(\r\n       child: Card(\r\n         child: Row(\r\n           children: [\r\n             Radio(\r\n"
+                },
+                {
+                    "date": 1676889358280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,14 +25,9 @@\n               groupValue: 1,\r\n               onChanged: (value) {},\r\n             ),\r\n             const Text('Khalti'),\r\n-            Radio(\r\n-              value: 1,\r\n-              groupValue: 1,\r\n-              onChanged: (value) {},\r\n-            ),\r\n-            const Text('Cash on Delivery'),\r\n+          \r\n           ],\r\n         ),\r\n       ),\r\n     );\r\n"
+                }
+            ],
+            "date": 1676888399395,
+            "name": "Commit-0",
+            "content": "stf"
+        }
+    ]
+}

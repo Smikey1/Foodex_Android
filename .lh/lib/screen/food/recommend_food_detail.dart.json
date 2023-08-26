@@ -1,0 +1,58 @@
+{
+    "sourceFile": "lib/screen/food/recommend_food_detail.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1674138268257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1674138273925,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,8 @@\n-st\n\\ No newline at end of file\n+class Recommend extends StatelessWidget {\r\n+  const Recommend({super.key});\r\n+\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Container();\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674138280508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n-class Recommend extends StatelessWidget {\r\n-  const Recommend({super.key});\r\n+class RecommendedFoodDetail extends StatelessWidget {\r\n+  const RecommendedFoodDetail({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container();\r\n"
+                },
+                {
+                    "date": 1674138286523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import 'package:flutter/material.dart';\r\n+\r\n class RecommendedFoodDetail extends StatelessWidget {\r\n   const RecommendedFoodDetail({super.key});\r\n \r\n   @override\r\n"
+                },
+                {
+                    "date": 1674138409122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n   const RecommendedFoodDetail({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return Container();\r\n+    return ;\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674138429936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,9 @@\n   const RecommendedFoodDetail({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return ;\r\n+    return Scaffold(\r\n+      body: ,\r\n+    );\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674138437416,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n-      body: ,\r\n+      body: CustomScrollView,\r\n     );\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674138445589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,10 @@\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n-      body: CustomScrollView,\r\n+      body: CustomScrollView(\r\n+        slivers: [],\r\n+      ),\r\n     );\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674138452743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,11 @@\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       body: CustomScrollView(\r\n-        slivers: [],\r\n+        slivers: [\r\n+          Silver\r\n+        ],\r\n       ),\r\n     );\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674138458517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       body: CustomScrollView(\r\n         slivers: [\r\n-          SliverAppBar.large\r\n+          SliverAppBar.larg\r\n         ],\r\n       ),\r\n     );\r\n   }\r\n"
+                },
+                {
+                    "date": 1674138652944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n             // expandedHeight: 300,\r\n             flexibleSpace: FlexibleSpaceBar(\r\n               background: Image.asset(\r\n                 'assets/images/food.jpg',\r\n-                // fit: BoxFit.cover,\r\n+                fit: BoxFit.cover,\r\n                 width: double.maxFinite,\r\n               ),\r\n             ),\r\n           ),\r\n"
+                }
+            ],
+            "date": 1674138268257,
+            "name": "Commit-0",
+            "content": "st"
+        }
+    ]
+}

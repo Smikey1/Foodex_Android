@@ -1,0 +1,42 @@
+{
+    "sourceFile": "lib/model/food.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1674559814960,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1674559820868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n       required this.category,\r\n       required this.createAt});\r\n \r\n   \r\n-  factory FoodCategory.fromJson(Map<String, dynamic> json) =>\r\n+  factory Food.fromJson(Map<String, dynamic> json) =>\r\n       _FoodCategoryFromJson(json);\r\n \r\n   Map<String, dynamic> toJson() => _FoodCategoryToJson(this);\r\n }\r\n"
+                },
+                {
+                    "date": 1674559828277,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,8 @@\n       required this.createAt});\r\n \r\n   \r\n   factory Food.fromJson(Map<String, dynamic> json) =>\r\n-      _FoodCategoryFromJson(json);\r\n+      _FoodFromJson(json);\r\n \r\n-  Map<String, dynamic> toJson() => _FoodCategoryToJson(this);\r\n+  Map<String, dynamic> toJson() => _FoodToJson(this);\r\n }\r\n"
+                },
+                {
+                    "date": 1674559844290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,8 @@\n       required this.foodPhoto,\r\n       required this.category,\r\n       required this.createAt});\r\n \r\n-  \r\n-  factory Food.fromJson(Map<String, dynamic> json) =>\r\n-      _FoodFromJson(json);\r\n+  factory Food.fromJson(Map<String, dynamic> json) => _FoodFromJson(json);\r\n \r\n   Map<String, dynamic> toJson() => _FoodToJson(this);\r\n }\r\n"
+                },
+                {
+                    "date": 1674559869230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+\r\n+\r\n class Food {\r\n   String title;\r\n   String description;\r\n   String price;\r\n"
+                },
+                {
+                    "date": 1674559874475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n \r\n-@Jso\r\n+import 'package:json_annotation/json_annotation.dart';\r\n+\r\n+@JsonSerializable()\r\n class Food {\r\n   String title;\r\n   String description;\r\n   String price;\r\n"
+                },
+                {
+                    "date": 1674561666398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   String foodPhoto;\r\n   String category;\r\n   String createAt;\r\n   String rating;\r\n-  String createAt;\r\n+  String numReviews;\r\n \r\n   Food(\r\n       {required this.title,\r\n       required this.description,\r\n"
+                }
+            ],
+            "date": 1674559814960,
+            "name": "Commit-0",
+            "content": "class Food {\r\n  String title;\r\n  String description;\r\n  String price;\r\n  String foodPhoto;\r\n  String category;\r\n  String createAt;\r\n\r\n  Food(\r\n      {required this.title,\r\n      required this.description,\r\n      required this.price,\r\n      required this.foodPhoto,\r\n      required this.category,\r\n      required this.createAt});\r\n\r\n  \r\n  factory FoodCategory.fromJson(Map<String, dynamic> json) =>\r\n      _FoodCategoryFromJson(json);\r\n\r\n  Map<String, dynamic> toJson() => _FoodCategoryToJson(this);\r\n}\r\n"
+        }
+    ]
+}

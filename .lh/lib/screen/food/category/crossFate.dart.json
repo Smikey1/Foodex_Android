@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/screen/food/category/crossFate.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1675886944505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1675886944505,
+            "name": "Commit-0",
+            "content": "part of 'Widgets.dart';\r\n\r\nclass CrossFade extends StatelessWidget {\r\n  final Widget child;\r\n  final Widget? hiddenChild;\r\n  final bool show;\r\n  final EdgeInsets? padding;\r\n  final bool useCenter;\r\n\r\n  const CrossFade({\r\n    Key? key,\r\n    required this.child,\r\n    this.hiddenChild,\r\n    this.show = false,\r\n    this.padding,\r\n    this.useCenter = true,\r\n  }) : super(key: key);\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Container(\r\n        padding: padding,\r\n        child: AnimatedCrossFade(\r\n          firstChild: hiddenChild ?? Container(),\r\n          secondChild: childX(),\r\n          duration: Duration(milliseconds: 500),\r\n          crossFadeState:\r\n              show ? CrossFadeState.showSecond : CrossFadeState.showFirst,\r\n        ));\r\n  }\r\n\r\n  Widget childX() {\r\n    if (useCenter) return Center(child: child);\r\n    return child;\r\n  }\r\n}\r\n"
+        }
+    ]
+}

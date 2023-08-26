@@ -1,0 +1,38 @@
+{
+    "sourceFile": "lib/repository/remote_repository/remote_food_repository.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1675875584728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1675875590573,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,6 +16,8 @@\n   Future<SingleFoodResponse?> getSingleFood(String foodId) async {\r\n     return await FoodAPI().getSingleFood(foodId);\r\n   }\r\n \r\n-  \r\n+  Future<FoodResponse?> getAllFoodCategory(String categoryId) async {\r\n+    return await FoodAPI().getAllFoodCategory(categoryId);\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1675879725446,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,8 @@\n   Future<SingleFoodResponse?> getSingleFood(String foodId) async {\r\n     return await FoodAPI().getSingleFood(foodId);\r\n   }\r\n \r\n-  Future<FoodResponse?> getAllFoodCategory(String categoryId) async {\r\n-    return await FoodAPI().getAllFoodCategory(categoryId);\r\n-  }\r\n+  // Future<FoodResponse?> getAllFoodCategory(String categoryId) async {\r\n+  //   return await FoodAPI().getAllFoodCategory(categoryId);\r\n+  // }\r\n }\r\n"
+                },
+                {
+                    "date": 1675881791002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,8 @@\n   Future<SingleFoodResponse?> getSingleFood(String foodId) async {\r\n     return await FoodAPI().getSingleFood(foodId);\r\n   }\r\n \r\n-  // Future<FoodResponse?> getAllFoodCategory(String categoryId) async {\r\n-  //   return await FoodAPI().getAllFoodCategory(categoryId);\r\n-  // }\r\n+  Future<FoodResponse?> getAllFoodCategory(String categoryId) async {\r\n+    return await FoodAPI().getAllFoodCategory(categoryId);\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1675881801057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,11 +12,11 @@\n   Future<FoodResponse?> getAllFood() async {\r\n     return await FoodAPI().getAllFood();\r\n   }\r\n \r\n-  Future<SingleFoodResponse?> getSingleFood(String foodId) async {\r\n-    return await FoodAPI().getSingleFood(foodId);\r\n-  }\r\n+  // Future<SingleFoodResponse?> getSingleFood(String foodId) async {\r\n+  //   return await FoodAPI().getSingleFood(foodId);\r\n+  // }\r\n \r\n   Future<FoodResponse?> getAllFoodCategory(String categoryId) async {\r\n     return await FoodAPI().getAllFoodCategory(categoryId);\r\n   }\r\n"
+                },
+                {
+                    "date": 1675881807101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,11 +12,11 @@\n   Future<FoodResponse?> getAllFood() async {\r\n     return await FoodAPI().getAllFood();\r\n   }\r\n \r\n-  // Future<SingleFoodResponse?> getSingleFood(String foodId) async {\r\n-  //   return await FoodAPI().getSingleFood(foodId);\r\n-  // }\r\n+  Future<SingleFoodResponse?> getSingleFood(String foodId) async {\r\n+    return await FoodAPI().getSingleFood(foodId);\r\n+  }\r\n \r\n   Future<FoodResponse?> getAllFoodCategory(String categoryId) async {\r\n     return await FoodAPI().getAllFoodCategory(categoryId);\r\n   }\r\n"
+                }
+            ],
+            "date": 1675875584728,
+            "name": "Commit-0",
+            "content": "import 'dart:io';\r\nimport 'package:foodex_app/data/remote_data_source/api/food_api.dart';\r\nimport 'package:foodex_app/model/food.dart';\r\nimport 'package:foodex_app/response/food_response.dart';\r\nimport 'package:foodex_app/response/single_food_response.dart';\r\n\r\nclass FoodRepository {\r\n  Future<bool> addFood(File? file, Food food) async {\r\n    return await FoodAPI().addFood(file, food);\r\n  }\r\n\r\n  Future<FoodResponse?> getAllFood() async {\r\n    return await FoodAPI().getAllFood();\r\n  }\r\n\r\n  Future<SingleFoodResponse?> getSingleFood(String foodId) async {\r\n    return await FoodAPI().getSingleFood(foodId);\r\n  }\r\n\r\n  \r\n}\r\n"
+        }
+    ]
+}

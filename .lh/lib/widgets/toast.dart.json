@@ -1,0 +1,58 @@
+{
+    "sourceFile": "lib/widgets/toast.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1674810608612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1674810613790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n import 'package:flutter/cupertino.dart';\r\n import 'package:motion_toast/motion_toast.dart';\r\n \r\n class ShowToast {\r\n-  static void displaySuccessToast(BuildContext context, String message) {\r\n+  static void displaySuccessToast(BuildContext context, String message, ) {\r\n     MotionToast.success(description: Text(message)).show(context);\r\n   }\r\n \r\n-  static void displayErrorToast(BuildContext context, String message, ) {\r\n+  static void displayErrorToast(BuildContext context, String message) {\r\n     MotionToast.error(description: Text(message)).show(context);\r\n   }\r\n \r\n   static void displayWarningToast(BuildContext context, String message) {\r\n"
+                },
+                {
+                    "date": 1674810623827,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,16 @@\n import 'package:flutter/cupertino.dart';\r\n import 'package:motion_toast/motion_toast.dart';\r\n \r\n class ShowToast {\r\n-  static void displaySuccessToast(BuildContext context, String message, ) {\r\n-    MotionToast.success(description: Text(message)).show(context);\r\n+  static void displaySuccessToast(BuildContext context, String message) {\r\n+    MotionToast.success(description: Text(message),  onClose: () {\r\n+          Navigator.of(context).push(\r\n+            MaterialPageRoute(\r\n+              builder: (_) => const VerificationScreen(),\r\n+            ),\r\n+          );\r\n+        });).show(context);\r\n   }\r\n \r\n   static void displayErrorToast(BuildContext context, String message) {\r\n     MotionToast.error(description: Text(message)).show(context);\r\n"
+                },
+                {
+                    "date": 1674810631910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import 'package:flutter/cupertino.dart';\r\n+import 'package:flutter/material.dart';\r\n import 'package:motion_toast/motion_toast.dart';\r\n \r\n class ShowToast {\r\n   static void displaySuccessToast(BuildContext context, String message) {\r\n@@ -8,9 +9,9 @@\n             MaterialPageRoute(\r\n               builder: (_) => const VerificationScreen(),\r\n             ),\r\n           );\r\n-        });).show(context);\r\n+        }).show(context);\r\n   }\r\n \r\n   static void displayErrorToast(BuildContext context, String message) {\r\n     MotionToast.error(description: Text(message)).show(context);\r\n"
+                },
+                {
+                    "date": 1674810637777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,13 @@\n-import 'package:flutter/cupertino.dart';\r\n import 'package:flutter/material.dart';\r\n+import 'package:foodex_app/screen/verification/verification.dart';\r\n import 'package:motion_toast/motion_toast.dart';\r\n \r\n class ShowToast {\r\n   static void displaySuccessToast(BuildContext context, String message) {\r\n-    MotionToast.success(description: Text(message),  onClose: () {\r\n+    MotionToast.success(\r\n+        description: Text(message),\r\n+        onClose: () {\r\n           Navigator.of(context).push(\r\n             MaterialPageRoute(\r\n               builder: (_) => const VerificationScreen(),\r\n             ),\r\n"
+                },
+                {
+                    "date": 1675093710540,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,5 +21,7 @@\n \r\n   static void displayWarningToast(BuildContext context, String message) {\r\n     MotionToast.warning(description: Text(message)).show(context);\r\n   }\r\n+\r\n+  \r\n }\r\n"
+                },
+                {
+                    "date": 1675093733229,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,6 +22,10 @@\n   static void displayWarningToast(BuildContext context, String message) {\r\n     MotionToast.warning(description: Text(message)).show(context);\r\n   }\r\n \r\n+   static void showAlertDialog(BuildContext context, String message) {\r\n+    MotionToast.error(description: Text(message)).show(context);\r\n+  }\r\n+\r\n   \r\n }\r\n"
+                },
+                {
+                    "date": 1675093793079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n   static void displayWarningToast(BuildContext context, String message) {\r\n     MotionToast.warning(description: Text(message)).show(context);\r\n   }\r\n \r\n-   static void showAlertDialog(BuildContext context, String message) {\r\n+   static void showAlertDialog(BuildContext context,String t String message) {\r\n     MotionToast.error(description: Text(message)).show(context);\r\n   }\r\n \r\n   \r\n"
+                },
+                {
+                    "date": 1675093803675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,10 +22,9 @@\n   static void displayWarningToast(BuildContext context, String message) {\r\n     MotionToast.warning(description: Text(message)).show(context);\r\n   }\r\n \r\n-   static void showAlertDialog(BuildContext context,String t String message) {\r\n+  static void showAlertDialog(\r\n+      BuildContext context, String title, String message) {\r\n     MotionToast.error(description: Text(message)).show(context);\r\n   }\r\n-\r\n-  \r\n }\r\n"
+                },
+                {
+                    "date": 1675431040778,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n         description: Text(message),\r\n         onClose: () {\r\n           Navigator.of(context).push(\r\n             MaterialPageRoute(\r\n-              builder: (_) => const VerificationScreen(),\r\n+              builder: (_) => const (),\r\n             ),\r\n           );\r\n         }).show(context);\r\n   }\r\n"
+                },
+                {
+                    "date": 1675431051394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n         description: Text(message),\r\n         onClose: () {\r\n           Navigator.of(context).push(\r\n             MaterialPageRoute(\r\n-              builder: (_) => const Bu(),\r\n+              builder: (_) => const Botton(),\r\n             ),\r\n           );\r\n         }).show(context);\r\n   }\r\n"
+                }
+            ],
+            "date": 1674810608612,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/cupertino.dart';\r\nimport 'package:motion_toast/motion_toast.dart';\r\n\r\nclass ShowToast {\r\n  static void displaySuccessToast(BuildContext context, String message) {\r\n    MotionToast.success(description: Text(message)).show(context);\r\n  }\r\n\r\n  static void displayErrorToast(BuildContext context, String message, ) {\r\n    MotionToast.error(description: Text(message)).show(context);\r\n  }\r\n\r\n  static void displayWarningToast(BuildContext context, String message) {\r\n    MotionToast.warning(description: Text(message)).show(context);\r\n  }\r\n}\r\n"
+        }
+    ]
+}

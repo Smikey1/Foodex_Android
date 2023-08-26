@@ -1,0 +1,62 @@
+{
+    "sourceFile": "lib/widgets/icon_text.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1673006097372,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1673006107237,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n         //   width: 5,\r\n         // ),\r\n         SmallText(\r\n           text: Text,\r\n-          co\r\n+          \r\n         )\r\n       ],\r\n     );\r\n   }\r\n"
+                },
+                {
+                    "date": 1673021350703,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,9 @@\n         // ),\r\n         SmallText(\r\n           text: Text,\r\n           \r\n+          \r\n         )\r\n       ],\r\n     );\r\n   }\r\n"
+                },
+                {
+                    "date": 1674141890880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,17 +22,15 @@\n       children: [\r\n         Icon(\r\n           icon,\r\n           color: iconColor,\r\n-          size: Dimensions.inconSize24,\r\n+          size: Dimensions.iconSize24,\r\n         ),\r\n         // const SizedBox(\r\n         //   width: 5,\r\n         // ),\r\n         SmallText(\r\n           text: Text,\r\n-          \r\n-          \r\n         )\r\n       ],\r\n     );\r\n   }\r\n"
+                },
+                {
+                    "date": 1675078400144,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n // ignore_for_file: public_member_api_docs, sort_constructors_first\r\n import 'package:flutter/material.dart';\r\n import 'package:foodex_app/widgets/small_text.dart';\r\n \r\n-import '../utils/dimension.dart';\r\n+import '../app/utils/dimension.dart';\r\n \r\n class IconTextWidget extends StatelessWidget {\r\n   final IconData icon;\r\n   final String Text;\r\n"
+                },
+                {
+                    "date": 1675743265443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,9 @@\n         //   width: 5,\r\n         // ),\r\n         SmallText(\r\n           text: Text,\r\n+          \r\n         )\r\n       ],\r\n     );\r\n   }\r\n"
+                },
+                {
+                    "date": 1675743371815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,10 +28,9 @@\n         // const SizedBox(\r\n         //   width: 5,\r\n         // ),\r\n         SmallText(\r\n-          text: Text,\r\n-          \r\n+          text: Text,   \r\n         )\r\n       ],\r\n     );\r\n   }\r\n"
+                },
+                {
+                    "date": 1675743378492,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n         // const SizedBox(\r\n         //   width: 5,\r\n         // ),\r\n         SmallText(\r\n-          text: Text,   \r\n+          text: Text,\r\n         )\r\n       ],\r\n     );\r\n   }\r\n"
+                },
+                {
+                    "date": 1675743502205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n       children: [\r\n         Icon(\r\n           icon,\r\n           color: iconColor,\r\n-          size: Dimensions.iconSize24,\r\n+          size: Dimensions.,\r\n         ),\r\n         // const SizedBox(\r\n         //   width: 5,\r\n         // ),\r\n"
+                },
+                {
+                    "date": 1675744466982,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,15 +22,16 @@\n       children: [\r\n         Icon(\r\n           icon,\r\n           color: iconColor,\r\n-          size: Dimensions.,\r\n+          size: Dimensions.inconSize16,\r\n         ),\r\n         // const SizedBox(\r\n         //   width: 5,\r\n         // ),\r\n         SmallText(\r\n           text: Text,\r\n+          size: ,\r\n         )\r\n       ],\r\n     );\r\n   }\r\n"
+                },
+                {
+                    "date": 1675744472792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n         //   width: 5,\r\n         // ),\r\n         SmallText(\r\n           text: Text,\r\n-          size: Dime,\r\n+          size: Dimensions.font14,\r\n         )\r\n       ],\r\n     );\r\n   }\r\n"
+                },
+                {
+                    "date": 1675745016104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n         //   width: 5,\r\n         // ),\r\n         SmallText(\r\n           text: Text,\r\n-          size: Dimensions.font12S,\r\n+          size: Dimensions.font12,\r\n         )\r\n       ],\r\n     );\r\n   }\r\n"
+                }
+            ],
+            "date": 1673006097372,
+            "name": "Commit-0",
+            "content": "// ignore_for_file: public_member_api_docs, sort_constructors_first\r\nimport 'package:flutter/material.dart';\r\nimport 'package:foodex_app/widgets/small_text.dart';\r\n\r\nimport '../utils/dimension.dart';\r\n\r\nclass IconTextWidget extends StatelessWidget {\r\n  final IconData icon;\r\n  final String Text;\r\n  final Color iconColor;\r\n\r\n  const IconTextWidget({\r\n    Key? key,\r\n    required this.icon,\r\n    required this.Text,\r\n    required this.iconColor,\r\n  }) : super(key: key);\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Row(\r\n      children: [\r\n        Icon(\r\n          icon,\r\n          color: iconColor,\r\n          size: Dimensions.inconSize24,\r\n        ),\r\n        // const SizedBox(\r\n        //   width: 5,\r\n        // ),\r\n        SmallText(\r\n          text: Text,\r\n          co\r\n        )\r\n      ],\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

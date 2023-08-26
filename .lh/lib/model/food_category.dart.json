@@ -1,0 +1,138 @@
+{
+    "sourceFile": "lib/model/food_category.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 30,
+            "patches": [
+                {
+                    "date": 1674559655567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1674559662977,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n-cl\n\\ No newline at end of file\n+class FooTCategory {}\r\n+\r\n"
+                },
+                {
+                    "date": 1674559672572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,3 @@\n-class FooTCategory {}\r\n+class FoodCategory {\r\n \r\n+}\r\n"
+                },
+                {
+                    "date": 1674559679952,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n class FoodCategory {\r\n-\r\n+String \r\n }\r\n"
+                },
+                {
+                    "date": 1674559685706,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n class FoodCategory {\r\n-String \r\n+  String foodCategoryTitle;\r\n }\r\n"
+                },
+                {
+                    "date": 1674559694617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n class FoodCategory {\r\n   String foodCategoryTitle;\r\n+  String foodCategoryImageUrlfoodCategoryImageUrl;\r\n }\r\n"
+                },
+                {
+                    "date": 1674559701027,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n class FoodCategory {\r\n   String foodCategoryTitle;\r\n-  String foodCategoryImageUrlfoodCategoryImageUrl;\r\n+  String foodCategoryImageUrl;\r\n }\r\n"
+                },
+                {
+                    "date": 1674559708470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n class FoodCategory {\r\n   String foodCategoryTitle;\r\n   String foodCategoryImageUrl;\r\n+  String foodCategoryCreateAt;\r\n }\r\n"
+                },
+                {
+                    "date": 1674559715364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,10 @@\n class FoodCategory {\r\n   String foodCategoryTitle;\r\n   String foodCategoryImageUrl;\r\n   String foodCategoryCreateAt;\r\n+\r\n+  FoodCategory(\r\n+      {required this.foodCategoryTitle,\r\n+      required this.foodCategoryImageUrl,\r\n+      required this.foodCategoryCreateAt});\r\n }\r\n"
+                },
+                {
+                    "date": 1674559724804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,8 @@\n   FoodCategory(\r\n       {required this.foodCategoryTitle,\r\n       required this.foodCategoryImageUrl,\r\n       required this.foodCategoryCreateAt});\r\n+\r\n+\r\n+      \r\n }\r\n"
+                },
+                {
+                    "date": 1674559732453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,12 @@\n       required this.foodCategoryImageUrl,\r\n       required this.foodCategoryCreateAt});\r\n \r\n \r\n-      \r\n+  factory FoodCategory.fromJson(Map<String, dynamic> json) {\r\n+    return FoodCategory(\r\n+      foodCategoryTitle: json['title'],\r\n+      foodCategoryImageUrl: json['image_url'],\r\n+      foodCategoryCreateAt: json['created_at'],\r\n+    );\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1674559741096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,12 +8,7 @@\n       required this.foodCategoryImageUrl,\r\n       required this.foodCategoryCreateAt});\r\n \r\n \r\n-  factory FoodCategory.fromJson(Map<String, dynamic> json) {\r\n-    return FoodCategory(\r\n-      foodCategoryTitle: json['title'],\r\n-      foodCategoryImageUrl: json['image_url'],\r\n-      foodCategoryCreateAt: json['created_at'],\r\n-    );\r\n-  }\r\n+  factory FoodCategory.fromJson(Map<String, dynamic> json) \r\n+    \r\n }\r\n"
+                },
+                {
+                    "date": 1674559746497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n       required this.foodCategoryImageUrl,\r\n       required this.foodCategoryCreateAt});\r\n \r\n \r\n-  factory FoodCategory.fromJson(Map<String, dynamic> json) \r\n+  factory FoodCategory.fromJson(Map<String, dynamic> json) => _\r\n     \r\n }\r\n"
+                },
+                {
+                    "date": 1674559754823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n       required this.foodCategoryImageUrl,\r\n       required this.foodCategoryCreateAt});\r\n \r\n \r\n-  factory FoodCategory.fromJson(Map<String, dynamic> json) => _\r\n+  factory FoodCategory.fromJson(Map<String, dynamic> json) => _FoodCategory.fromJson\r\n     \r\n }\r\n"
+                },
+                {
+                    "date": 1674559761723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n       required this.foodCategoryImageUrl,\r\n       required this.foodCategoryCreateAt});\r\n \r\n \r\n-  factory FoodCategory.fromJson(Map<String, dynamic> json) => _FoodCategory.fromJson\r\n+  factory FoodCategory.fromJson(Map<String, dynamic> json) => _FoodCategoryFromJson()\r\n     \r\n }\r\n"
+                },
+                {
+                    "date": 1674559768800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,6 @@\n       {required this.foodCategoryTitle,\r\n       required this.foodCategoryImageUrl,\r\n       required this.foodCategoryCreateAt});\r\n \r\n-\r\n-  factory FoodCategory.fromJson(Map<String, dynamic> json) => _FoodCategoryFromJson()\r\n-    \r\n+  factory FoodCategory.fromJson(Map<String, dynamic> json) => _FoodCategoryFromJson();\r\n }\r\n"
+                },
+                {
+                    "date": 1674559778191,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,6 @@\n       {required this.foodCategoryTitle,\r\n       required this.foodCategoryImageUrl,\r\n       required this.foodCategoryCreateAt});\r\n \r\n-  factory FoodCategory.fromJson(Map<String, dynamic> json) => _FoodCategoryFromJson();\r\n+  factory FoodCategory.fromJson(Map<String, dynamic> json) => _FoodCategoryFromJson(json);\r\n }\r\n"
+                },
+                {
+                    "date": 1674559785862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+\r\n+\r\n class FoodCategory {\r\n   String foodCategoryTitle;\r\n   String foodCategoryImageUrl;\r\n   String foodCategoryCreateAt;\r\n"
+                },
+                {
+                    "date": 1674559791256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n \r\n+import 'package:json_annotation/json_annotation.dart';\r\n \r\n+@JsonSerializable()\r\n class FoodCategory {\r\n   String foodCategoryTitle;\r\n   String foodCategoryImageUrl;\r\n   String foodCategoryCreateAt;\r\n"
+                },
+                {
+                    "date": 1674559798201,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n-\r\n import 'package:json_annotation/json_annotation.dart';\r\n \r\n @JsonSerializable()\r\n class FoodCategory {\r\n@@ -11,6 +10,9 @@\n       {required this.foodCategoryTitle,\r\n       required this.foodCategoryImageUrl,\r\n       required this.foodCategoryCreateAt});\r\n \r\n-  factory FoodCategory.fromJson(Map<String, dynamic> json) => _FoodCategoryFromJson(json);\r\n+  factory FoodCategory.fromJson(Map<String, dynamic> json) =>\r\n+      _FoodCategoryFromJson(json);\r\n+    \r\n+    \r\n }\r\n"
+                },
+                {
+                    "date": 1674559927943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import 'package:json_annotation/json_annotation.dart';\r\n \r\n+\r\n @JsonSerializable()\r\n class FoodCategory {\r\n   String foodCategoryTitle;\r\n   String foodCategoryImageUrl;\r\n@@ -12,7 +13,7 @@\n       required this.foodCategoryCreateAt});\r\n \r\n   factory FoodCategory.fromJson(Map<String, dynamic> json) =>\r\n       _FoodCategoryFromJson(json);\r\n-    \r\n-    \r\n+\r\n+  Map<String, dynamic> toJson() => _FoodCategoryToJson(this);\r\n }\r\n"
+                },
+                {
+                    "date": 1674559943344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import 'package:json_annotation/json_annotation.dart';\r\n \r\n+part 'food_category.g.dart';\r\n \r\n @JsonSerializable()\r\n class FoodCategory {\r\n   String foodCategoryTitle;\r\n"
+                },
+                {
+                    "date": 1674560280900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n       required this.foodCategoryImageUrl,\r\n       required this.foodCategoryCreateAt});\r\n \r\n   factory FoodCategory.fromJson(Map<String, dynamic> json) =>\r\n-      _FoodCategoryFromJson(json);\r\n+      _$FoodCategoryFromJson(json);\r\n \r\n   Map<String, dynamic> toJson() => _FoodCategoryToJson(this);\r\n }\r\n"
+                },
+                {
+                    "date": 1674562326216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,6 +15,6 @@\n \r\n   factory FoodCategory.fromJson(Map<String, dynamic> json) =>\r\n       _$FoodCategoryFromJson(json);\r\n \r\n-  Map<String, dynamic> toJson() => _FoodCategoryToJson(this);\r\n+  Map<String, dynamic> toJson() => _$FoodCategoryToJson(this);\r\n }\r\n"
+                },
+                {
+                    "date": 1675337174267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n part 'food_category.g.dart';\r\n \r\n @JsonSerializable()\r\n class FoodCategory {\r\n+  \r\n   String foodCategoryTitle;\r\n   String foodCategoryImageUrl;\r\n   String foodCategoryCreateAt;\r\n \r\n"
+                },
+                {
+                    "date": 1675337181934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n part 'food_category.g.dart';\r\n \r\n @JsonSerializable()\r\n class FoodCategory {\r\n-  \r\n+  String? Id;\r\n   String foodCategoryTitle;\r\n   String foodCategoryImageUrl;\r\n   String foodCategoryCreateAt;\r\n \r\n"
+                },
+                {
+                    "date": 1675337193693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n part 'food_category.g.dart';\r\n \r\n @JsonSerializable()\r\n class FoodCategory {\r\n+  @JsonKey(name: \"_id\")\r\n   String? Id;\r\n   String foodCategoryTitle;\r\n   String foodCategoryImageUrl;\r\n   String foodCategoryCreateAt;\r\n"
+                },
+                {
+                    "date": 1675337254728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,17 +4,17 @@\n \r\n @JsonSerializable()\r\n class FoodCategory {\r\n   @JsonKey(name: \"_id\")\r\n-  String? Id;\r\n+  String? id;\r\n   String foodCategoryTitle;\r\n   String foodCategoryImageUrl;\r\n   String foodCategoryCreateAt;\r\n \r\n   FoodCategory(\r\n       {required this.foodCategoryTitle,\r\n       required this.foodCategoryImageUrl,\r\n-      required this.foodCategoryCreateAt});\r\n+      required this.foodCategoryCreateAt);\r\n \r\n   factory FoodCategory.fromJson(Map<String, dynamic> json) =>\r\n       _$FoodCategoryFromJson(json);\r\n \r\n"
+                },
+                {
+                    "date": 1675337260125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,11 +10,11 @@\n   String foodCategoryImageUrl;\r\n   String foodCategoryCreateAt;\r\n \r\n   FoodCategory(\r\n-      {required this.foodCategoryTitle,\r\n+      required this.foodCategoryTitle,\r\n       required this.foodCategoryImageUrl,\r\n-      required this.foodCategoryCreateAt);\r\n+      required this.foodCategoryCreateAt,);\r\n \r\n   factory FoodCategory.fromJson(Map<String, dynamic> json) =>\r\n       _$FoodCategoryFromJson(json);\r\n \r\n"
+                },
+                {
+                    "date": 1675337266911,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   String foodCategoryCreateAt;\r\n \r\n   FoodCategory(\r\n       this.foodCategoryTitle,\r\n-      required this.foodCategoryImageUrl,\r\n+      this.foodCategoryImageUrl,\r\n       required this.foodCategoryCreateAt,[]);\r\n \r\n   factory FoodCategory.fromJson(Map<String, dynamic> json) =>\r\n       _$FoodCategoryFromJson(json);\r\n"
+                },
+                {
+                    "date": 1675337272581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n \r\n   FoodCategory(\r\n       this.foodCategoryTitle,\r\n       this.foodCategoryImageUrl,\r\n-      this.foodCategoryCreateAt,[this.]);\r\n+      this.foodCategoryCreateAt,[this.id]);\r\n \r\n   factory FoodCategory.fromJson(Map<String, dynamic> json) =>\r\n       _$FoodCategoryFromJson(json);\r\n \r\n"
+                }
+            ],
+            "date": 1674559655567,
+            "name": "Commit-0",
+            "content": "cl"
+        }
+    ]
+}

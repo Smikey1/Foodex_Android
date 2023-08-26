@@ -1,0 +1,66 @@
+{
+    "sourceFile": "lib/screen/food/popularFood.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 12,
+            "patches": [
+                {
+                    "date": 1673025679672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1673025686822,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,8 @@\n-st\n\\ No newline at end of file\n+class PopularFood extends StatelessWidget {\r\n+  const PopularFood({super.key});\r\n+\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Container();\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1673025700825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n-class PopularFood extends StatelessWidget {\r\n-  const PopularFood({super.key});\r\n+import 'package:flutter/material.dart';\r\n \r\n+class PopularFoodDetails extends StatelessWidget {\r\n+  const PopularFoodDetails({super.key});\r\n+\r\n   @override\r\n\\ No newline at end of file\n   Widget build(BuildContext context) {\r\n     return Container();\r\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1673025736686,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n   const PopularFoodDetails({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return Container();\r\n+    return Sca;\r\n   }\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1673025742940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,9 @@\n   const PopularFoodDetails({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return Sca;\r\n+    return Scaffold(\r\n+      body: sta,\r\n\\ No newline at end of file\n+    );\r\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1673025749872,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,10 @@\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n-      body: sta,\r\n+      body: Stack(\r\n+        \r\n+      ),\r\n\\ No newline at end of file\n     );\r\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1673025756493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,11 @@\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       body: Stack(\r\n-        \r\n+        children: [\r\n+          Positioned(child: child)\r\n+        ],\r\n       ),\r\n\\ No newline at end of file\n     );\r\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1673025762155,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       body: Stack(\r\n         children: [\r\n-          Positioned(child: child)\r\n+          Positioned(child: Container)\r\n         ],\r\n       ),\r\n     );\r\n   }\r\n"
+                },
+                {
+                    "date": 1673025768269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,11 @@\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       body: Stack(\r\n         children: [\r\n-          Positioned(child: Container)\r\n+          Positioned(\r\n+            child: Container())\r\n         ],\r\n       ),\r\n     );\r\n\\ No newline at end of file\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1673025774185,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,11 @@\n     return Scaffold(\r\n       body: Stack(\r\n         children: [\r\n           Positioned(\r\n+            left: ,\r\n             child: Container())\r\n         ],\r\n       ),\r\n     );\r\n   }\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1673025779529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,10 @@\n     return Scaffold(\r\n       body: Stack(\r\n         children: [\r\n           Positioned(\r\n-            left: ,\r\n+            left: 0,\r\n+            right: 0,\r\n             child: Container())\r\n         ],\r\n       ),\r\n     );\r\n"
+                },
+                {
+                    "date": 1673025814859,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,10 @@\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       body: Stack(\r\n-        children: [Positioned(left: 0, right: 0, child: Container())],\r\n+        children: [Positioned(left: 0, right: 0, \r\n+        child: Container())],\r\n       ),\r\n     );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1673025836491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n       body: Stack(\r\n         children: [Positioned(left: 0, right: 0, \r\n         child: Container(\r\n           width: double.infinity,\r\n-          height: ,\r\n+          height: 350,\r\n         ))],\r\n       ),\r\n     );\r\n   }\r\n"
+                }
+            ],
+            "date": 1673025679672,
+            "name": "Commit-0",
+            "content": "st"
+        }
+    ]
+}

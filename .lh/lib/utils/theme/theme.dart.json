@@ -1,0 +1,50 @@
+{
+    "sourceFile": "lib/utils/theme/theme.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1672995766534,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1672995773208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,9 @@\n \r\n class AppTheme {\r\n   static ThemeData lightTheme = ThemeData(\r\n       brightness: Brightness.light,\r\n-      textTheme: const TextTheme(\r\n-          );\r\n+      textTheme: const TextTheme());\r\n   static ThemeData darkTheme = ThemeData(\r\n     brightness: Brightness.dark,\r\n      textTheme: const TextTheme(\r\n           headline2:\r\n"
+                },
+                {
+                    "date": 1672996150015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n class AppTheme {\r\n   static ThemeData lightTheme = ThemeData(\r\n       brightness: Brightness.light,\r\n-      textTheme: const TextTheme());\r\n+      textTheme: const TextTheme(App));\r\n   static ThemeData darkTheme = ThemeData(\r\n     brightness: Brightness.dark,\r\n      textTheme: const TextTheme(\r\n           headline2:\r\n"
+                },
+                {
+                    "date": 1672996159640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,12 @@\n import 'package:flutter/material.dart';\r\n+import 'package:foodex_app/utils/theme/widget_theme.dart';\r\n import 'package:google_fonts/google_fonts.dart';\r\n \r\n class AppTheme {\r\n   static ThemeData lightTheme = ThemeData(\r\n       brightness: Brightness.light,\r\n-      textTheme: const TextTheme(App));\r\n+      textTheme: const TextTheme(AppTextTheme));\r\n   static ThemeData darkTheme = ThemeData(\r\n     brightness: Brightness.dark,\r\n      textTheme: const TextTheme(\r\n           headline2:\r\n"
+                },
+                {
+                    "date": 1672996168923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n class AppTheme {\r\n   static ThemeData lightTheme = ThemeData(\r\n       brightness: Brightness.light,\r\n-      textTheme: const TextTheme(AppTextTheme));\r\n+      textTheme: AppTextTheme));\r\n   static ThemeData darkTheme = ThemeData(\r\n     brightness: Brightness.dark,\r\n      textTheme: const TextTheme(\r\n           headline2:\r\n"
+                },
+                {
+                    "date": 1672996173994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n class AppTheme {\r\n   static ThemeData lightTheme = ThemeData(\r\n       brightness: Brightness.light,\r\n-      textTheme: AppTextTheme));\r\n+      textTheme: AppTextTheme;\r\n   static ThemeData darkTheme = ThemeData(\r\n     brightness: Brightness.dark,\r\n      textTheme: const TextTheme(\r\n           headline2:\r\n"
+                },
+                {
+                    "date": 1672996195578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,10 @@\n \r\n class AppTheme {\r\n   static ThemeData lightTheme = ThemeData(\r\n       brightness: Brightness.light,\r\n-      textTheme: AppTextTheme;\r\n+      textTheme: AppTextTheme\r\n+      );\r\n   static ThemeData darkTheme = ThemeData(\r\n     brightness: Brightness.dark,\r\n      textTheme: const TextTheme(\r\n           headline2:\r\n"
+                },
+                {
+                    "date": 1672996212540,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,11 +8,6 @@\n       textTheme: AppTextTheme.lightTextTheme\r\n       );\r\n   static ThemeData darkTheme = ThemeData(\r\n     brightness: Brightness.dark,\r\n-     textTheme: const TextTheme(\r\n-          headline2:\r\n-              // GoogleFonts.roboto(\r\n-              //   color: Colors.black87,\r\n-              // )\r\n-              TextStyle(fontFamily: 'Roboto', color: Colors.white70)));\r\n+     textTheme: );\r\n }\r\n"
+                },
+                {
+                    "date": 1672996287509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import 'package:flutter/material.dart';\r\n+import 'package:foodex_app/utils/theme/widget_theme.dart';\r\n+import 'package:google_fonts/google_fonts.dart';\r\n+\r\n+class AppTheme {\r\n+  static ThemeData lightTheme = ThemeData(\r\n+      brightness: Brightness.light,\r\n+      textTheme: AppTextTheme.lightTextTheme,\r\n+      elevatedButtonTheme: ElevatedButtonThemeDate(style: El)\r\n+      );\r\n+  static ThemeData darkTheme = ThemeData(\r\n+    brightness: Brightness.dark,\r\n+     textTheme: AppTextTheme.darkTextTheme);\r\n+}\r\n"
+                }
+            ],
+            "date": 1672995766534,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\nimport 'package:google_fonts/google_fonts.dart';\r\n\r\nclass AppTheme {\r\n  static ThemeData lightTheme = ThemeData(\r\n      brightness: Brightness.light,\r\n      textTheme: const TextTheme(\r\n          );\r\n  static ThemeData darkTheme = ThemeData(\r\n    brightness: Brightness.dark,\r\n     textTheme: const TextTheme(\r\n          headline2:\r\n              // GoogleFonts.roboto(\r\n              //   color: Colors.black87,\r\n              // )\r\n              TextStyle(fontFamily: 'Roboto', color: Colors.white70)));\r\n}\r\n"
+        }
+    ]
+}

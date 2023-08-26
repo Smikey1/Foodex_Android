@@ -1,0 +1,222 @@
+{
+    "sourceFile": "lib/components/page_titleBar.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 51,
+            "patches": [
+                {
+                    "date": 1672304415186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1672304868982,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,17 +7,17 @@\n   final String title;\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Padding(\r\n-      padding: EdgeInsets.only(top: Dimensions.height225),\r\n+      padding: EdgeInsets.only(top: Dimensions.height245),\r\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n-        decoration: const BoxDecoration(\r\n+        decoration: BoxDecoration(\r\n             color: AppColor.kPrimaryMainColor,\r\n             borderRadius: BorderRadius.only(\r\n-              topLeft: Radius.circular(50),\r\n-              topRight: Radius.circular(50),\r\n+              topLeft: Radius.circular(Dimensions.radius50),\r\n+              topRight: Radius.circular(Dimensions.radius50),\r\n             )),\r\n         child: Padding(\r\n           padding: const EdgeInsets.only(top: 25.0),\r\n           child: Text(\r\n"
+                },
+                {
+                    "date": 1672305014888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,15 +18,15 @@\n               topLeft: Radius.circular(Dimensions.radius50),\r\n               topRight: Radius.circular(Dimensions.radius50),\r\n             )),\r\n         child: Padding(\r\n-          padding: const EdgeInsets.only(top: 25.0),\r\n+          padding: EdgeInsets.only(top: Dimensions.height25),\r\n           child: Text(\r\n             title,\r\n             textAlign: TextAlign.center,\r\n-            style: const TextStyle(\r\n+            style: TextStyle(\r\n               fontFamily: 'OpenSans',\r\n-              fontSize: 30,\r\n+              fontSize: Dimensions.font30,\r\n               letterSpacing: 1,\r\n               fontWeight: FontWeight.bold,\r\n               color: Colors.black,\r\n             ),\r\n"
+                },
+                {
+                    "date": 1672305034999,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n             textAlign: TextAlign.center,\r\n             style: TextStyle(\r\n               fontFamily: 'OpenSans',\r\n               fontSize: Dimensions.font30,\r\n-              letterSpacing: 1,\r\n+              letterSpacing: 2,\r\n               fontWeight: FontWeight.bold,\r\n               color: Colors.black,\r\n             ),\r\n           ),\r\n"
+                },
+                {
+                    "date": 1672305042868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n             textAlign: TextAlign.center,\r\n             style: TextStyle(\r\n               fontFamily: 'OpenSans',\r\n               fontSize: Dimensions.font30,\r\n-              letterSpacing: 2,\r\n+              letterSpacing: 1,\r\n               fontWeight: FontWeight.bold,\r\n               color: Colors.black,\r\n             ),\r\n           ),\r\n"
+                },
+                {
+                    "date": 1672305087158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n             textAlign: TextAlign.center,\r\n             style: TextStyle(\r\n               fontFamily: 'OpenSans',\r\n               fontSize: Dimensions.font30,\r\n-              letterSpacing: 1,\r\n+              letterSpacing: Dimensions.space2,\r\n               fontWeight: FontWeight.bold,\r\n               color: Colors.black,\r\n             ),\r\n           ),\r\n"
+                },
+                {
+                    "date": 1672313048479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   final String title;\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Padding(\r\n-      padding: EdgeInsets.only(top: Dimensions.height245),\r\n+      padding: const EdgeInsets.only(top: 240),\r\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n"
+                },
+                {
+                    "date": 1672313059221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   final String title;\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Padding(\r\n-      padding: const EdgeInsets.only(top: 240),\r\n+      padding: const EdgeInsets.only(top: 225),\r\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n"
+                },
+                {
+                    "date": 1672313069763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   final String title;\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Padding(\r\n-      padding: const EdgeInsets.only(top: 225),\r\n+      padding: const EdgeInsets.only(top: 200),\r\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n"
+                },
+                {
+                    "date": 1672313100723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   final String title;\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Padding(\r\n-      padding: const EdgeInsets.only(top: 200),\r\n+      padding: EdgeInsets.only(top: Dimensions.height245),\r\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n"
+                },
+                {
+                    "date": 1672313107934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n               topLeft: Radius.circular(Dimensions.radius50),\r\n               topRight: Radius.circular(Dimensions.radius50),\r\n             )),\r\n         child: Padding(\r\n-          padding: EdgeInsets.only(top: Dimensions.height25),\r\n+          padding: EdgeInsets.only(top: Dimensions.height20),\r\n           child: Text(\r\n             title,\r\n             textAlign: TextAlign.center,\r\n             style: TextStyle(\r\n"
+                },
+                {
+                    "date": 1672313113745,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n               topLeft: Radius.circular(Dimensions.radius50),\r\n               topRight: Radius.circular(Dimensions.radius50),\r\n             )),\r\n         child: Padding(\r\n-          padding: EdgeInsets.only(top: Dimensions.height20),\r\n+          padding: EdgeInsets.only(top: Dimensions.height15),\r\n           child: Text(\r\n             title,\r\n             textAlign: TextAlign.center,\r\n             style: TextStyle(\r\n"
+                },
+                {
+                    "date": 1673000961249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            color: AppColor.kPrimaryMainColor,\r\n+            color: AppColor.kPrimaryColor,\r\n             borderRadius: BorderRadius.only(\r\n               topLeft: Radius.circular(Dimensions.radius50),\r\n               topRight: Radius.circular(Dimensions.radius50),\r\n             )),\r\n"
+                },
+                {
+                    "date": 1673001133240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            color: AppColor.kPrimaryColor,\r\n+            // color: AppColor.kPrimaryColor,\r\n             borderRadius: BorderRadius.only(\r\n               topLeft: Radius.circular(Dimensions.radius50),\r\n               topRight: Radius.circular(Dimensions.radius50),\r\n             )),\r\n"
+                },
+                {
+                    "date": 1673001170496,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n import 'package:flutter/material.dart';\r\n-import 'package:foodex_app/constant/constants.dart';\r\n import 'package:foodex_app/utils/dimension.dart';\r\n \r\n class PageTitleBar extends StatelessWidget {\r\n   const PageTitleBar({Key? key, required this.title}) : super(key: key);\r\n@@ -12,13 +11,13 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            // color: AppColor.kPrimaryColor,\r\n+            color: AppColor.kPrimaryColor,\r\n             borderRadius: BorderRadius.only(\r\n-              topLeft: Radius.circular(Dimensions.radius50),\r\n-              topRight: Radius.circular(Dimensions.radius50),\r\n-            )),\r\n+          topLeft: Radius.circular(Dimensions.radius50),\r\n+          topRight: Radius.circular(Dimensions.radius50),\r\n+        )),\r\n         child: Padding(\r\n           padding: EdgeInsets.only(top: Dimensions.height15),\r\n           child: Text(\r\n             title,\r\n"
+                },
+                {
+                    "date": 1673001176534,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import 'package:flutter/material.dart';\r\n+import 'package:foodex_app/constant/constants.dart';\r\n import 'package:foodex_app/utils/dimension.dart';\r\n \r\n class PageTitleBar extends StatelessWidget {\r\n   const PageTitleBar({Key? key, required this.title}) : super(key: key);\r\n"
+                },
+                {
+                    "date": 1673001241978,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,13 +12,13 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            color: AppColor.kPrimaryColor,\r\n+            // color: AppColor.kPrimaryColor,\r\n             borderRadius: BorderRadius.only(\r\n-          topLeft: Radius.circular(Dimensions.radius50),\r\n-          topRight: Radius.circular(Dimensions.radius50),\r\n-        )),\r\n+              topLeft: Radius.circular(Dimensions.radius50),\r\n+              topRight: Radius.circular(Dimensions.radius50),\r\n+            )),\r\n         child: Padding(\r\n           padding: EdgeInsets.only(top: Dimensions.height15),\r\n           child: Text(\r\n             title,\r\n"
+                },
+                {
+                    "date": 1673001250164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n import 'package:flutter/material.dart';\r\n-import 'package:foodex_app/constant/constants.dart';\r\n import 'package:foodex_app/utils/dimension.dart';\r\n \r\n class PageTitleBar extends StatelessWidget {\r\n   const PageTitleBar({Key? key, required this.title}) : super(key: key);\r\n@@ -12,13 +11,13 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            // color: AppColor.kPrimaryColor,\r\n+            color: AppColor.kPrimaryColor,\r\n             borderRadius: BorderRadius.only(\r\n-              topLeft: Radius.circular(Dimensions.radius50),\r\n-              topRight: Radius.circular(Dimensions.radius50),\r\n-            )),\r\n+          topLeft: Radius.circular(Dimensions.radius50),\r\n+          topRight: Radius.circular(Dimensions.radius50),\r\n+        )),\r\n         child: Padding(\r\n           padding: EdgeInsets.only(top: Dimensions.height15),\r\n           child: Text(\r\n             title,\r\n"
+                },
+                {
+                    "date": 1673001256930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import 'package:flutter/material.dart';\r\n+import 'package:foodex_app/constant/constants.dart';\r\n import 'package:foodex_app/utils/dimension.dart';\r\n \r\n class PageTitleBar extends StatelessWidget {\r\n   const PageTitleBar({Key? key, required this.title}) : super(key: key);\r\n"
+                },
+                {
+                    "date": 1673001286130,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,13 +12,13 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            color: AppColor.kPrimaryColor,\r\n+            color: ,\r\n             borderRadius: BorderRadius.only(\r\n-          topLeft: Radius.circular(Dimensions.radius50),\r\n-          topRight: Radius.circular(Dimensions.radius50),\r\n-        )),\r\n+              topLeft: Radius.circular(Dimensions.radius50),\r\n+              topRight: Radius.circular(Dimensions.radius50),\r\n+            )),\r\n         child: Padding(\r\n           padding: EdgeInsets.only(top: Dimensions.height15),\r\n           child: Text(\r\n             title,\r\n"
+                },
+                {
+                    "date": 1673001291193,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            color: ,\r\n+            color: Colors.,\r\n             borderRadius: BorderRadius.only(\r\n               topLeft: Radius.circular(Dimensions.radius50),\r\n               topRight: Radius.circular(Dimensions.radius50),\r\n             )),\r\n"
+                },
+                {
+                    "date": 1673001298498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n import 'package:flutter/material.dart';\r\n-import 'package:foodex_app/constant/constants.dart';\r\n import 'package:foodex_app/utils/dimension.dart';\r\n \r\n class PageTitleBar extends StatelessWidget {\r\n   const PageTitleBar({Key? key, required this.title}) : super(key: key);\r\n@@ -12,9 +11,9 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            color: Colors.,\r\n+            color: Colors.white,\r\n             borderRadius: BorderRadius.only(\r\n               topLeft: Radius.circular(Dimensions.radius50),\r\n               topRight: Radius.circular(Dimensions.radius50),\r\n             )),\r\n"
+                },
+                {
+                    "date": 1673003526139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            color: Colors.white,\r\n+            color: App,\r\n             borderRadius: BorderRadius.only(\r\n               topLeft: Radius.circular(Dimensions.radius50),\r\n               topRight: Radius.circular(Dimensions.radius50),\r\n             )),\r\n"
+                },
+                {
+                    "date": 1673003532022,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import 'package:flutter/material.dart';\r\n+import 'package:foodex_app/constant/constants.dart';\r\n import 'package:foodex_app/utils/dimension.dart';\r\n \r\n class PageTitleBar extends StatelessWidget {\r\n   const PageTitleBar({Key? key, required this.title}) : super(key: key);\r\n@@ -11,9 +12,9 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            color: App,\r\n+            color: AppColor.kContentColorLightTheme,\r\n             borderRadius: BorderRadius.only(\r\n               topLeft: Radius.circular(Dimensions.radius50),\r\n               topRight: Radius.circular(Dimensions.radius50),\r\n             )),\r\n"
+                },
+                {
+                    "date": 1673003580686,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            color: AppColor.kContentColorLightTheme,\r\n+            color: AppColor.,\r\n             borderRadius: BorderRadius.only(\r\n               topLeft: Radius.circular(Dimensions.radius50),\r\n               topRight: Radius.circular(Dimensions.radius50),\r\n             )),\r\n"
+                },
+                {
+                    "date": 1673003586054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            color: AppColor.,\r\n+            color: AppColor.kContentColorDarkTheme,\r\n             borderRadius: BorderRadius.only(\r\n               topLeft: Radius.circular(Dimensions.radius50),\r\n               topRight: Radius.circular(Dimensions.radius50),\r\n             )),\r\n"
+                },
+                {
+                    "date": 1673003596297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            color: AppColor.kContentColorDarkTheme,\r\n+            color: AppColor.,\r\n             borderRadius: BorderRadius.only(\r\n               topLeft: Radius.circular(Dimensions.radius50),\r\n               topRight: Radius.circular(Dimensions.radius50),\r\n             )),\r\n"
+                },
+                {
+                    "date": 1673003601826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            color: AppColor.,\r\n+            color: AppColor.kContentColorLightTheme,\r\n             borderRadius: BorderRadius.only(\r\n               topLeft: Radius.circular(Dimensions.radius50),\r\n               topRight: Radius.circular(Dimensions.radius50),\r\n             )),\r\n"
+                },
+                {
+                    "date": 1673003690252,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            color: AppColor.kContentColorLightTheme,\r\n+            // color: AppColor.kContentColorLightTheme,\r\n             borderRadius: BorderRadius.only(\r\n               topLeft: Radius.circular(Dimensions.radius50),\r\n               topRight: Radius.circular(Dimensions.radius50),\r\n             )),\r\n"
+                },
+                {
+                    "date": 1673003711884,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n import 'package:flutter/material.dart';\r\n-import 'package:foodex_app/constant/constants.dart';\r\n import 'package:foodex_app/utils/dimension.dart';\r\n \r\n class PageTitleBar extends StatelessWidget {\r\n   const PageTitleBar({Key? key, required this.title}) : super(key: key);\r\n@@ -12,13 +11,13 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            // color: AppColor.kContentColorLightTheme,\r\n+            color: AppColor.kContentColorLightTheme,\r\n             borderRadius: BorderRadius.only(\r\n-              topLeft: Radius.circular(Dimensions.radius50),\r\n-              topRight: Radius.circular(Dimensions.radius50),\r\n-            )),\r\n+          topLeft: Radius.circular(Dimensions.radius50),\r\n+          topRight: Radius.circular(Dimensions.radius50),\r\n+        )),\r\n         child: Padding(\r\n           padding: EdgeInsets.only(top: Dimensions.height15),\r\n           child: Text(\r\n             title,\r\n"
+                },
+                {
+                    "date": 1673003764949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import 'package:flutter/material.dart';\r\n+import 'package:foodex_app/constant/constants.dart';\r\n import 'package:foodex_app/utils/dimension.dart';\r\n \r\n class PageTitleBar extends StatelessWidget {\r\n   const PageTitleBar({Key? key, required this.title}) : super(key: key);\r\n@@ -11,9 +12,9 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            color: AppColor.kContentColorLightTheme,\r\n+            // color: AppColor.kContentColorLightTheme,\r\n             borderRadius: BorderRadius.only(\r\n           topLeft: Radius.circular(Dimensions.radius50),\r\n           topRight: Radius.circular(Dimensions.radius50),\r\n         )),\r\n"
+                },
+                {
+                    "date": 1673003773533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n import 'package:flutter/material.dart';\r\n-import 'package:foodex_app/constant/constants.dart';\r\n import 'package:foodex_app/utils/dimension.dart';\r\n \r\n class PageTitleBar extends StatelessWidget {\r\n   const PageTitleBar({Key? key, required this.title}) : super(key: key);\r\n"
+                },
+                {
+                    "date": 1673003795212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            // color: AppColor.kContentColorLightTheme,\r\n+            color: AppColor.kContentColorLightTheme,\r\n             borderRadius: BorderRadius.only(\r\n           topLeft: Radius.circular(Dimensions.radius50),\r\n           topRight: Radius.circular(Dimensions.radius50),\r\n         )),\r\n"
+                },
+                {
+                    "date": 1673003803695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            color: AppColor.kContentColorLightTheme,\r\n+            color: Colors.,\r\n             borderRadius: BorderRadius.only(\r\n           topLeft: Radius.circular(Dimensions.radius50),\r\n           topRight: Radius.circular(Dimensions.radius50),\r\n         )),\r\n"
+                },
+                {
+                    "date": 1673003843474,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,13 +11,13 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            color: Colors.,\r\n+            color: Colors.green,\r\n             borderRadius: BorderRadius.only(\r\n-          topLeft: Radius.circular(Dimensions.radius50),\r\n-          topRight: Radius.circular(Dimensions.radius50),\r\n-        )),\r\n+              topLeft: Radius.circular(Dimensions.radius50),\r\n+              topRight: Radius.circular(Dimensions.radius50),\r\n+            )),\r\n         child: Padding(\r\n           padding: EdgeInsets.only(top: Dimensions.height15),\r\n           child: Text(\r\n             title,\r\n"
+                },
+                {
+                    "date": 1673003856932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            color: Colors.green,\r\n+            color: App,\r\n             borderRadius: BorderRadius.only(\r\n               topLeft: Radius.circular(Dimensions.radius50),\r\n               topRight: Radius.circular(Dimensions.radius50),\r\n             )),\r\n"
+                },
+                {
+                    "date": 1673003881967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import 'package:flutter/material.dart';\r\n+import 'package:foodex_app/constant/constants.dart';\r\n import 'package:foodex_app/utils/dimension.dart';\r\n \r\n class PageTitleBar extends StatelessWidget {\r\n   const PageTitleBar({Key? key, required this.title}) : super(key: key);\r\n@@ -11,9 +12,10 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            color: App,\r\n+          ba\r\n+            color: AppColor.kContentColorLightTheme,\r\n             borderRadius: BorderRadius.only(\r\n               topLeft: Radius.circular(Dimensions.radius50),\r\n               topRight: Radius.circular(Dimensions.radius50),\r\n             )),\r\n"
+                },
+                {
+                    "date": 1673003896098,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,8 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-          ba\r\n             color: AppColor.kContentColorLightTheme,\r\n             borderRadius: BorderRadius.only(\r\n               topLeft: Radius.circular(Dimensions.radius50),\r\n               topRight: Radius.circular(Dimensions.radius50),\r\n@@ -28,9 +27,9 @@\n               fontFamily: 'OpenSans',\r\n               fontSize: Dimensions.font30,\r\n               letterSpacing: Dimensions.space2,\r\n               fontWeight: FontWeight.bold,\r\n-              color: Colors.black,\r\n+              // color: Colors.black,\r\n             ),\r\n           ),\r\n         ),\r\n       ),\r\n"
+                },
+                {
+                    "date": 1673004838458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            color: AppColor.kContentColorLightTheme,\r\n+            // color: AppColor.kContentColorLightTheme,\r\n             borderRadius: BorderRadius.only(\r\n               topLeft: Radius.circular(Dimensions.radius50),\r\n               topRight: Radius.circular(Dimensions.radius50),\r\n             )),\r\n"
+                },
+                {
+                    "date": 1673004846262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n import 'package:flutter/material.dart';\r\n-import 'package:foodex_app/constant/constants.dart';\r\n import 'package:foodex_app/utils/dimension.dart';\r\n \r\n class PageTitleBar extends StatelessWidget {\r\n   const PageTitleBar({Key? key, required this.title}) : super(key: key);\r\n@@ -12,13 +11,13 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            // color: AppColor.kContentColorLightTheme,\r\n+            color: AppColor.kContentColorLightTheme,\r\n             borderRadius: BorderRadius.only(\r\n-              topLeft: Radius.circular(Dimensions.radius50),\r\n-              topRight: Radius.circular(Dimensions.radius50),\r\n-            )),\r\n+          topLeft: Radius.circular(Dimensions.radius50),\r\n+          topRight: Radius.circular(Dimensions.radius50),\r\n+        )),\r\n         child: Padding(\r\n           padding: EdgeInsets.only(top: Dimensions.height15),\r\n           child: Text(\r\n             title,\r\n"
+                },
+                {
+                    "date": 1673004854271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,38 @@\n+import 'package:flutter/material.dart';\r\n+import 'package:foodex_app/constant/constants.dart';\r\n+import 'package:foodex_app/utils/dimension.dart';\r\n+\r\n+class PageTitleBar extends StatelessWidget {\r\n+  const PageTitleBar({Key? key, required this.title}) : super(key: key);\r\n+  final String title;\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Padding(\r\n+      padding: EdgeInsets.only(top: Dimensions.height245),\r\n+      child: Container(\r\n+        width: double.infinity,\r\n+        height: MediaQuery.of(context).size.height,\r\n+        decoration: BoxDecoration(\r\n+            color: AppColor.kContentColorLightTheme,\r\n+            borderRadius: BorderRadius.only(\r\n+              topLeft: Radius.circular(Dimensions.radius50),\r\n+              topRight: Radius.circular(Dimensions.radius50),\r\n+            )),\r\n+        child: Padding(\r\n+          padding: EdgeInsets.only(top: Dimensions.height15),\r\n+          child: Text(\r\n+            title,\r\n+            textAlign: TextAlign.center,\r\n+            style: TextStyle(\r\n+              fontFamily: 'OpenSans',\r\n+              fontSize: Dimensions.font30,\r\n+              letterSpacing: Dimensions.space2,\r\n+              fontWeight: FontWeight.bold,\r\n+              // color: Colors.black,\r\n+            ),\r\n+          ),\r\n+        ),\r\n+      ),\r\n+    );\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1673007040697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            color: AppColor.kContentColorLightTheme,\r\n+            color: Color\r\n             borderRadius: BorderRadius.only(\r\n               topLeft: Radius.circular(Dimensions.radius50),\r\n               topRight: Radius.circular(Dimensions.radius50),\r\n             )),\r\n@@ -35,41 +35,4 @@\n       ),\r\n     );\r\n   }\r\n }\r\n-import 'package:flutter/material.dart';\r\n-import 'package:foodex_app/utils/dimension.dart';\r\n-\r\n-class PageTitleBar extends StatelessWidget {\r\n-  const PageTitleBar({Key? key, required this.title}) : super(key: key);\r\n-  final String title;\r\n-  @override\r\n-  Widget build(BuildContext context) {\r\n-    return Padding(\r\n-      padding: EdgeInsets.only(top: Dimensions.height245),\r\n-      child: Container(\r\n-        width: double.infinity,\r\n-        height: MediaQuery.of(context).size.height,\r\n-        decoration: BoxDecoration(\r\n-            color: AppColor.kContentColorLightTheme,\r\n-            borderRadius: BorderRadius.only(\r\n-          topLeft: Radius.circular(Dimensions.radius50),\r\n-          topRight: Radius.circular(Dimensions.radius50),\r\n-        )),\r\n-        child: Padding(\r\n-          padding: EdgeInsets.only(top: Dimensions.height15),\r\n-          child: Text(\r\n-            title,\r\n-            textAlign: TextAlign.center,\r\n-            style: TextStyle(\r\n-              fontFamily: 'OpenSans',\r\n-              fontSize: Dimensions.font30,\r\n-              letterSpacing: Dimensions.space2,\r\n-              fontWeight: FontWeight.bold,\r\n-              // color: Colors.black,\r\n-            ),\r\n-          ),\r\n-        ),\r\n-      ),\r\n-    );\r\n-  }\r\n-}\r\n"
+                },
+                {
+                    "date": 1673007046173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n import 'package:flutter/material.dart';\r\n-import 'package:foodex_app/constant/constants.dart';\r\n import 'package:foodex_app/utils/dimension.dart';\r\n \r\n class PageTitleBar extends StatelessWidget {\r\n   const PageTitleBar({Key? key, required this.title}) : super(key: key);\r\n@@ -12,9 +11,9 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            color: Color\r\n+            color: Colors.white,\r\n             borderRadius: BorderRadius.only(\r\n               topLeft: Radius.circular(Dimensions.radius50),\r\n               topRight: Radius.circular(Dimensions.radius50),\r\n             )),\r\n"
+                },
+                {
+                    "date": 1673007059082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n               fontFamily: 'OpenSans',\r\n               fontSize: Dimensions.font30,\r\n               letterSpacing: Dimensions.space2,\r\n               fontWeight: FontWeight.bold,\r\n-              // color: Colors.black,\r\n+              color: Colors.black,\r\n             ),\r\n           ),\r\n         ),\r\n       ),\r\n"
+                },
+                {
+                    "date": 1673007329141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            color: Colors.white,\r\n+            color: App\r\n             borderRadius: BorderRadius.only(\r\n               topLeft: Radius.circular(Dimensions.radius50),\r\n               topRight: Radius.circular(Dimensions.radius50),\r\n             )),\r\n"
+                },
+                {
+                    "date": 1673007335897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import 'package:flutter/material.dart';\r\n+import 'package:foodex_app/constant/constants.dart';\r\n import 'package:foodex_app/utils/dimension.dart';\r\n \r\n class PageTitleBar extends StatelessWidget {\r\n   const PageTitleBar({Key? key, required this.title}) : super(key: key);\r\n@@ -11,9 +12,9 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            color: App\r\n+            color: AppColor.\r\n             borderRadius: BorderRadius.only(\r\n               topLeft: Radius.circular(Dimensions.radius50),\r\n               topRight: Radius.circular(Dimensions.radius50),\r\n             )),\r\n"
+                },
+                {
+                    "date": 1673007342308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            color: AppColor.\r\n+            color: AppColor.kContentColorLightTheme,\r\n             borderRadius: BorderRadius.only(\r\n               topLeft: Radius.circular(Dimensions.radius50),\r\n               topRight: Radius.circular(Dimensions.radius50),\r\n             )),\r\n"
+                },
+                {
+                    "date": 1673007402856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n               fontFamily: 'OpenSans',\r\n               fontSize: Dimensions.font30,\r\n               letterSpacing: Dimensions.space2,\r\n               fontWeight: FontWeight.bold,\r\n-              color: Colors.black,\r\n+              // color: Colors.black,\r\n             ),\r\n           ),\r\n         ),\r\n       ),\r\n"
+                },
+                {
+                    "date": 1673007593477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import 'package:flutter/material.dart';\r\n-import 'package:foodex_app/constant/constants.dart';\r\n+import 'package:foodex_app/utils/theme/constants.dart';\r\n import 'package:foodex_app/utils/dimension.dart';\r\n \r\n class PageTitleBar extends StatelessWidget {\r\n   const PageTitleBar({Key? key, required this.title}) : super(key: key);\r\n"
+                },
+                {
+                    "date": 1673007784152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            color: AppColor.kContentColorLightTheme,\r\n+            color: AppColor.kContentColorDarkTheme,\r\n             borderRadius: BorderRadius.only(\r\n               topLeft: Radius.circular(Dimensions.radius50),\r\n               topRight: Radius.circular(Dimensions.radius50),\r\n             )),\r\n"
+                },
+                {
+                    "date": 1673007822926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       child: Container(\r\n         width: double.infinity,\r\n         height: MediaQuery.of(context).size.height,\r\n         decoration: BoxDecoration(\r\n-            color: AppColor.kContentColor,\r\n+            color: AppColor.kContentColorL,\r\n             borderRadius: BorderRadius.only(\r\n               topLeft: Radius.circular(Dimensions.radius50),\r\n               topRight: Radius.circular(Dimensions.radius50),\r\n             )),\r\n"
+                },
+                {
+                    "date": 1673008279062,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n               fontFamily: 'OpenSans',\r\n               fontSize: Dimensions.font30,\r\n               letterSpacing: Dimensions.space2,\r\n               fontWeight: FontWeight.bold,\r\n-              color: Colors.black,\r\n+              color: \r\n               Theme.of(context).textTheme.title\r\n             ),\r\n           ),\r\n         ),\r\n"
+                }
+            ],
+            "date": 1672304415186,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\nimport 'package:foodex_app/constant/constants.dart';\r\nimport 'package:foodex_app/utils/dimension.dart';\r\n\r\nclass PageTitleBar extends StatelessWidget {\r\n  const PageTitleBar({Key? key, required this.title}) : super(key: key);\r\n  final String title;\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Padding(\r\n      padding: EdgeInsets.only(top: Dimensions.height225),\r\n      child: Container(\r\n        width: double.infinity,\r\n        height: MediaQuery.of(context).size.height,\r\n        decoration: const BoxDecoration(\r\n            color: AppColor.kPrimaryMainColor,\r\n            borderRadius: BorderRadius.only(\r\n              topLeft: Radius.circular(50),\r\n              topRight: Radius.circular(50),\r\n            )),\r\n        child: Padding(\r\n          padding: const EdgeInsets.only(top: 25.0),\r\n          child: Text(\r\n            title,\r\n            textAlign: TextAlign.center,\r\n            style: const TextStyle(\r\n              fontFamily: 'OpenSans',\r\n              fontSize: 30,\r\n              letterSpacing: 1,\r\n              fontWeight: FontWeight.bold,\r\n              color: Colors.black,\r\n            ),\r\n          ),\r\n        ),\r\n      ),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

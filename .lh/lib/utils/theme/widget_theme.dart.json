@@ -1,0 +1,38 @@
+{
+    "sourceFile": "lib/utils/theme/widget_theme.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1672995680477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1672995685557,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,4 @@\n \r\n-class \n\\ No newline at end of file\n+class TextTheme{\r\n+  \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1672995692618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n \r\n class TextTheme{\r\n-  \r\n+  static TextTheme\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1672995701313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n \r\n class TextTheme{\r\n-  static TextTheme\r\n+  static TextTheme lightTextTheme = Text\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1672995708800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n-\r\n-class TextTheme{\r\n-  static TextTheme lightTextTheme = TextTheme()\r\n-}\n\\ No newline at end of file\n+class TextTheme {\r\n+  static TextTheme lightTextTheme = TextTheme();\r\n+  static \r\n+}\r\n"
+                },
+                {
+                    "date": 1672995725565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n class TextTheme {\r\n   static TextTheme lightTextTheme = TextTheme();\r\n-  static TextTheme darkTextTheme = \r\n+  static TextTheme darkTextTheme = Text\r\n }\r\n"
+                }
+            ],
+            "date": 1672995680477,
+            "name": "Commit-0",
+            "content": "\r\nclass "
+        }
+    ]
+}

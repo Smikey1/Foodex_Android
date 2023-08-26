@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/local_data_source/user_data_source.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1672314686279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1672314686279,
+            "name": "Commit-0",
+            "content": "import 'package:foodex_app/model/model.dart';\r\nimport 'package:foodex_app/state/objectbox_state.dart';\r\n\r\nimport '../helper/objectbox.dart';\r\n\r\nclass UserDataSource {\r\n  ObjectBoxInstance objectBoxInstance = ObjectBoxState.objectBoxInstance!;\r\n\r\n// Add User\r\n  Future<int> addUser(User user) async {\r\n    try {\r\n      return objectBoxInstance.addUser(user);\r\n    } catch (e) {\r\n      return Future.value(0);\r\n    }\r\n  }\r\n// Get user data\r\n\r\n  Future<List<User>> getUser() async {\r\n    try {\r\n      return Future.value(objectBoxInstance.getAllUser());\r\n    } catch (e) {\r\n      throw Exception('Error getting user');\r\n    }\r\n  }\r\n\r\n//  Login user\r\n  Future<bool> loginUser(int phone, String password) {\r\n    try {\r\n      return Future.value(objectBoxInstance.loginUser(phone, password));\r\n    } catch (e) {\r\n      throw Exception(null);\r\n    }\r\n  }\r\n}\r\n"
+        }
+    ]
+}

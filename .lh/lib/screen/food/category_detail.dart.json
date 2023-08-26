@@ -1,0 +1,54 @@
+{
+    "sourceFile": "lib/screen/food/category_detail.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1674987940100,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1674987946395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,13 @@\n-st\n\\ No newline at end of file\n+class Category extends StatefulWidget {\r\n+  const Category({super.key});\r\n+\r\n+  @override\r\n+  State<Category> createState() => _CategoryState();\r\n+}\r\n+\r\n+class _CategoryState extends State<Category> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Container();\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674987955911,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,15 @@\n-class Category extends StatefulWidget {\r\n-  const Category({super.key});\r\n+import 'package:flutter/material.dart';\r\n \r\n+class CategoryScreen extends StatefulWidget {\r\n+  const CategoryScreen({super.key});\r\n+\r\n   @override\r\n-  State<Category> createState() => _CategoryState();\r\n+  State<CategoryScreen> createState() => _CategoryScreenState();\r\n }\r\n \r\n-class _CategoryState extends State<Category> {\r\n\\ No newline at end of file\n+class _CategoryScreenState extends State<CategoryScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container();\r\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1674987981555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n \r\n class _CategoryScreenState extends State<CategoryScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return Container();\r\n+    return ;\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1674987987136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,9 @@\n \r\n class _CategoryScreenState extends State<CategoryScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return ;\r\n+    return Scaffold(\r\n+      \r\n+    );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1674987992548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,10 @@\n class _CategoryScreenState extends State<CategoryScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n-      \r\n+      body: Container(\r\n+        child: const Text('Category Screen'),\r\n+      ),\r\n     );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1674988826515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,12 @@\n class _CategoryScreenState extends State<CategoryScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n-      body: Container(\r\n-        child: const Text('Category Screen'),\r\n+      body: Center(\r\n+        child: Container(\r\n+          child: const Text('Category Screen'),\r\n+        ),\r\n       ),\r\n     );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1675762543754,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,11 +11,9 @@\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       body: Center(\r\n-        child: Container(\r\n-          child: const Text('Category Screen'),\r\n-        ),\r\n+        child: \r\n       ),\r\n     );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1675762549185,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,8 @@\n class _CategoryScreenState extends State<CategoryScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n-      body: Center(\r\n-\r\n-      ),\r\n+      body: \r\n     );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1675762624632,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,10 @@\n                               fit: BoxFit.cover,\r\n                               image: NetworkImage(\r\n                                   foodList[index].foodPhoto.isNotEmpty\r\n                                       ? foodList[index].foodPhoto[0]\r\n-                                      : imageUnavailable))),\r\n+                                      : imageUnavailable))\r\n+                                      ),\r\n                     ),\r\n \r\n                     //------------------- Text and icon section --------------------\r\n                     Expanded(\r\n"
+                }
+            ],
+            "date": 1674987940100,
+            "name": "Commit-0",
+            "content": "st"
+        }
+    ]
+}

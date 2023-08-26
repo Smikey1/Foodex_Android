@@ -1,0 +1,238 @@
+{
+    "sourceFile": "lib/dashboard.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 55,
+            "patches": [
+                {
+                    "date": 1673024011370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1673024029919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n               BottomNavigationBarItem(icon: Icon(Icons.chat), label: \"Chat\"),\r\n               BottomNavigationBarItem(\r\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n-            backgroundColor: Colors.lightGreen,\r\n+            // backgroundColor: Colors.lightGreen,\r\n             selectedItemColor: Colors.white,\r\n             // unselectedItemColor: Colors.black,\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n"
+                },
+                {
+                    "date": 1673024055692,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n               BottomNavigationBarItem(icon: Icon(Icons.chat), label: \"Chat\"),\r\n               BottomNavigationBarItem(\r\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n-            // backgroundColor: Colors.lightGreen,\r\n+            backgroundColor: Colors.lightGreen,\r\n             selectedItemColor: Colors.white,\r\n             // unselectedItemColor: Colors.black,\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n"
+                },
+                {
+                    "date": 1673024109168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,10 +37,10 @@\n               BottomNavigationBarItem(icon: Icon(Icons.chat), label: \"Chat\"),\r\n               BottomNavigationBarItem(\r\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n-            backgroundColor: Colors.lightGreen,\r\n-            selectedItemColor: Colors.white,\r\n+            // backgroundColor: Colors.lightGreen,\r\n+            // selectedItemColor: Colors.white,\r\n             // unselectedItemColor: Colors.black,\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n               setState(() {\r\n"
+                },
+                {
+                    "date": 1675093033694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import 'package:flutter/material.dart';\r\n import 'package:foodex_app/screen/order/order.dart';\r\n-import 'package:foodex_app/screen/screen.dart';\r\n+import 'package:foodex_app/screen/export_screen.dart';\r\n \r\n class DashBoardScreen extends StatefulWidget {\r\n   const DashBoardScreen({super.key});\r\n \r\n"
+                },
+                {
+                    "date": 1675106188173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n               BottomNavigationBarItem(icon: Icon(Icons.chat), label: \"Chat\"),\r\n               BottomNavigationBarItem(\r\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n-            // backgroundColor: Colors.lightGreen,\r\n+            backgroundColor: Colors.lightGreen,\r\n             // selectedItemColor: Colors.white,\r\n             // unselectedItemColor: Colors.black,\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n"
+                },
+                {
+                    "date": 1675106196035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n               BottomNavigationBarItem(icon: Icon(Icons.chat), label: \"Chat\"),\r\n               BottomNavigationBarItem(\r\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n-            backgroundColor: Colors.lightGreen,\r\n+            backgroundColor: The,\r\n             // selectedItemColor: Colors.white,\r\n             // unselectedItemColor: Colors.black,\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n"
+                },
+                {
+                    "date": 1675106201816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n               BottomNavigationBarItem(icon: Icon(Icons.chat), label: \"Chat\"),\r\n               BottomNavigationBarItem(\r\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n-            backgroundColor: The,\r\n+            backgroundColor: Theme.of(context).,\r\n             // selectedItemColor: Colors.white,\r\n             // unselectedItemColor: Colors.black,\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n"
+                },
+                {
+                    "date": 1675106206932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n               BottomNavigationBarItem(icon: Icon(Icons.chat), label: \"Chat\"),\r\n               BottomNavigationBarItem(\r\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n-            backgroundColor: Theme.of(context).,\r\n+            backgroundColor: Theme.of(context).k,\r\n             // selectedItemColor: Colors.white,\r\n             // unselectedItemColor: Colors.black,\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n"
+                },
+                {
+                    "date": 1675106213826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n               BottomNavigationBarItem(icon: Icon(Icons.chat), label: \"Chat\"),\r\n               BottomNavigationBarItem(\r\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n-            backgroundColor: Theme.of(context).k,\r\n+            backgroundColor: Theme.of(context).,\r\n             // selectedItemColor: Colors.white,\r\n             // unselectedItemColor: Colors.black,\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n"
+                },
+                {
+                    "date": 1675106234760,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n import 'package:flutter/material.dart';\r\n-import 'package:foodex_app/screen/order/order.dart';\r\n import 'package:foodex_app/screen/export_screen.dart';\r\n \r\n class DashBoardScreen extends StatefulWidget {\r\n   const DashBoardScreen({super.key});\r\n"
+                },
+                {
+                    "date": 1675106240107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n               BottomNavigationBarItem(icon: Icon(Icons.chat), label: \"Chat\"),\r\n               BottomNavigationBarItem(\r\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n-            backgroundColor: Theme.of(context).,\r\n+            backgroundColor: Theme.of(context).sc,\r\n             // selectedItemColor: Colors.white,\r\n             // unselectedItemColor: Colors.black,\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n"
+                },
+                {
+                    "date": 1675106273607,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n               BottomNavigationBarItem(icon: Icon(Icons.chat), label: \"Chat\"),\r\n               BottomNavigationBarItem(\r\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n-            backgroundColor: Theme.of(context).sc,\r\n+            backgroundColor: Theme.of(context).,\r\n             // selectedItemColor: Colors.white,\r\n             // unselectedItemColor: Colors.black,\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n"
+                },
+                {
+                    "date": 1675106281888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n               BottomNavigationBarItem(icon: Icon(Icons.chat), label: \"Chat\"),\r\n               BottomNavigationBarItem(\r\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n-            backgroundColor: Theme.of(context).,\r\n+            backgroundColor: Theme.of(context).colorScheme.,\r\n             // selectedItemColor: Colors.white,\r\n             // unselectedItemColor: Colors.black,\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n"
+                },
+                {
+                    "date": 1675106343283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n               BottomNavigationBarItem(icon: Icon(Icons.chat), label: \"Chat\"),\r\n               BottomNavigationBarItem(\r\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n-            backgroundColor: Theme.of(context).colorScheme.,\r\n+            // backgroundColor: Theme.of(context).colorScheme.primary,\r\n             // selectedItemColor: Colors.white,\r\n             // unselectedItemColor: Colors.black,\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n"
+                },
+                {
+                    "date": 1675106348361,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,8 +39,9 @@\n             ],\r\n             // backgroundColor: Theme.of(context).colorScheme.primary,\r\n             // selectedItemColor: Colors.white,\r\n             // unselectedItemColor: Colors.black,\r\n+            color\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n               setState(() {\r\n                 _selectedIndex = index;\r\n"
+                },
+                {
+                    "date": 1675106358017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n             ],\r\n             // backgroundColor: Theme.of(context).colorScheme.primary,\r\n             // selectedItemColor: Colors.white,\r\n             // unselectedItemColor: Colors.black,\r\n-            color\r\n+            fixedColor: Theme.of(context),\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n               setState(() {\r\n                 _selectedIndex = index;\r\n"
+                },
+                {
+                    "date": 1675106364243,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n             ],\r\n             // backgroundColor: Theme.of(context).colorScheme.primary,\r\n             // selectedItemColor: Colors.white,\r\n             // unselectedItemColor: Colors.black,\r\n-            fixedColor: Theme.of(context),\r\n+            fixedColor: Theme.of(context).,\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n               setState(() {\r\n                 _selectedIndex = index;\r\n"
+                },
+                {
+                    "date": 1675106379487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n             ],\r\n             // backgroundColor: Theme.of(context).colorScheme.primary,\r\n             // selectedItemColor: Colors.white,\r\n             // unselectedItemColor: Colors.black,\r\n-            fixedColor: Theme.of(context).,\r\n+            fixedColor: Theme.of(context).primaryColorDark,\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n               setState(() {\r\n                 _selectedIndex = index;\r\n"
+                },
+                {
+                    "date": 1675106403252,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n             ],\r\n             // backgroundColor: Theme.of(context).colorScheme.primary,\r\n             // selectedItemColor: Colors.white,\r\n             // unselectedItemColor: Colors.black,\r\n-            fixedColor: Theme.of(context).primaryColorDark,\r\n+            fixedColor: ,\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n               setState(() {\r\n                 _selectedIndex = index;\r\n"
+                },
+                {
+                    "date": 1675106417369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n             ],\r\n             // backgroundColor: Theme.of(context).colorScheme.primary,\r\n             // selectedItemColor: Colors.white,\r\n             // unselectedItemColor: Colors.black,\r\n-            fixedColor: ,\r\n+            ,\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n               setState(() {\r\n                 _selectedIndex = index;\r\n"
+                },
+                {
+                    "date": 1675106542913,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,12 +36,12 @@\n               BottomNavigationBarItem(icon: Icon(Icons.chat), label: \"Chat\"),\r\n               BottomNavigationBarItem(\r\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n-            // backgroundColor: Theme.of(context).colorScheme.primary,\r\n-            // selectedItemColor: Colors.white,\r\n-            // unselectedItemColor: Colors.black,\r\n-            ,\r\n+            backgroundColor: Theme.of(context).colorScheme.primary,\r\n+            selectedItemColor: Colors.white,\r\n+            unselectedItemColor: Colors.black,\r\n+            \r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n               setState(() {\r\n                 _selectedIndex = index;\r\n"
+                },
+                {
+                    "date": 1675106549858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n               BottomNavigationBarItem(icon: Icon(Icons.chat), label: \"Chat\"),\r\n               BottomNavigationBarItem(\r\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n-            backgroundColor: Theme.of(context).colorScheme.primary,\r\n+            backgroundColor: Theme.of(context).,\r\n             selectedItemColor: Colors.white,\r\n             unselectedItemColor: Colors.black,\r\n             \r\n             currentIndex: _selectedIndex,\r\n"
+                },
+                {
+                    "date": 1675106557730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,10 +36,10 @@\n               BottomNavigationBarItem(icon: Icon(Icons.chat), label: \"Chat\"),\r\n               BottomNavigationBarItem(\r\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n-            backgroundColor: Theme.of(context).,\r\n-            selectedItemColor: Colors.white,\r\n+            backgroundColor: Theme.of(context).scaffoldBackgroundColor,\r\n+            selectedItemColor: ,\r\n             unselectedItemColor: Colors.black,\r\n             \r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n"
+                },
+                {
+                    "date": 1675106565277,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n               BottomNavigationBarItem(\r\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n             backgroundColor: Theme.of(context).scaffoldBackgroundColor,\r\n-            selectedItemColor: ,\r\n+            selectedItemColor: Theme.of(context).,\r\n             unselectedItemColor: Colors.black,\r\n             \r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n"
+                },
+                {
+                    "date": 1675106570572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n               BottomNavigationBarItem(\r\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n             backgroundColor: Theme.of(context).scaffoldBackgroundColor,\r\n-            selectedItemColor: Theme.of(context).,\r\n+            selectedItemColor: Theme.of(context).colorScheme.,\r\n             unselectedItemColor: Colors.black,\r\n             \r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n"
+                },
+                {
+                    "date": 1675106581364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,10 +37,10 @@\n               BottomNavigationBarItem(\r\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n             backgroundColor: Theme.of(context).scaffoldBackgroundColor,\r\n-            selectedItemColor: Theme.of(context).colorScheme.,\r\n-            unselectedItemColor: Colors.black,\r\n+            selectedItemColor: Theme.of(context).colorScheme.primary,\r\n+            unselectedItemColor: ,\r\n             \r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n               setState(() {\r\n"
+                },
+                {
+                    "date": 1675106586878,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n             backgroundColor: Theme.of(context).scaffoldBackgroundColor,\r\n             selectedItemColor: Theme.of(context).colorScheme.primary,\r\n-            unselectedItemColor: ,\r\n+            unselectedItemColor: Theme.of(context.),\r\n             \r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n               setState(() {\r\n"
+                },
+                {
+                    "date": 1675106593068,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n             backgroundColor: Theme.of(context).scaffoldBackgroundColor,\r\n             selectedItemColor: Theme.of(context).colorScheme.primary,\r\n-            unselectedItemColor: Theme.of(context.),\r\n+            unselectedItemColor: Theme.of(context).,\r\n             \r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n               setState(() {\r\n"
+                },
+                {
+                    "date": 1675106603904,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n             backgroundColor: Theme.of(context).scaffoldBackgroundColor,\r\n             selectedItemColor: Theme.of(context).colorScheme.primary,\r\n-            unselectedItemColor: Theme.of(context).,\r\n+            unselectedItemColor: Theme.of(context).colorScheme.s,\r\n             \r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n               setState(() {\r\n"
+                },
+                {
+                    "date": 1675106622079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n             backgroundColor: Theme.of(context).scaffoldBackgroundColor,\r\n             selectedItemColor: Theme.of(context).colorScheme.primary,\r\n-            unselectedItemColor: Theme.of(context).colorScheme.s,\r\n+            unselectedItemColor: Theme.of(context).colorScheme.kSecondaryColor,\r\n             \r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n               setState(() {\r\n"
+                },
+                {
+                    "date": 1675106627178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,10 +38,9 @@\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n             backgroundColor: Theme.of(context).scaffoldBackgroundColor,\r\n             selectedItemColor: Theme.of(context).colorScheme.primary,\r\n-            unselectedItemColor: Theme.of(context).colorScheme.kSecondaryColor,\r\n-            \r\n+            unselectedItemColor: Theme.of(context).colorScheme.secondary,\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n               setState(() {\r\n                 _selectedIndex = index;\r\n"
+                },
+                {
+                    "date": 1675106674983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n               BottomNavigationBarItem(\r\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n             backgroundColor: Theme.of(context).scaffoldBackgroundColor,\r\n-            selectedItemColor: Theme.of(context).colorScheme.primary,\r\n+            selectedItemColor: Theme.of(context).colorScheme.se,\r\n             unselectedItemColor: Theme.of(context).colorScheme.secondary,\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n               setState(() {\r\n"
+                },
+                {
+                    "date": 1675106747901,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,11 +36,11 @@\n               BottomNavigationBarItem(icon: Icon(Icons.chat), label: \"Chat\"),\r\n               BottomNavigationBarItem(\r\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n-            backgroundColor: Theme.of(context).scaffoldBackgroundColor,\r\n-            selectedItemColor: Theme.of(context).colorScheme.se,\r\n-            unselectedItemColor: Theme.of(context).colorScheme.secondary,\r\n+            backgroundColor: Theme.of(context).co,\r\n+            selectedItemColor: Theme.of(context).colorScheme.secondary,\r\n+            unselectedItemColor: Theme.of(context).colorScheme.primary,\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n               setState(() {\r\n                 _selectedIndex = index;\r\n"
+                },
+                {
+                    "date": 1675106753708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n               BottomNavigationBarItem(icon: Icon(Icons.chat), label: \"Chat\"),\r\n               BottomNavigationBarItem(\r\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n-            backgroundColor: Theme.of(context).co,\r\n+            backgroundColor: Theme.of(context).colorScheme.,\r\n             selectedItemColor: Theme.of(context).colorScheme.secondary,\r\n             unselectedItemColor: Theme.of(context).colorScheme.primary,\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n"
+                },
+                {
+                    "date": 1675107007336,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,10 +36,10 @@\n               BottomNavigationBarItem(icon: Icon(Icons.chat), label: \"Chat\"),\r\n               BottomNavigationBarItem(\r\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n-            backgroundColor: Theme.of(context).colorScheme.,\r\n-            selectedItemColor: Theme.of(context).colorScheme.secondary,\r\n+            backgroundColor: Theme.of(context).colorScheme.background,\r\n+            selectedItemColor: Theme.of(context).colorScheme.seco,\r\n             unselectedItemColor: Theme.of(context).colorScheme.primary,\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n               setState(() {\r\n"
+                },
+                {
+                    "date": 1675107014752,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,10 +37,10 @@\n               BottomNavigationBarItem(\r\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n             backgroundColor: Theme.of(context).colorScheme.background,\r\n-            selectedItemColor: Theme.of(context).colorScheme.seco,\r\n-            unselectedItemColor: Theme.of(context).colorScheme.primary,\r\n+            selectedItemColor: Theme.of(context).colorScheme.secondary,\r\n+            unselectedItemColor: Theme.of(context).colorScheme.,\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n               setState(() {\r\n                 _selectedIndex = index;\r\n"
+                },
+                {
+                    "date": 1675107019924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n             backgroundColor: Theme.of(context).colorScheme.background,\r\n             selectedItemColor: Theme.of(context).colorScheme.secondary,\r\n-            unselectedItemColor: Theme.of(context).colorScheme.,\r\n+            unselectedItemColor: Theme.of(context).colorScheme.onPrimary,\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n               setState(() {\r\n                 _selectedIndex = index;\r\n"
+                },
+                {
+                    "date": 1675107045903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n               BottomNavigationBarItem(icon: Icon(Icons.chat), label: \"Chat\"),\r\n               BottomNavigationBarItem(\r\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n-            backgroundColor: Theme.of(context).colorScheme.background,\r\n+            backgroundColor: Theme.of(context).colorScheme,\r\n             selectedItemColor: Theme.of(context).colorScheme.secondary,\r\n             unselectedItemColor: Theme.of(context).colorScheme.onPrimary,\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n"
+                },
+                {
+                    "date": 1675107052607,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n               BottomNavigationBarItem(icon: Icon(Icons.chat), label: \"Chat\"),\r\n               BottomNavigationBarItem(\r\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n-            backgroundColor: Theme.of(context).colorScheme,\r\n+            backgroundColor: Theme.of(context).colorScheme.secondarys,\r\n             selectedItemColor: Theme.of(context).colorScheme.secondary,\r\n             unselectedItemColor: Theme.of(context).colorScheme.onPrimary,\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n"
+                },
+                {
+                    "date": 1675107058622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,10 +36,10 @@\n               BottomNavigationBarItem(icon: Icon(Icons.chat), label: \"Chat\"),\r\n               BottomNavigationBarItem(\r\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n-            backgroundColor: Theme.of(context).colorScheme.secondarys,\r\n-            selectedItemColor: Theme.of(context).colorScheme.secondary,\r\n+            backgroundColor: Theme.of(context).colorScheme.secondary,\r\n+            selectedItemColor: Theme.of(context).colorScheme.,\r\n             unselectedItemColor: Theme.of(context).colorScheme.onPrimary,\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n               setState(() {\r\n"
+                },
+                {
+                    "date": 1675107064652,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,10 @@\n               BottomNavigationBarItem(\r\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n             backgroundColor: Theme.of(context).colorScheme.secondary,\r\n-            selectedItemColor: Theme.of(context).colorScheme.,\r\n+            selectedItemColor: Theme.of(context).colorScheme.p\\\r\n+            ,\r\n             unselectedItemColor: Theme.of(context).colorScheme.onPrimary,\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n               setState(() {\r\n"
+                },
+                {
+                    "date": 1675107070763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,10 +37,9 @@\n               BottomNavigationBarItem(\r\n                   icon: Icon(Icons.person), label: \"Profile\")\r\n             ],\r\n             backgroundColor: Theme.of(context).colorScheme.secondary,\r\n-            selectedItemColor: Theme.of(context).colorScheme.p\\\r\n-            ,\r\n+            selectedItemColor: Theme.of(context).colorScheme.primary,\r\n             unselectedItemColor: Theme.of(context).colorScheme.onPrimary,\r\n             currentIndex: _selectedIndex,\r\n             onTap: (index) {\r\n               setState(() {\r\n"
+                },
+                {
+                    "date": 1675361204873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,8 @@\n class _DashBoardScreenState extends State<DashBoardScreen> {\r\n   int _selectedIndex = 0;\r\n   List<Widget> lstBottomScreen = [\r\n     const HomeScreen(),\r\n-    const ChatScreen(),\r\n     const OrderScreen(),\r\n     const ProfileScreen(),\r\n   ];\r\n   @override\r\n"
+                },
+                {
+                    "date": 1675367605377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,10 +24,9 @@\n       body: lstBottomScreen[_selectedIndex],\r\n       bottomNavigationBar: Padding(\r\n         padding: const EdgeInsets.all(2),\r\n         child: ClipRRect(\r\n-          borderRadius: const BorderRadius.only(\r\n-              topLeft: Radius.circular(20), topRight: Radius.circular(20)),\r\n+          borderRadius: const BorderRadius.all(Radius.circular(24)),\r\n           child: BottomNavigationBar(\r\n             type: BottomNavigationBarType.fixed,\r\n             items: const [\r\n               BottomNavigationBarItem(icon: Icon(Icons.home), label: \"Home\"),\r\n"
+                },
+                {
+                    "date": 1675367659243,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,16 +14,17 @@\n   int _selectedIndex = 0;\r\n   List<Widget> lstBottomScreen = [\r\n     const HomeScreen(),\r\n     const OrderScreen(),\r\n+    const ChatScreen(),\r\n     const ProfileScreen(),\r\n   ];\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       body: lstBottomScreen[_selectedIndex],\r\n       bottomNavigationBar: Padding(\r\n-        padding: const EdgeInsets.all(2),\r\n+        padding: const EdgeInsets.all(),\r\n         child: ClipRRect(\r\n           borderRadius: const BorderRadius.all(Radius.circular(24)),\r\n           child: BottomNavigationBar(\r\n             type: BottomNavigationBarType.fixed,\r\n"
+                },
+                {
+                    "date": 1675367666668,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       body: lstBottomScreen[_selectedIndex],\r\n       bottomNavigationBar: Padding(\r\n-        padding: const EdgeInsets.all(),\r\n+        padding: const EdgeInsets.all(1),\r\n         child: ClipRRect(\r\n           borderRadius: const BorderRadius.all(Radius.circular(24)),\r\n           child: BottomNavigationBar(\r\n             type: BottomNavigationBarType.fixed,\r\n"
+                },
+                {
+                    "date": 1675367673274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       body: lstBottomScreen[_selectedIndex],\r\n       bottomNavigationBar: Padding(\r\n-        padding: const EdgeInsets.all(1),\r\n+        padding: const EdgeInsets.all(),\r\n         child: ClipRRect(\r\n           borderRadius: const BorderRadius.all(Radius.circular(24)),\r\n           child: BottomNavigationBar(\r\n             type: BottomNavigationBarType.fixed,\r\n"
+                },
+                {
+                    "date": 1675367682416,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       body: lstBottomScreen[_selectedIndex],\r\n       bottomNavigationBar: Padding(\r\n-        padding: const EdgeInsets.all(),\r\n+        padding: const EdgeInsets.all(17),\r\n         child: ClipRRect(\r\n           borderRadius: const BorderRadius.all(Radius.circular(24)),\r\n           child: BottomNavigationBar(\r\n             type: BottomNavigationBarType.fixed,\r\n"
+                },
+                {
+                    "date": 1675367747026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,9 @@\n     return Scaffold(\r\n       body: lstBottomScreen[_selectedIndex],\r\n       bottomNavigationBar: Padding(\r\n         padding: const EdgeInsets.all(17),\r\n+        \r\n         child: ClipRRect(\r\n           borderRadius: const BorderRadius.all(Radius.circular(24)),\r\n           child: BottomNavigationBar(\r\n             type: BottomNavigationBarType.fixed,\r\n"
+                },
+                {
+                    "date": 1675367759547,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,9 @@\n       bottomNavigationBar: Padding(\r\n         padding: const EdgeInsets.all(17),\r\n         \r\n         child: ClipRRect(\r\n+           margin: const EdgeInsets.symmetric(horizontal: 20),\r\n           borderRadius: const BorderRadius.all(Radius.circular(24)),\r\n           child: BottomNavigationBar(\r\n             type: BottomNavigationBarType.fixed,\r\n             items: const [\r\n"
+                },
+                {
+                    "date": 1675367767758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,8 @@\n       bottomNavigationBar: Padding(\r\n         padding: const EdgeInsets.all(17),\r\n         \r\n         child: ClipRRect(\r\n-           margin: const EdgeInsets.symmetric(horizontal: 20),\r\n           borderRadius: const BorderRadius.all(Radius.circular(24)),\r\n           child: BottomNavigationBar(\r\n             type: BottomNavigationBarType.fixed,\r\n             items: const [\r\n"
+                },
+                {
+                    "date": 1675367864409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,31 +23,11 @@\n     return Scaffold(\r\n       body: lstBottomScreen[_selectedIndex],\r\n       bottomNavigationBar: Padding(\r\n         padding: const EdgeInsets.all(17),\r\n-        \r\n         child: ClipRRect(\r\n           borderRadius: const BorderRadius.all(Radius.circular(24)),\r\n-          child: BottomNavigationBar(\r\n-            type: BottomNavigationBarType.fixed,\r\n-            items: const [\r\n-              BottomNavigationBarItem(icon: Icon(Icons.home), label: \"Home\"),\r\n-              BottomNavigationBarItem(\r\n-                  icon: Icon(Icons.shopping_basket), label: \"Order\"),\r\n-              BottomNavigationBarItem(icon: Icon(Icons.chat), label: \"Chat\"),\r\n-              BottomNavigationBarItem(\r\n-                  icon: Icon(Icons.person), label: \"Profile\")\r\n-            ],\r\n-            backgroundColor: Theme.of(context).colorScheme.secondary,\r\n-            selectedItemColor: Theme.of(context).colorScheme.primary,\r\n-            unselectedItemColor: Theme.of(context).colorScheme.onPrimary,\r\n-            currentIndex: _selectedIndex,\r\n-            onTap: (index) {\r\n-              setState(() {\r\n-                _selectedIndex = index;\r\n-              });\r\n-            },\r\n-          ),\r\n+          child:\r\n         ),\r\n       ),\r\n     );\r\n   }\r\n"
+                },
+                {
+                    "date": 1675368879932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,12 +22,31 @@\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       body: lstBottomScreen[_selectedIndex],\r\n       bottomNavigationBar: Padding(\r\n-        padding: const EdgeInsets.all(17),\r\n+        padding: const EdgeInsets.(17),\r\n         child: ClipRRect(\r\n           borderRadius: const BorderRadius.all(Radius.circular(24)),\r\n-          child:\r\n+          child: BottomNavigationBar(\r\n+            type: BottomNavigationBarType.fixed,\r\n+            items: const [\r\n+              BottomNavigationBarItem(icon: Icon(Icons.home), label: \"Home\"),\r\n+              BottomNavigationBarItem(\r\n+                  icon: Icon(Icons.shopping_basket), label: \"Order\"),\r\n+              BottomNavigationBarItem(icon: Icon(Icons.chat), label: \"Chat\"),\r\n+              BottomNavigationBarItem(\r\n+                  icon: Icon(Icons.person), label: \"Profile\")\r\n+            ],\r\n+            backgroundColor: Theme.of(context).colorScheme.secondary,\r\n+            selectedItemColor: Theme.of(context).colorScheme.primary,\r\n+            unselectedItemColor: Theme.of(context).colorScheme.onPrimary,\r\n+            currentIndex: _selectedIndex,\r\n+            onTap: (index) {\r\n+              setState(() {\r\n+                _selectedIndex = index;\r\n+              });\r\n+            },\r\n+          ),\r\n         ),\r\n       ),\r\n     );\r\n   }\r\n"
+                },
+                {
+                    "date": 1675368908175,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       body: lstBottomScreen[_selectedIndex],\r\n       bottomNavigationBar: Padding(\r\n-        padding: const EdgeInsets.only(top: 12, left: 12, right: 12, bottom: 1),\r\n+        padding: const EdgeInsets.only(top: 1, left: 12, right: 12, bottom: 1),\r\n         child: ClipRRect(\r\n           borderRadius: const BorderRadius.all(Radius.circular(24)),\r\n           child: BottomNavigationBar(\r\n             type: BottomNavigationBarType.fixed,\r\n"
+                },
+                {
+                    "date": 1675368923506,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       body: lstBottomScreen[_selectedIndex],\r\n       bottomNavigationBar: Padding(\r\n-        padding: const EdgeInsets.only(top: , left: 12, right: 12, bottom: 1),\r\n+        padding: const EdgeInsets.only(top: 1, left: 12, right: 12, bottom: 1),\r\n         child: ClipRRect(\r\n           borderRadius: const BorderRadius.all(Radius.circular(24)),\r\n           child: BottomNavigationBar(\r\n             type: BottomNavigationBarType.fixed,\r\n"
+                }
+            ],
+            "date": 1673024011370,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\nimport 'package:foodex_app/screen/order/order.dart';\r\nimport 'package:foodex_app/screen/screen.dart';\r\n\r\nclass DashBoardScreen extends StatefulWidget {\r\n  const DashBoardScreen({super.key});\r\n\r\n  // static const String route = \"dashboardScreen\";\r\n\r\n  @override\r\n  State<DashBoardScreen> createState() => _DashBoardScreenState();\r\n}\r\n\r\nclass _DashBoardScreenState extends State<DashBoardScreen> {\r\n  int _selectedIndex = 0;\r\n  List<Widget> lstBottomScreen = [\r\n    const HomeScreen(),\r\n    const ChatScreen(),\r\n    const OrderScreen(),\r\n    const ProfileScreen(),\r\n  ];\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Scaffold(\r\n      body: lstBottomScreen[_selectedIndex],\r\n      bottomNavigationBar: Padding(\r\n        padding: const EdgeInsets.all(2),\r\n        child: ClipRRect(\r\n          borderRadius: const BorderRadius.only(\r\n              topLeft: Radius.circular(20), topRight: Radius.circular(20)),\r\n          child: BottomNavigationBar(\r\n            type: BottomNavigationBarType.fixed,\r\n            items: const [\r\n              BottomNavigationBarItem(icon: Icon(Icons.home), label: \"Home\"),\r\n              BottomNavigationBarItem(\r\n                  icon: Icon(Icons.shopping_basket), label: \"Order\"),\r\n              BottomNavigationBarItem(icon: Icon(Icons.chat), label: \"Chat\"),\r\n              BottomNavigationBarItem(\r\n                  icon: Icon(Icons.person), label: \"Profile\")\r\n            ],\r\n            backgroundColor: Colors.lightGreen,\r\n            selectedItemColor: Colors.white,\r\n            // unselectedItemColor: Colors.black,\r\n            currentIndex: _selectedIndex,\r\n            onTap: (index) {\r\n              setState(() {\r\n                _selectedIndex = index;\r\n              });\r\n            },\r\n          ),\r\n        ),\r\n      ),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

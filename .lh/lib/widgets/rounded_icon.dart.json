@@ -1,0 +1,42 @@
+{
+    "sourceFile": "lib/widgets/rounded_icon.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1672309168915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1675078400276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import 'package:flutter/material.dart';\r\n-import 'package:foodex_app/utils/dimension.dart';\r\n+import 'package:foodex_app/app/utils/dimension.dart';\r\n \r\n class RoundIcon extends StatelessWidget {\r\n   const RoundIcon({Key? key, required this.imageUrl}) : super(key: key);\r\n   final String imageUrl;\r\n"
+                },
+                {
+                    "date": 1675927512837,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             boxShadow: const [\r\n               BoxShadow(\r\n                   color: Colors.black26, offset: Offset(0, 2), blurRadius: 0.6)\r\n             ],\r\n-            image: DecorationImage(image: AssetImage(imageUrl))),\r\n+            image: DecorationImage(image: NetworkImage(imageUrl))),\r\n       ),\r\n     );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1675927727066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n         width: Dimensions.width30,\r\n         height: Dimensions.height30,\r\n         decoration: BoxDecoration(\r\n             shape: BoxShape.circle,\r\n-            color: Colors.white,\r\n+            // color: Colors.white,\r\n             boxShadow: const [\r\n               BoxShadow(\r\n                   color: Colors.black26, offset: Offset(0, 2), blurRadius: 0.6)\r\n             ],\r\n"
+                },
+                {
+                    "date": 1675927842787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n         width: Dimensions.width30,\r\n         height: Dimensions.height30,\r\n         decoration: BoxDecoration(\r\n             shape: BoxShape.circle,\r\n-            // color: Colors.white,\r\n+            color: Colors.white,\r\n             boxShadow: const [\r\n               BoxShadow(\r\n                   color: Colors.black26, offset: Offset(0, 2), blurRadius: 0.6)\r\n             ],\r\n"
+                },
+                {
+                    "date": 1675927849504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,25 @@\n+import 'package:flutter/material.dart';\r\n+import 'package:foodex_app/app/utils/dimension.dart';\r\n+\r\n+class RoundIcon extends StatelessWidget {\r\n+  const RoundIcon({Key? key, required this.imageUrl}) : super(key: key);\r\n+  final String imageUrl;\r\n+\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return GestureDetector(\r\n+      child: Container(\r\n+        width: Dimensions.width30,\r\n+        height: Dimensions.height30,\r\n+        decoration: BoxDecoration(\r\n+            shape: BoxShape.circle,\r\n+            color: Theme,\r\n+            boxShadow: const [\r\n+              BoxShadow(\r\n+                  color: Colors.black26, offset: Offset(0, 2), blurRadius: 0.6)\r\n+            ],\r\n+            image: DecorationImage(image: NetworkImage(imageUrl))),\r\n+      ),\r\n+    );\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1675927856208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n         width: Dimensions.width30,\r\n         height: Dimensions.height30,\r\n         decoration: BoxDecoration(\r\n             shape: BoxShape.circle,\r\n-            color: Theme.of(context).,\r\n+            color: Theme.of(context).scaffoldBackgroundColor,\r\n             boxShadow: const [\r\n               BoxShadow(\r\n                   color: Colors.black26, offset: Offset(0, 2), blurRadius: 0.6)\r\n             ],\r\n"
+                }
+            ],
+            "date": 1672309168915,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\nimport 'package:foodex_app/utils/dimension.dart';\r\n\r\nclass RoundIcon extends StatelessWidget {\r\n  const RoundIcon({Key? key, required this.imageUrl}) : super(key: key);\r\n  final String imageUrl;\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return GestureDetector(\r\n      child: Container(\r\n        width: Dimensions.width30,\r\n        height: Dimensions.height30,\r\n        decoration: BoxDecoration(\r\n            shape: BoxShape.circle,\r\n            color: Colors.white,\r\n            boxShadow: const [\r\n              BoxShadow(\r\n                  color: Colors.black26, offset: Offset(0, 2), blurRadius: 0.6)\r\n            ],\r\n            image: DecorationImage(image: AssetImage(imageUrl))),\r\n      ),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

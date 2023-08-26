@@ -1,0 +1,38 @@
+{
+    "sourceFile": "lib/screen/Profile/profile.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1675742035051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1675742040743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n class _ProfileScreenState extends State<ProfileScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return const Center(\r\n-      child: ,\r\n+      child: Container(),\r\n     );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1675742047549,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+import 'package:flutter/material.dart';\r\n+\r\n+class ProfileScreen extends StatefulWidget {\r\n+  const ProfileScreen({super.key});\r\n+\r\n+  @override\r\n+  State<ProfileScreen> createState() => _ProfileScreenState();\r\n+}\r\n+\r\n+class _ProfileScreenState extends State<ProfileScreen> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return const Center(\r\n+      child: Container(child:C),\r\n+    );\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1675742054923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,25 +10,8 @@\n class _ProfileScreenState extends State<ProfileScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return const Center(\r\n-      child: Container(child:C),\r\n+      child: Container(child:Column(children: [ElevatedButton(onPressed: s, child: child)],)),\r\n     );\r\n   }\r\n }\r\n-import 'package:flutter/material.dart';\r\n-\r\n-class ProfileScreen extends StatefulWidget {\r\n-  const ProfileScreen({super.key});\r\n-\r\n-  @override\r\n-  State<ProfileScreen> createState() => _ProfileScreenState();\r\n-}\r\n-\r\n-class _ProfileScreenState extends State<ProfileScreen> {\r\n-  @override\r\n-  Widget build(BuildContext context) {\r\n-    return const Center(\r\n-      child: Container(),\r\n-    );\r\n-  }\r\n-}\r\n"
+                },
+                {
+                    "date": 1675742062190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   Widget build(BuildContext context) {\r\n     return const Center(\r\n       child: Container(\r\n         child: Column(\r\n-          children: [ElevatedButton(onPressed: s, child: child)],\r\n+          children: [ElevatedButton(onPressed: s, child: child),],\r\n         ),\r\n       ),\r\n     );\r\n   }\r\n"
+                },
+                {
+                    "date": 1675742084022,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n         child: Column(\r\n           children: [\r\n             ElevatedButton(onPressed: () {\r\n               \r\n-            }, child: child),\r\n+            }, child: Text(\"Log Out\")),\r\n           ],\r\n         ),\r\n       ),\r\n     );\r\n"
+                }
+            ],
+            "date": 1675742035051,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\nclass ProfileScreen extends StatefulWidget {\r\n  const ProfileScreen({super.key});\r\n\r\n  @override\r\n  State<ProfileScreen> createState() => _ProfileScreenState();\r\n}\r\n\r\nclass _ProfileScreenState extends State<ProfileScreen> {\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return const Center(\r\n      child: ,\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

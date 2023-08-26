@@ -1,0 +1,46 @@
+{
+    "sourceFile": "lib/sensor/shake_sensor.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1676819009428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1676819015279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,8 @@\n-st\n\\ No newline at end of file\n+class Shake extends StatelessWidget {\r\n+  const Shake({super.key});\r\n+\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Container();\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676819020358,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n-class Shake extends StatelessWidget {\r\n-  const Shake({super.key});\r\n+class ShakeSensor extends StatelessWidget {\r\n+  const ShakeSensor({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container();\r\n"
+                },
+                {
+                    "date": 1676819027244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import 'package:flutter/material.dart';\r\n+\r\n class ShakeSensor extends StatelessWidget {\r\n   const ShakeSensor({super.key});\r\n \r\n   @override\r\n"
+                },
+                {
+                    "date": 1676819053448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,10 @@\n \r\n class ShakeSensor extends StatelessWidget {\r\n   const ShakeSensor({super.key});\r\n \r\n+  \r\n+\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container();\r\n   }\r\n"
+                },
+                {
+                    "date": 1676819088857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n class ShakeSensor extends StatelessWidget {\r\n   const ShakeSensor({super.key});\r\n \r\n-  \r\n+  i\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container();\r\n"
+                },
+                {
+                    "date": 1676819098506,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \r\n   @override\r\n   void initState() {\r\n     super.initState();\r\n-    // ShakeDetector detector = ShakeDetector.autoStart(onPhoneShake: () {\r\n+    // ShakeDetector detector = ShakeDetector.autoStart(onPhoneShake: () {  \r\n   }\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n"
+                },
+                {
+                    "date": 1676819107536,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import 'package:flutter/material.dart';\r\n+\r\n+class ShakeSensor extends StatelessWidget {\r\n+  const ShakeSensor({super.key});\r\n+\r\n+  @override\r\n+  void initState() {\r\n+    super.initState();\r\n+    ShakeDetector detector = ShakeDetector.autoStart(onPhoneShake: () {        \r\n+  }\r\n+\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Container();\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1676819009428,
+            "name": "Commit-0",
+            "content": "st"
+        }
+    ]
+}

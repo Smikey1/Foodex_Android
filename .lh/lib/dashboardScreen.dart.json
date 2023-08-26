@@ -1,0 +1,122 @@
+{
+    "sourceFile": "lib/dashboardScreen.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 26,
+            "patches": [
+                {
+                    "date": 1675362322772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1675362332441,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,13 @@\n-stf\n\\ No newline at end of file\n+class Dashboard extends StatefulWidget {\r\n+  const Dashboard({super.key});\r\n+\r\n+  @override\r\n+  State<Dashboard> createState() => _DashboardState();\r\n+}\r\n+\r\n+class _DashboardState extends State<Dashboard> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Container();\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1675362342138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import 'package:flutter/material.dart';\r\n+\r\n class Dashboard extends StatefulWidget {\r\n   const Dashboard({super.key});\r\n \r\n   @override\r\n"
+                },
+                {
+                    "date": 1675362499449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n \r\n class _DashboardState extends State<Dashboard> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return Container();\r\n+    return ;\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1675362505124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,9 @@\n \r\n class _DashboardState extends State<Dashboard> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return ;\r\n+    return Scaffold(\r\n+      body\r\n+    );\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1675362522275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \r\n class _DashboardState extends State<Dashboard> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return Scaffold(\r\n-      body\r\n+    return const Scaffold(\r\n+      body: \r\n     );\r\n\\ No newline at end of file\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675362527399,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n class _DashboardState extends State<Dashboard> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return const Scaffold(\r\n-      body: \r\n+      body: butto\r\n     );\r\n   }\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675362533652,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n class _DashboardState extends State<Dashboard> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return const Scaffold(\r\n-      body: butto\r\n+      body: buttom\r\n     );\r\n   }\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675362542713,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n class _DashboardState extends State<Dashboard> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return const Scaffold(\r\n-      body: buttom\r\n+      body: buttomNavi\r\n     );\r\n   }\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675362549367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n class _DashboardState extends State<Dashboard> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return const Scaffold(\r\n-      body: buttomNavi\r\n+      body:ButtomNav\r\n     );\r\n   }\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675362569198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n class _DashboardState extends State<Dashboard> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return const Scaffold(\r\n-      body:ButtomNav\r\n+      body: bottomNavigationBar\r\n     );\r\n   }\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675362592373,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n class _DashboardState extends State<Dashboard> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return const Scaffold(\r\n-      body: bottomNavigationBar\r\n+      bottomNavigationBar: \r\n     );\r\n   }\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675362597770,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n class _DashboardState extends State<Dashboard> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return const Scaffold(\r\n-      bottomNavigationBar: \r\n+      bottomNavigationBar: sa\r\n     );\r\n   }\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675362605900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n class _DashboardState extends State<Dashboard> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return const Scaffold(\r\n-      bottomNavigationBar: sa\r\n+      bottomNavigationBar: SafeArea(child: \r\n+      Con)\r\n     );\r\n\\ No newline at end of file\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675362612870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,10 @@\n \r\n class _DashboardState extends State<Dashboard> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return const Scaffold(\r\n+    return  Scaffold(\r\n       bottomNavigationBar: SafeArea(child: \r\n-      Con)\r\n+      Container())\r\n     );\r\n\\ No newline at end of file\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675362619923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,12 @@\n \r\n class _DashboardState extends State<Dashboard> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return  Scaffold(\r\n+    return Scaffold(\r\n       bottomNavigationBar: SafeArea(child: \r\n-      Container())\r\n+      Container(\r\n+        \r\n\\ No newline at end of file\n+      ))\r\n     );\r\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675362632032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       bottomNavigationBar: SafeArea(child: \r\n       Container(\r\n-        \r\n+        padding: ,\r\n       ))\r\n     );\r\n   }\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675362639145,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       bottomNavigationBar: SafeArea(child: \r\n       Container(\r\n-        padding: ,\r\n+        padding: EdgeInsets.all(12),\r\n       ))\r\n     );\r\n   }\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675362647504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n     return Scaffold(\r\n       bottomNavigationBar: SafeArea(child: \r\n       Container(\r\n         padding: EdgeInsets.all(12),\r\n+        margin: EdgeInsets.,\r\n       ))\r\n     );\r\n   }\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675362656126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     return Scaffold(\r\n       bottomNavigationBar: SafeArea(child: \r\n       Container(\r\n         padding: EdgeInsets.all(12),\r\n-        margin: EdgeInsets.,\r\n+        margin: EdgeInsets.symmetric(h),\r\n       ))\r\n     );\r\n   }\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675362661216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     return Scaffold(\r\n       bottomNavigationBar: SafeArea(child: \r\n       Container(\r\n         padding: EdgeInsets.all(12),\r\n-        margin: EdgeInsets.symmetric(h),\r\n+        margin: EdgeInsets.symmetric(horizontal: 20, vertical),\r\n       ))\r\n     );\r\n   }\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675362666318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,10 @@\n     return Scaffold(\r\n       bottomNavigationBar: SafeArea(child: \r\n       Container(\r\n         padding: EdgeInsets.all(12),\r\n-        margin: EdgeInsets.symmetric(horizontal: 20, vertical),\r\n+        margin: EdgeInsets.symmetric(horizontal: 20),\r\n+        \r\n       ))\r\n     );\r\n\\ No newline at end of file\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675362689533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n       bottomNavigationBar: SafeArea(child: \r\n       Container(\r\n         padding: EdgeInsets.all(12),\r\n         margin: EdgeInsets.symmetric(horizontal: 20),\r\n-        \r\n+        deco\r\n       ))\r\n     );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1675362695526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,22 @@\n+import 'package:flutter/material.dart';\r\n+\r\n+class Dashboard extends StatefulWidget {\r\n+  const Dashboard({super.key});\r\n+\r\n+  @override\r\n+  State<Dashboard> createState() => _DashboardState();\r\n+}\r\n+\r\n+class _DashboardState extends State<Dashboard> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Scaffold(\r\n+      bottomNavigationBar: SafeArea(child: \r\n+      Container(\r\n+        padding: EdgeInsets.all(12),\r\n+        margin: EdgeInsets.symmetric(horizontal: 20),\r\n+        decoration: box,\r\n+      ))\r\n+    );\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1675362703093,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,31 +14,11 @@\n       bottomNavigationBar: SafeArea(child: \r\n       Container(\r\n         padding: EdgeInsets.all(12),\r\n         margin: EdgeInsets.symmetric(horizontal: 20),\r\n-        decoration: box,\r\n+        decoration: BoxDecoration(\r\n+          color: \r\n+        ),\r\n       ))\r\n     );\r\n   }\r\n }\r\n-import 'package:flutter/material.dart';\r\n-\r\n-class Dashboard extends StatefulWidget {\r\n-  const Dashboard({super.key});\r\n-\r\n-  @override\r\n-  State<Dashboard> createState() => _DashboardState();\r\n-}\r\n-\r\n-class _DashboardState extends State<Dashboard> {\r\n-  @override\r\n-  Widget build(BuildContext context) {\r\n-    return Scaffold(\r\n-      bottomNavigationBar: SafeArea(child: \r\n-      Container(\r\n-        padding: EdgeInsets.all(12),\r\n-        margin: EdgeInsets.symmetric(horizontal: 20),\r\n-        deco\r\n-      ))\r\n\\ No newline at end of file\n-    );\r\n-  }\r\n-}\n"
+                },
+                {
+                    "date": 1675362722727,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n       Container(\r\n         padding: EdgeInsets.all(12),\r\n         margin: EdgeInsets.symmetric(horizontal: 20),\r\n         decoration: BoxDecoration(\r\n-          color: Colors.v\r\n+          color: Colors.\r\n         ),\r\n       ))\r\n     );\r\n   }\r\n"
+                },
+                {
+                    "date": 1675362748846,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n         padding: EdgeInsets.all(12),\r\n         margin: EdgeInsets.symmetric(horizontal: 20),\r\n         decoration: BoxDecoration(\r\n           color: Colors.blueGrey.withOpacity(0.8),\r\n-          \r\n+          borderRadius: BorderRadius.circular(20),\r\n         ),\r\n       ))\r\n     );\r\n   }\r\n"
+                }
+            ],
+            "date": 1675362322772,
+            "name": "Commit-0",
+            "content": "stf"
+        }
+    ]
+}

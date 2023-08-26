@@ -1,0 +1,30 @@
+{
+    "sourceFile": "lib/repository/remote_repository/user_repository.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1675078556028,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1675078715657,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import 'package:foodex_app/app/api/user_api.dart';\r\n+import 'package:foodex_app/data/remote_data_source/api/user_api.dart';\r\n import 'package:foodex_app/model/user.dart';\r\n \r\n class UserRepository {\r\n   Future<bool> registerUser(User user) async {\r\n"
+                },
+                {
+                    "date": 1675090671038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import 'package:foodex_app/data/remote_data_source/api/user_api.dart';\r\n+import 'package:foodex_app/helper/api/user_api.dart';\r\n import 'package:foodex_app/model/user.dart';\r\n \r\n class UserRepository {\r\n   Future<bool> registerUser(User user) async {\r\n"
+                },
+                {
+                    "date": 1675090684356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import 'package:foodex_app/helper/api/user_api.dart';\r\n+import 'package:foodex_app/data/remote_data_source/api/user_api.dart';\r\n import 'package:foodex_app/model/user.dart';\r\n \r\n class UserRepository {\r\n   Future<bool> registerUser(User user) async {\r\n"
+                }
+            ],
+            "date": 1675078556028,
+            "name": "Commit-0",
+            "content": "import 'package:foodex_app/app/api/user_api.dart';\r\nimport 'package:foodex_app/model/user.dart';\r\n\r\nclass UserRepository {\r\n  Future<bool> registerUser(User user) async {\r\n    return await UserAPI().registerUser(user);\r\n  }\r\n\r\n  Future<bool> loginUser(int phoneNumber, String password) async {\r\n    return await UserAPI().loginUser(phoneNumber, password);\r\n  }\r\n}\r\n"
+        }
+    ]
+}

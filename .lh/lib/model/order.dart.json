@@ -1,0 +1,26 @@
+{
+    "sourceFile": "lib/model/order.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1676912673921,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1676912688797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   String? id;\r\n   User? userId;\r\n   Food? foodId;\r\n   int? orderedQuantity;\r\n-  \r\n+  int? totalPrice\r\n   String? deliveryStatusMessage;\r\n   String? deliveryDate;\r\n \r\n   Order(\r\n"
+                },
+                {
+                    "date": 1676912698598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,30 @@\n+import 'package:foodex_app/model/food.dart';\r\n+import 'package:foodex_app/model/user.dart';\r\n+import 'package:json_annotation/json_annotation.dart';\r\n+\r\n+part 'order.g.dart';\r\n+\r\n+@JsonSerializable()\r\n+class Order {\r\n+  @JsonKey(name: \"_id\")\r\n+  String? id;\r\n+  User? userId;\r\n+  Food? foodId;\r\n+  int? orderedQuantity;\r\n+  int? totalPrice;\r\n+  String? deliveryStatusMessage;\r\n+  String? deliveryDate;\r\n+\r\n+  Order(\r\n+      {this.id,\r\n+      this.userId,\r\n+      this.foodId,\r\n+      this.orderedQuantity,\r\n+      this\r\n+      this.deliveryStatusMessage,\r\n+      this.deliveryDate});\r\n+\r\n+  factory Order.fromJson(Map<String, dynamic> json) => _$OrderFromJson(json);\r\n+\r\n+  Map<String, dynamic> toJson() => _$OrderToJson(this);\r\n+}\r\n"
+                }
+            ],
+            "date": 1676912673921,
+            "name": "Commit-0",
+            "content": "import 'package:foodex_app/model/food.dart';\r\nimport 'package:foodex_app/model/user.dart';\r\nimport 'package:json_annotation/json_annotation.dart';\r\n\r\npart 'order.g.dart';\r\n\r\n@JsonSerializable()\r\nclass Order {\r\n  @JsonKey(name: \"_id\")\r\n  String? id;\r\n  User? userId;\r\n  Food? foodId;\r\n  int? orderedQuantity;\r\n  \r\n  String? deliveryStatusMessage;\r\n  String? deliveryDate;\r\n\r\n  Order(\r\n      {this.id,\r\n      this.userId,\r\n      this.foodId,\r\n      this.orderedQuantity,\r\n      this.deliveryStatusMessage,\r\n      this.deliveryDate});\r\n\r\n  factory Order.fromJson(Map<String, dynamic> json) => _$OrderFromJson(json);\r\n\r\n  Map<String, dynamic> toJson() => _$OrderToJson(this);\r\n}\r\n"
+        }
+    ]
+}

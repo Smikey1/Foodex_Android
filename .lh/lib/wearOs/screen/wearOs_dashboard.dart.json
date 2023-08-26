@@ -1,0 +1,38 @@
+{
+    "sourceFile": "lib/wearOs/screen/wearOs_dashboard.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1676026601932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1676026607349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,1 @@\n+st\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676026615779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+class WearOs extends StatefulWidget {\r\n+  const WearOs({super.key});\r\n+\r\n+  @override\r\n+  State<WearOs> createState() => _WearOsState();\r\n+}\r\n+\r\n+class _WearOsState extends State<WearOs> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Container();\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676026626632,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,15 @@\n-class WearOs extends StatefulWidget {\r\n-  const WearOs({super.key});\r\n+import 'package:flutter/material.dart';\r\n \r\n+class WearOsDashboard extends StatefulWidget {\r\n+  const WearOsDashboard({super.key});\r\n+\r\n   @override\r\n-  State<WearOs> createState() => _WearOsState();\r\n+  State<WearOsDashboard> createState() => _WearOsDashboardState();\r\n }\r\n \r\n-class _WearOsState extends State<WearOs> {\r\n+class _WearOsDashboardState extends State<WearOsDashboard> {\r\n   @override\r\n\\ No newline at end of file\n   Widget build(BuildContext context) {\r\n     return Container();\r\n   }\r\n-}\n-st\n-sc\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676026635569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+import 'package:flutter/material.dart';\r\n+\r\n+class WearOsDashboard extends StatefulWidget {\r\n+  const WearOsDashboard({super.key});\r\n+\r\n+  @override\r\n+  State<WearOsDashboard> createState() => _WearOsDashboardState();\r\n+}\r\n+\r\n+class _WearOsDashboardState extends State<WearOsDashboard> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Scaffold(\r\n+      \r\n+    )\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676026643638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+import 'package:flutter/material.dart';\r\n+\r\n+class WearOsDashboard extends StatefulWidget {\r\n+  const WearOsDashboard({super.key});\r\n+\r\n+  @override\r\n+  State<WearOsDashboard> createState() => _WearOsDashboardState();\r\n+}\r\n+\r\n+class _WearOsDashboardState extends State<WearOsDashboard> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Scaffold(\r\n+      bod\r\n+    );\r\n+  }\r\n+}\r\n"
+                }
+            ],
+            "date": 1676026601932,
+            "name": "Commit-0",
+            "content": "sc"
+        }
+    ]
+}

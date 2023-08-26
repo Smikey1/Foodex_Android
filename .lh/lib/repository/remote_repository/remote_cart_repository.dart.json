@@ -1,0 +1,110 @@
+{
+    "sourceFile": "lib/repository/remote_repository/remote_cart_repository.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 23,
+            "patches": [
+                {
+                    "date": 1675774184173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1675774190297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n class FoodRepository {\r\n-  Future<bool> addFood(File? file, Food food) async {\r\n+  Future<bool> addFood(Food food) async {\r\n     return await FoodAPI().addFood(file, food);\r\n   }\r\n \r\n   Future<FoodResponse?> getAllFood() async {\r\n     return await FoodAPI().getAllFood();\r\n\\ No newline at end of file\n-  }\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1675774201866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n-class FoodRepository {\r\n-  Future<bool> addFood(Food food) async {\r\n-    return await FoodAPI().addFood(file, food);\r\n+class CartRepository {\r\n+  Future<bool> addCart(Cart food) async {\r\n+    return await CartAPI().addCart(file, food);\r\n   }\r\n \r\n-  Future<FoodResponse?> getAllFood() async {\r\n\\ No newline at end of file\n-    return await FoodAPI().getAllFood();\r\n+  Future<CartResponse?> getAllCart() async {\r\n+    return await CartAPI().getAllCart();\r\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675774208369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n class CartRepository {\r\n-  Future<bool> addCart(Cart food) async {\r\n-    return await CartAPI().addCart(file, food);\r\n+  Future<bool> addCart(Cart cart) async {\r\n+    return await CartAPI().addCart(file, cart);\r\n   }\r\n \r\n   Future<CartResponse?> getAllCart() async {\r\n     return await CartAPI().getAllCart();\r\n"
+                },
+                {
+                    "date": 1675774227804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,7 @@\n+import 'package:foodex_app/data/remote_data_source/api/cart_api.dart';\r\n+import 'package:foodex_app/response/cart_response.dart';\r\n+\r\n class CartRepository {\r\n   Future<bool> addCart(Cart cart) async {\r\n     return await CartAPI().addCart(file, cart);\r\n   }\r\n"
+                },
+                {
+                    "date": 1675774233532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import 'package:foodex_app/response/cart_response.dart';\r\n \r\n class CartRepository {\r\n   Future<bool> addCart(Cart cart) async {\r\n-    return await CartAPI().addCart(file, cart);\r\n+    return await CartAPI().addProductToCart(file, cart);\r\n   }\r\n \r\n   Future<CartResponse?> getAllCart() async {\r\n     return await CartAPI().getAllCart();\r\n"
+                },
+                {
+                    "date": 1675774242717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,13 @@\n import 'package:foodex_app/data/remote_data_source/api/cart_api.dart';\r\n+import 'package:foodex_app/model/cart.dart';\r\n import 'package:foodex_app/response/cart_response.dart';\r\n \r\n class CartRepository {\r\n   Future<bool> addCart(Cart cart) async {\r\n-    return await CartAPI().addProductToCart(file, cart);\r\n+    return await CartAPI().addProductToCart( cart);\r\n   }\r\n \r\n   Future<CartResponse?> getAllCart() async {\r\n-    return await CartAPI().getAllCart();\r\n+    return await CartAPI().getAllFood();\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1675774258488,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n     return await CartAPI().addProductToCart( cart);\r\n   }\r\n \r\n   Future<CartResponse?> getAllCart() async {\r\n-    return await CartAPI().getAllFood();\r\n+    return await CartAPI().getAllCart();\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1675774270385,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import 'package:foodex_app/response/cart_response.dart';\r\n \r\n class CartRepository {\r\n   Future<bool> addCart(Cart cart) async {\r\n-    return await CartAPI().addProductToCart( cart);\r\n+    return await CartAPI().addProductToCart(cart);\r\n   }\r\n \r\n   Future<CartResponse?> getAllCart() async {\r\n     return await CartAPI().getAllCart();\r\n"
+                },
+                {
+                    "date": 1675774399164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+import 'package:foodex_app/data/remote_data_source/api/cart_api.dart';\r\n+import 'package:foodex_app/model/cart.dart';\r\n+import 'package:foodex_app/response/cart_response.dart';\r\n+\r\n+class CartRepository {\r\n+  Future<bool> addProductToCart(Cart cart) async {\r\n+    return await CartAPI().addProductToCart(cart);\r\n+  }\r\n+\r\n+  Future<CartResponse?> getAllCart() async {\r\n+    return await CartAPI().getAllCart();\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1675775064377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import 'package:foodex_app/data/remote_data_source/api/cart_api.dart';\r\n import 'package:foodex_app/model/cart.dart';\r\n-import 'package:foodex_app/response/cart_response.dart';\r\n+import 'package:foodex_app/response/food_cart_response.dart';\r\n \r\n class CartRepository {\r\n   Future<bool> addProductToCart(Cart cart) async {\r\n     return await CartAPI().addProductToCart(cart);\r\n@@ -10,17 +10,4 @@\n   Future<CartResponse?> getAllCart() async {\r\n     return await CartAPI().getAllCart();\r\n   }\r\n }\r\n-import 'package:foodex_app/data/remote_data_source/api/cart_api.dart';\r\n-import 'package:foodex_app/model/cart.dart';\r\n-import 'package:foodex_app/response/cart_response.dart';\r\n-\r\n-class CartRepository {\r\n-  Future<bool> addCart(Cart cart) async {\r\n-    return await CartAPI().addProductToCart(cart);\r\n-  }\r\n-\r\n-  Future<CartResponse?> getAllCart() async {\r\n-    return await CartAPI().getAllCart();\r\n-  }\r\n-}\r\n"
+                },
+                {
+                    "date": 1675788544519,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,5 +9,9 @@\n \r\n   Future<CartResponse?> getAllCart() async {\r\n     return await CartAPI().getAllCart();\r\n   }\r\n+\r\n+   Future<CartResponse?> getAllCart() async {\r\n+    return await CartAPI().getAllCart();\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1675788551237,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n   Future<CartResponse?> getAllCart() async {\r\n     return await CartAPI().getAllCart();\r\n   }\r\n \r\n-   Future<CartResponse?> getAllCart() async {\r\n+   Future<CartResponse?> delete() async {\r\n     return await CartAPI().getAllCart();\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1675788562782,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n   Future<CartResponse?> getAllCart() async {\r\n     return await CartAPI().getAllCart();\r\n   }\r\n \r\n-   Future<CartResponse?> delete() async {\r\n+   Future<CartResponse?> deleteCart() async {\r\n     return await CartAPI().getAllCart();\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1675788787248,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n   Future<CartResponse?> getAllCart() async {\r\n     return await CartAPI().getAllCart();\r\n   }\r\n \r\n-   Future<CartResponse?> deleteCart() async {\r\n-    return await CartAPI().getAllCart();\r\n+  Future<CartResponse?> deleteCart(Cart cart) async {\r\n+    return await CartAPI().deleteCart();\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1675789100724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,7 +11,7 @@\n     return await CartAPI().getAllCart();\r\n   }\r\n \r\n   Future<CartResponse?> deleteCart(Cart cart) async {\r\n-    return await CartAPI().deleteCart();\r\n+    return await CartAPI().deleteCart(cart);\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1675789672707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n   Future<CartResponse?> getAllCart() async {\r\n     return await CartAPI().getAllCart();\r\n   }\r\n \r\n-  Future<CartResponse?> deleteCart(Cart cart) async {\r\n+  Future<bool?> deleteCart(Cart cart) async {\r\n     return await CartAPI().deleteCart(cart);\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1675836049278,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n   Future<CartResponse?> getAllCart() async {\r\n     return await CartAPI().getAllCart();\r\n   }\r\n \r\n-  Future<bool?> deleteCart(Cart cart) async {\r\n+  Future<bool?> deleteProductFromCart(Cart cart) async {\r\n     return await CartAPI().deleteCart(cart);\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1675836077697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n   Future<CartResponse?> getAllCart() async {\r\n     return await CartAPI().getAllCart();\r\n   }\r\n \r\n-  Future<bool?> deleteProductFromCart(Cart cart) async {\r\n+  Future<bool?> deleteProductFromCart(String id cart) async {\r\n     return await CartAPI().deleteCart(cart);\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1675836102958,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n   Future<CartResponse?> getAllCart() async {\r\n     return await CartAPI().getAllCart();\r\n   }\r\n \r\n-  Future<bool?> deleteProductFromCart(String id cart) async {\r\n-    return await CartAPI().deleteCart(cart);\r\n+  Future<bool?> deleteProductFromCart(String productId) async {\r\n+    return await CartAPI().deleteCart(id);\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1675836156594,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+import 'package:foodex_app/data/remote_data_source/api/cart_api.dart';\r\n+import 'package:foodex_app/model/cart.dart';\r\n+import 'package:foodex_app/response/food_cart_response.dart';\r\n+\r\n+class CartRepository {\r\n+  Future<bool> addProductToCart(Cart cart) async {\r\n+    return await CartAPI().addProductToCart(cart);\r\n+  }\r\n+\r\n+  Future<CartResponse?> getAllCart() async {\r\n+    return await CartAPI().getAllCart();\r\n+  }\r\n+\r\n+  Future<bool?> deleteProductFromCart(String productId) async {\r\n+    return await CartAPI().deleteCart(producfoodIdtId);\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1675836358598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+import 'package:foodex_app/data/remote_data_source/api/cart_api.dart';\r\n+import 'package:foodex_app/model/cart.dart';\r\n+import 'package:foodex_app/response/food_cart_response.dart';\r\n+\r\n+class CartRepository {\r\n+  Future<bool> addProductToCart(Cart cart) async {\r\n+    return await CartAPI().addProductToCart(foodId, quantity);\r\n+  }\r\n+\r\n+  Future<CartResponse?> getAllCart() async {\r\n+    return await CartAPI().getAllCart();\r\n+  }\r\n+\r\n+  Future<bool?> deleteProductFromCart(String foodId) async {\r\n+    return await CartAPI().deleteCart(foodId);\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1675836365194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+import 'package:foodex_app/data/remote_data_source/api/cart_api.dart';\r\n+import 'package:foodex_app/model/cart.dart';\r\n+import 'package:foodex_app/response/food_cart_response.dart';\r\n+\r\n+class CartRepository {\r\n+  Future<bool> addProductToCart(String foodId, String quantity) async {\r\n+    return await CartAPI().addProductToCart(foodId, quantity);\r\n+  }\r\n+\r\n+  Future<CartResponse?> getAllCart() async {\r\n+    return await CartAPI().getAllCart();\r\n+  }\r\n+\r\n+  Future<bool?> deleteProductFromCart(String foodId) async {\r\n+    return await CartAPI().deleteCart(foodId);\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1676397083265,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n import 'package:foodex_app/data/remote_data_source/api/cart_api.dart';\r\n-import 'package:foodex_app/model/cart.dart';\r\n import 'package:foodex_app/response/food_cart_response.dart';\r\n \r\n class CartRepository {\r\n   Future<bool> addProductToCart(String foodId, String quantity) async {\r\n@@ -14,55 +13,4 @@\n   Future<bool?> deleteProductFromCart(String foodId) async {\r\n     return await CartAPI().deleteCart(foodId);\r\n   }\r\n }\r\n-import 'package:foodex_app/data/remote_data_source/api/cart_api.dart';\r\n-import 'package:foodex_app/model/cart.dart';\r\n-import 'package:foodex_app/response/food_cart_response.dart';\r\n-\r\n-class CartRepository {\r\n-  Future<bool> addProductToCart(Cart cart) async {\r\n-    return await CartAPI().addProductToCart(foodId, quantity);\r\n-  }\r\n-\r\n-  Future<CartResponse?> getAllCart() async {\r\n-    return await CartAPI().getAllCart();\r\n-  }\r\n-\r\n-  Future<bool?> deleteProductFromCart(String foodId) async {\r\n-    return await CartAPI().deleteCart(foodId);\r\n-  }\r\n-}\r\n-import 'package:foodex_app/data/remote_data_source/api/cart_api.dart';\r\n-import 'package:foodex_app/model/cart.dart';\r\n-import 'package:foodex_app/response/food_cart_response.dart';\r\n-\r\n-class CartRepository {\r\n-  Future<bool> addProductToCart(Cart cart) async {\r\n-    return await CartAPI().addProductToCart(cart);\r\n-  }\r\n-\r\n-  Future<CartResponse?> getAllCart() async {\r\n-    return await CartAPI().getAllCart();\r\n-  }\r\n-\r\n-  Future<bool?> deleteProductFromCart(String productId) async {\r\n-    return await CartAPI().deleteCart(producfoodIdtId);\r\n-  }\r\n-}\r\n-import 'package:foodex_app/data/remote_data_source/api/cart_api.dart';\r\n-import 'package:foodex_app/model/cart.dart';\r\n-import 'package:foodex_app/response/food_cart_response.dart';\r\n-\r\n-class CartRepository {\r\n-  Future<bool> addProductToCart(Cart cart) async {\r\n-    return await CartAPI().addProductToCart(cart);\r\n-  }\r\n-\r\n-  Future<CartResponse?> getAllCart() async {\r\n-    return await CartAPI().getAllCart();\r\n-  }\r\n-\r\n-  Future<bool?> deleteProductFromCart(String productId) async {\r\n-    return await CartAPI().deleteCart(id);\r\n-  }\r\n-}\r\n"
+                }
+            ],
+            "date": 1675774184173,
+            "name": "Commit-0",
+            "content": "class FoodRepository {\r\n  Future<bool> addFood(File? file, Food food) async {\r\n    return await FoodAPI().addFood(file, food);\r\n  }\r\n\r\n  Future<FoodResponse?> getAllFood() async {\r\n    return await FoodAPI().getAllFood();\r\n  }"
+        }
+    ]
+}

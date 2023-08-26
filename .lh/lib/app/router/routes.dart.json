@@ -1,0 +1,54 @@
+{
+    "sourceFile": "lib/app/router/routes.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1674796127599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1674796139252,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,3 @@\n-class Routerhelper\n\\ No newline at end of file\n+class Routerhelper{\r\n+  \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674796148982,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n class Routerhelper{\r\n-  \r\n+  static const \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674796157060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n class Routerhelper{\r\n-  static const \r\n+  static const String ini = '/';\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674796165426,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n-class Routerhelper{\r\n-  static const String ini = '/';\r\n+class RouterHelper{\r\n+  static const String initial = '/';\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674796496959,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,6 @@\n class RouterHelper{\r\n   static const String initial = '/';\r\n+\r\n+\r\n+  \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674796510821,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n class RouterHelper{\r\n   static const String initial = '/';\r\n \r\n \r\n-  \r\n+  static \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674796522772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n class RouterHelper{\r\n   static const String initial = '/';\r\n \r\n \r\n-  static \r\n+  static List\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674796528454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n class RouterHelper{\r\n   static const String initial = '/';\r\n \r\n \r\n-  static List<>\r\n+  static List<Getpage>\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674796572368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,7 @@\n class RouterHelper {\r\n   static const String initial = '/';\r\n \r\n   static List<GetPage> routes = [\r\n-    GetPage(name: , page: () => const DashBoardScreen()),\r\n+    GetPage(name: \"/\", page: () => const DashBoardScreen()),\r\n   ];\r\n }\r\n"
+                }
+            ],
+            "date": 1674796127599,
+            "name": "Commit-0",
+            "content": "class Routerhelper"
+        }
+    ]
+}

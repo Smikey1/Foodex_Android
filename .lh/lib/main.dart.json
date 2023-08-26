@@ -1,0 +1,50 @@
+{
+    "sourceFile": "lib/main.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1672987293146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1672987300316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return GetMaterialApp(\r\n-      \r\n+      theme: The,\r\n       initialRoute: '/',\r\n       routes: {\r\n         '/': (context) => const LoginScreen(),\r\n       },\r\n"
+                },
+                {
+                    "date": 1672987312238,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,10 @@\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return GetMaterialApp(\r\n-      theme: The,\r\n+      theme: ThemeData(),\r\n+      \r\n       initialRoute: '/',\r\n       routes: {\r\n         '/': (context) => const LoginScreen(),\r\n       },\r\n"
+                },
+                {
+                    "date": 1672987317732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n   @override\r\n   Widget build(BuildContext context) {\r\n     return GetMaterialApp(\r\n       theme: ThemeData(),\r\n-      \r\n+      darkTheme: ,\r\n       initialRoute: '/',\r\n       routes: {\r\n         '/': (context) => const LoginScreen(),\r\n       },\r\n"
+                },
+                {
+                    "date": 1672987323009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n   @override\r\n   Widget build(BuildContext context) {\r\n     return GetMaterialApp(\r\n       theme: ThemeData(),\r\n-      darkTheme: ,\r\n+      darkTheme: The,\r\n       initialRoute: '/',\r\n       routes: {\r\n         '/': (context) => const LoginScreen(),\r\n       },\r\n"
+                },
+                {
+                    "date": 1672987328508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n   @override\r\n   Widget build(BuildContext context) {\r\n     return GetMaterialApp(\r\n       theme: ThemeData(),\r\n-      darkTheme: The,\r\n+      darkTheme: ThemeData(),\r\n       initialRoute: '/',\r\n       routes: {\r\n         '/': (context) => const LoginScreen(),\r\n       },\r\n"
+                },
+                {
+                    "date": 1672987334695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,9 @@\n   Widget build(BuildContext context) {\r\n     return GetMaterialApp(\r\n       theme: ThemeData(),\r\n       darkTheme: ThemeData(),\r\n+      \r\n       initialRoute: '/',\r\n       routes: {\r\n         '/': (context) => const LoginScreen(),\r\n       },\r\n"
+                },
+                {
+                    "date": 1672987340386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n   Widget build(BuildContext context) {\r\n     return GetMaterialApp(\r\n       theme: ThemeData(),\r\n       darkTheme: ThemeData(),\r\n-      themeMode: ,\r\n+      themeMode: The,\r\n       initialRoute: '/',\r\n       routes: {\r\n         '/': (context) => const LoginScreen(),\r\n       },\r\n"
+                },
+                {
+                    "date": 1672988815613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n   Widget build(BuildContext context) {\r\n     return GetMaterialApp(\r\n       theme: ThemeData(\r\n           brightness: Brightness.light, \r\n-          primarySwatch: MaterialColor(0xFFFFE200, <> )),\r\n+          primarySwatch: MaterialColor(0xFFFFE200, <int> )),\r\n       darkTheme: ThemeData(brightness: Brightness.dark),\r\n       themeMode: ThemeMode.system,\r\n       initialRoute: '/',\r\n       routes: {\r\n"
+                }
+            ],
+            "date": 1672987293146,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\nimport 'package:flutter/services.dart';\r\nimport 'package:foodex_app/helper/objectbox.dart';\r\nimport 'package:foodex_app/screen/login_register/loginScreen.dart';\r\nimport 'package:foodex_app/state/objectbox_state.dart';\r\n\r\nimport 'package:foodex_app/screen/screen.dart';\r\nimport 'package:get/get.dart';\r\n\r\nvoid main() async {\r\n  WidgetsFlutterBinding.ensureInitialized();\r\n  // create an object for objectBoxInstance\r\n  ObjectBoxState.objectBoxInstance = await ObjectBoxInstance.init();\r\n\r\n  // Disable landscape mode\r\n  SystemChrome.setPreferredOrientations(\r\n          [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown])\r\n      .then((value) => runApp(const MyApp()));\r\n}\r\n\r\nclass MyApp extends StatelessWidget {\r\n  const MyApp({Key? key}) : super(key: key);\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return GetMaterialApp(\r\n      \r\n      initialRoute: '/',\r\n      routes: {\r\n        '/': (context) => const LoginScreen(),\r\n      },\r\n      debugShowCheckedModeBanner: false,\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

@@ -1,0 +1,130 @@
+{
+    "sourceFile": "lib/themeScreen.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 28,
+            "patches": [
+                {
+                    "date": 1674129353363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1674129358567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-swt\n\\ No newline at end of file\n+s\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674129366118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,13 @@\n-s\n\\ No newline at end of file\n+class The extends StatefulWidget {\r\n+  const The({super.key});\r\n+\r\n+  @override\r\n+  State<The> createState() => _TheState();\r\n+}\r\n+\r\n+class _TheState extends State<The> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Container();\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674129374162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,14 @@\n-class The extends StatefulWidget {\r\n-  const The({super.key});\r\n+import 'package:flutter/material.dart';\r\n \r\n+class ThemeScreen extends StatefulWidget {\r\n+  const ThemeScreen({super.key});\r\n+\r\n   @override\r\n-  State<The> createState() => _TheState();\r\n+  State<ThemeScreen> createState() => _ThemeScreenState();\r\n }\r\n \r\n-class _TheState extends State<The> {\r\n+class _ThemeScreenState extends State<ThemeScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container();\r\n   }\r\n"
+                },
+                {
+                    "date": 1674129382658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,9 @@\n \r\n class _ThemeScreenState extends State<ThemeScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return Container();\r\n+    return Scaffold(\r\n+      \r\n+    );\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674129390973,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n class _ThemeScreenState extends State<ThemeScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n-      \r\n+\r\n+\r\n     );\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674129400834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,13 @@\n class _ThemeScreenState extends State<ThemeScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n-\r\n-\r\n+      appBar: AppBar(\r\n+        title: const Text('Theme Screen'),\r\n+      ),\r\n+      body: const Center(\r\n+        child: Text('Theme Screen'),\r\n+      ),\r\n     );\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674130049603,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n \r\n class _ThemeScreenState extends State<ThemeScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n+    \r\n     return Scaffold(\r\n       appBar: AppBar(\r\n         title: const Text('Theme Screen'),\r\n       ),\r\n"
+                },
+                {
+                    "date": 1674130063487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \r\n class _ThemeScreenState extends State<ThemeScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    \r\n+    final text\r\n     return Scaffold(\r\n       appBar: AppBar(\r\n         title: const Text('Theme Screen'),\r\n       ),\r\n"
+                },
+                {
+                    "date": 1674130069523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \r\n class _ThemeScreenState extends State<ThemeScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    final text\r\n+    final text =\r\n     return Scaffold(\r\n       appBar: AppBar(\r\n         title: const Text('Theme Screen'),\r\n       ),\r\n"
+                },
+                {
+                    "date": 1674130075435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \r\n class _ThemeScreenState extends State<ThemeScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    final text =\r\n+    final text = MediaQuery(data: data, child: child)\r\n     return Scaffold(\r\n       appBar: AppBar(\r\n         title: const Text('Theme Screen'),\r\n       ),\r\n"
+                },
+                {
+                    "date": 1674130088300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \r\n class _ThemeScreenState extends State<ThemeScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    final text = MediaQuery(data: data, child: child)\r\n+    final text = MediaQuery.\r\n     return Scaffold(\r\n       appBar: AppBar(\r\n         title: const Text('Theme Screen'),\r\n       ),\r\n"
+                },
+                {
+                    "date": 1674130093964,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \r\n class _ThemeScreenState extends State<ThemeScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    final text = MediaQuery.\r\n+    final text = MediaQuery.of\r\n     return Scaffold(\r\n       appBar: AppBar(\r\n         title: const Text('Theme Screen'),\r\n       ),\r\n"
+                },
+                {
+                    "date": 1674130099693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \r\n class _ThemeScreenState extends State<ThemeScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    final text = MediaQuery.of\r\n+    final text = MediaQuery.of(context).p\r\n     return Scaffold(\r\n       appBar: AppBar(\r\n         title: const Text('Theme Screen'),\r\n       ),\r\n"
+                },
+                {
+                    "date": 1674130141194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \r\n class _ThemeScreenState extends State<ThemeScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    final text = MediaQuery.of(context).p\r\n+    final text = MediaQuery.of(context).platformBrightness == Brightness.dark\r\n     return Scaffold(\r\n       appBar: AppBar(\r\n         title: const Text('Theme Screen'),\r\n       ),\r\n"
+                },
+                {
+                    "date": 1674130146784,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,10 @@\n class _ThemeScreenState extends State<ThemeScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     final text = MediaQuery.of(context).platformBrightness == Brightness.dark\r\n+        ? 'Dark Mode'\r\n+        : 'Light Mode';\r\n     return Scaffold(\r\n       appBar: AppBar(\r\n         title: const Text('Theme Screen'),\r\n       ),\r\n"
+                },
+                {
+                    "date": 1674130238602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,10 @@\n       appBar: AppBar(\r\n         title: const Text('Theme Screen'),\r\n       ),\r\n       body: const Center(\r\n-        child: Text('Theme Screen'),\r\n+        child: Text('Theme Screen', \r\n+        ),\r\n       ),\r\n     );\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674130250699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n         title: const Text('Theme Screen'),\r\n       ),\r\n       body: const Center(\r\n         child: Text('Theme Screen', \r\n-        ),\r\n+        style:),\r\n       ),\r\n     );\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674130256850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n         title: const Text('Theme Screen'),\r\n       ),\r\n       body: const Center(\r\n         child: Text('Theme Screen', \r\n-        style:),\r\n+        style: TextSelection(baseOffset: baseOffset, extentOffset: extentOffset)),\r\n       ),\r\n     );\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674130262980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n         title: const Text('Theme Screen'),\r\n       ),\r\n       body: const Center(\r\n         child: Text('Theme Screen', \r\n-        style: TextSelection(baseOffset: baseOffset, extentOffset: extentOffset)),\r\n+        style: TextSty),\r\n       ),\r\n     );\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674130277516,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,9 @@\n       appBar: AppBar(\r\n         title: const Text('Theme Screen'),\r\n       ),\r\n       body: const Center(\r\n-        child: Text('Theme Screen', \r\n-        style: TextSty),\r\n+        child: Text('Theme Screen', style: TextStyle(fontSize: .0)),\r\n       ),\r\n     );\r\n   }\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1674132024227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,11 +15,12 @@\n         : 'Light Mode';\r\n     return Scaffold(\r\n       appBar: AppBar(\r\n         title: const Text('Theme Screen'),\r\n+        \r\n       ),\r\n       body: const Center(\r\n-        child: Text('Theme Screen', style: TextStyle(fontSize: .0)),\r\n+        child: Text('Theme Screen', style: TextStyle(fontSize: 30.0)),\r\n       ),\r\n     );\r\n\\ No newline at end of file\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1674132032395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,12 +15,14 @@\n         : 'Light Mode';\r\n     return Scaffold(\r\n       appBar: AppBar(\r\n         title: const Text('Theme Screen'),\r\n-        \r\n+        actions: [\r\n+          ChangeNotifier()\r\n+        ],\r\n       ),\r\n       body: const Center(\r\n         child: Text('Theme Screen', style: TextStyle(fontSize: 30.0)),\r\n       ),\r\n\\ No newline at end of file\n     );\r\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1674132041246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,13 +16,13 @@\n     return Scaffold(\r\n       appBar: AppBar(\r\n         title: const Text('Theme Screen'),\r\n         actions: [\r\n-          ChangeNotifier()\r\n+          Change\r\n         ],\r\n       ),\r\n       body: const Center(\r\n         child: Text('Theme Screen', style: TextStyle(fontSize: 30.0)),\r\n       ),\r\n     );\r\n   }\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1674132048158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import 'package:flutter/material.dart';\r\n+import 'package:foodex_app/widgets/changeTheme.dart';\r\n \r\n class ThemeScreen extends StatefulWidget {\r\n   const ThemeScreen({super.key});\r\n \r\n@@ -16,13 +17,13 @@\n     return Scaffold(\r\n       appBar: AppBar(\r\n         title: const Text('Theme Screen'),\r\n         actions: [\r\n-          Change\r\n+          ChangeThemeButtonWidget()\r\n         ],\r\n       ),\r\n       body: const Center(\r\n         child: Text('Theme Screen', style: TextStyle(fontSize: 30.0)),\r\n       ),\r\n     );\r\n   }\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1674132129877,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,15 +15,14 @@\n         ? 'Dark Mode'\r\n         : 'Light Mode';\r\n     return Scaffold(\r\n       appBar: AppBar(\r\n+        \r\n         title: const Text('Theme Screen'),\r\n-        actions: [\r\n-          ChangeThemeButtonWidget()\r\n-        ],\r\n+        actions: [ChangeThemeButtonWidget()],\r\n       ),\r\n       body: const Center(\r\n         child: Text('Theme Screen', style: TextStyle(fontSize: 30.0)),\r\n       ),\r\n     );\r\n\\ No newline at end of file\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1674132135155,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,14 +15,14 @@\n         ? 'Dark Mode'\r\n         : 'Light Mode';\r\n     return Scaffold(\r\n       appBar: AppBar(\r\n-        \r\n+        backgroundColor: ,\r\n         title: const Text('Theme Screen'),\r\n         actions: [ChangeThemeButtonWidget()],\r\n       ),\r\n       body: const Center(\r\n         child: Text('Theme Screen', style: TextStyle(fontSize: 30.0)),\r\n       ),\r\n     );\r\n   }\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1674132140585,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n         ? 'Dark Mode'\r\n         : 'Light Mode';\r\n     return Scaffold(\r\n       appBar: AppBar(\r\n-        backgroundColor: Ap,\r\n+        backgroundColor: App,\r\n         title: const Text('Theme Screen'),\r\n         actions: [ChangeThemeButtonWidget()],\r\n       ),\r\n       body: const Center(\r\n"
+                },
+                {
+                    "date": 1674132150774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n         : 'Light Mode';\r\n     return Scaffold(\r\n       appBar: AppBar(\r\n         backgroundColor: AppColor.k,\r\n-        title: const Text('Theme Sreen'),\r\n+        title: const Text('Theme Screen'),\r\n         actions: [ChangeThemeButtonWidget()],\r\n       ),\r\n       body: const Center(\r\n         child: Text('Theme Screen', style: TextStyle(fontSize: 30.0)),\r\n"
+                }
+            ],
+            "date": 1674129353363,
+            "name": "Commit-0",
+            "content": "swt"
+        }
+    ]
+}

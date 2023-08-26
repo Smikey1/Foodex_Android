@@ -1,0 +1,42 @@
+{
+    "sourceFile": ".gitignore",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1675313632725,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1675313639934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,6 +42,6 @@\n /android/app/debug\r\n /android/app/profile\r\n /android/app/release\r\n \r\n-./\r\n+./lh\r\n \r\n"
+                },
+                {
+                    "date": 1675313647260,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,6 +42,6 @@\n /android/app/debug\r\n /android/app/profile\r\n /android/app/release\r\n \r\n-./lh\r\n+./\r\n \r\n"
+                },
+                {
+                    "date": 1675313660492,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,6 +42,6 @@\n /android/app/debug\r\n /android/app/profile\r\n /android/app/release\r\n \r\n-./\r\n+/.lh\r\n \r\n"
+                },
+                {
+                    "date": 1675313670588,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,6 +42,5 @@\n /android/app/debug\r\n /android/app/profile\r\n /android/app/release\r\n \r\n-/.lh\r\n \r\n"
+                },
+                {
+                    "date": 1675313691719,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,4 +43,5 @@\n /android/app/profile\r\n /android/app/release\r\n \r\n \r\n+/\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1675313697243,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,5 +43,5 @@\n /android/app/profile\r\n /android/app/release\r\n \r\n \r\n-/\n\\ No newline at end of file\n+/.lh\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1675313632725,
+            "name": "Commit-0",
+            "content": "# Miscellaneous\r\n*.class\r\n*.log\r\n*.pyc\r\n*.swp\r\n.DS_Store\r\n.atom/\r\n.buildlog/\r\n.history\r\n.svn/\r\nmigrate_working_dir/\r\n\r\n# IntelliJ related\r\n*.iml\r\n*.ipr\r\n*.iws\r\n.idea/\r\n\r\n# The .vscode folder contains launch configuration and tasks you configure in\r\n# VS Code which you may wish to be included in version control, so this line\r\n# is commented out by default.\r\n#.vscode/\r\n\r\n# Flutter/Dart/Pub related\r\n**/doc/api/\r\n**/ios/Flutter/.last_build_id\r\n.dart_tool/\r\n.flutter-plugins\r\n.flutter-plugins-dependencies\r\n.packages\r\n.pub-cache/\r\n.pub/\r\n/build/\r\n\r\n# Symbolication related\r\napp.*.symbols\r\n\r\n# Obfuscation related\r\napp.*.map.json\r\n\r\n# Android Studio will place build artifacts here\r\n/android/app/debug\r\n/android/app/profile\r\n/android/app/release\r\n\r\n./\r\n\r\n"
+        }
+    ]
+}

@@ -1,0 +1,94 @@
+{
+    "sourceFile": "lib/screen/splash_screen/splashScreen.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 19,
+            "patches": [
+                {
+                    "date": 1675929799827,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1675929807333,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,13 @@\n-st\n\\ No newline at end of file\n+class SplashScreen extends StatefulWidget {\r\n+  const SplashScreen({super.key});\r\n+\r\n+  @override\r\n+  State<SplashScreen> createState() => _SplashScreenState();\r\n+}\r\n+\r\n+class _SplashScreenState extends State<SplashScreen> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Container();\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1675929818489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import 'package:flutter/material.dart';\r\n+\r\n class SplashScreen extends StatefulWidget {\r\n   const SplashScreen({super.key});\r\n \r\n   @override\r\n@@ -7,7 +9,7 @@\n \r\n class _SplashScreenState extends State<SplashScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return Container();\r\n+    return Container(\"This Is \");\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1675929825435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n \r\n class _SplashScreenState extends State<SplashScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return Container(\"This Is \");\r\n+    return Container(\"This Is SplashScreen\");\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1675929835279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n \r\n class _SplashScreenState extends State<SplashScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return Container(\"This Is SplashScreen\");\r\n+    return Container(Text());\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1675929841465,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n \r\n class _SplashScreenState extends State<SplashScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return Container(Text());\r\n+    return Container(Text(\"This Is SplashScreen\"));\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1675929860087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n \r\n class _SplashScreenState extends State<SplashScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return Container(Text(\"This Is SplashScreen\"));\r\n+    return Container( Text(\"This Is SplashScreen\"));\r\n   }\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675929866765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n \r\n class _SplashScreenState extends State<SplashScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return Container( Text(\"This Is SplashScreen\"));\r\n+    return Container(child: Text(\"This Is SplashScreen\"));\r\n   }\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675929939417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n \r\n class _SplashScreenState extends State<SplashScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return Container(child: Text(\"This Is SplashScreen\"));\r\n+    return Container(child: const Text(\"This Is SplashScreen\"));\r\n   }\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675932328300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,12 @@\n   State<SplashScreen> createState() => _SplashScreenState();\r\n }\r\n \r\n class _SplashScreenState extends State<SplashScreen> {\r\n+\r\n+\r\n+  \r\n   @override\r\n   Widget build(BuildContext context) {\r\n\\ No newline at end of file\n     return Container(child: const Text(\"This Is SplashScreen\"));\r\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675932333874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,11 +8,12 @@\n }\r\n \r\n class _SplashScreenState extends State<SplashScreen> {\r\n \r\n+  late \r\n \r\n-  \r\n+\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container(child: const Text(\"This Is SplashScreen\"));\r\n\\ No newline at end of file\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675932344139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,12 +8,12 @@\n }\r\n \r\n class _SplashScreenState extends State<SplashScreen> {\r\n \r\n-  late \r\n+  late Animation\r\n \r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container(child: const Text(\"This Is SplashScreen\"));\r\n   }\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675932350971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,12 +8,12 @@\n }\r\n \r\n class _SplashScreenState extends State<SplashScreen> {\r\n \r\n-  late Animation\r\n+  late Animation<double>\r\n \r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container(child: const Text(\"This Is SplashScreen\"));\r\n   }\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675932358272,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,13 +7,12 @@\n   State<SplashScreen> createState() => _SplashScreenState();\r\n }\r\n \r\n class _SplashScreenState extends State<SplashScreen> {\r\n+  late Animation<double> animation;\r\n+  late AnimationController controller;\r\n \r\n-  late Animation<double>\r\n-\r\n-\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container(child: const Text(\"This Is SplashScreen\"));\r\n\\ No newline at end of file\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675932364605,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,11 @@\n class _SplashScreenState extends State<SplashScreen> {\r\n   late Animation<double> animation;\r\n   late AnimationController controller;\r\n \r\n+  ini\r\n+\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container(child: const Text(\"This Is SplashScreen\"));\r\n\\ No newline at end of file\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675932372064,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,11 +10,14 @@\n class _SplashScreenState extends State<SplashScreen> {\r\n   late Animation<double> animation;\r\n   late AnimationController controller;\r\n \r\n-  ini\r\n+  @override\r\n+  void initState() {\r\n+    super.initState();\r\n+  }\r\n \r\n   @override\r\n\\ No newline at end of file\n   Widget build(BuildContext context) {\r\n     return Container(child: const Text(\"This Is SplashScreen\"));\r\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675932384782,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,15 @@\n \r\n   @override\r\n   void initState() {\r\n     super.initState();\r\n+    controller = AnimationController(\r\n+      duration: const Duration(seconds: 2),\r\n+      vsync: this,\r\n+    );\r\n   }\r\n \r\n   @override\r\n\\ No newline at end of file\n   Widget build(BuildContext context) {\r\n     return Container(child: const Text(\"This Is SplashScreen\"));\r\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675932393910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,13 +15,13 @@\n   void initState() {\r\n     super.initState();\r\n     controller = AnimationController(\r\n       duration: const Duration(seconds: 2),\r\n-      vsync: this,\r\n+      \r\n     );\r\n   }\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container(child: const Text(\"This Is SplashScreen\"));\r\n   }\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1675932402080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,8 @@\n     super.initState();\r\n     controller = AnimationController(\r\n       vsync: this,\r\n       duration: const Duration(seconds: 2),\r\n-      \r\n     );\r\n   }\r\n \r\n   @override\r\n"
+                },
+                {
+                    "date": 1675932416676,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     controller = AnimationController(\r\n       vsync: this,\r\n       duration: const Duration(seconds: 2),\r\n     );\r\n-    \r\n+    animation = Cur\r\n   }\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n"
+                }
+            ],
+            "date": 1675929799827,
+            "name": "Commit-0",
+            "content": "st"
+        }
+    ]
+}

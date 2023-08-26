@@ -1,0 +1,42 @@
+{
+    "sourceFile": "lib/api/user_api.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1674561303817,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1674561310418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n import 'package:dio/dio.dart';\r\n+import 'package:foodex_app/constraints/http_services.dart';\r\n+import 'package:foodex_app/model/user.dart';\r\n \r\n \r\n class UserAPI {\r\n   Future<bool> registerUser(User user) async {\r\n"
+                },
+                {
+                    "date": 1674562282332,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n import 'package:dio/dio.dart';\r\n+import 'package:foodex_app/constraints/api_url.dart';\r\n import 'package:foodex_app/constraints/http_services.dart';\r\n import 'package:foodex_app/model/user.dart';\r\n+import 'package:foodex_app/response/login_response.dart';\r\n \r\n \r\n class UserAPI {\r\n   Future<bool> registerUser(User user) async {\r\n"
+                },
+                {
+                    "date": 1674563209259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n     }\r\n     return isRegister;\r\n   }\r\n \r\n-  Future<bool> loginUser(String userName, String password) async {\r\n+  Future<bool> loginUser(int userName, String password) async {\r\n     bool isLogin = false;\r\n     Dio dio = HttpServices().getDioInstance();\r\n     try {\r\n       Map<String, dynamic> userLoginData = {\r\n"
+                },
+                {
+                    "date": 1674563222959,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,14 +21,14 @@\n     }\r\n     return isRegister;\r\n   }\r\n \r\n-  Future<bool> loginUser(int userName, String password) async {\r\n+  Future<bool> loginUser(int phoneNumber, String password) async {\r\n     bool isLogin = false;\r\n     Dio dio = HttpServices().getDioInstance();\r\n     try {\r\n       Map<String, dynamic> userLoginData = {\r\n-        \"username\": userName,\r\n+        \"username\": phoneNumber,\r\n         \"password\": password\r\n       };\r\n       // dio ko response --> server le dine\r\n       Response response = await dio.post(loginUrl, data: userLoginData);\r\n"
+                },
+                {
+                    "date": 1674563751356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,8 @@\n import 'package:foodex_app/constraints/http_services.dart';\r\n import 'package:foodex_app/model/user.dart';\r\n import 'package:foodex_app/response/login_response.dart';\r\n \r\n-\r\n class UserAPI {\r\n   Future<bool> registerUser(User user) async {\r\n     bool isRegister = false;\r\n     Dio dio = HttpServices().getDioInstance();\r\n@@ -26,9 +25,9 @@\n     bool isLogin = false;\r\n     Dio dio = HttpServices().getDioInstance();\r\n     try {\r\n       Map<String, dynamic> userLoginData = {\r\n-        \"username\": phoneNumber,\r\n+        \"phone\": phoneNumber,\r\n         \"password\": password\r\n       };\r\n       // dio ko response --> server le dine\r\n       Response response = await dio.post(loginUrl, data: userLoginData);\r\n"
+                },
+                {
+                    "date": 1675078429090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import 'package:dio/dio.dart';\r\n-import 'package:foodex_app/constraints/api_url.dart';\r\n-import 'package:foodex_app/constraints/http_services.dart';\r\n+import 'package:foodex_app/app/constraints/api_url.dart';\r\n+import 'package:foodex_app/app/constraints/http_services.dart';\r\n import 'package:foodex_app/model/user.dart';\r\n import 'package:foodex_app/response/login_response.dart';\r\n \r\n class UserAPI {\r\n"
+                }
+            ],
+            "date": 1674561303817,
+            "name": "Commit-0",
+            "content": "import 'package:dio/dio.dart';\r\n\r\n\r\nclass UserAPI {\r\n  Future<bool> registerUser(User user) async {\r\n    bool isRegister = false;\r\n    Dio dio = HttpServices().getDioInstance();\r\n    try {\r\n      // dio ko response\r\n      Response response = await dio.post(registerUrl, data: user.toJson());\r\n      if (response.statusCode == 200) {\r\n        isRegister = true;\r\n        return isRegister;\r\n      }\r\n    } catch (exception) {\r\n      print(exception);\r\n    }\r\n    return isRegister;\r\n  }\r\n\r\n  Future<bool> loginUser(String userName, String password) async {\r\n    bool isLogin = false;\r\n    Dio dio = HttpServices().getDioInstance();\r\n    try {\r\n      Map<String, dynamic> userLoginData = {\r\n        \"username\": userName,\r\n        \"password\": password\r\n      };\r\n      // dio ko response --> server le dine\r\n      Response response = await dio.post(loginUrl, data: userLoginData);\r\n      // response.data\r\n      final LoginResponse loginResponseKoData =\r\n          LoginResponse.fromJson(response.data);\r\n      tokenConstant = loginResponseKoData.token;\r\n      if (response.statusCode == 200) {\r\n        isLogin = true;\r\n        return isLogin;\r\n      }\r\n    } catch (exception) {\r\n      print(exception);\r\n    }\r\n    return isLogin;\r\n  }\r\n}\r\n"
+        }
+    ]
+}

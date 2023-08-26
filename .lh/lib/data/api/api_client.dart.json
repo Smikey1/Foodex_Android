@@ -1,0 +1,94 @@
+{
+    "sourceFile": "lib/data/api/api_client.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 19,
+            "patches": [
+                {
+                    "date": 1674193514805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1674193522244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-class ApiClient\n\\ No newline at end of file\n+class ApiClient extends Get\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674193528727,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,3 @@\n-class ApiClient extends Get\n\\ No newline at end of file\n+import 'package:get/get.dart';\r\n+\r\n+class ApiClient extends GetConnect implements \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674193534088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n import 'package:get/get.dart';\r\n \r\n-class ApiClient extends GetConnect implements \n\\ No newline at end of file\n+class ApiClient extends GetConnect implements Get\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674193539359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n import 'package:get/get.dart';\r\n \r\n-class ApiClient extends GetConnect implements Get\n\\ No newline at end of file\n+class ApiClient extends GetConnect implements GetxService\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674193557141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+import 'package:get/get.dart';\r\n+\r\n+class ApiClient extends GetConnect implements GetxService{\r\n+  late\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674193566363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,6 @@\n+import 'package:get/get.dart';\r\n+\r\n+class ApiClient extends GetConnect implements GetxService {\r\n+  late String token;\r\n+  final \r\n+}\r\n"
+                },
+                {
+                    "date": 1674193574258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,7 @@\n import 'package:get/get.dart';\r\n \r\n class ApiClient extends GetConnect implements GetxService {\r\n   late String token;\r\n-  final \r\n+  final String appBaseUrl;\r\n+  \r\n }\r\n-import 'package:get/get.dart';\r\n-\r\n-class ApiClient extends GetConnect implements GetxService{\r\n-  late\r\n-}\n-import 'package:get/get.dart';\r\n\\ No newline at end of file\n-\r\n-class ApiClient extends GetConnect implements GetxService\n"
+                },
+                {
+                    "date": 1674193581055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n \r\n class ApiClient extends GetConnect implements GetxService {\r\n   late String token;\r\n   final String appBaseUrl;\r\n-  \r\n+  Api\r\n }\r\n"
+                },
+                {
+                    "date": 1674193586551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n \r\n class ApiClient extends GetConnect implements GetxService {\r\n   late String token;\r\n   final String appBaseUrl;\r\n-  Api\r\n+  ApiClient()\r\n }\r\n"
+                },
+                {
+                    "date": 1674193596452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n \r\n class ApiClient extends GetConnect implements GetxService {\r\n   late String token;\r\n   final String appBaseUrl;\r\n-  ApiClient()\r\n+  ApiClient({ required this.appBaseUrl})\r\n }\r\n"
+                },
+                {
+                    "date": 1674193604935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,8 @@\n \r\n class ApiClient extends GetConnect implements GetxService {\r\n   late String token;\r\n   final String appBaseUrl;\r\n-  ApiClient({ required this.appBaseUrl})\r\n+  ApiClient({ required this.appBaseUrl}){\r\n+    baseUrl\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1674193612313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n \r\n class ApiClient extends GetConnect implements GetxService {\r\n   late String token;\r\n   final String appBaseUrl;\r\n-  ApiClient({ required this.appBaseUrl}){\r\n-    baseUrl\r\n+  ApiClient({required this.appBaseUrl}) {\r\n+    baseUrl = appBaseUrl;\r\n+    \r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1674193619381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n   late String token;\r\n   final String appBaseUrl;\r\n   ApiClient({required this.appBaseUrl}) {\r\n     baseUrl = appBaseUrl;\r\n-    \r\n+    timeout = Duration()\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1674193625957,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n   late String token;\r\n   final String appBaseUrl;\r\n   ApiClient({required this.appBaseUrl}) {\r\n     baseUrl = appBaseUrl;\r\n-    timeout = Duration()\r\n+    timeout = Duration(seconds: 30);\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1674193634070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n \r\n class ApiClient extends GetConnect implements GetxService {\r\n   late String token;\r\n   final String appBaseUrl;\r\n+  late Map\r\n   ApiClient({required this.appBaseUrl}) {\r\n     baseUrl = appBaseUrl;\r\n     timeout = Duration(seconds: 30);\r\n   }\r\n"
+                },
+                {
+                    "date": 1674193639771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n class ApiClient extends GetConnect implements GetxService {\r\n   late String token;\r\n   final String appBaseUrl;\r\n-  late Map\r\n+  late Map<String>\r\n   ApiClient({required this.appBaseUrl}) {\r\n     baseUrl = appBaseUrl;\r\n     timeout = Duration(seconds: 30);\r\n   }\r\n"
+                },
+                {
+                    "date": 1674193651040,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n class ApiClient extends GetConnect implements GetxService {\r\n   late String token;\r\n   final String appBaseUrl;\r\n-  late Map<String>\r\n+  late Map<String, s>\r\n   ApiClient({required this.appBaseUrl}) {\r\n     baseUrl = appBaseUrl;\r\n     timeout = Duration(seconds: 30);\r\n   }\r\n"
+                },
+                {
+                    "date": 1674193663348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n class ApiClient extends GetConnect implements GetxService {\r\n   late String token;\r\n   final String appBaseUrl;\r\n-  late Map<String, string>\r\n+  late Map<String, String>\r\n   ApiClient({required this.appBaseUrl}) {\r\n     baseUrl = appBaseUrl;\r\n     timeout = Duration(seconds: 30);\r\n   }\r\n"
+                },
+                {
+                    "date": 1674193787226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   ApiClient({required this.appBaseUrl}) {\r\n     baseUrl = appBaseUrl;\r\n     timeout = Duration(seconds: 30);\r\n     _mainHeader = {\r\n-      'Content-Type': 'application/json; char',\r\n+      'Content-Type': 'application/json; charset',\r\n       'Accept': 'application/json',\r\n     };\r\n   }\r\n }\r\n"
+                }
+            ],
+            "date": 1674193514805,
+            "name": "Commit-0",
+            "content": "class ApiClient"
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "sourceFile": "lib/screen/billing/screen/address.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1676885799360,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1676885806029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,13 @@\n-stf\n\\ No newline at end of file\n+class name extends StatefulWidget {\r\n+  const name({super.key});\r\n+\r\n+  @override\r\n+  State<name> createState() => _nameState();\r\n+}\r\n+\r\n+class _nameState extends State<name> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Container();\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676885811580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n-class name extends StatefulWidget {\r\n-  const name({super.key});\r\n+class UserAddress extends StatefulWidget {\r\n+  const UserAddress({super.key});\r\n \r\n   @override\r\n-  State<name> createState() => _nameState();\r\n+  State<UserAddress> createState() => _UserAddressState();\r\n }\r\n \r\n-class _nameState extends State<name> {\r\n+class _UserAddressState extends State<UserAddress> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container();\r\n   }\r\n"
+                },
+                {
+                    "date": 1676885819781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import 'package:flutter/widgets.dart';\r\n+\r\n class UserAddress extends StatefulWidget {\r\n   const UserAddress({super.key});\r\n \r\n   @override\r\n"
+                },
+                {
+                    "date": 1676885833454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n-import 'package:flutter/widgets.dart';\r\n \r\n class UserAddress extends StatefulWidget {\r\n   const UserAddress({super.key});\r\n \r\n"
+                },
+                {
+                    "date": 1676885844318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+import 'package:flutter/material.dart';\r\n+\r\n+class UserAddress extends StatefulWidget {\r\n+  const UserAddress({super.key});\r\n+\r\n+  @override\r\n+  State<UserAddress> createState() => _UserAddressState();\r\n+}\r\n+\r\n+class _UserAddressState extends State<UserAddress> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Card(\r\n+      \r\n+    );\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1676886168929,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,22 +10,23 @@\n class _UserAddressState extends State<UserAddress> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Card(\r\n-      \r\n+      Column(\r\n+        children: [\r\n+          Align(\r\n+              alignment: Alignment.centerLeft,\r\n+              child: BigText(text: \"Deliver To\")),\r\n+          Container(\r\n+            width: double.infinity,\r\n+            height: 50,\r\n+            color: Colors.greenAccent,\r\n+            child: BigText(\r\n+              text: \"Address\",\r\n+              color: Colors.black,\r\n+            ),\r\n+          )\r\n+        ],\r\n+      ),\r\n     );\r\n\\ No newline at end of file\n   }\r\n }\r\n-\r\n-class UserAddress extends StatefulWidget {\r\n-  const UserAddress({super.key});\r\n-\r\n-  @override\r\n-  State<UserAddress> createState() => _UserAddressState();\r\n-}\r\n-\r\n-class _UserAddressState extends State<UserAddress> {\r\n-  @override\r\n-  Widget build(BuildContext context) {\r\n-    return Container();\r\n-  }\r\n-}\n"
+                },
+                {
+                    "date": 1676886175516,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n class _UserAddressState extends State<UserAddress> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Card(\r\n-      childColumn(\r\n+      child: Column(\r\n         children: [\r\n           Align(\r\n               alignment: Alignment.centerLeft,\r\n               child: BigText(text: \"Deliver To\")),\r\n"
+                },
+                {
+                    "date": 1676886181794,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,33 @@\n+import 'package:flutter/material.dart';\r\n+import 'package:foodex_app/widgets/export_widgets.dart';\r\n+\r\n+class UserAddress extends StatefulWidget {\r\n+  const UserAddress({super.key});\r\n+\r\n+  @override\r\n+  State<UserAddress> createState() => _UserAddressState();\r\n+}\r\n+\r\n+class _UserAddressState extends State<UserAddress> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Card(\r\n+      child: Column(\r\n+        children: [\r\n+          Align(\r\n+              alignment: Alignment.centerLeft,\r\n+              child: BigText(text: \"Deliver To\")),\r\n+          Container(\r\n+            width: double.infinity,\r\n+            height: 50,\r\n+            color: Colors.greenAccent,\r\n+            child: BigText(\r\n+              text: \"Address\",\r\n+              color: Colors.black,\r\n+            ),\r\n+          )\r\n+        ],\r\n+      ),\r\n+    );\r\n+  }\r\n+}\r\n"
+                }
+            ],
+            "date": 1676885799360,
+            "name": "Commit-0",
+            "content": "stf"
+        }
+    ]
+}

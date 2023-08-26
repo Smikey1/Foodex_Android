@@ -1,0 +1,54 @@
+{
+    "sourceFile": "lib/data/remote_data_source/api/cart_api.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1675773149718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1675773682876,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n class FoodAPI {\r\n-  Future<bool> addFood(File? file, Food food) async {\r\n+  Future<bool> addProductToCart(File? file, Food food) async {\r\n     bool isFoodAdded = false;\r\n     Dio dio = HttpServices().getDioInstance();\r\n     MultipartFile? foodFinalImageFile;\r\n     if (file != null) {\r\n"
+                },
+                {
+                    "date": 1675773689492,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n class FoodAPI {\r\n-  Future<bool> addProductToCart(File? file, Food food) async {\r\n+  Future<bool> addProductToCart(C food) async {\r\n     bool isFoodAdded = false;\r\n     Dio dio = HttpServices().getDioInstance();\r\n     MultipartFile? foodFinalImageFile;\r\n     if (file != null) {\r\n"
+                },
+                {
+                    "date": 1675773697629,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n class FoodAPI {\r\n-  Future<bool> addProductToCart(C food) async {\r\n+  Future<bool> addProductToCart(Cart cart) async {\r\n     bool isFoodAdded = false;\r\n     Dio dio = HttpServices().getDioInstance();\r\n     MultipartFile? foodFinalImageFile;\r\n     if (file != null) {\r\n"
+                },
+                {
+                    "date": 1675773702882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import 'package:foodex_app/model/cart.dart';\r\n+\r\n class FoodAPI {\r\n   Future<bool> addProductToCart(Cart cart) async {\r\n     bool isFoodAdded = false;\r\n     Dio dio = HttpServices().getDioInstance();\r\n"
+                },
+                {
+                    "date": 1675773742276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import 'package:foodex_app/app/constraints/http_services.dart';\r\n import 'package:foodex_app/model/cart.dart';\r\n \r\n class FoodAPI {\r\n   Future<bool> addProductToCart(Cart cart) async {\r\n"
+                },
+                {
+                    "date": 1675773754921,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,29 +1,14 @@\n+import 'package:dio/dio.dart';\r\n import 'package:foodex_app/app/constraints/http_services.dart';\r\n import 'package:foodex_app/model/cart.dart';\r\n \r\n class FoodAPI {\r\n   Future<bool> addProductToCart(Cart cart) async {\r\n     bool isFoodAdded = false;\r\n     Dio dio = HttpServices().getDioInstance();\r\n     MultipartFile? foodFinalImageFile;\r\n-    if (file != null) {\r\n-      var filePath = file.path;\r\n-\r\n-      // it is used to check only for images like: jpg, png, jpeg\r\n-      // if we won't check then, user may upload other file type such as: pdf, docx.\r\n-      // so, mimeType is used to check for the extension or file type of uploaded file;\r\n-      var mimeType = lookupMimeType(filePath);\r\n-\r\n-      // image path: -->I:\\final_api\\images\\\r\n-      // file name: --> chat.png\r\n-      // absolute path: --> image path + file name\r\n-      // absolute path:--> I:\\final_api\\images\\chat.png\r\n-      var image = await MultipartFile.fromFile(filePath,\r\n-          filename: filePath.split(\"/\").last,\r\n-          contentType: MediaType(\"image\", mimeType!.split(\"/\").last));\r\n-      foodFinalImageFile = image;\r\n-    }\r\n+  \r\n     try {\r\n       // dio ko response\r\n       Map<String, dynamic> foodMap = {\r\n         \"name\": food.title,\r\n"
+                },
+                {
+                    "date": 1675773761708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     MultipartFile? foodFinalImageFile;\r\n   \r\n     try {\r\n       // dio ko response\r\n-      Map<String, dynamic> foodMap = {\r\n+      Map<String, dynamic> cartMap = {\r\n         \"name\": food.title,\r\n         \"description\": food.description,\r\n         \"image\": foodFinalImageFile,\r\n         \"price\": food.price,\r\n"
+                },
+                {
+                    "date": 1675773770446,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   \r\n     try {\r\n       // dio ko response\r\n       Map<String, dynamic> cartMap = {\r\n-        \"userId\": food.title,\r\n+        \"userId\": logge,\r\n         \"description\": food.description,\r\n         \"image\": foodFinalImageFile,\r\n         \"price\": food.price,\r\n       };\r\n"
+                },
+                {
+                    "date": 1675773873125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n           options: Options(headers: {\r\n             HttpHeaders.authorizationHeader: \"Bearer $tokenConstant\",\r\n           }));\r\n \r\n-      final FoodResponse foodResponseData =\r\n+      final Ca foodResponseData =\r\n           FoodResponse.fromJson(response.data);\r\n       if (foodResponseData.success == true) {\r\n         isFoodAdded = true;\r\n         return isFoodAdded;\r\n"
+                }
+            ],
+            "date": 1675773149718,
+            "name": "Commit-0",
+            "content": "class FoodAPI {\r\n  Future<bool> addFood(File? file, Food food) async {\r\n    bool isFoodAdded = false;\r\n    Dio dio = HttpServices().getDioInstance();\r\n    MultipartFile? foodFinalImageFile;\r\n    if (file != null) {\r\n      var filePath = file.path;\r\n\r\n      // it is used to check only for images like: jpg, png, jpeg\r\n      // if we won't check then, user may upload other file type such as: pdf, docx.\r\n      // so, mimeType is used to check for the extension or file type of uploaded file;\r\n      var mimeType = lookupMimeType(filePath);\r\n\r\n      // image path: -->I:\\final_api\\images\\\r\n      // file name: --> chat.png\r\n      // absolute path: --> image path + file name\r\n      // absolute path:--> I:\\final_api\\images\\chat.png\r\n      var image = await MultipartFile.fromFile(filePath,\r\n          filename: filePath.split(\"/\").last,\r\n          contentType: MediaType(\"image\", mimeType!.split(\"/\").last));\r\n      foodFinalImageFile = image;\r\n    }\r\n    try {\r\n      // dio ko response\r\n      Map<String, dynamic> foodMap = {\r\n        \"name\": food.title,\r\n        \"description\": food.description,\r\n        \"image\": foodFinalImageFile,\r\n        \"price\": food.price,\r\n      };\r\n      var foodFormData = FormData.fromMap(foodMap);\r\n      Response response = await dio.post(foodUrl,\r\n          data: foodFormData,\r\n          options: Options(headers: {\r\n            HttpHeaders.authorizationHeader: \"Bearer $tokenConstant\",\r\n          }));\r\n\r\n      final FoodResponse foodResponseData =\r\n          FoodResponse.fromJson(response.data);\r\n      if (foodResponseData.success == true) {\r\n        isFoodAdded = true;\r\n        return isFoodAdded;\r\n      }\r\n    } catch (exception) {\r\n      print(exception);\r\n    }\r\n    return isFoodAdded;\r\n  }\r\n\r\n  Future<FoodResponse?> getAllFood() async {\r\n    FoodResponse? foodResponse;\r\n    Dio dio = HttpServices().getDioInstance();\r\n    try {\r\n      // dio ko response --> server le dine\r\n      Response response = await dio.get(foodUrl);\r\n      // response.data\r\n      foodResponse = FoodResponse.fromJson(response.data);\r\n      if (foodResponse.success == true) {\r\n        print(\"The food response is: --> ${foodResponse.data}\");\r\n        return foodResponse;\r\n      } else {\r\n        foodResponse = null;\r\n      }\r\n    } catch (exception) {\r\n      print(exception);\r\n    }\r\n    return foodResponse;\r\n  }\r\n\r\n  Future<SingleFoodResponse?> getSingleFood(String foodId) async {\r\n    SingleFoodResponse? foodResponse;\r\n    Dio dio = HttpServices().getDioInstance();\r\n    try {\r\n      // dio ko response --> server le dine\r\n      Response response = await dio.get(\"$foodUrl/$foodId\");\r\n      // response.data\r\n      foodResponse = SingleFoodResponse.fromJson(response.data);\r\n      if (foodResponse.success == true) {\r\n        print(\"The food response is: --> ${foodResponse.data}\");\r\n        return foodResponse;\r\n      } else {\r\n        foodResponse = null;\r\n      }\r\n    } catch (exception) {\r\n      print(exception);\r\n    }\r\n    return foodResponse;\r\n  }\r\n}\r\n"
+        }
+    ]
+}

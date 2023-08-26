@@ -1,0 +1,34 @@
+{
+    "sourceFile": "lib/screen/home/export_homePage.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1675092641233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1675092655795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n-export './';\n\\ No newline at end of file\n+export './food_file.dart';\r\n+export\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1675092661142,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n export './food_file.dart';\r\n-export\n\\ No newline at end of file\n+export '';\r\n"
+                },
+                {
+                    "date": 1675092666985,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n export './food_file.dart';\r\n-export '';\r\n+export './food_menu.dart';\r\n"
+                },
+                {
+                    "date": 1675092673085,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,3 @@\n export './food_file.dart';\r\n export './food_menu.dart';\r\n+export './home_page.dart';\r\n"
+                }
+            ],
+            "date": 1675092641233,
+            "name": "Commit-0",
+            "content": "export './';"
+        }
+    ]
+}

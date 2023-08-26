@@ -1,0 +1,70 @@
+{
+    "sourceFile": "lib/helper/dependency.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 13,
+            "patches": [
+                {
+                    "date": 1674649209607,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1674649215717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n \r\n-Future<>\n\\ No newline at end of file\n+Future<void> init()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674649225912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,4 @@\n \r\n-Future<void> init()\n\\ No newline at end of file\n+Future<void> init() async {\r\n+  \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674649235561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n \r\n Future<void> init() async {\r\n-  \r\n+  Get\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674649240981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n \r\n Future<void> init() async {\r\n-  Get\r\n+  Get.lazy\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674649247387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n \r\n Future<void> init() async {\r\n-  Get.lazy\r\n+  Get.lazyPut(())\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674649254684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n \r\n Future<void> init() async {\r\n-  Get.lazyPut(())\r\n+  Get.lazyPut(() => FoodController(foodRepository: FoodRepository()));\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674649266899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n \r\n+import 'package:get/get.dart';\r\n+\r\n Future<void> init() async {\r\n   Get.lazyPut(() => FoodController(foodRepository: FoodRepository()));\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674649290995,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n \r\n import 'package:get/get.dart';\r\n \r\n Future<void> init() async {\r\n-  Get.lazyPut(() => FoodController(foodRepository: FoodRepository()));\r\n+  Get.lazyPut(() => ;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674649297144,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n \r\n import 'package:get/get.dart';\r\n \r\n Future<void> init() async {\r\n-  Get.lazyPut(() => ;\r\n+  Get.lazyPut(() => food);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674649333584,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n \r\n+import 'package:foodex_app/api/food_api.dart';\r\n import 'package:get/get.dart';\r\n \r\n Future<void> init() async {\r\n-  Get.lazyPut(() => food);\r\n+  Get.lazyPut(() => FoodAPI(bas));\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674649340250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n \r\n import 'package:foodex_app/api/food_api.dart';\r\n+import 'package:foodex_app/constraints/api_url.dart';\r\n import 'package:get/get.dart';\r\n \r\n Future<void> init() async {\r\n-  Get.lazyPut(() => FoodAPI(bas));\r\n+  Get.lazyPut(() => FoodAPI(baseUrl:''));\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674649374403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n import 'package:foodex_app/constraints/api_url.dart';\r\n import 'package:get/get.dart';\r\n \r\n Future<void> init() async {\r\n-  Get.lazyPut(() => ());\r\n+  Get.lazyPut(() => A());\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674649608022,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,6 @@\n \r\n Future<void> init() async {\r\n   Get.lazyPut(() => ApiClient(appBaseUrl:\"http://10.0.2.2:5000/\"));\r\n \r\n-  Get.lazyPut(() => FoodRepository(ApiClient:Get.find()));\r\n+  Get.lazyPut(() => FoodAPI(ApiClient:Get.find()));\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1674649209607,
+            "name": "Commit-0",
+            "content": "\r\nFuture<>"
+        }
+    ]
+}

@@ -1,0 +1,66 @@
+{
+    "sourceFile": "lib/widgets/small_text.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 12,
+            "patches": [
+                {
+                    "date": 1673005371559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1673005378067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n       text,\r\n       maxLines: 1,\r\n       style: TextStyle(\r\n         fontFamily: 'OpenSans',\r\n-        color: color,\r\n+        // color: color,\r\n         fontSize: size == 0 ? Dimensions.font12 : size,\r\n         fontWeight: FontWeight.w400,\r\n       ),\r\n     );\r\n"
+                },
+                {
+                    "date": 1673021397659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       maxLines: 1,\r\n       style: TextStyle(\r\n         fontFamily: 'OpenSans',\r\n         // color: color,\r\n-        fontSize: size == 0 ? Dimensions.font12 : size,\r\n+        fontSize: size == 0 ? Dimensions. : size,\r\n         fontWeight: FontWeight.w400,\r\n       ),\r\n     );\r\n   }\r\n"
+                },
+                {
+                    "date": 1673023296268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       maxLines: 1,\r\n       style: TextStyle(\r\n         fontFamily: 'OpenSans',\r\n         // color: color,\r\n-        fontSize: size == 0 ? Dimensions. : size,\r\n+        fontSize: size == 0 ? Dimensions.font12 : size,\r\n         fontWeight: FontWeight.w400,\r\n       ),\r\n     );\r\n   }\r\n"
+                },
+                {
+                    "date": 1675078400270,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n // ignore_for_file: public_member_api_docs, sort_constructors_first\r\n import 'package:flutter/material.dart';\r\n-import 'package:foodex_app/utils/dimension.dart';\r\n+import 'package:foodex_app/app/utils/dimension.dart';\r\n \r\n class SmallText extends StatelessWidget {\r\n   Color? color;\r\n   final String text;\r\n"
+                },
+                {
+                    "date": 1675743333616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       maxLines: 1,\r\n       style: TextStyle(\r\n         fontFamily: 'OpenSans',\r\n         // color: color,\r\n-        fontSize: size == 0 ? Dimensions.font12 : size,\r\n+        fontSize: Dimensions.font12 : size,\r\n         fontWeight: FontWeight.w400,\r\n       ),\r\n     );\r\n   }\r\n"
+                },
+                {
+                    "date": 1675743338723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       maxLines: 1,\r\n       style: TextStyle(\r\n         fontFamily: 'OpenSans',\r\n         // color: color,\r\n-        fontSize: Dimensions.font12 : size,\r\n+        fontSize: Dimensions.font12,\r\n         fontWeight: FontWeight.w400,\r\n       ),\r\n     );\r\n   }\r\n"
+                },
+                {
+                    "date": 1675744143038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       maxLines: 1,\r\n       style: TextStyle(\r\n         fontFamily: 'OpenSans',\r\n         // color: color,\r\n-        fontSize: Dimensions.font12,\r\n+        fontSize: size == 0 ? Dimensions.font12 : size,\r\n         fontWeight: FontWeight.w400,\r\n       ),\r\n     );\r\n   }\r\n"
+                },
+                {
+                    "date": 1676055108209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n       text,\r\n       maxLines: 1,\r\n       style: TextStyle(\r\n         fontFamily: 'OpenSans',\r\n-        // color: color,\r\n+        color: color,\r\n         fontSize: size == 0 ? Dimensions.font12 : size,\r\n         fontWeight: FontWeight.w400,\r\n       ),\r\n     );\r\n"
+                },
+                {
+                    "date": 1676055129639,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   final String text;\r\n   double size;\r\n   SmallText({\r\n     Key? key,\r\n-    // this.color = const Color(0xFFccc7c5),\r\n+    this.color = const Color(0xFFccc7c5),\r\n     required this.text,\r\n     this.size = 0,\r\n   }) : super(key: key);\r\n \r\n"
+                },
+                {
+                    "date": 1676055136338,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   final String text;\r\n   double size;\r\n   SmallText({\r\n     Key? key,\r\n-    this.color = const Color(0xFFccc7c5),\r\n+    this.color\r\n     required this.text,\r\n     this.size = 0,\r\n   }) : super(key: key);\r\n \r\n"
+                },
+                {
+                    "date": 1676889684933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,18 +7,18 @@\n   final String text;\r\n   double size;\r\n   SmallText({\r\n     Key? key,\r\n-    this.color\r\n+    this.color,\r\n     required this.text,\r\n     this.size = 0,\r\n   }) : super(key: key);\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Text(\r\n       text,\r\n-      maxLines: 1,\r\n+      maxLines: 2,\r\n       style: TextStyle(\r\n         fontFamily: 'OpenSans',\r\n         color: color,\r\n         fontSize: size == 0 ? Dimensions.font12 : size,\r\n"
+                },
+                {
+                    "date": 1676901153941,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Text(\r\n       text,\r\n-      maxLines: 2,\r\n+      maxLines: 1,\r\n       style: TextStyle(\r\n         fontFamily: 'OpenSans',\r\n         color: color,\r\n         fontSize: size == 0 ? Dimensions.font12 : size,\r\n"
+                }
+            ],
+            "date": 1673005371559,
+            "name": "Commit-0",
+            "content": "// ignore_for_file: public_member_api_docs, sort_constructors_first\r\nimport 'package:flutter/material.dart';\r\nimport 'package:foodex_app/utils/dimension.dart';\r\n\r\nclass SmallText extends StatelessWidget {\r\n  Color? color;\r\n  final String text;\r\n  double size;\r\n  SmallText({\r\n    Key? key,\r\n    // this.color = const Color(0xFFccc7c5),\r\n    required this.text,\r\n    this.size = 0,\r\n  }) : super(key: key);\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Text(\r\n      text,\r\n      maxLines: 1,\r\n      style: TextStyle(\r\n        fontFamily: 'OpenSans',\r\n        color: color,\r\n        fontSize: size == 0 ? Dimensions.font12 : size,\r\n        fontWeight: FontWeight.w400,\r\n      ),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

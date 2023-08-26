@@ -1,0 +1,30 @@
+{
+    "sourceFile": "lib/screen/login_register/export_login_register.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1675092705359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1675092710481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n-export './';\n\\ No newline at end of file\n+export './loginScreen.dart';\r\n+export './registerScreen.dart';\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1675092718555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n export './loginScreen.dart';\r\n-export './registerScreen.dart';\n\\ No newline at end of file\n+export './si.dart';\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1675092725658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n export './loginScreen.dart';\r\n-export './si.dart';\n\\ No newline at end of file\n+export './';\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1675092705359,
+            "name": "Commit-0",
+            "content": "export './';"
+        }
+    ]
+}

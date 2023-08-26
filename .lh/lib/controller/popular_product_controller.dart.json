@@ -1,0 +1,86 @@
+{
+    "sourceFile": "lib/controller/popular_product_controller.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 17,
+            "patches": [
+                {
+                    "date": 1674554351812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1674554358211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-class \n\\ No newline at end of file\n+class PopularProduct\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674554364241,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-class PopularProduct\n\\ No newline at end of file\n+class PopularProductController extends \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674554372115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,3 @@\n-class PopularProductController extends \n\\ No newline at end of file\n+import 'package:get/get.dart';\r\n+\r\n+class PopularProductController extends GetxController\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674554378615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,5 @@\n import 'package:get/get.dart';\r\n \r\n-class PopularProductController extends GetxController\n\\ No newline at end of file\n+class PopularProductController extends GetxController{\r\n+  final Pop\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674554426812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n+import 'package:foodex_app/repository/popular_product_repo.dart';\r\n import 'package:get/get.dart';\r\n \r\n class PopularProductController extends GetxController{\r\n-  final Pop\r\n+  final PopularProductRepo \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1674554450450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import 'package:foodex_app/repository/popular_product_repo.dart';\r\n import 'package:get/get.dart';\r\n \r\n-class PopularProductController extends GetxController{\r\n-  final PopularProductRepo \r\n-}\n\\ No newline at end of file\n+class PopularProductController extends GetxController {\r\n+  final PopularProductRepo popularProductRepo;\r\n+  PopularProductController({required this.popularProductRepo});\r\n+}\r\n"
+                },
+                {
+                    "date": 1674554464432,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,6 @@\n \r\n class PopularProductController extends GetxController {\r\n   final PopularProductRepo popularProductRepo;\r\n   PopularProductController({required this.popularProductRepo});\r\n+  \r\n }\r\n"
+                },
+                {
+                    "date": 1674554472629,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n \r\n class PopularProductController extends GetxController {\r\n   final PopularProductRepo popularProductRepo;\r\n   PopularProductController({required this.popularProductRepo});\r\n-  \r\n+  Li\r\n }\r\n"
+                },
+                {
+                    "date": 1674554480059,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n \r\n class PopularProductController extends GetxController {\r\n   final PopularProductRepo popularProductRepo;\r\n   PopularProductController({required this.popularProductRepo});\r\n-  Li\r\n+  List<>\r\n }\r\n"
+                },
+                {
+                    "date": 1674554485240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n \r\n class PopularProductController extends GetxController {\r\n   final PopularProductRepo popularProductRepo;\r\n   PopularProductController({required this.popularProductRepo});\r\n-  List<>\r\n+  List<dy>\r\n }\r\n"
+                },
+                {
+                    "date": 1674554491369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n \r\n class PopularProductController extends GetxController {\r\n   final PopularProductRepo popularProductRepo;\r\n   PopularProductController({required this.popularProductRepo});\r\n-  List<dy>\r\n+  List<dynamic>\r\n }\r\n"
+                },
+                {
+                    "date": 1674554499517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n \r\n class PopularProductController extends GetxController {\r\n   final PopularProductRepo popularProductRepo;\r\n   PopularProductController({required this.popularProductRepo});\r\n-  List<dynamic>\r\n+  List<dynamic> popularProduct\r\n }\r\n"
+                },
+                {
+                    "date": 1674554505440,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n \r\n class PopularProductController extends GetxController {\r\n   final PopularProductRepo popularProductRepo;\r\n   PopularProductController({required this.popularProductRepo});\r\n-  List<dynamic> popularProduct\r\n+  List<dynamic> popularProductList\r\n }\r\n"
+                },
+                {
+                    "date": 1674554511204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,8 @@\n \r\n class PopularProductController extends GetxController {\r\n   final PopularProductRepo popularProductRepo;\r\n   PopularProductController({required this.popularProductRepo});\r\n-  List<dynamic> popularProductList\r\n+  List<dynamic> popularProductList = [];\r\n+\r\n+  \r\n }\r\n"
+                },
+                {
+                    "date": 1674554572073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,6 @@\n   final PopularProductRepo popularProductRepo;\r\n   PopularProductController({required this.popularProductRepo});\r\n   List<dynamic> popularProductList = [];\r\n \r\n-  \r\n+  Future\r\n }\r\n"
+                },
+                {
+                    "date": 1674554579554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,6 @@\n   final PopularProductRepo popularProductRepo;\r\n   PopularProductController({required this.popularProductRepo});\r\n   List<dynamic> popularProductList = [];\r\n \r\n-  Future<Void> get\r\n+  Future<Void> getP\r\n }\r\n"
+                },
+                {
+                    "date": 1674554585940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,6 @@\n   final PopularProductRepo popularProductRepo;\r\n   PopularProductController({required this.popularProductRepo});\r\n   List<dynamic> popularProductList = [];\r\n \r\n-  Future<Void> getPopularProduct\r\n+  Future<Void> getPopularProductL\r\n }\r\n"
+                }
+            ],
+            "date": 1674554351811,
+            "name": "Commit-0",
+            "content": "class "
+        }
+    ]
+}

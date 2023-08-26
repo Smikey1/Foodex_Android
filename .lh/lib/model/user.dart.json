@@ -1,0 +1,42 @@
+{
+    "sourceFile": "lib/model/user.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1674561338243,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1674561344864,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,8 @@\n   int phone;\r\n   String password;\r\n \r\n   User(this.email, this.phone, this.password, {this.userId = 0});\r\n-  factory \r\n+\r\n+\r\n+\r\n }\r\n"
+                },
+                {
+                    "date": 1674561373501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n // ignore_for_file: public_member_api_docs, sort_constructors_first\r\n import 'package:objectbox/objectbox.dart';\r\n \r\n+@Js\r\n @Entity()\r\n class User {\r\n   @Id(assignable: true)\r\n   int userId;\r\n"
+                },
+                {
+                    "date": 1674561393468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n // ignore_for_file: public_member_api_docs, sort_constructors_first\r\n+import 'package:json_annotation/json_annotation.dart';\r\n import 'package:objectbox/objectbox.dart';\r\n \r\n-@Js\r\n+@JsonSerializable()\r\n @Entity()\r\n class User {\r\n   @Id(assignable: true)\r\n   int userId;\r\n@@ -12,6 +13,8 @@\n \r\n   User(this.email, this.phone, this.password, {this.userId = 0});\r\n \r\n \r\n+  factory Food.fromJson(Map<String, dynamic> json) => _$FoodFromJson(json);\r\n \r\n+  Map<String, dynamic> toJson() => _$FoodToJson(this);\r\n }\r\n"
+                },
+                {
+                    "date": 1674561401038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n \r\n   User(this.email, this.phone, this.password, {this.userId = 0});\r\n \r\n \r\n-  factory Food.fromJson(Map<String, dynamic> json) => _$FoodFromJson(json);\r\n+  factory User.fromJson(Map<String, dynamic> json) => _$FoodFromJson(json);\r\n \r\n-  Map<String, dynamic> toJson() => _$FoodToJson(this);\r\n+  Map<String, dynamic> toJson() => _$UserToJson(this);\r\n }\r\n"
+                },
+                {
+                    "date": 1674561407806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,8 @@\n   String password;\r\n \r\n   User(this.email, this.phone, this.password, {this.userId = 0});\r\n \r\n-\r\n   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);\r\n \r\n   Map<String, dynamic> toJson() => _$UserToJson(this);\r\n }\r\n"
+                },
+                {
+                    "date": 1674561426914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n // ignore_for_file: public_member_api_docs, sort_constructors_first\r\n import 'package:json_annotation/json_annotation.dart';\r\n import 'package:objectbox/objectbox.dart';\r\n \r\n-part '';\r\n+part 'user.g.dart';\r\n @JsonSerializable()\r\n @Entity()\r\n class User {\r\n   @Id(assignable: true)\r\n"
+                }
+            ],
+            "date": 1674561338243,
+            "name": "Commit-0",
+            "content": "// ignore_for_file: public_member_api_docs, sort_constructors_first\r\nimport 'package:objectbox/objectbox.dart';\r\n\r\n@Entity()\r\nclass User {\r\n  @Id(assignable: true)\r\n  int userId;\r\n  String email;\r\n  int phone;\r\n  String password;\r\n\r\n  User(this.email, this.phone, this.password, {this.userId = 0});\r\n  factory \r\n}\r\n"
+        }
+    ]
+}

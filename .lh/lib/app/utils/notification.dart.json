@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/app/utils/notification.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1676880307866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1676880307866,
+            "name": "Commit-0",
+            "content": "import 'package:awesome_notifications/awesome_notifications.dart';\r\n\r\nclass MyNotification{\r\n  static Future<void> showNotification({required String notificationTitle,required String notificationMessage}) async {\r\n    await AwesomeNotifications().createNotification(\r\n      content: NotificationContent(\r\n        id: createUniqueId(),\r\n        channelKey: 'basic_channel',\r\n        title:notificationTitle,\r\n        body: notificationMessage,\r\n        // locked: true\r\n        // notificationLayout: NotificationLayout.BigPicture,\r\n      ),\r\n    );\r\n  }\r\n}\r\nint createUniqueId() {\r\n  return DateTime.now().millisecondsSinceEpoch.remainder(100000);\r\n}"
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "sourceFile": "lib/screen/profile/screen/profile_info.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1676705954923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1676705970628,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,17 @@\n \r\n+import 'package:flutter/src/widgets/framework.dart';\r\n+import 'package:flutter/src/widgets/placeholder.dart';\r\n+\r\n+class MyWidget extends StatefulWidget {\r\n+  const MyWidget({super.key});\r\n+\r\n+  @override\r\n+  State<MyWidget> createState() => _MyWidgetState();\r\n+}\r\n+\r\n+class _MyWidgetState extends State<MyWidget> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return const Placeholder();\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676705978067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+\r\n+import 'package:flutter/src/widgets/framework.dart';\r\n+import 'package:flutter/src/widgets/placeholder.dart';\r\n+\r\n+class ProfileInfo extends StatefulWidget {\r\n+  const ProfileInfo({super.key});\r\n+\r\n+  @override\r\n+  State<ProfileInfo> createState() => _ProfileInfoState();\r\n+}\r\n+\r\n+class _ProfileInfoState extends State<ProfileInfo> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return const Placeholder();\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676706006641,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,34 +1,16 @@\n-\r\n import 'package:flutter/src/widgets/framework.dart';\r\n import 'package:flutter/src/widgets/placeholder.dart';\r\n \r\n-class ProfileInfo extends StatefulWidget {\r\n-  const ProfileInfo({super.key});\r\n+class ProfileInfoScreen extends StatefulWidget {\r\n+  const ProfileInfoScreen({super.key});\r\n \r\n   @override\r\n-  State<ProfileInfo> createState() => _ProfileInfoState();\r\n+  State<ProfileInfoScreen> createState() => _ProfileInfoScreenState();\r\n }\r\n \r\n-class _ProfileInfoState extends State<ProfileInfo> {\r\n+class _ProfileInfoScreenState extends State<ProfileInfoScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return const Placeholder();\r\n   }\r\n-}\n-\r\n-import 'package:flutter/src/widgets/framework.dart';\r\n-import 'package:flutter/src/widgets/placeholder.dart';\r\n-\r\n-class MyWidget extends StatefulWidget {\r\n-  const MyWidget({super.key});\r\n-\r\n-  @override\r\n-  State<MyWidget> createState() => _MyWidgetState();\r\n }\r\n-\r\n-class _MyWidgetState extends State<MyWidget> {\r\n-  @override\r\n\\ No newline at end of file\n-  Widget build(BuildContext context) {\r\n-    return const Placeholder();\r\n-  }\r\n-}\n"
+                },
+                {
+                    "date": 1676706035702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,7 +10,7 @@\n \r\n class _ProfileInfoScreenState extends State<ProfileInfoScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return const Placeholder();\r\n+    return \r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1676706042559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import 'package:flutter/material.dart';\r\n import 'package:flutter/src/widgets/framework.dart';\r\n import 'package:flutter/src/widgets/placeholder.dart';\r\n \r\n class ProfileInfoScreen extends StatefulWidget {\r\n@@ -10,7 +11,7 @@\n \r\n class _ProfileInfoScreenState extends State<ProfileInfoScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return \r\n+    return Scaffold()\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1676706108940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,19 @@\n+import 'package:flutter/material.dart';\r\n+import 'package:flutter/src/widgets/framework.dart';\r\n+import 'package:flutter/src/widgets/placeholder.dart';\r\n+\r\n+class ProfileInfoScreen extends StatefulWidget {\r\n+  const ProfileInfoScreen({super.key});\r\n+\r\n+  @override\r\n+  State<ProfileInfoScreen> createState() => _ProfileInfoScreenState();\r\n+}\r\n+\r\n+class _ProfileInfoScreenState extends State<ProfileInfoScreen> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Scaffold(\r\n+      body: Column(),\r\n+    );\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1676706116414,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,36 @@\n+import 'package:flutter/material.dart';\r\n+import 'package:flutter/src/widgets/framework.dart';\r\n+import 'package:flutter/src/widgets/placeholder.dart';\r\n+import 'package:foodex_app/app/utils/dimension.dart';\r\n+\r\n+class ProfileInfoScreen extends StatefulWidget {\r\n+  const ProfileInfoScreen({super.key});\r\n+\r\n+  @override\r\n+  State<ProfileInfoScreen> createState() => _ProfileInfoScreenState();\r\n+}\r\n+\r\n+class _ProfileInfoScreenState extends State<ProfileInfoScreen> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Scaffold(\r\n+      body: Column(children: [\r\n+        Container(\r\n+          padding: EdgeInsets.only(top: Dimensions.height30),\r\n+          color: Theme.of(context).scaffoldBackgroundColor,\r\n+          child: Center(\r\n+            child: Text(\r\n+              'My Profile',\r\n+              style: TextStyle(\r\n+                // color: Colors.white,\r\n+                fontSize: Dimensions.font26,\r\n+                fontWeight: FontWeight.bold,\r\n+              ),\r\n+            ),\r\n+          ),\r\n+        ),\r\n+        const Divider(),\r\n+      ]),\r\n+    );\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1676706178051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,24 +11,26 @@\n class _ProfileInfoScreenState extends State<ProfileInfoScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n-      body: Column(children: [\r\n-        Container(\r\n-          padding: EdgeInsets.only(top: Dimensions.height30),\r\n-          color: Theme.of(context).scaffoldBackgroundColor,\r\n-          child: Center(\r\n-            child: Text(\r\n-              'Profile Info',\r\n-              style: TextStyle(\r\n-                // color: Colors.white,\r\n-                fontSize: Dimensions.font26,\r\n-                fontWeight: FontWeight.bold,\r\n+      body: SafeArea(\r\n+        child: Column(children: [\r\n+          Container(\r\n+            padding: EdgeInsets.only(top: Dimensions.height30),\r\n+            color: Theme.of(context).scaffoldBackgroundColor,\r\n+            child: Center(\r\n+              child: Text(\r\n+                'Profile Info',\r\n+                style: TextStyle(\r\n+                  // color: Colors.white,\r\n+                  fontSize: Dimensions.font26,\r\n+                  fontWeight: FontWeight.bold,\r\n+                ),\r\n               ),\r\n             ),\r\n           ),\r\n-        ),\r\n-        const Divider(),\r\n-      ]),\r\n+          const Divider(),\r\n+        ]),\r\n+      ),\r\n     );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1676706199754,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,18 +12,20 @@\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       body: Column(children: [\r\n-        Container(\r\n-          padding: EdgeInsets.only(top: Dimensions.height30),\r\n-          color: Theme.of(context).scaffoldBackgroundColor,\r\n-          child: Center(\r\n-            child: Text(\r\n-              'Profile Info',\r\n-              style: TextStyle(\r\n-                // color: Colors.white,\r\n-                fontSize: Dimensions.font26,\r\n-                fontWeight: FontWeight.bold,\r\n+        SafeArea(\r\n+          child: Container(\r\n+            padding: EdgeInsets.only(top: Dimensions.height30),\r\n+            color: Theme.of(context).scaffoldBackgroundColor,\r\n+            child: Center(\r\n+              child: Text(\r\n+                'Profile Info',\r\n+                style: TextStyle(\r\n+                  // color: Colors.white,\r\n+                  fontSize: Dimensions.font26,\r\n+                  fontWeight: FontWeight.bold,\r\n+                ),\r\n               ),\r\n             ),\r\n           ),\r\n         ),\r\n"
+                }
+            ],
+            "date": 1676705954923,
+            "name": "Commit-0",
+            "content": "\r\n"
+        }
+    ]
+}

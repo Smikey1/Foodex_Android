@@ -1,0 +1,38 @@
+{
+    "sourceFile": "lib/model/cart.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1675773281063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1675773288103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,6 @@\n-class Cart {}\r\n+class Cart {\r\n+\r\n+String? \r\n+\r\n+\r\n+}\r\n"
+                },
+                {
+                    "date": 1675773298413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n class Cart {\r\n-\r\n-String? \r\n-\r\n-\r\n+  String? userId;\r\n+  String? foodId;\r\n+  String? q\r\n }\r\n"
+                },
+                {
+                    "date": 1675773305534,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,8 @@\n class Cart {\r\n   String? userId;\r\n   String? foodId;\r\n-  String? q\r\n+  String? quantity;\r\n+\r\n+  Cart({this.userId, this.foodId, this.quantity});\r\n+  \r\n }\r\n"
+                },
+                {
+                    "date": 1675773324548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,6 @@\n   String? quantity;\r\n \r\n   Cart({this.userId, this.foodId, this.quantity});\r\n \r\n-  Cart\r\n+  Cart.\r\n }\r\n"
+                },
+                {
+                    "date": 1675794832097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   String? userId;\r\n   String? foodId;\r\n   String? quantity;\r\n \r\n-  Cart({this,this.userId, this.foodId, this.quantity});\r\n+  Cart({thisthis.userId, this.foodId, this.quantity});\r\n \r\n   factory Cart.fromJson(Map<String, dynamic> json) => _$CartFromJson(json);\r\n \r\n   Map<String, dynamic> toJson() => _$CartToJson(this);\r\n"
+                }
+            ],
+            "date": 1675773281063,
+            "name": "Commit-0",
+            "content": "class Cart {}\r\n"
+        }
+    ]
+}

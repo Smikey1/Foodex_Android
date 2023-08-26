@@ -1,0 +1,58 @@
+{
+    "sourceFile": "lib/api/food_api.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1674561779143,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1674562269367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n import 'package:dio/dio.dart';\r\n import 'package:foodex_app/constraints/api_url.dart';\r\n import 'package:foodex_app/constraints/http_services.dart';\r\n import 'package:foodex_app/model/food.dart';\r\n+import 'package:foodex_app/response/food_response.dart';\r\n import 'package:http_parser/http_parser.dart';\r\n import 'package:mime/mime.dart';\r\n \r\n class FoodAPI {\r\n"
+                },
+                {
+                    "date": 1674562690096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,10 @@\n import 'package:foodex_app/constraints/api_url.dart';\r\n import 'package:foodex_app/constraints/http_services.dart';\r\n import 'package:foodex_app/model/food.dart';\r\n import 'package:foodex_app/response/food_response.dart';\r\n-import 'package:http_parser/http_parser.dart';\r\n-import 'package:mime/mime.dart';\r\n \r\n+\r\n class FoodAPI {\r\n   Future<bool> addFood(File? file, Food food) async {\r\n     bool isFoodAdded = false;\r\n     Dio dio = HttpServices().getDioInstance();\r\n"
+                },
+                {
+                    "date": 1674562699698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,11 @@\n import 'package:foodex_app/constraints/api_url.dart';\r\n import 'package:foodex_app/constraints/http_services.dart';\r\n import 'package:foodex_app/model/food.dart';\r\n import 'package:foodex_app/response/food_response.dart';\r\n+import 'package:http_parser/http_parser.dart';\r\n+import 'package:mime/mime.dart';\r\n \r\n-\r\n class FoodAPI {\r\n   Future<bool> addFood(File? file, Food food) async {\r\n     bool isFoodAdded = false;\r\n     Dio dio = HttpServices().getDioInstance();\r\n"
+                },
+                {
+                    "date": 1674651835604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n     return isFoodAdded;\r\n   }\r\n \r\n   Future<FoodResponse?> getAllFood() async {\r\n-    FoodResponse? foodResponse;\r\n+    FoodResponse foodResponse;\r\n     Dio dio = HttpServices().getDioInstance();\r\n     try {\r\n       // dio ko response --> server le dine\r\n       Response response = await dio.get(foodUrl);\r\n"
+                },
+                {
+                    "date": 1674651842137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n     return isFoodAdded;\r\n   }\r\n \r\n   Future<FoodResponse?> getAllFood() async {\r\n-    FoodResponse foodResponse;\r\n+    FoodResponse? foodResponse;\r\n     Dio dio = HttpServices().getDioInstance();\r\n     try {\r\n       // dio ko response --> server le dine\r\n       Response response = await dio.get(foodUrl);\r\n"
+                },
+                {
+                    "date": 1674994871686,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,11 +35,8 @@\n         \"name\": food.title,\r\n         \"description\": food.description,\r\n         \"image\": foodFinalImageFile,\r\n         \"price\": food.price,\r\n-        \"category\": food.category.foodCategoryTitle,\r\n-        \"rating\": food.rating,\r\n-        \"numReviews\": food.numReviews\r\n       };\r\n       var foodFormData = FormData.fromMap(foodMap);\r\n       Response response = await dio.post(foodUrl,\r\n           data: foodFormData,\r\n@@ -67,8 +64,9 @@\n       Response response = await dio.get(foodUrl);\r\n       // response.data\r\n       foodResponse = FoodResponse.fromJson(response.data);\r\n       if (foodResponse.success == true) {\r\n+      print(\"The food response is: --> ${foodResponse.data}\");\r\n         return foodResponse;\r\n       } else {\r\n         foodResponse = null;\r\n       }\r\n@@ -76,5 +74,7 @@\n       print(exception);\r\n     }\r\n     return foodResponse;\r\n   }\r\n+\r\n+\r\n }\r\n"
+                },
+                {
+                    "date": 1674995244490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,6 +75,7 @@\n     }\r\n     return foodResponse;\r\n   }\r\n \r\n+Future\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1674995254031,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,7 +75,7 @@\n     }\r\n     return foodResponse;\r\n   }\r\n \r\n-Future\r\n+Future<Food\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1674995259978,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,7 +75,7 @@\n     }\r\n     return foodResponse;\r\n   }\r\n \r\n-Future<Food\r\n+Future<FoodResponse?>\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1674995266455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,7 +75,7 @@\n     }\r\n     return foodResponse;\r\n   }\r\n \r\n-Future<FoodResponse?> getSingleFood()\r\n+Future<FoodResponse?> getSingleFood(S)\r\n \r\n }\r\n"
+                }
+            ],
+            "date": 1674561779143,
+            "name": "Commit-0",
+            "content": "import 'dart:io';\r\nimport 'package:dio/dio.dart';\r\nimport 'package:foodex_app/constraints/api_url.dart';\r\nimport 'package:foodex_app/constraints/http_services.dart';\r\nimport 'package:foodex_app/model/food.dart';\r\nimport 'package:http_parser/http_parser.dart';\r\nimport 'package:mime/mime.dart';\r\n\r\nclass FoodAPI {\r\n  Future<bool> addFood(File? file, Food food) async {\r\n    bool isFoodAdded = false;\r\n    Dio dio = HttpServices().getDioInstance();\r\n    MultipartFile? foodFinalImageFile;\r\n    if (file != null) {\r\n      var filePath = file.path;\r\n\r\n      // it is used to check only for images like: jpg, png, jpeg\r\n      // if we won't check then, user may upload other file type such as: pdf, docx.\r\n      // so, mimeType is used to check for the extension or file type of uploaded file;\r\n      var mimeType = lookupMimeType(filePath);\r\n\r\n      // image path: -->I:\\final_api\\images\\\r\n      // file name: --> chat.png\r\n      // absolute path: --> image path + file name\r\n      // absolute path:--> I:\\final_api\\images\\chat.png\r\n      var image = await MultipartFile.fromFile(filePath,\r\n          filename: filePath.split(\"/\").last,\r\n          contentType: MediaType(\"image\", mimeType!.split(\"/\").last));\r\n      foodFinalImageFile = image;\r\n    }\r\n    try {\r\n      // dio ko response\r\n      Map<String, dynamic> foodMap = {\r\n        \"name\": food.title,\r\n        \"description\": food.description,\r\n        \"image\": foodFinalImageFile,\r\n        \"price\": food.price,\r\n        \"category\": food.category.foodCategoryTitle,\r\n        \"rating\": food.rating,\r\n        \"numReviews\": food.numReviews\r\n      };\r\n      var foodFormData = FormData.fromMap(foodMap);\r\n      Response response = await dio.post(foodUrl,\r\n          data: foodFormData,\r\n          options: Options(headers: {\r\n            HttpHeaders.authorizationHeader: \"Bearer $tokenConstant\",\r\n          }));\r\n\r\n      final FoodResponse foodResponseData =\r\n          FoodResponse.fromJson(response.data);\r\n      if (foodResponseData.success == true) {\r\n        isFoodAdded = true;\r\n        return isFoodAdded;\r\n      }\r\n    } catch (exception) {\r\n      print(exception);\r\n    }\r\n    return isFoodAdded;\r\n  }\r\n\r\n  Future<FoodResponse?> getAllFood() async {\r\n    FoodResponse? foodResponse;\r\n    Dio dio = HttpServices().getDioInstance();\r\n    try {\r\n      // dio ko response --> server le dine\r\n      Response response = await dio.get(foodUrl);\r\n      // response.data\r\n      foodResponse = FoodResponse.fromJson(response.data);\r\n      if (foodResponse.success == true) {\r\n        return foodResponse;\r\n      } else {\r\n        foodResponse = null;\r\n      }\r\n    } catch (exception) {\r\n      print(exception);\r\n    }\r\n    return foodResponse;\r\n  }\r\n}\r\n"
+        }
+    ]
+}

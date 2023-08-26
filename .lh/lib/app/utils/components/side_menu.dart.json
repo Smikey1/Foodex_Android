@@ -1,0 +1,30 @@
+{
+    "sourceFile": "lib/app/utils/components/side_menu.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1675369164043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1675369180992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import 'package:flutter/material.dart';\r\n+import 'package:foodex_app/app/utils/model/menu.dart';\r\n import 'package:rive/rive.dart';\r\n+// \r\n \r\n-\r\n class SideMenu extends StatelessWidget {\r\n   const SideMenu(\r\n       {super.key,\r\n       required this.menu,\r\n"
+                },
+                {
+                    "date": 1675369205418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n import 'package:flutter/material.dart';\r\n-import 'package:foodex_app/app/utils/model/menu.dart';\r\n import 'package:rive/rive.dart';\r\n // \r\n \r\n class SideMenu extends StatelessWidget {\r\n"
+                },
+                {
+                    "date": 1675369216866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import 'package:flutter/material.dart';\r\n+import 'package:foodex_app/app/utils/model/menu.dart';\r\n import 'package:rive/rive.dart';\r\n // \r\n \r\n class SideMenu extends StatelessWidget {\r\n"
+                }
+            ],
+            "date": 1675369164043,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\nimport 'package:rive/rive.dart';\r\n\r\n\r\nclass SideMenu extends StatelessWidget {\r\n  const SideMenu(\r\n      {super.key,\r\n      required this.menu,\r\n      required this.press,\r\n      required this.riveOnInit,\r\n      required this.selectedMenu});\r\n\r\n  final Menu menu;\r\n  final VoidCallback press;\r\n  final ValueChanged<Artboard> riveOnInit;\r\n  final Menu selectedMenu;\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Column(\r\n      children: [\r\n        const Padding(\r\n          padding: EdgeInsets.only(left: 24),\r\n          child: Divider(color: Colors.white24, height: 1),\r\n        ),\r\n        Stack(\r\n          children: [\r\n            AnimatedPositioned(\r\n              duration: const Duration(milliseconds: 300),\r\n              curve: Curves.fastOutSlowIn,\r\n              width: selectedMenu == menu ? 288 : 0,\r\n              height: 56,\r\n              left: 0,\r\n              child: Container(\r\n                decoration: const BoxDecoration(\r\n                  color: Color(0xFF6792FF),\r\n                  borderRadius: BorderRadius.all(Radius.circular(10)),\r\n                ),\r\n              ),\r\n            ),\r\n            ListTile(\r\n              onTap: press,\r\n              leading: SizedBox(\r\n                height: 36,\r\n                width: 36,\r\n                child: RiveAnimation.asset(\r\n                  menu.rive.src,\r\n                  artboard: menu.rive.artboard,\r\n                  onInit: riveOnInit,\r\n                ),\r\n              ),\r\n              title: Text(\r\n                menu.title,\r\n                style: const TextStyle(color: Colors.white),\r\n              ),\r\n            ),\r\n          ],\r\n        ),\r\n      ],\r\n    );\r\n  }\r\n}"
+        }
+    ]
+}

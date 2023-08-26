@@ -1,0 +1,162 @@
+{
+    "sourceFile": "lib/response/single_cart.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 36,
+            "patches": [
+                {
+                    "date": 1675792106727,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1675792113464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import 'package:foodex_app/model/food.dart';\r\n import 'package:json_annotation/json_annotation.dart';\r\n \r\n-part 'single_food_response.g.dart';\r\n+part '_response.g.dart';\r\n \r\n @JsonSerializable()\r\n class SingleFoodResponse {\r\n   bool? success;\r\n"
+                },
+                {
+                    "date": 1675792123415,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n import 'package:foodex_app/model/food.dart';\r\n import 'package:json_annotation/json_annotation.dart';\r\n \r\n-part '_response.g.dart';\r\n+part 'single_cart_response.g.dart';\r\n \r\n @JsonSerializable()\r\n-class SingleFoodResponse {\r\n+class SingleCaResponse {\r\n   bool? success;\r\n   String? message;\r\n   Food? data;\r\n \r\n"
+                },
+                {
+                    "date": 1675792130240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,14 +3,14 @@\n \r\n part 'single_cart_response.g.dart';\r\n \r\n @JsonSerializable()\r\n-class SingleCaResponse {\r\n+class SingleCartResponse {\r\n   bool? success;\r\n   String? message;\r\n   Food? data;\r\n \r\n-  SingleFoodResponse({this.success, this.message, this.data});\r\n+  SingleCartResponse({this.success, this.message, this.data});\r\n \r\n   factory SingleFoodResponse.fromJson(Map<String, dynamic> json) =>\r\n       _$SingleFoodResponseFromJson(json);\r\n \r\n"
+                },
+                {
+                    "date": 1675792135984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   Food? data;\r\n \r\n   SingleCartResponse({this.success, this.message, this.data});\r\n \r\n-  factory SingleFoodResponse.fromJson(Map<String, dynamic> json) =>\r\n+  factory SingleCartResponse.fromJson(Map<String, dynamic> json) =>\r\n       _$SingleFoodResponseFromJson(json);\r\n \r\n   Map<String, dynamic> toJson() => _$SingleFoodResponseToJson(this);\r\n }\r\n"
+                },
+                {
+                    "date": 1675792142094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,8 @@\n \r\n   SingleCartResponse({this.success, this.message, this.data});\r\n \r\n   factory SingleCartResponse.fromJson(Map<String, dynamic> json) =>\r\n-      _$SingleFoodResponseFromJson(json);\r\n+      _$SingleCartResponseFromJson(json);\r\n \r\n   Map<String, dynamic> toJson() => _$SingleFoodResponseToJson(this);\r\n }\r\n"
+                },
+                {
+                    "date": 1675792151769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,13 +6,13 @@\n @JsonSerializable()\r\n class SingleCartResponse {\r\n   bool? success;\r\n   String? message;\r\n-  Food? data;\r\n+   data;\r\n \r\n   SingleCartResponse({this.success, this.message, this.data});\r\n \r\n   factory SingleCartResponse.fromJson(Map<String, dynamic> json) =>\r\n       _$SingleCartResponseFromJson(json);\r\n \r\n-  Map<String, dynamic> toJson() => _$SingleFoodResponseToJson(this);\r\n+  Map<String, dynamic> toJson() => _$SingleCartResponseToJson(this);\r\n }\r\n"
+                },
+                {
+                    "date": 1675792161384,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import 'package:foodex_app/model/cart.dart';\r\n import 'package:foodex_app/model/food.dart';\r\n import 'package:json_annotation/json_annotation.dart';\r\n \r\n part 'single_cart_response.g.dart';\r\n@@ -6,9 +7,9 @@\n @JsonSerializable()\r\n class SingleCartResponse {\r\n   bool? success;\r\n   String? message;\r\n-   data;\r\n+  Cart? data;\r\n \r\n   SingleCartResponse({this.success, this.message, this.data});\r\n \r\n   factory SingleCartResponse.fromJson(Map<String, dynamic> json) =>\r\n"
+                },
+                {
+                    "date": 1675792219032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,14 @@\n import 'package:foodex_app/model/cart.dart';\r\n-import 'package:foodex_app/model/food.dart';\r\n import 'package:json_annotation/json_annotation.dart';\r\n \r\n part 'single_cart_response.g.dart';\r\n \r\n @JsonSerializable()\r\n class SingleCartResponse {\r\n   bool? success;\r\n   String? message;\r\n-  Cart? data;\r\n+  List<Cart>? data;\r\n \r\n   SingleCartResponse({this.success, this.message, this.data});\r\n \r\n   factory SingleCartResponse.fromJson(Map<String, dynamic> json) =>\r\n"
+                },
+                {
+                    "date": 1675792251898,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n import 'package:foodex_app/model/cart.dart';\r\n import 'package:json_annotation/json_annotation.dart';\r\n \r\n-part 'single_cart_response.g.dart';\r\n \r\n @JsonSerializable()\r\n class SingleCartResponse {\r\n   bool? success;\r\n"
+                },
+                {
+                    "date": 1675792260032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import 'package:foodex_app/model/cart.dart';\r\n import 'package:json_annotation/json_annotation.dart';\r\n \r\n+part 'single_cart';\r\n \r\n @JsonSerializable()\r\n class SingleCartResponse {\r\n   bool? success;\r\n"
+                },
+                {
+                    "date": 1675792267987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import 'package:foodex_app/model/cart.dart';\r\n import 'package:json_annotation/json_annotation.dart';\r\n \r\n-part 'single_cart';\r\n+part 'single_cart_response.dart';\r\n \r\n @JsonSerializable()\r\n class SingleCartResponse {\r\n   bool? success;\r\n"
+                },
+                {
+                    "date": 1675792275350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import 'package:foodex_app/model/cart.dart';\r\n import 'package:json_annotation/json_annotation.dart';\r\n \r\n-part 'single_cart_response.dart';\r\n+part 'single_cart_response.g.dart';\r\n \r\n @JsonSerializable()\r\n class SingleCartResponse {\r\n   bool? success;\r\n"
+                },
+                {
+                    "date": 1675792302140,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,8 @@\n \r\n @JsonSerializable()\r\n class SingleCartResponse {\r\n   bool? success;\r\n-  String? message;\r\n   List<Cart>? data;\r\n \r\n   SingleCartResponse({this.success, this.message, this.data});\r\n \r\n"
+                },
+                {
+                    "date": 1675792340104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,11 @@\n \r\n @JsonSerializable()\r\n class SingleCartResponse {\r\n   bool? success;\r\n-  List<Cart>? data;\r\n+  List<Cart? data;\r\n \r\n-  SingleCartResponse({this.success, this.message, this.data});\r\n+  SingleCartResponse({this.success, this.data});\r\n \r\n   factory SingleCartResponse.fromJson(Map<String, dynamic> json) =>\r\n       _$SingleCartResponseFromJson(json);\r\n \r\n"
+                },
+                {
+                    "date": 1675792380011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,13 +5,13 @@\n \r\n @JsonSerializable()\r\n class SingleCartResponse {\r\n   bool? success;\r\n-  List<Cart? data;\r\n+  Cart? data;\r\n \r\n   SingleCartResponse({this.success, this.data});\r\n \r\n-  factory SingleCartResponse.fromJson(Map<String, dynamic> json) =>\r\n-      _$SingleCartResponseFromJson(json);\r\n+  factory SingleFoodResponse.fromJson(Map<String, dynamic> json) =>\r\n+      _$SingleFoodResponseFromJson(json);\r\n \r\n-  Map<String, dynamic> toJson() => _$SingleCartResponseToJson(this);\r\n+  Map<String, dynamic> toJson() => _$SingleFoodResponseToJson(this);\r\n }\r\n"
+                },
+                {
+                    "date": 1675792389672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   Cart? data;\r\n \r\n   SingleCartResponse({this.success, this.data});\r\n \r\n-  factory SingleFoodResponse.fromJson(Map<String, dynamic> json) =>\r\n+  factory SingleCartResponse.fromJson(Map<String, dynamic> json) =>\r\n       _$SingleFoodResponseFromJson(json);\r\n \r\n   Map<String, dynamic> toJson() => _$SingleFoodResponseToJson(this);\r\n }\r\n"
+                },
+                {
+                    "date": 1675792396521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n \r\n   SingleCartResponse({this.success, this.data});\r\n \r\n   factory SingleCartResponse.fromJson(Map<String, dynamic> json) =>\r\n-      _$SingleFoodResponseFromJson(json);\r\n+      _$SingleCartResponseFromJson(json);\r\n \r\n   Map<String, dynamic> toJson() => _$SingleFoodResponseToJson(this);\r\n }\r\n"
+                },
+                {
+                    "date": 1675792401612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n \r\n   factory SingleCartResponse.fromJson(Map<String, dynamic> json) =>\r\n       _$SingleCartResponseFromJson(json);\r\n \r\n-  Map<String, dynamic> toJson() => _$SingleFoodResponseToJson(this);\r\n+  Map<String, dynamic> toJson() => _$SingleCartResponseToJson(this);\r\n }\r\n"
+                },
+                {
+                    "date": 1675792426180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n \r\n @JsonSerializable()\r\n class SingleCartResponse {\r\n   bool? success;\r\n+  \r\n   Cart? data;\r\n \r\n   SingleCartResponse({this.success, this.data});\r\n \r\n"
+                },
+                {
+                    "date": 1675792435947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,12 +5,12 @@\n \r\n @JsonSerializable()\r\n class SingleCartResponse {\r\n   bool? success;\r\n-  \r\n+  String? message;\r\n   Cart? data;\r\n \r\n-  SingleCartResponse({this.success, this.data});\r\n+  SingleCartResponse({this.success, this. this.data});\r\n \r\n   factory SingleCartResponse.fromJson(Map<String, dynamic> json) =>\r\n       _$SingleCartResponseFromJson(json);\r\n \r\n"
+                },
+                {
+                    "date": 1675792585852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,15 +2,15 @@\n import 'package:json_annotation/json_annotation.dart';\r\n \r\n part 'single_cart_response.g.dart';\r\n \r\n-@JsonSerializable()\r\n+\r\n class SingleCartResponse {\r\n   bool? success;\r\n   String? message;\r\n   Cart? data;\r\n \r\n-  SingleCartResponse({this.success, this. this.data});\r\n+  SingleCartResponse({this.success, this.message, this.data});\r\n \r\n   factory SingleCartResponse.fromJson(Map<String, dynamic> json) =>\r\n       _$SingleCartResponseFromJson(json);\r\n \r\n"
+                },
+                {
+                    "date": 1675792591830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,9 @@\n import 'package:foodex_app/model/cart.dart';\r\n-import 'package:json_annotation/json_annotation.dart';\r\n \r\n part 'single_cart_response.g.dart';\r\n \r\n-\r\n+@JsonSerializable()\r\n class SingleCartResponse {\r\n   bool? success;\r\n   String? message;\r\n   Cart? data;\r\n"
+                },
+                {
+                    "date": 1675792602649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,13 @@\n import 'package:foodex_app/model/cart.dart';\r\n+import 'package:json_annotation/json_annotation.dart';\r\n \r\n part 'single_cart_response.g.dart';\r\n \r\n @JsonSerializable()\r\n class SingleCartResponse {\r\n   bool? success;\r\n-  String? message;\r\n+  \r\n   Cart? data;\r\n \r\n   SingleCartResponse({this.success, this.message, this.data});\r\n \r\n"
+                },
+                {
+                    "date": 1675792610819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n part 'single_cart_response.g.dart';\r\n \r\n @JsonSerializable()\r\n class SingleCartResponse {\r\n+  String? message;\r\n   bool? success;\r\n-  \r\n   Cart? data;\r\n \r\n   SingleCartResponse({this.success, this.message, this.data});\r\n \r\n"
+                },
+                {
+                    "date": 1675792665792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n @JsonSerializable()\r\n class SingleCartResponse {\r\n   String? message;\r\n   bool? success;\r\n-  Cart? data;\r\n+  List<Cart>? data;\r\n \r\n   SingleCartResponse({this.success, this.message, this.data});\r\n \r\n   factory SingleCartResponse.fromJson(Map<String, dynamic> json) =>\r\n"
+                },
+                {
+                    "date": 1675792914782,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,18 @@\n-import 'package:foodex_app/model/cart.dart';\r\n-import 'package:json_annotation/json_annotation.dart';\r\n+// import 'package:foodex_app/model/cart.dart';\r\n+// import 'package:json_annotation/json_annotation.dart';\r\n \r\n-part 'single_cart_response.g.dart';\r\n+// part 'single_cart_response.g.dart';\r\n \r\n-@JsonSerializable()\r\n-class SingleCartResponse {\r\n-  String? message;\r\n-  bool? success;\r\n-  List<Cart>? data;\r\n+// @JsonSerializable()\r\n+// class SingleCartResponse {\r\n+//   String? message;\r\n+//   bool? success;\r\n+//   List<Cart>? data;\r\n \r\n-  SingleCartResponse({this.success, this.message, this.data});\r\n+//   SingleCartResponse({this.success, this.message, this.data});\r\n \r\n-  factory SingleCartResponse.fromJson(Map<String, dynamic> json) =>\r\n-      _$SingleCartResponseFromJson(json);\r\n+//   factory SingleCartResponse.fromJson(Map<String, dynamic> json) =>\r\n+//       _$SingleCartResponseFromJson(json);\r\n \r\n-  Map<String, dynamic> toJson() => _$SingleCartResponseToJson(this);\r\n-}\r\n+//   Map<String, dynamic> toJson() => _$SingleCartResponseToJson(this);\r\n+// }\r\n"
+                },
+                {
+                    "date": 1675793816417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,18 @@\n-// import 'package:foodex_app/model/cart.dart';\r\n-// import 'package:json_annotation/json_annotation.dart';\r\n+import 'package:foodex_app/model/cart.dart';\r\n+import 'package:json_annotation/json_annotation.dart';\r\n \r\n-// part 'single_cart_response.g.dart';\r\n+part 'single_cart_response.g.dart';\r\n \r\n-// @JsonSerializable()\r\n-// class SingleCartResponse {\r\n-//   String? message;\r\n-//   bool? success;\r\n-//   List<Cart>? data;\r\n+@JsonSerializable()\r\n+class SingleCartResponse {\r\n+  String? message;\r\n+  bool? success;\r\n+  List<Cart>? data;\r\n \r\n-//   SingleCartResponse({this.success, this.message, this.data});\r\n+  SingleCartResponse({this.success, this.message, this.data});\r\n \r\n-//   factory SingleCartResponse.fromJson(Map<String, dynamic> json) =>\r\n-//       _$SingleCartResponseFromJson(json);\r\n+  factory SingleCartResponse.fromJson(Map<String, dynamic> json) =>\r\n+      _$SingleCartResponseFromJson(json);\r\n \r\n-//   Map<String, dynamic> toJson() => _$SingleCartResponseToJson(this);\r\n-// }\r\n+  Map<String, dynamic> toJson() => _$SingleCartResponseToJson(this);\r\n+}\r\n"
+                },
+                {
+                    "date": 1675793891282,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,18 @@\n import 'package:foodex_app/model/cart.dart';\r\n import 'package:json_annotation/json_annotation.dart';\r\n \r\n-part 'single_cart_response.g.dart';\r\n+part 'food_cart_response.g.dart';\r\n \r\n @JsonSerializable()\r\n-class SingleCartResponse {\r\n+class CartResponse {\r\n   String? message;\r\n   bool? success;\r\n   List<Cart>? data;\r\n \r\n-  SingleCartResponse({this.success, this.message, this.data});\r\n+  CartResponse({this.success, this.message, this.data});\r\n \r\n-  factory SingleCartResponse.fromJson(Map<String, dynamic> json) =>\r\n-      _$SingleCartResponseFromJson(json);\r\n+  factory CartResponse.fromJson(Map<String, dynamic> json) =>\r\n+      _$CartResponseFromJson(json);\r\n \r\n-  Map<String, dynamic> toJson() => _$SingleCartResponseToJson(this);\r\n+  Map<String, dynamic> toJson() => _$CartResponseToJson(this);\r\n }\r\n"
+                },
+                {
+                    "date": 1675793897602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,18 @@\n import 'package:foodex_app/model/cart.dart';\r\n import 'package:json_annotation/json_annotation.dart';\r\n \r\n-part 'food_cart_response.g.dart';\r\n+part 'single_cart_response.g.dart';\r\n \r\n @JsonSerializable()\r\n-class CartResponse {\r\n+class SingleCartResponse {\r\n   String? message;\r\n   bool? success;\r\n   List<Cart>? data;\r\n \r\n-  CartResponse({this.success, this.message, this.data});\r\n+  SingleCartResponse({this.success, this.message, this.data});\r\n \r\n-  factory CartResponse.fromJson(Map<String, dynamic> json) =>\r\n-      _$CartResponseFromJson(json);\r\n+  factory SingleCartResponse.fromJson(Map<String, dynamic> json) =>\r\n+      _$SingleCartResponseFromJson(json);\r\n \r\n-  Map<String, dynamic> toJson() => _$CartResponseToJson(this);\r\n+  Map<String, dynamic> toJson() => _$SingleCartResponseToJson(this);\r\n }\r\n"
+                },
+                {
+                    "date": 1675793907293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,19 @@\n import 'package:foodex_app/model/cart.dart';\r\n import 'package:json_annotation/json_annotation.dart';\r\n \r\n-part 'single_cart_response.g.dart';\r\n+part 'food_cart_response.g.dart';\r\n \r\n @JsonSerializable()\r\n-class SingleCartResponse {\r\n+class SCartResponse {\r\n   String? message;\r\n   bool? success;\r\n   List<Cart>? data;\r\n \r\n-  SingleCartResponse({this.success, this.message, this.data});\r\n+  CartResponse(\r\n+      {this.success, this.message, this.data});\r\n \r\n-  factory SingleCartResponse.fromJson(Map<String, dynamic> json) =>\r\n-      _$SingleCartResponseFromJson(json);\r\n+  factory CartResponse.fromJson(Map<String, dynamic> json) =>\r\n+      _$CartResponseFromJson(json);\r\n \r\n-  Map<String, dynamic> toJson() => _$SingleCartResponseToJson(this);\r\n+  Map<String, dynamic> toJson() => _$CartResponseToJson(this);\r\n }\r\n"
+                },
+                {
+                    "date": 1675793918734,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,14 +3,14 @@\n \r\n part 'food_cart_response.g.dart';\r\n \r\n @JsonSerializable()\r\n-class SCartResponse {\r\n+class SingleCartResponse {\r\n   String? message;\r\n   bool? success;\r\n   List<Cart>? data;\r\n \r\n-  CartResponse(\r\n+  SingleCartResponse(\r\n       {this.success, this.message, this.data});\r\n \r\n   factory CartResponse.fromJson(Map<String, dynamic> json) =>\r\n       _$CartResponseFromJson(json);\r\n"
+                },
+                {
+                    "date": 1675793924914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n \r\n   SingleCartResponse(\r\n       {this.success, this.message, this.data});\r\n \r\n-  factory CartResponse.fromJson(Map<String, dynamic> json) =>\r\n+  factory SingleCartResponse.fromJson(Map<String, dynamic> json) =>\r\n       _$CartResponseFromJson(json);\r\n \r\n   Map<String, dynamic> toJson() => _$CartResponseToJson(this);\r\n }\r\n"
+                },
+                {
+                    "date": 1675793936043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,8 @@\n   SingleCartResponse(\r\n       {this.success, this.message, this.data});\r\n \r\n   factory SingleCartResponse.fromJson(Map<String, dynamic> json) =>\r\n-      _$CartResponseFromJson(json);\r\n+      _$SingleCartResponseFromJson(json);\r\n \r\n-  Map<String, dynamic> toJson() => _$CartResponseToJson(this);\r\n+  Map<String, dynamic> toJson() => _$SingleCartResponseToJson(this);\r\n }\r\n"
+                },
+                {
+                    "date": 1675793958132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,12 +6,11 @@\n @JsonSerializable()\r\n class SingleCartResponse {\r\n   String? message;\r\n   bool? success;\r\n-  List<Cart>? data;\r\n+  List<Cart data;\r\n \r\n-  SingleCartResponse(\r\n-      {this.success, this.message, this.data});\r\n+  SingleCartResponse({this.success, this.message, this.data});\r\n \r\n   factory SingleCartResponse.fromJson(Map<String, dynamic> json) =>\r\n       _$SingleCartResponseFromJson(json);\r\n \r\n"
+                },
+                {
+                    "date": 1675793971570,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n @JsonSerializable()\r\n class SingleCartResponse {\r\n   String? message;\r\n   bool? success;\r\n-  Cart data;\r\n+  Cart? data;\r\n \r\n   SingleCartResponse({this.success, this.message, this.data});\r\n \r\n   factory SingleCartResponse.fromJson(Map<String, dynamic> json) =>\r\n"
+                },
+                {
+                    "date": 1675829959817,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,4 +15,5 @@\n //       _$SingleCartResponseFromJson(json);\r\n \r\n //   Map<String, dynamic> toJson() => _$SingleCartResponseToJson(this);\r\n // }\r\n+// \n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1675792106727,
+            "name": "Commit-0",
+            "content": "import 'package:foodex_app/model/food.dart';\r\nimport 'package:json_annotation/json_annotation.dart';\r\n\r\npart 'single_food_response.g.dart';\r\n\r\n@JsonSerializable()\r\nclass SingleFoodResponse {\r\n  bool? success;\r\n  String? message;\r\n  Food? data;\r\n\r\n  SingleFoodResponse({this.success, this.message, this.data});\r\n\r\n  factory SingleFoodResponse.fromJson(Map<String, dynamic> json) =>\r\n      _$SingleFoodResponseFromJson(json);\r\n\r\n  Map<String, dynamic> toJson() => _$SingleFoodResponseToJson(this);\r\n}\r\n"
+        }
+    ]
+}

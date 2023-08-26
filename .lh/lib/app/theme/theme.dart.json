@@ -1,0 +1,58 @@
+{
+    "sourceFile": "lib/app/theme/theme.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1675078360924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1675106441318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n       colorScheme: const ColorScheme.dark().copyWith(\r\n         primary: AppColor.kPrimaryColor,\r\n         secondary: AppColor.kSecondaryColor,\r\n       ),\r\n-      backgroundColor: AppColor.kContentColorDarkTheme);\r\n+     \r\n \r\n   static final lightTheme = ThemeData(\r\n       scaffoldBackgroundColor: AppColor.kContentColorLightTheme,\r\n       backgroundColor: AppColor.kContentColorLightTheme,\r\n"
+                },
+                {
+                    "date": 1675106450983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,10 +28,9 @@\n       // colorScheme: const ColorScheme.dark(),\r\n       colorScheme: const ColorScheme.dark().copyWith(\r\n         primary: AppColor.kPrimaryColor,\r\n         secondary: AppColor.kSecondaryColor,\r\n-      ),\r\n-     \r\n+      ),);\r\n \r\n   static final lightTheme = ThemeData(\r\n       scaffoldBackgroundColor: AppColor.kContentColorLightTheme,\r\n       backgroundColor: AppColor.kContentColorLightTheme,\r\n"
+                },
+                {
+                    "date": 1675106456327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,7 +32,6 @@\n       ),);\r\n \r\n   static final lightTheme = ThemeData(\r\n       scaffoldBackgroundColor: AppColor.kContentColorLightTheme,\r\n-      backgroundColor: AppColor.kContentColorLightTheme,\r\n       colorScheme: const ColorScheme.light());\r\n }\r\n"
+                },
+                {
+                    "date": 1675106475003,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,15 +23,16 @@\n }\r\n \r\n class MyThemes {\r\n   static final darkTheme = ThemeData(\r\n-      scaffoldBackgroundColor: AppColor.kContentColorDarkTheme,\r\n-      // colorScheme: const ColorScheme.dark(),\r\n-      colorScheme: const ColorScheme.dark().copyWith(\r\n-        primary: AppColor.kPrimaryColor,\r\n-        secondary: AppColor.kSecondaryColor,\r\n-      ),);\r\n+    scaffoldBackgroundColor: AppColor.kContentColorDarkTheme,\r\n+    // colorScheme: const ColorScheme.dark(),\r\n+    colorScheme: const ColorScheme.dark().copyWith(\r\n+      primary: AppColor.kPrimaryColor,\r\n+      secondary: AppColor.kSecondaryColor,\r\n+    ),\r\n+  );\r\n \r\n   static final lightTheme = ThemeData(\r\n       scaffoldBackgroundColor: AppColor.kContentColorLightTheme,\r\n-      colorScheme: const ColorScheme.light());\r\n+      colorScheme: const ColorScheme.light().);\r\n }\r\n"
+                },
+                {
+                    "date": 1675106480867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,6 +33,8 @@\n   );\r\n \r\n   static final lightTheme = ThemeData(\r\n       scaffoldBackgroundColor: AppColor.kContentColorLightTheme,\r\n-      colorScheme: const ColorScheme.light().);\r\n+      colorScheme: const ColorScheme.light().copyWith(\r\n+        \r\n+      ));\r\n }\r\n"
+                },
+                {
+                    "date": 1675106698407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,13 +28,15 @@\n     // colorScheme: const ColorScheme.dark(),\r\n     colorScheme: const ColorScheme.dark().copyWith(\r\n       primary: AppColor.kPrimaryColor,\r\n       secondary: AppColor.kSecondaryColor,\r\n+      \r\n     ),\r\n   );\r\n \r\n   static final lightTheme = ThemeData(\r\n       scaffoldBackgroundColor: AppColor.kContentColorLightTheme,\r\n       colorScheme: const ColorScheme.light().copyWith(\r\n-        \r\n+        primary: AppColor.kPrimaryColor,\r\n+        secondary: AppColor.kSecondaryColor,\r\n       ));\r\n }\r\n"
+                },
+                {
+                    "date": 1675106706509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n     // colorScheme: const ColorScheme.dark(),\r\n     colorScheme: const ColorScheme.dark().copyWith(\r\n       primary: AppColor.kPrimaryColor,\r\n       secondary: AppColor.kSecondaryColor,\r\n-      \r\n+      background: App\r\n     ),\r\n   );\r\n \r\n   static final lightTheme = ThemeData(\r\n"
+                },
+                {
+                    "date": 1675106723720,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n     // colorScheme: const ColorScheme.dark(),\r\n     colorScheme: const ColorScheme.dark().copyWith(\r\n       primary: AppColor.kPrimaryColor,\r\n       secondary: AppColor.kSecondaryColor,\r\n-      background: App\r\n+      background: AppColor().b.\r\n     ),\r\n   );\r\n \r\n   static final lightTheme = ThemeData(\r\n"
+                },
+                {
+                    "date": 1675106730076,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n     // colorScheme: const ColorScheme.dark(),\r\n     colorScheme: const ColorScheme.dark().copyWith(\r\n       primary: AppColor.kPrimaryColor,\r\n       secondary: AppColor.kSecondaryColor,\r\n-      background: AppColor.b\r\n+      background: AppColor.bgFillColor\r\n     ),\r\n   );\r\n \r\n   static final lightTheme = ThemeData(\r\n"
+                },
+                {
+                    "date": 1675106998092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,6 +41,6 @@\n       colorScheme: const ColorScheme.light().copyWith(\r\n           primary: AppColor.kPrimaryColor,\r\n           secondary: AppColor.kSecondaryColor,\r\n           background: AppColor.bgFillColor,\r\n-          ));\r\n+          onPrimary: Colors.white));\r\n }\r\n"
+                }
+            ],
+            "date": 1675078360924,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\nimport 'package:flutter/scheduler.dart';\r\nimport 'package:foodex_app/app/theme/constants.dart';\r\n\r\nclass ThemeProvider extends ChangeNotifier {\r\n  ThemeMode themeMode = ThemeMode.system;\r\n\r\n  // bool get isDarkMode => themeMode == ThemeMode.dark;\r\n\r\n  bool get isDarkMode {\r\n    if (themeMode == ThemeMode.system) {\r\n      final brightness = SchedulerBinding.instance.window.platformBrightness;\r\n      return brightness == Brightness.dark;\r\n    } else {\r\n      return themeMode == ThemeMode.dark;\r\n    }\r\n  }\r\n\r\n  void toggleTheme(bool isOn) {\r\n    themeMode = isOn ? ThemeMode.dark : ThemeMode.light;\r\n    notifyListeners();\r\n  }\r\n}\r\n\r\nclass MyThemes {\r\n  static final darkTheme = ThemeData(\r\n      scaffoldBackgroundColor: AppColor.kContentColorDarkTheme,\r\n      // colorScheme: const ColorScheme.dark(),\r\n      colorScheme: const ColorScheme.dark().copyWith(\r\n        primary: AppColor.kPrimaryColor,\r\n        secondary: AppColor.kSecondaryColor,\r\n      ),\r\n      backgroundColor: AppColor.kContentColorDarkTheme);\r\n\r\n  static final lightTheme = ThemeData(\r\n      scaffoldBackgroundColor: AppColor.kContentColorLightTheme,\r\n      backgroundColor: AppColor.kContentColorLightTheme,\r\n      colorScheme: const ColorScheme.light());\r\n}\r\n"
+        }
+    ]
+}

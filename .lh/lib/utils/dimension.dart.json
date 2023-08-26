@@ -1,0 +1,78 @@
+{
+    "sourceFile": "lib/utils/dimension.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 15,
+            "patches": [
+                {
+                    "date": 1672304415489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1672304762015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n   static double height15 = screenHeight / 56.27;\r\n   static double height30 = screenHeight / 28.13;\r\n   static double height45 = screenHeight / 18.76;\r\n   static double height300 = screenHeight / 2.81;\r\n-  static double height225 = screenHeight / 3.75;\r\n+  static double height225 = screenHeight / 3.44;\r\n \r\n   // dynamic width for padding and margin\r\n   static double width10 = screenHeight / 84.4;\r\n   static double width15 = screenHeight / 56.27;\r\n"
+                },
+                {
+                    "date": 1672304779292,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n   static double height15 = screenHeight / 56.27;\r\n   static double height30 = screenHeight / 28.13;\r\n   static double height45 = screenHeight / 18.76;\r\n   static double height300 = screenHeight / 2.81;\r\n-  static double height225 = screenHeight / 3.44;\r\n+  static double height245 = screenHeight / 3.44;\r\n \r\n   // dynamic width for padding and margin\r\n   static double width10 = screenHeight / 84.4;\r\n   static double width15 = screenHeight / 56.27;\r\n"
+                },
+                {
+                    "date": 1672304883251,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,8 +35,9 @@\n   // Radius Size adjusting\r\n   static double radius15 = screenHeight / 56.27;\r\n   static double radius20 = screenHeight / 42.2;\r\n   static double radius30 = screenHeight / 28.13;\r\n+  static double radius50 = screenHeight / 16.88;\r\n \r\n   // default icon size converting to dynamic\r\n   static double inconSize24 = screenHeight / 35.17;\r\n \r\n"
+                },
+                {
+                    "date": 1672305017601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n \r\n   // dynamic height for padding and margin\r\n   static double height10 = screenHeight / 84.4;\r\n   static double height20 = screenHeight / 42.2;\r\n+  static double height25 = screenHeight / 33.76;\r\n   static double height15 = screenHeight / 56.27;\r\n   static double height30 = screenHeight / 28.13;\r\n   static double height45 = screenHeight / 18.76;\r\n   static double height300 = screenHeight / 2.81;\r\n@@ -29,8 +30,9 @@\n \r\n   // Font and Icon size (screen size / icon or font size)\r\n   static double font20 = screenHeight / 42.2;\r\n   static double font12 = screenHeight / 70.3;\r\n+  static double font30 = screenHeight / 28.13;\r\n   // static double icon20 = screenHeight / 42.2;\r\n \r\n   // Radius Size adjusting\r\n   static double radius15 = screenHeight / 56.27;\r\n"
+                },
+                {
+                    "date": 1672305093198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,9 @@\n   // Font and Icon size (screen size / icon or font size)\r\n   static double font20 = screenHeight / 42.2;\r\n   static double font12 = screenHeight / 70.3;\r\n   static double font30 = screenHeight / 28.13;\r\n+  static double space2 = screenWidth / 422;\r\n   // static double icon20 = screenHeight / 42.2;\r\n \r\n   // Radius Size adjusting\r\n   static double radius15 = screenHeight / 56.27;\r\n"
+                },
+                {
+                    "date": 1672305132768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   static double height15 = screenHeight / 56.27;\r\n   static double height30 = screenHeight / 28.13;\r\n   static double height45 = screenHeight / 18.76;\r\n   static double height300 = screenHeight / 2.81;\r\n-  static double height245 = screenHeight / 3.44;\r\n+  static double height245 = screenHeight / 3.75;\r\n \r\n   // dynamic width for padding and margin\r\n   static double width10 = screenHeight / 84.4;\r\n   static double width15 = screenHeight / 56.27;\r\n"
+                },
+                {
+                    "date": 1672305350803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   static double height15 = screenHeight / 56.27;\r\n   static double height30 = screenHeight / 28.13;\r\n   static double height45 = screenHeight / 18.76;\r\n   static double height300 = screenHeight / 2.81;\r\n-  static double height245 = screenHeight / 3.75;\r\n+  static double height245 = screenHeight / 3.44;\r\n \r\n   // dynamic width for padding and margin\r\n   static double width10 = screenHeight / 84.4;\r\n   static double width15 = screenHeight / 56.27;\r\n@@ -30,8 +30,9 @@\n \r\n   // Font and Icon size (screen size / icon or font size)\r\n   static double font20 = screenHeight / 42.2;\r\n   static double font12 = screenHeight / 70.3;\r\n+  static double font17 = screenHeight / 49.64;\r\n   static double font30 = screenHeight / 28.13;\r\n   static double space2 = screenWidth / 422;\r\n   // static double icon20 = screenHeight / 42.2;\r\n \r\n"
+                },
+                {
+                    "date": 1672305931669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,9 @@\n \r\n   // Font and Icon size (screen size / icon or font size)\r\n   static double font20 = screenHeight / 42.2;\r\n   static double font12 = screenHeight / 70.3;\r\n+  static double font15 = screenHeight / 56.26;\r\n   static double font17 = screenHeight / 49.64;\r\n   static double font30 = screenHeight / 28.13;\r\n   static double space2 = screenWidth / 422;\r\n   // static double icon20 = screenHeight / 42.2;\r\n"
+                },
+                {
+                    "date": 1672306847381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n \r\n   // dynamic height for padding and margin\r\n   static double height10 = screenHeight / 84.4;\r\n   static double height20 = screenHeight / 42.2;\r\n+  static double height22 = screenHeight / 38.36;\r\n   static double height25 = screenHeight / 33.76;\r\n   static double height15 = screenHeight / 56.27;\r\n   static double height30 = screenHeight / 28.13;\r\n   static double height45 = screenHeight / 18.76;\r\n"
+                },
+                {
+                    "date": 1672308088237,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,9 @@\n   // Text container size adjusting\r\n   static double pageViewTextContainer = screenHeight / 6.5;\r\n \r\n   // dynamic height for padding and margin\r\n+  static double height8 = screenHeight / 105.5;\r\n   static double height10 = screenHeight / 84.4;\r\n   static double height20 = screenHeight / 42.2;\r\n   static double height22 = screenHeight / 38.36;\r\n   static double height25 = screenHeight / 33.76;\r\n"
+                },
+                {
+                    "date": 1672308636916,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,9 @@\n   static double height22 = screenHeight / 38.36;\r\n   static double height25 = screenHeight / 33.76;\r\n   static double height15 = screenHeight / 56.27;\r\n   static double height30 = screenHeight / 28.13;\r\n+  static double height40 = screenHeight / 21.1;\r\n   static double height45 = screenHeight / 18.76;\r\n   static double height300 = screenHeight / 2.81;\r\n   static double height245 = screenHeight / 3.44;\r\n \r\n"
+                },
+                {
+                    "date": 1672308969507,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,8 +33,9 @@\n \r\n   // Font and Icon size (screen size / icon or font size)\r\n   static double font20 = screenHeight / 42.2;\r\n   static double font12 = screenHeight / 70.3;\r\n+  static double font14 = screenHeight / 60.28;\r\n   static double font15 = screenHeight / 56.26;\r\n   static double font17 = screenHeight / 49.64;\r\n   static double font30 = screenHeight / 28.13;\r\n   static double space2 = screenWidth / 422;\r\n"
+                },
+                {
+                    "date": 1673020092623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,9 @@\n   static double width10 = screenHeight / 84.4;\r\n   static double width15 = screenHeight / 56.27;\r\n   static double width20 = screenHeight / 42.2;\r\n   static double width30 = screenHeight / 28.13;\r\n+  static double width100 = \r\n \r\n   // Font and Icon size (screen size / icon or font size)\r\n   static double font20 = screenHeight / 42.2;\r\n   static double font12 = screenHeight / 70.3;\r\n"
+                },
+                {
+                    "date": 1673020098818,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n   static double width10 = screenHeight / 84.4;\r\n   static double width15 = screenHeight / 56.27;\r\n   static double width20 = screenHeight / 42.2;\r\n   static double width30 = screenHeight / 28.13;\r\n-  static double width100 = screenWidth\r\n+  static double width100 = screenWidth \r\n \r\n   // Font and Icon size (screen size / icon or font size)\r\n   static double font20 = screenHeight / 42.2;\r\n   static double font12 = screenHeight / 70.3;\r\n"
+                },
+                {
+                    "date": 1673020166061,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n   static double height245 = screenHeight / 3.44;\r\n \r\n   // dynamic width for padding and margin\r\n   static double width10 = screenWidth / 84.4;\r\n-  static double width15 = screenHeight / 56.27;\r\n+  static double width15 = screenWidth / 56.27;\r\n   static double width20 = screenHeight / 42.2;\r\n   static double width30 = screenHeight / 28.13;\r\n   static double width100 = screenWidth / 8.44;\r\n \r\n"
+                }
+            ],
+            "date": 1672304415489,
+            "name": "Commit-0",
+            "content": "import 'package:get/get.dart';\r\n\r\nclass Dimensions {\r\n  // accessing height and width properties\r\n  static double screenHeight = Get.context!.height;\r\n  static double screenWidth = Get.context!.width;\r\n\r\n  // Main Screen size adjusting (screen siz/ 320)\r\n  static double pageView = screenHeight / 2.64;\r\n  // container size adjusting\r\n  static double pageViewContainer = screenHeight / 3.84;\r\n  // Text container size adjusting\r\n  static double pageViewTextContainer = screenHeight / 6.5;\r\n\r\n  // dynamic height for padding and margin\r\n  static double height10 = screenHeight / 84.4;\r\n  static double height20 = screenHeight / 42.2;\r\n  static double height15 = screenHeight / 56.27;\r\n  static double height30 = screenHeight / 28.13;\r\n  static double height45 = screenHeight / 18.76;\r\n  static double height300 = screenHeight / 2.81;\r\n  static double height225 = screenHeight / 3.75;\r\n\r\n  // dynamic width for padding and margin\r\n  static double width10 = screenHeight / 84.4;\r\n  static double width15 = screenHeight / 56.27;\r\n  static double width20 = screenHeight / 42.2;\r\n  static double width30 = screenHeight / 28.13;\r\n\r\n  // Font and Icon size (screen size / icon or font size)\r\n  static double font20 = screenHeight / 42.2;\r\n  static double font12 = screenHeight / 70.3;\r\n  // static double icon20 = screenHeight / 42.2;\r\n\r\n  // Radius Size adjusting\r\n  static double radius15 = screenHeight / 56.27;\r\n  static double radius20 = screenHeight / 42.2;\r\n  static double radius30 = screenHeight / 28.13;\r\n\r\n  // default icon size converting to dynamic\r\n  static double inconSize24 = screenHeight / 35.17;\r\n\r\n  // list view size\r\n  static double listViewImgSize = screenHeight / 5.27;\r\n  static double listViewTextContSize = screenHeight / 6.02;\r\n}\r\n"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/response/product_response.g.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1674561807847,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1674561807847,
+            "name": "Commit-0",
+            "content": "// GENERATED CODE - DO NOT MODIFY BY HAND\n\npart of 'food_response.dart';\n\n// **************************************************************************\n// JsonSerializableGenerator\n// **************************************************************************\n\nProductResponse _$ProductResponseFromJson(Map<String, dynamic> json) =>\n    ProductResponse(\n      success: json['success'] as bool?,\n      data: (json['data'] as List<dynamic>?)\n          ?.map((e) => Product.fromJson(e as Map<String, dynamic>))\n          .toList(),\n    );\n\nMap<String, dynamic> _$ProductResponseToJson(ProductResponse instance) =>\n    <String, dynamic>{\n      'success': instance.success,\n      'data': instance.data,\n    };\n"
+        }
+    ]
+}

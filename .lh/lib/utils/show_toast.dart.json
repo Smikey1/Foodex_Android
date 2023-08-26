@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/utils/show_toast.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1672314686040,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1672314686040,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\nclass ShowToast {\r\n  static void showSuccessToast(BuildContext context, String message) {\r\n    ScaffoldMessenger.of(context).showSnackBar(SnackBar(\r\n      content: Text(message),\r\n      duration: const Duration(seconds: 5),\r\n      backgroundColor: Colors.green,\r\n      behavior: SnackBarBehavior.floating,\r\n      action: SnackBarAction(\r\n          label: 'OK', onPressed: () {}, textColor: Colors.white),\r\n    ));\r\n  }\r\n\r\n  static void showErrorToast(BuildContext context, String message) {\r\n    ScaffoldMessenger.of(context).showSnackBar(SnackBar(\r\n      content: Text(message),\r\n      duration: const Duration(seconds: 5),\r\n      backgroundColor: Colors.red,\r\n      behavior: SnackBarBehavior.floating,\r\n      action: SnackBarAction(\r\n          label: 'OK', onPressed: () {}, textColor: Colors.white),\r\n    ));\r\n  }\r\n}\r\n"
+        }
+    ]
+}

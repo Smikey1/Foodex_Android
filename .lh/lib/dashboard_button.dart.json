@@ -1,0 +1,62 @@
+{
+    "sourceFile": "lib/dashboard_button.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1675446555724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1675446561408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n   @override\r\n   Widget build(BuildContext context) {\r\n     double screenWidth = MediaQuery.of(context).size.width;\r\n     return Scaffold(\r\n-      backgroundColor: ,\r\n+      backgroundColor: Colors.transparent,\r\n       body: lstBottomScreen[currentIndex],\r\n       bottomNavigationBar: Container(\r\n         margin: const EdgeInsets.only(left: 20, right: 20, bottom: 20, top: 5),\r\n         height: screenWidth * .155,\r\n"
+                },
+                {
+                    "date": 1675446570253,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n   @override\r\n   Widget build(BuildContext context) {\r\n     double screenWidth = MediaQuery.of(context).size.width;\r\n     return Scaffold(\r\n-      backgroundColor: Colors.transparent,\r\n+      backgroundColor: Color.fromARGB(0, 255, 255, 255),\r\n       body: lstBottomScreen[currentIndex],\r\n       bottomNavigationBar: Container(\r\n         margin: const EdgeInsets.only(left: 20, right: 20, bottom: 20, top: 5),\r\n         height: screenWidth * .155,\r\n"
+                },
+                {
+                    "date": 1675446586655,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n   @override\r\n   Widget build(BuildContext context) {\r\n     double screenWidth = MediaQuery.of(context).size.width;\r\n     return Scaffold(\r\n-      backgroundColor: Color.fromARGB(0, 255, 255, 255),\r\n+      backgroundColor: Colors.transparent,\r\n       body: lstBottomScreen[currentIndex],\r\n       bottomNavigationBar: Container(\r\n         margin: const EdgeInsets.only(left: 20, right: 20, bottom: 20, top: 5),\r\n         height: screenWidth * .155,\r\n"
+                },
+                {
+                    "date": 1675446605706,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,8 @@\n   @override\r\n   Widget build(BuildContext context) {\r\n     double screenWidth = MediaQuery.of(context).size.width;\r\n     return Scaffold(\r\n-      backgroundColor: Colors.transparent,\r\n       body: lstBottomScreen[currentIndex],\r\n       bottomNavigationBar: Container(\r\n         margin: const EdgeInsets.only(left: 20, right: 20, bottom: 20, top: 5),\r\n         height: screenWidth * .155,\r\n"
+                },
+                {
+                    "date": 1675446617786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,10 @@\n   ];\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     double screenWidth = MediaQuery.of(context).size.width;\r\n+      backgroundColor: Colors.transparent,\r\n+\r\n     return Scaffold(\r\n       body: lstBottomScreen[currentIndex],\r\n       bottomNavigationBar: Container(\r\n         margin: const EdgeInsets.only(left: 20, right: 20, bottom: 20, top: 5),\r\n"
+                },
+                {
+                    "date": 1675446624643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,10 @@\n   ];\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     double screenWidth = MediaQuery.of(context).size.width;\r\n-      backgroundColor: Colors.transparent,\r\n+    backgroundColor:\r\n+    Colors.transparent;\r\n \r\n     return Scaffold(\r\n       body: lstBottomScreen[currentIndex],\r\n       bottomNavigationBar: Container(\r\n"
+                },
+                {
+                    "date": 1675446633292,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,10 +20,9 @@\n   ];\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     double screenWidth = MediaQuery.of(context).size.width;\r\n-    backgroundColor:\r\n-    Colors.transparent;\r\n+    \r\n \r\n     return Scaffold(\r\n       body: lstBottomScreen[currentIndex],\r\n       bottomNavigationBar: Container(\r\n"
+                },
+                {
+                    "date": 1675454005207,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,18 +20,16 @@\n   ];\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     double screenWidth = MediaQuery.of(context).size.width;\r\n-    \r\n-\r\n     return Scaffold(\r\n       body: lstBottomScreen[currentIndex],\r\n       bottomNavigationBar: Container(\r\n         margin: const EdgeInsets.only(left: 20, right: 20, bottom: 20, top: 5),\r\n         height: screenWidth * .155,\r\n         decoration: BoxDecoration(\r\n           // color: Theme.of(context).scaffoldBackgroundColor,\r\n-          color: AppColor.bgFillColor,\r\n+          color: AppColor.,\r\n           boxShadow: [\r\n             BoxShadow(\r\n               color: Colors.black.withOpacity(.15),\r\n               blurRadius: 30,\r\n"
+                },
+                {
+                    "date": 1675594953416,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,12 +24,12 @@\n     return Scaffold(\r\n       body: lstBottomScreen[currentIndex],\r\n       bottomNavigationBar: Container(\r\n         margin: const EdgeInsets.only(left: 20, right: 20, bottom: 20, top: 5),\r\n-        height: screenWidth * .155,\r\n+        height: screenWidth * .15,\r\n         decoration: BoxDecoration(\r\n           // color: Theme.of(context).scaffoldBackgroundColor,\r\n-          color: AppColor.,\r\n+          color: AppColor.kPrimaryColor,\r\n           boxShadow: [\r\n             BoxShadow(\r\n               color: Colors.black.withOpacity(.15),\r\n               blurRadius: 30,\r\n"
+                },
+                {
+                    "date": 1675594961831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     return Scaffold(\r\n       body: lstBottomScreen[currentIndex],\r\n       bottomNavigationBar: Container(\r\n         margin: const EdgeInsets.only(left: 20, right: 20, bottom: 20, top: 5),\r\n-        height: screenWidth * .145,\r\n+        height: screenWidth * .100,\r\n         decoration: BoxDecoration(\r\n           // color: Theme.of(context).scaffoldBackgroundColor,\r\n           color: AppColor.kPrimaryColor,\r\n           boxShadow: [\r\n"
+                },
+                {
+                    "date": 1675594968786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     return Scaffold(\r\n       body: lstBottomScreen[currentIndex],\r\n       bottomNavigationBar: Container(\r\n         margin: const EdgeInsets.only(left: 20, right: 20, bottom: 20, top: 5),\r\n-        height: screenWidth * .1,\r\n+        height: screenWidth * .130,\r\n         decoration: BoxDecoration(\r\n           // color: Theme.of(context).scaffoldBackgroundColor,\r\n           color: AppColor.kPrimaryColor,\r\n           boxShadow: [\r\n"
+                }
+            ],
+            "date": 1675446555724,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\nimport 'package:flutter/services.dart';\r\nimport 'package:foodex_app/app/theme/constants.dart';\r\nimport 'package:foodex_app/screen/export_screen.dart';\r\n\r\nclass DashboardButtonScreen extends StatefulWidget {\r\n  const DashboardButtonScreen({super.key});\r\n\r\n  @override\r\n  State<DashboardButtonScreen> createState() => _DashboardButtonScreenState();\r\n}\r\n\r\nclass _DashboardButtonScreenState extends State<DashboardButtonScreen> {\r\n  var currentIndex = 0;\r\n  List<Widget> lstBottomScreen = [\r\n    const HomeScreen(),\r\n    const OrderScreen(),\r\n    const ChatScreen(),\r\n    const ProfileScreen(),\r\n  ];\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    double screenWidth = MediaQuery.of(context).size.width;\r\n    return Scaffold(\r\n      backgroundColor: ,\r\n      body: lstBottomScreen[currentIndex],\r\n      bottomNavigationBar: Container(\r\n        margin: const EdgeInsets.only(left: 20, right: 20, bottom: 20, top: 5),\r\n        height: screenWidth * .155,\r\n        decoration: BoxDecoration(\r\n          // color: Theme.of(context).scaffoldBackgroundColor,\r\n          color: AppColor.bgFillColor,\r\n          boxShadow: [\r\n            BoxShadow(\r\n              color: Colors.black.withOpacity(.15),\r\n              blurRadius: 30,\r\n              offset: const Offset(0, 10),\r\n            ),\r\n          ],\r\n          borderRadius: BorderRadius.circular(50),\r\n        ),\r\n        child: ListView.builder(\r\n          itemCount: 4,\r\n          scrollDirection: Axis.horizontal,\r\n          padding: EdgeInsets.symmetric(horizontal: screenWidth * .024),\r\n          itemBuilder: (context, index) => InkWell(\r\n            onTap: () {\r\n              setState(() {\r\n                currentIndex = index;\r\n                HapticFeedback.lightImpact();\r\n              });\r\n            },\r\n            splashColor: Colors.transparent,\r\n            highlightColor: Colors.transparent,\r\n            child: Stack(\r\n              children: [\r\n                SizedBox(\r\n                  width: screenWidth * .2125,\r\n                  child: Center(\r\n                    child: AnimatedContainer(\r\n                      duration: const Duration(seconds: 1),\r\n                      curve: Curves.fastLinearToSlowEaseIn,\r\n                      height: index == currentIndex ? screenWidth * .12 : 0,\r\n                      width: index == currentIndex ? screenWidth * .2125 : 0,\r\n                      decoration: BoxDecoration(\r\n                        color: index == currentIndex\r\n                            ? AppColor.kSecondaryColor\r\n                            : Colors.transparent,\r\n                        borderRadius: BorderRadius.circular(50),\r\n                      ),\r\n                    ),\r\n                  ),\r\n                ),\r\n                Container(\r\n                  width: screenWidth * .2125,\r\n                  alignment: Alignment.center,\r\n                  child: Icon(\r\n                    listOfIcons[index],\r\n                    size: screenWidth * .076,\r\n                    color:\r\n                        index == currentIndex ? Colors.white : Colors.black26,\r\n                  ),\r\n                ),\r\n              ],\r\n            ),\r\n          ),\r\n        ),\r\n      ),\r\n    );\r\n  }\r\n\r\n  List<IconData> listOfIcons = [\r\n    Icons.home_rounded,\r\n    Icons.shopping_cart_checkout_rounded,\r\n    Icons.chat_sharp,\r\n    Icons.person_rounded,\r\n  ];\r\n}\r\n"
+        }
+    ]
+}

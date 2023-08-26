@@ -1,0 +1,46 @@
+{
+    "sourceFile": "lib/helper/objectbox.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1672314686040,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1675092360975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import 'package:foodex_app/model/export_model.dart';\r\n import 'package:foodex_app/model/model.dart';\r\n import 'package:foodex_app/objectbox.g.dart';\r\n import 'package:json_annotation/json_annotation.dart';\r\n import 'package:path_provider/path_provider.dart';\r\n"
+                },
+                {
+                    "date": 1675354105740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,5 @@\n import 'package:foodex_app/model/export_model.dart';\r\n-import 'package:foodex_app/model/model.dart';\r\n-import 'package:foodex_app/objectbox.g.dart';\r\n import 'package:json_annotation/json_annotation.dart';\r\n import 'package:path_provider/path_provider.dart';\r\n \r\n @JsonSerializable()\r\n"
+                },
+                {
+                    "date": 1675354595646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import 'package:foodex_app/model/export_model.dart';\r\n+import 'package:foodex_app/objectbox.g.dart';\r\n import 'package:json_annotation/json_annotation.dart';\r\n import 'package:path_provider/path_provider.dart';\r\n \r\n @JsonSerializable()\r\n"
+                },
+                {
+                    "date": 1676184182218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,16 +4,16 @@\n import 'package:path_provider/path_provider.dart';\r\n \r\n @JsonSerializable()\r\n class ObjectBoxInstance {\r\n-  late final Store _store;\r\n+  late final Store store;\r\n   late final Box<User> _user;\r\n \r\n // ObjectBoxInstance(Store store)\r\n \r\n // Creating a constructor\r\n-  ObjectBoxInstance(this._store) {\r\n-    _user = Box<User>(_store);\r\n+  ObjectBoxInstance(this.store) {\r\n+    _user = Box<User>(store);\r\n   }\r\n \r\n // ----------- Initialization ObjectBox --------------------------------\r\n \r\n"
+                },
+                {
+                    "date": 1676540167247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n     return _user.getAll();\r\n   }\r\n \r\n // ---- Login User ----------------\r\n-  bool loginUser(int phone, String password) {\r\n+  bool loginUser( phone, String password) {\r\n     final userData = _user\r\n         .query(User_.phone.equals(phone) & User_.password.equals(password))\r\n         .build()\r\n         .findFirst();\r\n"
+                },
+                {
+                    "date": 1676541829133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n import 'package:foodex_app/model/export_model.dart';\r\n-import 'package:foodex_app/objectbox.g.dart';\r\n import 'package:json_annotation/json_annotation.dart';\r\n import 'package:path_provider/path_provider.dart';\r\n \r\n @JsonSerializable()\r\n@@ -36,9 +35,9 @@\n     return _user.getAll();\r\n   }\r\n \r\n // ---- Login User ----------------\r\n-  bool loginUser( phone, String password) {\r\n+  bool loginUser(String phone, String password) {\r\n     final userData = _user\r\n         .query(User_.phone.equals(phone) & User_.password.equals(password))\r\n         .build()\r\n         .findFirst();\r\n"
+                },
+                {
+                    "date": 1676541836135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n import 'package:foodex_app/model/export_model.dart';\r\n import 'package:json_annotation/json_annotation.dart';\r\n import 'package:path_provider/path_provider.dart';\r\n \r\n+import '../objectbox.g.dart';\r\n+\r\n @JsonSerializable()\r\n class ObjectBoxInstance {\r\n   late final Store store;\r\n   late final Box<User> _user;\r\n"
+                }
+            ],
+            "date": 1672314686040,
+            "name": "Commit-0",
+            "content": "import 'package:foodex_app/model/model.dart';\r\nimport 'package:foodex_app/objectbox.g.dart';\r\nimport 'package:json_annotation/json_annotation.dart';\r\nimport 'package:path_provider/path_provider.dart';\r\n\r\n@JsonSerializable()\r\nclass ObjectBoxInstance {\r\n  late final Store _store;\r\n  late final Box<User> _user;\r\n\r\n// ObjectBoxInstance(Store store)\r\n\r\n// Creating a constructor\r\n  ObjectBoxInstance(this._store) {\r\n    _user = Box<User>(_store);\r\n  }\r\n\r\n// ----------- Initialization ObjectBox --------------------------------\r\n\r\n  static Future<ObjectBoxInstance> init() async {\r\n    var dir = await getApplicationDocumentsDirectory();\r\n    final store = Store(\r\n      getObjectBoxModel(),\r\n      directory: '${dir.path}/dashBoardScreen()',\r\n    );\r\n    return ObjectBoxInstance(store);\r\n  }\r\n\r\n// ----------- User Query ----------------\r\n\r\n  int addUser(User user) {\r\n    return _user.put(user);\r\n  }\r\n\r\n  List<User> getAllUser() {\r\n    return _user.getAll();\r\n  }\r\n\r\n// ---- Login User ----------------\r\n  bool loginUser(int phone, String password) {\r\n    final userData = _user\r\n        .query(User_.phone.equals(phone) & User_.password.equals(password))\r\n        .build()\r\n        .findFirst();\r\n\r\n    return userData == null ? false : true;\r\n  }\r\n}\r\n"
+        }
+    ]
+}

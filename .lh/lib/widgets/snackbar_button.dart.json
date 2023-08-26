@@ -1,0 +1,26 @@
+{
+    "sourceFile": "lib/widgets/snackbar_button.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1676405381792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1676405388122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import 'package:flutter/material.dart';\r\n+\r\n class ButtonWidget extends StatelessWidget {\r\n   final String text;\r\n   final VoidCallback onClicked;\r\n \r\n"
+                },
+                {
+                    "date": 1676405514569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,25 +1,25 @@\n-import 'package:flutter/material.dart';\r\n+// import 'package:flutter/material.dart';\r\n \r\n-class ButtonWidget extends StatelessWidget {\r\n-  final String text;\r\n-  final VoidCallback onClicked;\r\n+// class ButtonWidget extends StatelessWidget {\r\n+//   final String text;\r\n+//   final VoidCallback onClicked;\r\n \r\n-  const ButtonWidget({\r\n-    @required this.text,\r\n-    @required this.onClicked,\r\n-    Key key,\r\n-  }) : super(key: key);\r\n+//   const ButtonWidget({\r\n+//     @required this.text,\r\n+//     @required this.onClicked,\r\n+//     Key key,\r\n+//   }) : super(key: key);\r\n \r\n-  @override\r\n-  Widget build(BuildContext context) => RaisedButton(\r\n-        child: Text(\r\n-          text,\r\n-          style: TextStyle(fontSize: 24),\r\n-        ),\r\n-        shape: StadiumBorder(),\r\n-        color: Theme.of(context).accentColor,\r\n-        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),\r\n-        textColor: Colors.white,\r\n-        onPressed: onClicked,\r\n-      );\r\n-}\r\n+//   @override\r\n+//   Widget build(BuildContext context) => RaisedButton(\r\n+//         child: Text(\r\n+//           text,\r\n+//           style: TextStyle(fontSize: 24),\r\n+//         ),\r\n+//         shape: StadiumBorder(),\r\n+//         color: Theme.of(context).accentColor,\r\n+//         padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),\r\n+//         textColor: Colors.white,\r\n+//         onPressed: onClicked,\r\n+//       );\r\n+// }\r\n"
+                }
+            ],
+            "date": 1676405381792,
+            "name": "Commit-0",
+            "content": "class ButtonWidget extends StatelessWidget {\r\n  final String text;\r\n  final VoidCallback onClicked;\r\n\r\n  const ButtonWidget({\r\n    @required this.text,\r\n    @required this.onClicked,\r\n    Key key,\r\n  }) : super(key: key);\r\n\r\n  @override\r\n  Widget build(BuildContext context) => RaisedButton(\r\n        child: Text(\r\n          text,\r\n          style: TextStyle(fontSize: 24),\r\n        ),\r\n        shape: StadiumBorder(),\r\n        color: Theme.of(context).accentColor,\r\n        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),\r\n        textColor: Colors.white,\r\n        onPressed: onClicked,\r\n      );\r\n}\r\n"
+        }
+    ]
+}

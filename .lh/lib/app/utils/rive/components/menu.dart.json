@@ -1,0 +1,38 @@
+{
+    "sourceFile": "lib/app/utils/rive/components/menu.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1675365202576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1675365223071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,32 @@\n-import 'rive_model.dart';\r\n+// ignore_for_file: public_member_api_docs, sort_constructors_first\r\n+import 'dart:convert';\r\n \r\n+\r\n+\r\n class Menu {\r\n   final String title;\r\n   final RiveModel rive;\r\n \r\n   Menu({required this.title, required this.rive});\r\n+\r\n+  Map<String, dynamic> toMap() {\r\n+    return <String, dynamic>{\r\n+      'title': title,\r\n+      'rive': rive.toMap(),\r\n+    };\r\n+  }\r\n+\r\n+  factory Menu.fromMap(Map<String, dynamic> map) {\r\n+    return Menu(\r\n+      title: map['title'] as String,\r\n+      rive: RiveModel.fromMap(map['rive'] as Map<String,dynamic>),\r\n+    );\r\n+  }\r\n+\r\n+  String toJson() => json.encode(toMap());\r\n+\r\n+  factory Menu.fromJson(String source) => Menu.fromMap(json.decode(source) as Map<String, dynamic>);\r\n }\r\n \r\n List<Menu> sidebarMenus = [\r\n   Menu(\r\n"
+                },
+                {
+                    "date": 1675365242141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,32 +1,11 @@\n-// ignore_for_file: public_member_api_docs, sort_constructors_first\r\n-import 'dart:convert';\r\n+import 'rive_model.dart';\r\n \r\n-\r\n-\r\n class Menu {\r\n   final String title;\r\n   final RiveModel rive;\r\n \r\n   Menu({required this.title, required this.rive});\r\n-\r\n-  Map<String, dynamic> toMap() {\r\n-    return <String, dynamic>{\r\n-      'title': title,\r\n-      'rive': rive.toMap(),\r\n-    };\r\n-  }\r\n-\r\n-  factory Menu.fromMap(Map<String, dynamic> map) {\r\n-    return Menu(\r\n-      title: map['title'] as String,\r\n-      rive: RiveModel.fromMap(map['rive'] as Map<String,dynamic>),\r\n-    );\r\n-  }\r\n-\r\n-  String toJson() => json.encode(toMap());\r\n-\r\n-  factory Menu.fromJson(String source) => Menu.fromMap(json.decode(source) as Map<String, dynamic>);\r\n }\r\n \r\n List<Menu> sidebarMenus = [\r\n   Menu(\r\n"
+                },
+                {
+                    "date": 1675365248211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n-import 'rive_model.dart';\r\n \r\n+\r\n class Menu {\r\n   final String title;\r\n   final RiveModel rive;\r\n \r\n"
+                },
+                {
+                    "date": 1675365289122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n \r\n \r\n+import 'package:foodex_app/app/utils/rive/components/rive_model.dart';\r\n+\r\n class Menu {\r\n   final String title;\r\n   final RiveModel rive;\r\n \r\n"
+                },
+                {
+                    "date": 1675365912128,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n \r\n \r\n-import 'package:foodex_app/app/utils/RiveAssets/components/rive_model.dart';\r\n+import 'package:foodex_app/app/utils/rive/components/rive_model.dart';\r\n \r\n class Menu {\r\n   final String title;\r\n   final RiveModel rive;\r\n"
+                }
+            ],
+            "date": 1675365202576,
+            "name": "Commit-0",
+            "content": "import 'rive_model.dart';\r\n\r\nclass Menu {\r\n  final String title;\r\n  final RiveModel rive;\r\n\r\n  Menu({required this.title, required this.rive});\r\n}\r\n\r\nList<Menu> sidebarMenus = [\r\n  Menu(\r\n    title: \"Home\",\r\n    rive: RiveModel(\r\n        src: \"assets/RiveAssets/icons.riv\",\r\n        artboard: \"HOME\",\r\n        stateMachineName: \"HOME_interactivity\"),\r\n  ),\r\n  Menu(\r\n    title: \"Search\",\r\n    rive: RiveModel(\r\n        src: \"assets/RiveAssets/icons.riv\",\r\n        artboard: \"SEARCH\",\r\n        stateMachineName: \"SEARCH_Interactivity\"),\r\n  ),\r\n  Menu(\r\n    title: \"Favorites\",\r\n    rive: RiveModel(\r\n        src: \"assets/RiveAssets/icons.riv\",\r\n        artboard: \"LIKE/STAR\",\r\n        stateMachineName: \"STAR_Interactivity\"),\r\n  ),\r\n  Menu(\r\n    title: \"Help\",\r\n    rive: RiveModel(\r\n        src: \"assets/RiveAssets/icons.riv\",\r\n        artboard: \"CHAT\",\r\n        stateMachineName: \"CHAT_Interactivity\"),\r\n  ),\r\n];\r\nList<Menu> sidebarMenus2 = [\r\n  Menu(\r\n    title: \"History\",\r\n    rive: RiveModel(\r\n        src: \"assets/RiveAssets/icons.riv\",\r\n        artboard: \"TIMER\",\r\n        stateMachineName: \"TIMER_Interactivity\"),\r\n  ),\r\n  Menu(\r\n    title: \"Notifications\",\r\n    rive: RiveModel(\r\n        src: \"assets/RiveAssets/icons.riv\",\r\n        artboard: \"BELL\",\r\n        stateMachineName: \"BELL_Interactivity\"),\r\n  ),\r\n];\r\n\r\nList<Menu> bottomNavItems = [\r\n  Menu(\r\n    title: \"Chat\",\r\n    rive: RiveModel(\r\n        src: \"assets/RiveAssets/icons.riv\",\r\n        artboard: \"CHAT\",\r\n        stateMachineName: \"CHAT_Interactivity\"),\r\n  ),\r\n  Menu(\r\n    title: \"Search\",\r\n    rive: RiveModel(\r\n        src: \"assets/RiveAssets/icons.riv\",\r\n        artboard: \"SEARCH\",\r\n        stateMachineName: \"SEARCH_Interactivity\"),\r\n  ),\r\n  Menu(\r\n    title: \"Timer\",\r\n    rive: RiveModel(\r\n        src: \"assets/RiveAssets/icons.riv\",\r\n        artboard: \"TIMER\",\r\n        stateMachineName: \"TIMER_Interactivity\"),\r\n  ),\r\n  Menu(\r\n    title: \"Notification\",\r\n    rive: RiveModel(\r\n        src: \"assets/RiveAssets/icons.riv\",\r\n        artboard: \"BELL\",\r\n        stateMachineName: \"BELL_Interactivity\"),\r\n  ),\r\n  Menu(\r\n    title: \"Profile\",\r\n    rive: RiveModel(\r\n        src: \"assets/RiveAssets/icons.riv\",\r\n        artboard: \"USER\",\r\n        stateMachineName: \"USER_Interactivity\"),\r\n  ),\r\n];\r\n"
+        }
+    ]
+}

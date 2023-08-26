@@ -1,0 +1,250 @@
+{
+    "sourceFile": "lib/widgets/newSnackBar.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 58,
+            "patches": [
+                {
+                    "date": 1676407512697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1676407524339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-class \n\\ No newline at end of file\n+class Snackba\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676407530339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-class Snackba\n\\ No newline at end of file\n+class SnackbarWidget()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676407540588,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,29 @@\n-class SnackbarWidget()\n\\ No newline at end of file\n+class SnackbarWidget(){\r\n+  //   // void showBlurredSnackBar(BuildContext context) => show(\r\n+//   //       context,\r\n+//   //       Flushbar(\r\n+//   //         icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n+//   //         shouldIconPulse: false,\r\n+//   //         title: 'Title',\r\n+//   //         message: 'Hello',\r\n+//   //         // mainButton: FlatButton(\r\n+//   //         //   child: const Text(\r\n+//   //         //     'Click Me',\r\n+//   //         //     style: TextStyle(color: Colors.white, fontSize: 16),\r\n+//   //         //   ),\r\n+//   //         //   onPressed: () {},\r\n+//   //         // ),\r\n+//   //         onTap: (_) {\r\n+//   //           print('Clicked bar');\r\n+//   //         },\r\n+//   //         padding: const EdgeInsets.all(24),\r\n+//   //         flushbarPosition: FlushbarPosition.TOP,\r\n+//   //         margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n+//   //         duration: const Duration(seconds: 3),\r\n+//   //         borderRadius: 16,\r\n+//   //         barBlur: 20,\r\n+//   //         backgroundColor: Colors.black.withOpacity(0.5),\r\n+//   //       ),\r\n+//   //     );\r\n+\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676407550900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,29 +1,29 @@\n-class SnackbarWidget(){\r\n-  //   // void showBlurredSnackBar(BuildContext context) => show(\r\n-//   //       context,\r\n-//   //       Flushbar(\r\n-//   //         icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n-//   //         shouldIconPulse: false,\r\n-//   //         title: 'Title',\r\n-//   //         message: 'Hello',\r\n-//   //         // mainButton: FlatButton(\r\n-//   //         //   child: const Text(\r\n-//   //         //     'Click Me',\r\n-//   //         //     style: TextStyle(color: Colors.white, fontSize: 16),\r\n-//   //         //   ),\r\n-//   //         //   onPressed: () {},\r\n-//   //         // ),\r\n-//   //         onTap: (_) {\r\n-//   //           print('Clicked bar');\r\n-//   //         },\r\n-//   //         padding: const EdgeInsets.all(24),\r\n-//   //         flushbarPosition: FlushbarPosition.TOP,\r\n-//   //         margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n-//   //         duration: const Duration(seconds: 3),\r\n-//   //         borderRadius: 16,\r\n-//   //         barBlur: 20,\r\n-//   //         backgroundColor: Colors.black.withOpacity(0.5),\r\n-//   //       ),\r\n-//   //     );\r\n+class SnackbarWidget{\r\n+    // void showBlurredSnackBar(BuildContext context) => show(\r\n+  //       context,\r\n+  //       Flushbar(\r\n+  //         icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n+  //         shouldIconPulse: false,\r\n+  //         title: 'Title',\r\n+  //         message: 'Hello',\r\n+  //         // mainButton: FlatButton(\r\n+  //         //   child: const Text(\r\n+  //         //     'Click Me',\r\n+  //         //     style: TextStyle(color: Colors.white, fontSize: 16),\r\n+  //         //   ),\r\n+  //         //   onPressed: () {},\r\n+  //         // ),\r\n+  //         onTap: (_) {\r\n+  //           print('Clicked bar');\r\n+  //         },\r\n+  //         padding: const EdgeInsets.all(24),\r\n+  //         flushbarPosition: FlushbarPosition.TOP,\r\n+  //         margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n+  //         duration: const Duration(seconds: 3),\r\n+  //         borderRadius: 16,\r\n+  //         barBlur: 20,\r\n+  //         backgroundColor: Colors.black.withOpacity(0.5),\r\n+  //       ),\r\n+  //     );\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676407557769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,29 +1,29 @@\n class SnackbarWidget{\r\n-    // void showBlurredSnackBar(BuildContext context) => show(\r\n-  //       context,\r\n-  //       Flushbar(\r\n-  //         icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n-  //         shouldIconPulse: false,\r\n-  //         title: 'Title',\r\n-  //         message: 'Hello',\r\n-  //         // mainButton: FlatButton(\r\n-  //         //   child: const Text(\r\n-  //         //     'Click Me',\r\n-  //         //     style: TextStyle(color: Colors.white, fontSize: 16),\r\n-  //         //   ),\r\n-  //         //   onPressed: () {},\r\n-  //         // ),\r\n-  //         onTap: (_) {\r\n-  //           print('Clicked bar');\r\n-  //         },\r\n-  //         padding: const EdgeInsets.all(24),\r\n-  //         flushbarPosition: FlushbarPosition.TOP,\r\n-  //         margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n-  //         duration: const Duration(seconds: 3),\r\n-  //         borderRadius: 16,\r\n-  //         barBlur: 20,\r\n-  //         backgroundColor: Colors.black.withOpacity(0.5),\r\n-  //       ),\r\n-  //     );\r\n+    void showBlurredSnackBar(BuildContext context) => show(\r\n+        context,\r\n+        Flushbar(\r\n+          icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n+          shouldIconPulse: false,\r\n+          title: 'Title',\r\n+          message: 'Hello',\r\n+          // mainButton: FlatButton(\r\n+          //   child: const Text(\r\n+          //     'Click Me',\r\n+          //     style: TextStyle(color: Colors.white, fontSize: 16),\r\n+          //   ),\r\n+          //   onPressed: () {},\r\n+          // ),\r\n+          onTap: (_) {\r\n+            print('Clicked bar');\r\n+          },\r\n+          padding: const EdgeInsets.all(24),\r\n+          flushbarPosition: FlushbarPosition.TOP,\r\n+          margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n+          duration: const Duration(seconds: 3),\r\n+          borderRadius: 16,\r\n+          barBlur: 20,\r\n+          backgroundColor: Colors.black.withOpacity(0.5),\r\n+        ),\r\n+      );\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676407565511,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import 'package:flutter/material.dart';\r\n+\r\n class SnackbarWidget{\r\n     void showBlurredSnackBar(BuildContext context) => show(\r\n         context,\r\n         Flushbar(\r\n"
+                },
+                {
+                    "date": 1676407570730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import 'package:flutter/material.dart';\r\n+import 'package:flutter_flushbar/flutter_flushbar.dart';\r\n \r\n class SnackbarWidget{\r\n     void showBlurredSnackBar(BuildContext context) => show(\r\n         context,\r\n"
+                },
+                {
+                    "date": 1676407578801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import 'package:flutter/material.dart';\r\n import 'package:flutter_flushbar/flutter_flushbar.dart';\r\n \r\n class SnackbarWidget{\r\n-    void showBlurredSnackBar(BuildContext context) => show(\r\n+    void showBlurredSnackBar(BuildContext context) show(\r\n         context,\r\n         Flushbar(\r\n           icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n           shouldIconPulse: false,\r\n"
+                },
+                {
+                    "date": 1676407585499,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,32 +1,33 @@\n import 'package:flutter/material.dart';\r\n import 'package:flutter_flushbar/flutter_flushbar.dart';\r\n \r\n-class SnackbarWidget{\r\n-    void showBlurredSnackBar(BuildContext context) show(\r\n-        context,\r\n-        Flushbar(\r\n-          icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n-          shouldIconPulse: false,\r\n-          title: 'Title',\r\n-          message: 'Hello',\r\n-          // mainButton: FlatButton(\r\n-          //   child: const Text(\r\n-          //     'Click Me',\r\n-          //     style: TextStyle(color: Colors.white, fontSize: 16),\r\n-          //   ),\r\n-          //   onPressed: () {},\r\n-          // ),\r\n-          onTap: (_) {\r\n-            print('Clicked bar');\r\n-          },\r\n-          padding: const EdgeInsets.all(24),\r\n-          flushbarPosition: FlushbarPosition.TOP,\r\n-          margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n-          duration: const Duration(seconds: 3),\r\n-          borderRadius: 16,\r\n-          barBlur: 20,\r\n-          backgroundColor: Colors.black.withOpacity(0.5),\r\n-        ),\r\n-      );\r\n-\r\n-}\n\\ No newline at end of file\n+class SnackbarWidget {\r\n+  void showBlurredSnackBar(BuildContext context) {\r\n+    show(\r\n+      context,\r\n+      Flushbar(\r\n+        icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n+        shouldIconPulse: false,\r\n+        title: 'Title',\r\n+        message: 'Hello',\r\n+        // mainButton: FlatButton(\r\n+        //   child: const Text(\r\n+        //     'Click Me',\r\n+        //     style: TextStyle(color: Colors.white, fontSize: 16),\r\n+        //   ),\r\n+        //   onPressed: () {},\r\n+        // ),\r\n+        onTap: (_) {\r\n+          print('Clicked bar');\r\n+        },\r\n+        padding: const EdgeInsets.all(24),\r\n+        flushbarPosition: FlushbarPosition.TOP,\r\n+        margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n+        duration: const Duration(seconds: 3),\r\n+        borderRadius: 16,\r\n+        barBlur: 20,\r\n+        backgroundColor: Colors.black.withOpacity(0.5),\r\n+      ),\r\n+    );\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1676407599253,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n         padding: const EdgeInsets.all(24),\r\n         flushbarPosition: FlushbarPosition.TOP,\r\n         margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n         duration: const Duration(seconds: 3),\r\n-        borderRadius: 16,\r\n+        // borderRadius: 16,\r\n         barBlur: 20,\r\n         backgroundColor: Colors.black.withOpacity(0.5),\r\n       ),\r\n     );\r\n"
+                },
+                {
+                    "date": 1676407609988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,15 +9,15 @@\n         icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n         shouldIconPulse: false,\r\n         title: 'Title',\r\n         message: 'Hello',\r\n-        // mainButton: FlatButton(\r\n-        //   child: const Text(\r\n-        //     'Click Me',\r\n-        //     style: TextStyle(color: Colors.white, fontSize: 16),\r\n-        //   ),\r\n-        //   onPressed: () {},\r\n-        // ),\r\n+        mainButton: FlatButton(\r\n+          child: const Text(\r\n+            'Click Me',\r\n+            style: TextStyle(color: Colors.white, fontSize: 16),\r\n+          ),\r\n+          onPressed: () {},\r\n+        ),\r\n         onTap: (_) {\r\n           print('Clicked bar');\r\n         },\r\n         padding: const EdgeInsets.all(24),\r\n"
+                },
+                {
+                    "date": 1676407626658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,15 +9,15 @@\n         icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n         shouldIconPulse: false,\r\n         title: 'Title',\r\n         message: 'Hello',\r\n-        mainButton: FlatButton(\r\n-          child: const Text(\r\n-            'Click Me',\r\n-            style: TextStyle(color: Colors.white, fontSize: 16),\r\n-          ),\r\n-          onPressed: () {},\r\n-        ),\r\n+        // mainButton: FlatButton(\r\n+        //   child: const Text(\r\n+        //     'Click Me',\r\n+        //     style: TextStyle(color: Colors.white, fontSize: 16),\r\n+        //   ),\r\n+        //   onPressed: () {},\r\n+        // ),\r\n         onTap: (_) {\r\n           print('Clicked bar');\r\n         },\r\n         padding: const EdgeInsets.all(24),\r\n"
+                },
+                {
+                    "date": 1676407689885,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,8 @@\n import 'package:flutter_flushbar/flutter_flushbar.dart';\r\n \r\n class SnackbarWidget {\r\n   void showBlurredSnackBar(BuildContext context) {\r\n-    show(\r\n-      context,\r\n       Flushbar(\r\n         icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n         shouldIconPulse: false,\r\n         title: 'Title',\r\n"
+                },
+                {
+                    "date": 1676407695119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,30 +2,29 @@\n import 'package:flutter_flushbar/flutter_flushbar.dart';\r\n \r\n class SnackbarWidget {\r\n   void showBlurredSnackBar(BuildContext context) {\r\n-      Flushbar(\r\n-        icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n-        shouldIconPulse: false,\r\n-        title: 'Title',\r\n-        message: 'Hello',\r\n-        // mainButton: FlatButton(\r\n-        //   child: const Text(\r\n-        //     'Click Me',\r\n-        //     style: TextStyle(color: Colors.white, fontSize: 16),\r\n-        //   ),\r\n-        //   onPressed: () {},\r\n-        // ),\r\n-        onTap: (_) {\r\n-          print('Clicked bar');\r\n-        },\r\n-        padding: const EdgeInsets.all(24),\r\n-        flushbarPosition: FlushbarPosition.TOP,\r\n-        margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n-        duration: const Duration(seconds: 3),\r\n-        // borderRadius: 16,\r\n-        barBlur: 20,\r\n-        backgroundColor: Colors.black.withOpacity(0.5),\r\n-      ),\r\n+    Flushbar(\r\n+      icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n+      shouldIconPulse: false,\r\n+      title: 'Title',\r\n+      message: 'Hello',\r\n+      // mainButton: FlatButton(\r\n+      //   child: const Text(\r\n+      //     'Click Me',\r\n+      //     style: TextStyle(color: Colors.white, fontSize: 16),\r\n+      //   ),\r\n+      //   onPressed: () {},\r\n+      // ),\r\n+      onTap: (_) {\r\n+        print('Clicked bar');\r\n+      },\r\n+      padding: const EdgeInsets.all(24),\r\n+      flushbarPosition: FlushbarPosition.TOP,\r\n+      margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n+      duration: const Duration(seconds: 3),\r\n+      // borderRadius: 16,\r\n+      barBlur: 20,\r\n+      backgroundColor: Colors.black.withOpacity(0.5),\r\n     );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1676408003158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import 'package:flutter/material.dart';\r\n import 'package:flutter_flushbar/flutter_flushbar.dart';\r\n \r\n class SnackbarWidget {\r\n-  void showBlurredSnackBar(BuildContext context) {\r\n+  void showBlurredSnackBar(BuildContext context, ) {\r\n     Flushbar(\r\n       icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n       shouldIconPulse: false,\r\n       title: 'Title',\r\n"
+                },
+                {
+                    "date": 1676408014346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import 'package:flutter/material.dart';\r\n import 'package:flutter_flushbar/flutter_flushbar.dart';\r\n \r\n class SnackbarWidget {\r\n-  void showBlurredSnackBar(BuildContext context, ) {\r\n+  void showBlurredSnackBar(BuildContext context, String message, Color color) {\r\n     Flushbar(\r\n       icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n       shouldIconPulse: false,\r\n       title: 'Title',\r\n"
+                },
+                {
+                    "date": 1676408029804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     Flushbar(\r\n       icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n       shouldIconPulse: false,\r\n       title: 'Title',\r\n-      message: 'Hello',\r\n+      message: ,\r\n       // mainButton: FlatButton(\r\n       //   child: const Text(\r\n       //     'Click Me',\r\n       //     style: TextStyle(color: Colors.white, fontSize: 16),\r\n"
+                },
+                {
+                    "date": 1676408060013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     Flushbar(\r\n       icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n       shouldIconPulse: false,\r\n       title: 'Title',\r\n-      message: ,\r\n+      message: message,\r\n       // mainButton: FlatButton(\r\n       //   child: const Text(\r\n       //     'Click Me',\r\n       //     style: TextStyle(color: Colors.white, fontSize: 16),\r\n"
+                },
+                {
+                    "date": 1676408070985,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,8 @@\n       margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n       duration: const Duration(seconds: 3),\r\n       // borderRadius: 16,\r\n       barBlur: 20,\r\n-      backgroundColor: Colors.black.withOpacity(0.5),\r\n+      backgroundColor: colors.withOpacity(0.5),\r\n     );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1676408079421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,8 @@\n   void showBlurredSnackBar(BuildContext context, String message, Color color) {\r\n     Flushbar(\r\n       icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n       shouldIconPulse: false,\r\n-      title: 'Title',\r\n       message: message,\r\n       // mainButton: FlatButton(\r\n       //   child: const Text(\r\n       //     'Click Me',\r\n@@ -23,8 +22,8 @@\n       margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n       duration: const Duration(seconds: 3),\r\n       // borderRadius: 16,\r\n       barBlur: 20,\r\n-      backgroundColor: colors.withOpacity(0.5),\r\n+      backgroundColor: color.withOpacity(0.5),\r\n     );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1676408086851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,11 @@\n       //     style: TextStyle(color: Colors.white, fontSize: 16),\r\n       //   ),\r\n       //   onPressed: () {},\r\n       // ),\r\n-      onTap: (_) {\r\n-        print('Clicked bar');\r\n-      },\r\n+      // onTap: (_) {\r\n+      //   print('Clicked bar');\r\n+      // },\r\n       padding: const EdgeInsets.all(24),\r\n       flushbarPosition: FlushbarPosition.TOP,\r\n       margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n       duration: const Duration(seconds: 3),\r\n"
+                },
+                {
+                    "date": 1676408143102,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import 'package:flutter/material.dart';\r\n import 'package:flutter_flushbar/flutter_flushbar.dart';\r\n \r\n class SnackbarWidget {\r\n-  void showBlurredSnackBar(BuildContext context, String message, Color color) {\r\n+  showBlurredSnackBar(BuildContext context, String message, Color color) {\r\n     Flushbar(\r\n       icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n       shouldIconPulse: false,\r\n       message: message,\r\n"
+                },
+                {
+                    "date": 1676408300742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import 'package:flutter/material.dart';\r\n import 'package:flutter_flushbar/flutter_flushbar.dart';\r\n \r\n class SnackbarWidget {\r\n-  showBlurredSnackBar(BuildContext context, String message, Color color) {\r\n+  void showBlurredSnackBar(BuildContext context, String message, Color color) {\r\n     Flushbar(\r\n       icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n       shouldIconPulse: false,\r\n       message: message,\r\n"
+                },
+                {
+                    "date": 1676408327500,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,18 +6,18 @@\n     Flushbar(\r\n       icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n       shouldIconPulse: false,\r\n       message: message,\r\n-      // mainButton: FlatButton(\r\n-      //   child: const Text(\r\n-      //     'Click Me',\r\n-      //     style: TextStyle(color: Colors.white, fontSize: 16),\r\n-      //   ),\r\n-      //   onPressed: () {},\r\n-      // ),\r\n-      // onTap: (_) {\r\n-      //   print('Clicked bar');\r\n-      // },\r\n+      mainButton: FlatButton(\r\n+        child: const Text(\r\n+          'Click Me',\r\n+          style: TextStyle(color: Colors.white, fontSize: 16),\r\n+        ),\r\n+        onPressed: () {},\r\n+      ),\r\n+      onTap: (_) {\r\n+        print('Clicked bar');\r\n+      },\r\n       padding: const EdgeInsets.all(24),\r\n       flushbarPosition: FlushbarPosition.TOP,\r\n       margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n       duration: const Duration(seconds: 3),\r\n"
+                },
+                {
+                    "date": 1676408494299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,7 +23,7 @@\n       duration: const Duration(seconds: 3),\r\n       // borderRadius: 16,\r\n       barBlur: 20,\r\n       backgroundColor: color.withOpacity(0.5),\r\n-    );\r\n+    )..;\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1676408506683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,7 +23,7 @@\n       duration: const Duration(seconds: 3),\r\n       // borderRadius: 16,\r\n       barBlur: 20,\r\n       backgroundColor: color.withOpacity(0.5),\r\n-    )..;\r\n+    ).show(context);\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1676408519568,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,18 +6,18 @@\n     Flushbar(\r\n       icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n       shouldIconPulse: false,\r\n       message: message,\r\n-      mainButton: FlatButton(\r\n-        child: const Text(\r\n-          'Click Me',\r\n-          style: TextStyle(color: Colors.white, fontSize: 16),\r\n-        ),\r\n-        onPressed: () {},\r\n-      ),\r\n-      onTap: (_) {\r\n-        print('Clicked bar');\r\n-      },\r\n+      // mainButton: FlatButton(\r\n+      //   child: const Text(\r\n+      //     'Click Me',\r\n+      //     style: TextStyle(color: Colors.white, fontSize: 16),\r\n+      //   ),\r\n+      //   onPressed: () {},\r\n+      // ),\r\n+      // onTap: (_) {\r\n+      //   print('Clicked bar');\r\n+      // },\r\n       padding: const EdgeInsets.all(24),\r\n       flushbarPosition: FlushbarPosition.TOP,\r\n       margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n       duration: const Duration(seconds: 3),\r\n"
+                },
+                {
+                    "date": 1676408541905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import 'package:flutter/material.dart';\r\n import 'package:flutter_flushbar/flutter_flushbar.dart';\r\n \r\n class SnackbarWidget {\r\n-  void showBlurredSnackBar(BuildContext context, String message, Color color) {\r\n+  showBlurredSnackBar(BuildContext context, String message, Color color) {\r\n     Flushbar(\r\n       icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n       shouldIconPulse: false,\r\n       message: message,\r\n"
+                },
+                {
+                    "date": 1676408618866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,11 @@\n       //     style: TextStyle(color: Colors.white, fontSize: 16),\r\n       //   ),\r\n       //   onPressed: () {},\r\n       // ),\r\n-      // onTap: (_) {\r\n-      //   print('Clicked bar');\r\n-      // },\r\n+      onTap: (_) {\r\n+        print('Clicked bar');\r\n+      },\r\n       padding: const EdgeInsets.all(24),\r\n       flushbarPosition: FlushbarPosition.TOP,\r\n       margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n       duration: const Duration(seconds: 3),\r\n"
+                },
+                {
+                    "date": 1676408625279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,18 +6,18 @@\n     Flushbar(\r\n       icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n       shouldIconPulse: false,\r\n       message: message,\r\n-      // mainButton: FlatButton(\r\n-      //   child: const Text(\r\n-      //     'Click Me',\r\n-      //     style: TextStyle(color: Colors.white, fontSize: 16),\r\n-      //   ),\r\n-      //   onPressed: () {},\r\n-      // ),\r\n-      onTap: (_) {\r\n-        print('Clicked bar');\r\n-      },\r\n+      mainButton: FlatButton(\r\n+        child: const Text(\r\n+          'Click Me',\r\n+          style: TextStyle(color: Colors.white, fontSize: 16),\r\n+        ),\r\n+        onPressed: () {},\r\n+      ),\r\n+      // onTap: (_) {\r\n+      //   print('Clicked bar');\r\n+      // },\r\n       padding: const EdgeInsets.all(24),\r\n       flushbarPosition: FlushbarPosition.TOP,\r\n       margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n       duration: const Duration(seconds: 3),\r\n"
+                },
+                {
+                    "date": 1676408635710,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,15 +6,15 @@\n     Flushbar(\r\n       icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n       shouldIconPulse: false,\r\n       message: message,\r\n-      mainButton: FlatButton(\r\n-        child: const Text(\r\n-          'Click Me',\r\n-          style: TextStyle(color: Colors.white, fontSize: 16),\r\n-        ),\r\n-        onPressed: () {},\r\n-      ),\r\n+      // mainButton: FlatButton(\r\n+      //   child: const Text(\r\n+      //     'Click Me',\r\n+      //     style: TextStyle(color: Colors.white, fontSize: 16),\r\n+      //   ),\r\n+      //   onPressed: () {},\r\n+      // ),\r\n       // onTap: (_) {\r\n       //   print('Clicked bar');\r\n       // },\r\n       padding: const EdgeInsets.all(24),\r\n"
+                },
+                {
+                    "date": 1676408657521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       padding: const EdgeInsets.all(24),\r\n       flushbarPosition: FlushbarPosition.TOP,\r\n       margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n       duration: const Duration(seconds: 3),\r\n-      // borderRadius: 16,\r\n+      borderRadius: 16,\r\n       barBlur: 20,\r\n       backgroundColor: color.withOpacity(0.5),\r\n     ).show(context);\r\n   }\r\n"
+                },
+                {
+                    "date": 1676408663139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       padding: const EdgeInsets.all(24),\r\n       flushbarPosition: FlushbarPosition.TOP,\r\n       margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n       duration: const Duration(seconds: 3),\r\n-      borderRadius: 16,\r\n+      borderRadius: 16.0,\r\n       barBlur: 20,\r\n       backgroundColor: color.withOpacity(0.5),\r\n     ).show(context);\r\n   }\r\n"
+                },
+                {
+                    "date": 1676408671469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       padding: const EdgeInsets.all(24),\r\n       flushbarPosition: FlushbarPosition.TOP,\r\n       margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n       duration: const Duration(seconds: 3),\r\n-      borderRadius: 16.0,\r\n+      borderRadius: 16,\r\n       barBlur: 20,\r\n       backgroundColor: color.withOpacity(0.5),\r\n     ).show(context);\r\n   }\r\n"
+                },
+                {
+                    "date": 1676408697266,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       padding: const EdgeInsets.all(24),\r\n       flushbarPosition: FlushbarPosition.TOP,\r\n       margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n       duration: const Duration(seconds: 3),\r\n-      borderRadius: 16,\r\n+      borderRadius: int 16,\r\n       barBlur: 20,\r\n       backgroundColor: color.withOpacity(0.5),\r\n     ).show(context);\r\n   }\r\n"
+                },
+                {
+                    "date": 1676408702739,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       padding: const EdgeInsets.all(24),\r\n       flushbarPosition: FlushbarPosition.TOP,\r\n       margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n       duration: const Duration(seconds: 3),\r\n-      borderRadius: int 16,\r\n+      borderRadius: ,\r\n       barBlur: 20,\r\n       backgroundColor: color.withOpacity(0.5),\r\n     ).show(context);\r\n   }\r\n"
+                },
+                {
+                    "date": 1676408750469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,11 +18,11 @@\n       //   print('Clicked bar');\r\n       // },\r\n       padding: const EdgeInsets.all(24),\r\n       flushbarPosition: FlushbarPosition.TOP,\r\n-      margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n+      // margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n       duration: const Duration(seconds: 3),\r\n-      borderRadius: ,\r\n+      borderRadius: 16,\r\n       barBlur: 20,\r\n       backgroundColor: color.withOpacity(0.5),\r\n     ).show(context);\r\n   }\r\n"
+                },
+                {
+                    "date": 1676408765142,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       padding: const EdgeInsets.all(24),\r\n       flushbarPosition: FlushbarPosition.TOP,\r\n       // margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n       duration: const Duration(seconds: 3),\r\n-      borderRadius: 16,\r\n+      // borderRadius: 16,\r\n       barBlur: 20,\r\n       backgroundColor: color.withOpacity(0.5),\r\n     ).show(context);\r\n   }\r\n"
+                },
+                {
+                    "date": 1676408808508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n class SnackbarWidget {\r\n   showBlurredSnackBar(BuildContext context, String message, Color color) {\r\n     Flushbar(\r\n       icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n-      shouldIconPulse: false,\r\n+      shouldIconPulse: true,\r\n       message: message,\r\n       // mainButton: FlatButton(\r\n       //   child: const Text(\r\n       //     'Click Me',\r\n"
+                },
+                {
+                    "date": 1676408835899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       padding: const EdgeInsets.all(24),\r\n       flushbarPosition: FlushbarPosition.TOP,\r\n       // margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n       duration: const Duration(seconds: 3),\r\n-      // borderRadius: 16,\r\n+      borderRadius: 16,\r\n       barBlur: 20,\r\n       backgroundColor: color.withOpacity(0.5),\r\n     ).show(context);\r\n   }\r\n"
+                },
+                {
+                    "date": 1676408842815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       padding: const EdgeInsets.all(24),\r\n       flushbarPosition: FlushbarPosition.TOP,\r\n       // margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n       duration: const Duration(seconds: 3),\r\n-      borderRadius: 16,\r\n+      borderRadius: ,\r\n       barBlur: 20,\r\n       backgroundColor: color.withOpacity(0.5),\r\n     ).show(context);\r\n   }\r\n"
+                },
+                {
+                    "date": 1676408851549,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       padding: const EdgeInsets.all(24),\r\n       flushbarPosition: FlushbarPosition.TOP,\r\n       // margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n       duration: const Duration(seconds: 3),\r\n-      borderRadius: ,\r\n+      borderRadius: BorderRadius,\r\n       barBlur: 20,\r\n       backgroundColor: color.withOpacity(0.5),\r\n     ).show(context);\r\n   }\r\n"
+                },
+                {
+                    "date": 1676408881872,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,23 +6,23 @@\n     Flushbar(\r\n       icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n       shouldIconPulse: true,\r\n       message: message,\r\n-      // mainButton: FlatButton(\r\n-      //   child: const Text(\r\n-      //     'Click Me',\r\n-      //     style: TextStyle(color: Colors.white, fontSize: 16),\r\n-      //   ),\r\n-      //   onPressed: () {},\r\n-      // ),\r\n-      // onTap: (_) {\r\n-      //   print('Clicked bar');\r\n-      // },\r\n+      mainButton: FlatButton(\r\n+        child: const Text(\r\n+          'Click Me',\r\n+          style: TextStyle(color: Colors.white, fontSize: 16),\r\n+        ),\r\n+        onPressed: () {},\r\n+      ),\r\n+      onTap: (_) {\r\n+        print('Clicked bar');\r\n+      },\r\n       padding: const EdgeInsets.all(24),\r\n       flushbarPosition: FlushbarPosition.TOP,\r\n       // margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n       duration: const Duration(seconds: 3),\r\n-      borderRadius: BorderRadius,\r\n+      borderRadius: BorderRadius.circular(16),\r\n       barBlur: 20,\r\n       backgroundColor: color.withOpacity(0.5),\r\n     ).show(context);\r\n   }\r\n"
+                },
+                {
+                    "date": 1676408924279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     Flushbar(\r\n       icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n       shouldIconPulse: true,\r\n       message: message,\r\n-      mainButton: FlatButton(\r\n+      mainButton: TextButton(\r\n         child: const Text(\r\n           'Click Me',\r\n           style: TextStyle(color: Colors.white, fontSize: 16),\r\n         ),\r\n"
+                },
+                {
+                    "date": 1676408938184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n       shouldIconPulse: true,\r\n       message: message,\r\n       mainButton: TextButton(\r\n         child: const Text(\r\n-          'Click Me',\r\n+          '',\r\n           style: TextStyle(color: Colors.white, fontSize: 16),\r\n         ),\r\n         onPressed: () {},\r\n       ),\r\n"
+                },
+                {
+                    "date": 1676408945264,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n       shouldIconPulse: true,\r\n       message: message,\r\n       mainButton: TextButton(\r\n         child: const Text(\r\n-          '',\r\n+          'View Product',\r\n           style: TextStyle(color: Colors.white, fontSize: 16),\r\n         ),\r\n         onPressed: () {},\r\n       ),\r\n"
+                },
+                {
+                    "date": 1676408958257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n class SnackbarWidget {\r\n   showBlurredSnackBar(BuildContext context, String message, Color color) {\r\n     Flushbar(\r\n-      icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n+      icon: const Icon(Icons., size: 32, color: Colors.white),\r\n       shouldIconPulse: true,\r\n       message: message,\r\n       mainButton: TextButton(\r\n         child: const Text(\r\n"
+                },
+                {
+                    "date": 1676408964027,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n class SnackbarWidget {\r\n   showBlurredSnackBar(BuildContext context, String message, Color color) {\r\n     Flushbar(\r\n-      icon: const Icon(Icons., size: 32, color: Colors.white),\r\n+      icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n       shouldIconPulse: true,\r\n       message: message,\r\n       mainButton: TextButton(\r\n         child: const Text(\r\n"
+                },
+                {
+                    "date": 1676408969638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n class SnackbarWidget {\r\n   showBlurredSnackBar(BuildContext context, String message, Color color) {\r\n     Flushbar(\r\n-      icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n+      icon: const Icon(Icons.error_sharp, size: 32, color: Colors.white),\r\n       shouldIconPulse: true,\r\n       message: message,\r\n       mainButton: TextButton(\r\n         child: const Text(\r\n"
+                },
+                {
+                    "date": 1676408992490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,8 @@\n           style: TextStyle(color: Colors.white, fontSize: 16),\r\n         ),\r\n         onPressed: () {},\r\n       ),\r\n-      onTap: (_) {\r\n-        print('Clicked bar');\r\n-      },\r\n       padding: const EdgeInsets.all(24),\r\n       flushbarPosition: FlushbarPosition.TOP,\r\n       // margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n       duration: const Duration(seconds: 3),\r\n"
+                },
+                {
+                    "date": 1676409014384,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,18 +3,18 @@\n \r\n class SnackbarWidget {\r\n   showBlurredSnackBar(BuildContext context, String message, Color color) {\r\n     Flushbar(\r\n-      icon: const Icon(Icons.error_sharp, size: 32, color: Colors.white),\r\n+      icon: const Icon(Icons.error_sharp, size: 30, color: Colors.white),\r\n       shouldIconPulse: true,\r\n       message: message,\r\n-      mainButton: TextButton(\r\n-        child: const Text(\r\n-          'View Product',\r\n-          style: TextStyle(color: Colors.white, fontSize: 16),\r\n-        ),\r\n-        onPressed: () {},\r\n-      ),\r\n+      // mainButton: TextButton(\r\n+      //   child: const Text(\r\n+      //     'View Product',\r\n+      //     style: TextStyle(color: Colors.white, fontSize: 16),\r\n+      //   ),\r\n+      //   onPressed: () {},\r\n+      // ),\r\n       padding: const EdgeInsets.all(24),\r\n       flushbarPosition: FlushbarPosition.TOP,\r\n       // margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n       duration: const Duration(seconds: 3),\r\n"
+                },
+                {
+                    "date": 1676409137650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,5 +22,27 @@\n       barBlur: 20,\r\n       backgroundColor: color.withOpacity(0.5),\r\n     ).show(context);\r\n   }\r\n+\r\n+  showBlurredSnackBar(BuildContext context, String message, Color color) {\r\n+    Flushbar(\r\n+      icon: const Icon(Icons.error_sharp, size: 30, color: Colors.white),\r\n+      shouldIconPulse: true,\r\n+      message: message,\r\n+      // mainButton: TextButton(\r\n+      //   child: const Text(\r\n+      //     'View Product',\r\n+      //     style: TextStyle(color: Colors.white, fontSize: 16),\r\n+      //   ),\r\n+      //   onPressed: () {},\r\n+      // ),\r\n+      padding: const EdgeInsets.all(24),\r\n+      flushbarPosition: FlushbarPosition.TOP,\r\n+      // margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n+      duration: const Duration(seconds: 3),\r\n+      borderRadius: BorderRadius.circular(16),\r\n+      barBlur: 20,\r\n+      backgroundColor: color.withOpacity(0.5),\r\n+    ).show(context);\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1676409144856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n       backgroundColor: color.withOpacity(0.5),\r\n     ).show(context);\r\n   }\r\n \r\n-  showBlurredSnackBar(BuildContext context, String message, Color color) {\r\n+  showSnackBar(BuildContext context, String message, Color color) {\r\n     Flushbar(\r\n       icon: const Icon(Icons.error_sharp, size: 30, color: Colors.white),\r\n       shouldIconPulse: true,\r\n       message: message,\r\n"
+                },
+                {
+                    "date": 1676409159081,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n       backgroundColor: color.withOpacity(0.5),\r\n     ).show(context);\r\n   }\r\n \r\n-  showSnackBar(BuildContext context, String message, Color color) {\r\n+  showBottomSnackBar(BuildContext context, String message, Color color) {\r\n     Flushbar(\r\n       icon: const Icon(Icons.error_sharp, size: 30, color: Colors.white),\r\n       shouldIconPulse: true,\r\n       message: message,\r\n@@ -36,9 +36,9 @@\n       //   ),\r\n       //   onPressed: () {},\r\n       // ),\r\n       padding: const EdgeInsets.all(24),\r\n-      flushbarPosition: FlushbarPosition.TOP,\r\n+      flushbarPosition: FlushbarPosition.BOTTOM,\r\n       // margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n       duration: const Duration(seconds: 3),\r\n       borderRadius: BorderRadius.circular(16),\r\n       barBlur: 20,\r\n"
+                },
+                {
+                    "date": 1676409209602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,5 +44,7 @@\n       barBlur: 20,\r\n       backgroundColor: color.withOpacity(0.5),\r\n     ).show(context);\r\n   }\r\n+\r\n+  \r\n }\r\n"
+                },
+                {
+                    "date": 1676409219453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,6 +45,33 @@\n       backgroundColor: color.withOpacity(0.5),\r\n     ).show(context);\r\n   }\r\n \r\n-  \r\n+    // void showDismissSnackBar(BuildContext context) => show(\r\n+  //       context,\r\n+  //       Flushbar(\r\n+  //         icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n+  //         shouldIconPulse: false,\r\n+  //         title: 'Title',\r\n+  //         message: 'Hello',\r\n+  //         mainButton: FlatButton(\r\n+  //           child: const Text(\r\n+  //             'Click Me',\r\n+  //             style: TextStyle(color: Colors.white, fontSize: 16),\r\n+  //           ),\r\n+  //           onPressed: () {},\r\n+  //         ),\r\n+  //         onTap: (_) {\r\n+  //           print('Clicked bar');\r\n+  //         },\r\n+  //         flushbarPosition: FlushbarPosition.TOP,\r\n+  //         margin: const EdgeInsets.fromLTRB(8, kToolbarHeight + 8, 8, 0),\r\n+  //         borderRadius: 16,\r\n+  //         backgroundColor: Colors.blue.withOpacity(0.7),\r\n+  //         barBlur: 20,\r\n+  //         padding: const EdgeInsets.all(24),\r\n+  //         animationDuration: const Duration(microseconds: 0),\r\n+  //         dismissDirection: FlushbarDismissDirection.HORIZONTAL,\r\n+  //       ),\r\n+  //     );\r\n+\r\n }\r\n"
+                },
+                {
+                    "date": 1676409226340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,9 @@\n           icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n           shouldIconPulse: false,\r\n           title: 'Title',\r\n           message: 'Hello',\r\n-          mainButton: FlatButton(\r\n+          mainButton: Button(\r\n             child: const Text(\r\n               'Click Me',\r\n               style: TextStyle(color: Colors.white, fontSize: 16),\r\n             ),\r\n"
+                },
+                {
+                    "date": 1676409368543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n       backgroundColor: color.withOpacity(0.5),\r\n     ).show(context);\r\n   }\r\n \r\n-  showDismissSnackBar(BuildContext context,  String message, Color color) {\r\n+  showDismissSnackBar(BuildContext context, String message, Color color) {\r\n     Flushbar(\r\n       icon: const Icon(Icons.error, size: 32, color: Colors.white),\r\n       shouldIconPulse: false,\r\n       title: 'Title',\r\n"
+                }
+            ],
+            "date": 1676407512697,
+            "name": "Commit-0",
+            "content": "class "
+        }
+    ]
+}

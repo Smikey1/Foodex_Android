@@ -1,0 +1,26 @@
+{
+    "sourceFile": "lib/app/utils/rive_utils.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1675364053132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1675364058543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n-import 'package:rive/rive.dart';\r\n \r\n+\r\n class RiveUtils {\r\n   static SMIBool getRiveInput(Artboard artboard,\r\n       {required String stateMachineName}) {\r\n     StateMachineController? controller =\r\n"
+                },
+                {
+                    "date": 1675364066451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n+import 'package:rive/rive.dart';\r\n \r\n-\r\n class RiveUtils {\r\n   static SMIBool getRiveInput(Artboard artboard,\r\n       {required String stateMachineName}) {\r\n     StateMachineController? controller =\r\n"
+                }
+            ],
+            "date": 1675364053132,
+            "name": "Commit-0",
+            "content": "import 'package:rive/rive.dart';\r\n\r\nclass RiveUtils {\r\n  static SMIBool getRiveInput(Artboard artboard,\r\n      {required String stateMachineName}) {\r\n    StateMachineController? controller =\r\n        StateMachineController.fromArtboard(artboard, stateMachineName);\r\n\r\n    artboard.addController(controller!);\r\n\r\n    return controller.findInput<bool>(\"active\") as SMIBool;\r\n  }\r\n\r\n  static void chnageSMIBoolState(SMIBool input) {\r\n    input.change(true);\r\n    Future.delayed(\r\n      const Duration(seconds: 1),\r\n      () {\r\n        input.change(false);\r\n      },\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

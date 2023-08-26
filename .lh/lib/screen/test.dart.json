@@ -1,0 +1,134 @@
+{
+    "sourceFile": "lib/screen/test.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 29,
+            "patches": [
+                {
+                    "date": 1672987989418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1672987995173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-Stf\n\\ No newline at end of file\n+stf\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1672988004818,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,16 @@\n-stf\n\\ No newline at end of file\n+import 'package:flutter/src/widgets/container.dart';\r\n+import 'package:flutter/src/widgets/framework.dart';\r\n+\r\n+class ThemeScreen extends StatefulWidget {\r\n+  const ThemeScreen({super.key});\r\n+\r\n+  @override\r\n+  State<ThemeScreen> createState() => _ThemeScreenState();\r\n+}\r\n+\r\n+class _ThemeScreenState extends State<ThemeScreen> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Container();\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1672988016641,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import 'package:flutter/material.dart';\r\n import 'package:flutter/src/widgets/container.dart';\r\n import 'package:flutter/src/widgets/framework.dart';\r\n \r\n class ThemeScreen extends StatefulWidget {\r\n@@ -10,7 +11,9 @@\n \r\n class _ThemeScreenState extends State<ThemeScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return Container();\r\n+    return Scaffold(\r\n+      \r\n+    );\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1672988025461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,8 @@\n class _ThemeScreenState extends State<ThemeScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n-      \r\n+      body: ,\r\n     );\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1672988034123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,8 @@\n class _ThemeScreenState extends State<ThemeScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n-      body: ,\r\n+      body: Container(),\r\n     );\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1672988051117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,11 @@\n class _ThemeScreenState extends State<ThemeScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n-      body: Container(),\r\n+      body: Container(\r\n+        child: Text(''),\r\n+      ),\r\n+\r\n     );\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1672988056181,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       body: Container(\r\n-        child: Text(''),\r\n+        child: Text('This is new'),\r\n       ),\r\n \r\n     );\r\n   }\r\n"
+                },
+                {
+                    "date": 1672988061884,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       body: Container(\r\n+        color: Colors.,\r\n         child: Text('This is new'),\r\n       ),\r\n \r\n     );\r\n"
+                },
+                {
+                    "date": 1672988072773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       body: Container(\r\n-        color: Colors.,\r\n+        color: Colors.blue,\r\n         child: Text('This is new'),\r\n       ),\r\n \r\n     );\r\n"
+                },
+                {
+                    "date": 1672988078445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,10 @@\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       body: Container(\r\n         color: Colors.blue,\r\n-        child: Text('This is new'),\r\n+        child: const Text('This is new'),\r\n+        \r\n       ),\r\n-\r\n     );\r\n\\ No newline at end of file\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1672988105424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,8 @@\n     return Scaffold(\r\n       body: Container(\r\n         color: Colors.blue,\r\n         child: const Text('This is new'),\r\n-        \r\n       ),\r\n     );\r\n   }\r\n-}\n\\ No newline at end of file\n+}\r\n"
+                },
+                {
+                    "date": 1672988111049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,7 +16,8 @@\n       body: Container(\r\n         color: Colors.blue,\r\n         child: const Text('This is new'),\r\n       ),\r\n+      Ee\r\n     );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1672988117373,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,8 @@\n       body: Container(\r\n         color: Colors.blue,\r\n         child: const Text('This is new'),\r\n       ),\r\n-      Ee\r\n+      \r\n     );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1672988125252,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,11 +12,17 @@\n class _ThemeScreenState extends State<ThemeScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n-      body: Container(\r\n-        color: Colors.blue,\r\n-        child: const Text('This is new'),\r\n+      body: Column(\r\n+        children: [\r\n+          Container(\r\n+            color: Colors.blue,\r\n+            child: const Text('This is new'),\r\n+          ),\r\n+\r\n+          \r\n+        ],\r\n       ),\r\n       \r\n     );\r\n   }\r\n"
+                },
+                {
+                    "date": 1672988131456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,10 +18,9 @@\n           Container(\r\n             color: Colors.blue,\r\n             child: const Text('This is new'),\r\n           ),\r\n-\r\n-          \r\n+          ElevatedButton(onPressed: onPressed, child: child)\r\n         ],\r\n       ),\r\n       \r\n     );\r\n"
+                },
+                {
+                    "date": 1672988140145,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n           Container(\r\n             color: Colors.blue,\r\n             child: const Text('This is new'),\r\n           ),\r\n-          ElevatedButton(onPressed: onPressed, child: child)\r\n+          ElevatedButton(onPressed: (){}, child: Text)\r\n         ],\r\n       ),\r\n       \r\n     );\r\n"
+                },
+                {
+                    "date": 1672988146616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n           Container(\r\n             color: Colors.blue,\r\n             child: const Text('This is new'),\r\n           ),\r\n-          ElevatedButton(onPressed: (){}, child: Text)\r\n+          ElevatedButton(onPressed: (){}, child: Text('This is button'))\r\n         ],\r\n       ),\r\n       \r\n     );\r\n"
+                },
+                {
+                    "date": 1672988180758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,17 +12,18 @@\n class _ThemeScreenState extends State<ThemeScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n-      body: Column(\r\n-        children: [\r\n-          Container(\r\n-            color: Colors.blue,\r\n-            child: const Text('This is new'),\r\n-          ),\r\n-          ElevatedButton(onPressed: (){}, child: Text('This is button'))\r\n-        ],\r\n+      body: Center(\r\n+        child: Column(\r\n+          children: [\r\n+            Container(\r\n+              color: Colors.blue,\r\n+              child: const Text('This is new'),\r\n+            ),\r\n+            ElevatedButton(onPressed: () {}, child: const Text('This is button'))\r\n+          ],\r\n+        ),\r\n       ),\r\n-      \r\n     );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1672988186746,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,5 @@\n import 'package:flutter/material.dart';\r\n-import 'package:flutter/src/widgets/container.dart';\r\n-import 'package:flutter/src/widgets/framework.dart';\r\n \r\n class ThemeScreen extends StatefulWidget {\r\n   const ThemeScreen({super.key});\r\n \r\n@@ -13,15 +11,17 @@\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       body: Center(\r\n+        c\r\n         child: Column(\r\n           children: [\r\n             Container(\r\n               color: Colors.blue,\r\n               child: const Text('This is new'),\r\n             ),\r\n-            ElevatedButton(onPressed: () {}, child: const Text('This is button'))\r\n+            ElevatedButton(\r\n+                onPressed: () {}, child: const Text('This is button'))\r\n           ],\r\n         ),\r\n       ),\r\n     );\r\n"
+                },
+                {
+                    "date": 1672988196951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,8 @@\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       body: Center(\r\n-        c\r\n         child: Column(\r\n           children: [\r\n             Container(\r\n               color: Colors.blue,\r\n"
+                },
+                {
+                    "date": 1672988222816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       body: Center(\r\n+        \r\n         child: Column(\r\n           children: [\r\n             Container(\r\n               color: Colors.blue,\r\n"
+                },
+                {
+                    "date": 1672988230449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,10 @@\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       body: Center(\r\n-        \r\n         child: Column(\r\n+          crossAxisAlignment: CrossAxisAlignment.center,\r\n           children: [\r\n             Container(\r\n               color: Colors.blue,\r\n               child: const Text('This is new'),\r\n"
+                },
+                {
+                    "date": 1672988237981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n     return Scaffold(\r\n       body: Center(\r\n         child: Column(\r\n           crossAxisAlignment: CrossAxisAlignment.center,\r\n+          mainAxisAlignment: MainAxisAlignment.center,\r\n           children: [\r\n             Container(\r\n               color: Colors.blue,\r\n               child: const Text('This is new'),\r\n"
+                },
+                {
+                    "date": 1672988290514,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n           crossAxisAlignment: CrossAxisAlignment.center,\r\n           mainAxisAlignment: MainAxisAlignment.center,\r\n           children: [\r\n             Container(\r\n-              color: Colors.blue,\r\n+              // color: Colors.blue,\r\n               child: const Text('This is new'),\r\n             ),\r\n             ElevatedButton(\r\n                 onPressed: () {}, child: const Text('This is button'))\r\n"
+                },
+                {
+                    "date": 1672988300081,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,9 @@\n             Container(\r\n               // color: Colors.blue,\r\n               child: const Text('This is new'),\r\n             ),\r\n+            \r\n             ElevatedButton(\r\n                 onPressed: () {}, child: const Text('This is button'))\r\n           ],\r\n         ),\r\n"
+                },
+                {
+                    "date": 1672988393423,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,9 @@\n               // color: Colors.blue,\r\n               child: const Text('This is new'),\r\n             ),\r\n             \r\n+\r\n             ElevatedButton(\r\n                 onPressed: () {}, child: const Text('This is button'))\r\n           ],\r\n         ),\r\n"
+                },
+                {
+                    "date": 1672988416539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,31 @@\n+import 'package:flutter/material.dart';\r\n+\r\n+class ThemeScreen extends StatefulWidget {\r\n+  const ThemeScreen({super.key});\r\n+\r\n+  @override\r\n+  State<ThemeScreen> createState() => _ThemeScreenState();\r\n+}\r\n+\r\n+class _ThemeScreenState extends State<ThemeScreen> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Scaffold(\r\n+      body: Center(\r\n+        child: Column(\r\n+          crossAxisAlignment: CrossAxisAlignment.center,\r\n+          mainAxisAlignment: MainAxisAlignment.center,\r\n+          children: [\r\n+            Container(\r\n+              // color: Colors.blue,\r\n+              child: const Text('This is new'),\r\n+            ),\r\n+            const Text('This is new', style: ,),\r\n+            ElevatedButton(\r\n+                onPressed: () {}, child: const Text('This is button'))\r\n+          ],\r\n+        ),\r\n+      ),\r\n+    );\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1672988423924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n             Container(\r\n               // color: Colors.blue,\r\n               child: const Text('This is new'),\r\n             ),\r\n-            const Text('This is new', style: Theme(data: data, child: child),),\r\n+            const Text('This is new', style: The,),\r\n             ElevatedButton(\r\n                 onPressed: () {}, child: const Text('This is button'))\r\n           ],\r\n         ),\r\n"
+                },
+                {
+                    "date": 1672988548927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n class _ThemeScreenState extends State<ThemeScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n+      backgroundColor: ,\r\n       body: Center(\r\n         child: Column(\r\n           crossAxisAlignment: CrossAxisAlignment.center,\r\n           mainAxisAlignment: MainAxisAlignment.center,\r\n"
+                }
+            ],
+            "date": 1672987989417,
+            "name": "Commit-0",
+            "content": "Stf"
+        }
+    ]
+}

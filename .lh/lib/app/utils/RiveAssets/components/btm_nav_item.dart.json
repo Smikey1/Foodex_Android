@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/app/utils/RiveAssets/components/btm_nav_item.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1675365732337,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1675365732337,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\nimport 'package:foodex_app/app/utils/RiveAssets/components/animated_bar.dart';\r\nimport 'package:foodex_app/app/utils/RiveAssets/components/menu.dart';\r\nimport 'package:rive/rive.dart';\r\n\r\nclass BtmNavItem extends StatelessWidget {\r\n  const BtmNavItem(\r\n      {super.key,\r\n      required this.navBar,\r\n      required this.press,\r\n      required this.riveOnInit,\r\n      required this.selectedNav});\r\n\r\n  final Menu navBar;\r\n  final VoidCallback press;\r\n  final ValueChanged<Artboard> riveOnInit;\r\n  final Menu selectedNav;\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return GestureDetector(\r\n      onTap: press,\r\n      child: Column(\r\n        mainAxisSize: MainAxisSize.min,\r\n        children: [\r\n          AnimatedBar(isActive: selectedNav == navBar),\r\n          SizedBox(\r\n            height: 36,\r\n            width: 36,\r\n            child: Opacity(\r\n              opacity: selectedNav == navBar ? 1 : 0.5,\r\n              child: RiveAnimation.asset(\r\n                navBar.rive.src,\r\n                artboard: navBar.rive.artboard,\r\n                onInit: riveOnInit,\r\n              ),\r\n            ),\r\n          ),\r\n        ],\r\n      ),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

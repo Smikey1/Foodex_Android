@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/app/utils/rive/components/rive_model.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1675365279180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1675365279180,
+            "name": "Commit-0",
+            "content": "import 'package:rive/rive.dart';\r\n\r\nclass RiveModel {\r\n  final String src, artboard, stateMachineName;\r\n  late SMIBool? status;\r\n\r\n  RiveModel({\r\n    required this.src,\r\n    required this.artboard,\r\n    required this.stateMachineName,\r\n    this.status,\r\n  });\r\n\r\n  set setStatus(SMIBool state) {\r\n    status = state;\r\n  }\r\n}\r\n"
+        }
+    ]
+}

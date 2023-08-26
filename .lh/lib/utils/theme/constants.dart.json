@@ -1,0 +1,54 @@
+{
+    "sourceFile": "lib/utils/theme/constants.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1673007620515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1673007628957,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n import 'package:flutter/material.dart';\r\n \r\n \r\n-  static const kPrimaryColor = Color(0xff33A466);\r\n+  const kPrimaryColor = Color(0xff33A466);\r\n   // static const kButtonColor = Color(0xff0ACF83);\r\n-  static const kSecondaryColor = Color(0xffffb039);\r\n+  const kSecondaryColor = Color(0xffffb039);\r\n   static const bgFillColor = Color.fromARGB(255, 165, 255, 189);\r\n   static const kErrorColor = Color(0xffF24E1E);\r\n   static const textColor = Color(0xff000000);\r\n   // static const inputFiledColor = Color(0xffADB7BE);\r\n   static const kContentColorLightTheme = Color(0x0ff00000);\r\n   static const kContentColorDarkTheme = Color(0xFFF5FCF9);\r\n-}\r\n+\r\n"
+                },
+                {
+                    "date": 1673007634293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,11 @@\n \r\n   const kPrimaryColor = Color(0xff33A466);\r\n   // static const kButtonColor = Color(0xff0ACF83);\r\n   const kSecondaryColor = Color(0xffffb039);\r\n-  static const bgFillColor = Color.fromARGB(255, 165, 255, 189);\r\n-  static const kErrorColor = Color(0xffF24E1E);\r\n-  static const textColor = Color(0xff000000);\r\n+  const bgFillColor = Color.fromARGB(255, 165, 255, 189);\r\n+  const kErrorColor = Color(0xffF24E1E);\r\n+  const textColor = Color(0xff000000);\r\n   // static const inputFiledColor = Color(0xffADB7BE);\r\n   static const kContentColorLightTheme = Color(0x0ff00000);\r\n   static const kContentColorDarkTheme = Color(0xFFF5FCF9);\r\n \r\n"
+                },
+                {
+                    "date": 1673007658647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n import 'package:flutter/material.dart';\r\n \r\n-\r\n-  const kPrimaryColor = Color(0xff33A466);\r\n+class AppColor {\r\n+  static const kPrimaryColor = Color(0xff33A466);\r\n   // static const kButtonColor = Color(0xff0ACF83);\r\n-  const kSecondaryColor = Color(0xffffb039);\r\n-  const bgFillColor = Color.fromARGB(255, 165, 255, 189);\r\n-  const kErrorColor = Color(0xffF24E1E);\r\n-  const textColor = Color(0xff000000);\r\n+  static const kSecondaryColor = Color(0xffffb039);\r\n+  static const bgFillColor = Color.fromARGB(255, 165, 255, 189);\r\n+  static const kErrorColor = Color(0xffF24E1E);\r\n+  static const textColor = Color(0xff000000);\r\n   // static const inputFiledColor = Color(0xffADB7BE);\r\n   static const kContentColorLightTheme = Color(0x0ff00000);\r\n   static const kContentColorDarkTheme = Color(0xFFF5FCF9);\r\n-\r\n+}\r\n"
+                },
+                {
+                    "date": 1673007714089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n   static const bgFillColor = Color.fromARGB(255, 165, 255, 189);\r\n   static const kErrorColor = Color(0xffF24E1E);\r\n   static const textColor = Color(0xff000000);\r\n   // static const inputFiledColor = Color(0xffADB7BE);\r\n-  static const kContentColorLightTheme = Color(0x0ff00000);\r\n+  static const kContentColorLightTheme = Color(0x0ff000000);\r\n   static const kContentColorDarkTheme = Color(0xFFF5FCF9);\r\n }\r\n"
+                },
+                {
+                    "date": 1673007720376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n   static const bgFillColor = Color.fromARGB(255, 165, 255, 189);\r\n   static const kErrorColor = Color(0xffF24E1E);\r\n   static const textColor = Color(0xff000000);\r\n   // static const inputFiledColor = Color(0xffADB7BE);\r\n-  static const kContentColorLightTheme = Color(0x0ff000000);\r\n+  static const kContentColorLightTheme = Color(0xff000000);\r\n   static const kContentColorDarkTheme = Color(0xFFF5FCF9);\r\n }\r\n"
+                },
+                {
+                    "date": 1673020698973,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n   static const bgFillColor = Color.fromARGB(255, 165, 255, 189);\r\n   static const kErrorColor = Color(0xffF24E1E);\r\n   static const textColor = Color(0xff000000);\r\n   // static const inputFiledColor = Color(0xffADB7BE);\r\n-  static const kContentColorLightTheme = Color(0xff000000);\r\n+  static const kContentColorLightTheme = Color(0xFF1D1D35);\r\n   static const kContentColorDarkTheme = Color(0xFFF5FCF9);\r\n }\r\n"
+                },
+                {
+                    "date": 1674129690532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n   static const bgFillColor = Color.fromARGB(255, 165, 255, 189);\r\n   static const kErrorColor = Color(0xffF24E1E);\r\n   static const textColor = Color(0xff000000);\r\n   // static const inputFiledColor = Color(0xffADB7BE);\r\n-  static const kContentColorLightTheme = Color(0xFF1D1D35);\r\n+  static const kContentColorLightTheme = Color();\r\n   static const kContentColorDarkTheme = Color(0xFFF5FCF9);\r\n }\r\n"
+                },
+                {
+                    "date": 1674129700845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,7 @@\n   static const kErrorColor = Color(0xffF24E1E);\r\n   static const textColor = Color(0xff000000);\r\n   // static const inputFiledColor = Color(0xffADB7BE);\r\n   static const kContentColorLightTheme = Color();\r\n-  static const kContentColorDarkTheme = Color(0xFFF5FCF9);\r\n+  static const kContentColorDarkTheme = Color();\r\n+  0xFF1D1D35\r\n }\r\n"
+                },
+                {
+                    "date": 1674129707582,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,8 @@\n   static const bgFillColor = Color.fromARGB(255, 165, 255, 189);\r\n   static const kErrorColor = Color(0xffF24E1E);\r\n   static const textColor = Color(0xff000000);\r\n   // static const inputFiledColor = Color(0xffADB7BE);\r\n-  static const kContentColorLightTheme = Color();\r\n+  static const kContentColorLightTheme = Color(0xFFF5FCF9);\r\n   static const kContentColorDarkTheme = Color();\r\n-  0xFF1D1D35\r\n+ \r\n }\r\n"
+                }
+            ],
+            "date": 1673007620515,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\n\r\n  static const kPrimaryColor = Color(0xff33A466);\r\n  // static const kButtonColor = Color(0xff0ACF83);\r\n  static const kSecondaryColor = Color(0xffffb039);\r\n  static const bgFillColor = Color.fromARGB(255, 165, 255, 189);\r\n  static const kErrorColor = Color(0xffF24E1E);\r\n  static const textColor = Color(0xff000000);\r\n  // static const inputFiledColor = Color(0xffADB7BE);\r\n  static const kContentColorLightTheme = Color(0x0ff00000);\r\n  static const kContentColorDarkTheme = Color(0xFFF5FCF9);\r\n}\r\n"
+        }
+    ]
+}

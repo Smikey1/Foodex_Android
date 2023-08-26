@@ -1,0 +1,74 @@
+{
+    "sourceFile": "lib/controller/food_controller.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 14,
+            "patches": [
+                {
+                    "date": 1674649133318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1674649164636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   Future<void> getFoodList() async {\r\n     Response response = await foodRepository.getAllFood();\r\n     if (response.statusCode == 200) {\r\n       _foodList = [];\r\n-      _foodList.addAll();\r\n+//_foodList.addAll();\r\n       update();\r\n     }else{\r\n       print(\"Error\");\r\n     }\r\n"
+                },
+                {
+                    "date": 1674651160358,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   Future<void> getFoodList() async {\r\n     Response response = await foodRepository.getAllFood();\r\n     if (response.statusCode == 200) {\r\n       _foodList = [];\r\n-//_foodList.addAll();\r\n+_foodList.addAll();\r\n       update();\r\n     }else{\r\n       print(\"Error\");\r\n     }\r\n"
+                },
+                {
+                    "date": 1674651309623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   Future<void> getFoodList() async {\r\n     Response response = await foodRepository.getAllFood();\r\n     if (response.statusCode == 200) {\r\n       _foodList = [];\r\n-_foodList.addAll();\r\n+_foodList.addAll(response.bo);\r\n       update();\r\n     }else{\r\n       print(\"Error\");\r\n     }\r\n"
+                },
+                {
+                    "date": 1674651352200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,4 @@\n-import 'dart:math';\r\n-\r\n import 'package:foodex_app/repository/food_repository.dart';\r\n import 'package:get/get.dart';\r\n \r\n class FoodController extends GetxController {\r\n@@ -14,11 +12,11 @@\n   Future<void> getFoodList() async {\r\n     Response response = await foodRepository.getAllFood();\r\n     if (response.statusCode == 200) {\r\n       _foodList = [];\r\n-_foodList.addAll(response.bo);\r\n+      _foodList.addAll();\r\n       update();\r\n-    }else{\r\n+    } else {\r\n       print(\"Error\");\r\n     }\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1674651367061,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,22 @@\n+import 'package:foodex_app/repository/food_repository.dart';\r\n+import 'package:get/get.dart';\r\n+\r\n+class FoodController extends GetxController {\r\n+  final FoodRepository foodRepository;\r\n+\r\n+  FoodController({required this.foodRepository});\r\n+\r\n+  List<dynamic> _foodList = [];\r\n+  List<dynamic> get foodList => _foodList;\r\n+\r\n+  Future<void> getFoodList() async {\r\n+    Response response = await foodRepository.getAllFood();\r\n+    if (response.statusCode == 200) {\r\n+      _foodList = [];\r\n+      _foodList.addAll();\r\n+      update();\r\n+    } else {\r\n+      print(\"Error\");\r\n+    }\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1674651375707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,33 +12,11 @@\n   Future<void> getFoodList() async {\r\n     Response response = await foodRepository.getAllFood();\r\n     if (response.statusCode == 200) {\r\n       _foodList = [];\r\n-      _foodList.addAll();\r\n+      _foodList.addAll(Food.);\r\n       update();\r\n     } else {\r\n       print(\"Error\");\r\n     }\r\n   }\r\n }\r\n-import 'package:foodex_app/repository/food_repository.dart';\r\n-import 'package:get/get.dart';\r\n-\r\n-class FoodController extends GetxController {\r\n-  final FoodRepository foodRepository;\r\n-\r\n-  FoodController({required this.foodRepository});\r\n-\r\n-  List<dynamic> _foodList = [];\r\n-  List<dynamic> get foodList => _foodList;\r\n-\r\n-  Future<void> getFoodList() async {\r\n-    Response response = await foodRepository.getAllFood();\r\n-    if (response.statusCode == 200) {\r\n-      _foodList = [];\r\n-      _foodList.addAll();\r\n-      update();\r\n-    } else {\r\n-      print(\"Error\");\r\n-    }\r\n-  }\r\n-}\r\n"
+                },
+                {
+                    "date": 1674651383740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   Future<void> getFoodList() async {\r\n     Response response = await foodRepository.getAllFood();\r\n     if (response.statusCode == 200) {\r\n       _foodList = [];\r\n-      _foodList.addAll(Food.);\r\n+      _foodList.addAll(Food.from);\r\n       update();\r\n     } else {\r\n       print(\"Error\");\r\n     }\r\n"
+                },
+                {
+                    "date": 1674651391922,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   Future<void> getFoodList() async {\r\n     Response response = await foodRepository.getAllFood();\r\n     if (response.statusCode == 200) {\r\n       _foodList = [];\r\n-      _foodList.addAll(Food.from);\r\n+      _foodList.addAll(Food.fromjson(response.body));\r\n       update();\r\n     } else {\r\n       print(\"Error\");\r\n     }\r\n"
+                },
+                {
+                    "date": 1674651398910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   Future<void> getFoodList() async {\r\n     Response response = await foodRepository.getAllFood();\r\n     if (response.statusCode == 200) {\r\n       _foodList = [];\r\n-      _foodList.addAll(Food.fromjson(response.body));\r\n+      _foodList.addAll(Food.fromjson(response.body).food);\r\n       update();\r\n     } else {\r\n       print(\"Error\");\r\n     }\r\n"
+                },
+                {
+                    "date": 1674651405670,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import 'package:foodex_app/model/food.dart';\r\n import 'package:foodex_app/repository/food_repository.dart';\r\n import 'package:get/get.dart';\r\n \r\n class FoodController extends GetxController {\r\n"
+                },
+                {
+                    "date": 1674651418530,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   Future<void> getFoodList() async {\r\n     Response response = await foodRepository.getAllFood();\r\n     if (response.statusCode == 200) {\r\n       _foodList = [];\r\n-      _foodList.addAll(Food.fromjson(response.body).food);\r\n+      _foodList.addAll(Food.fromJson(response.body).foods);\r\n       update();\r\n     } else {\r\n       print(\"Error\");\r\n     }\r\n"
+                },
+                {
+                    "date": 1674651441530,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   Future<void> getFoodList() async {\r\n     Response response = await foodRepository.getAllFood();\r\n     if (response.statusCode == 200) {\r\n       _foodList = [];\r\n-      _foodList.addAll(Food.fromJson(response.body).foods);\r\n+      _foodList.addAll(Food.fromJson(response.body).data);\r\n       update();\r\n     } else {\r\n       print(\"Error\");\r\n     }\r\n"
+                },
+                {
+                    "date": 1674651447846,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   Future<void> getFoodList() async {\r\n     Response response = await foodRepository.getAllFood();\r\n     if (response.statusCode == 200) {\r\n       _foodList = [];\r\n-      _foodList.addAll(Food.fromJson(response.body).data);\r\n+      _foodList.addAll(Food.fromJson(response.body));\r\n       update();\r\n     } else {\r\n       print(\"Error\");\r\n     }\r\n"
+                },
+                {
+                    "date": 1674651514285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   Future<void> getFoodList() async {\r\n     Response response = await foodRepository.getAllFood();\r\n     if (response.statusCode == 200) {\r\n       _foodList = [];\r\n-      _foodList.addAll(Food.fromJson(response.body).);\r\n+      _foodList.addAll(Food.fromJson(response.body).Food);\r\n       update();\r\n     } else {\r\n       print(\"Error\");\r\n     }\r\n"
+                }
+            ],
+            "date": 1674649133318,
+            "name": "Commit-0",
+            "content": "import 'dart:math';\r\n\r\nimport 'package:foodex_app/repository/food_repository.dart';\r\nimport 'package:get/get.dart';\r\n\r\nclass FoodController extends GetxController {\r\n  final FoodRepository foodRepository;\r\n\r\n  FoodController({required this.foodRepository});\r\n\r\n  List<dynamic> _foodList = [];\r\n  List<dynamic> get foodList => _foodList;\r\n\r\n  Future<void> getFoodList() async {\r\n    Response response = await foodRepository.getAllFood();\r\n    if (response.statusCode == 200) {\r\n      _foodList = [];\r\n      _foodList.addAll();\r\n      update();\r\n    }else{\r\n      print(\"Error\");\r\n    }\r\n  }\r\n}\r\n"
+        }
+    ]
+}

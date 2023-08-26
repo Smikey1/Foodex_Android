@@ -1,0 +1,50 @@
+{
+    "sourceFile": "intregration_test/test.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1676546794899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1676546801437,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,6 @@\n+import 'package:flutter_test/flutter_test.dart';\r\n+\r\n+void main(List<String> args) {\r\n+  \r\n+  test(description, () => null)\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676546816231,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,13 @@\n import 'package:flutter_test/flutter_test.dart';\r\n \r\n void main(List<String> args) {\r\n-  \r\n-  test(description, () => null)\r\n-}\n-void main(List<String> args) {\r\n-  \r\n+\r\n+  test('Login test', () async {\r\n+    bool expectedResult = true;\r\n+    String phoneNumber = \"1234567890\";\r\n+    String password = \"password123\";\r\n+    bool actualResult = await UserAPI().loginUser(phoneNumber, password);\r\n+\r\n+    expect(actualResult, expectedResult);\r\n+  })\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676546826293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,14 @@\n import 'package:flutter_test/flutter_test.dart';\r\n+import 'package:foodex_app/data/remote_data_source/api/export_remote_data.dart';\r\n \r\n void main(List<String> args) {\r\n-\r\n+  \r\n   test('Login test', () async {\r\n     bool expectedResult = true;\r\n     String phoneNumber = \"1234567890\";\r\n     String password = \"password123\";\r\n     bool actualResult = await UserAPI().loginUser(phoneNumber, password);\r\n \r\n     expect(actualResult, expectedResult);\r\n\\ No newline at end of file\n-  })\r\n-}\n+  });\r\n+}\r\n"
+                },
+                {
+                    "date": 1676546835630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n import 'package:flutter_test/flutter_test.dart';\r\n import 'package:foodex_app/data/remote_data_source/api/export_remote_data.dart';\r\n \r\n void main(List<String> args) {\r\n+  IntegrationTestWidgetsFlutterBinding.ensureInitialized();\r\n+\r\n   \r\n   test('Login test', () async {\r\n     bool expectedResult = true;\r\n     String phoneNumber = \"1234567890\";\r\n"
+                },
+                {
+                    "date": 1676546849934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import 'package:flutter_test/flutter_test.dart';\r\n import 'package:foodex_app/data/remote_data_source/api/export_remote_data.dart';\r\n+import 'package:integration_test/integration_test.dart';\r\n \r\n void main(List<String> args) {\r\n   IntegrationTestWidgetsFlutterBinding.ensureInitialized();\r\n \r\n@@ -12,5 +13,5 @@\n     bool actualResult = await UserAPI().loginUser(phoneNumber, password);\r\n \r\n     expect(actualResult, expectedResult);\r\n   });\r\n-}\n\\ No newline at end of file\n+}\r\n"
+                },
+                {
+                    "date": 1676546886609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n void main(List<String> args) {\r\n   IntegrationTestWidgetsFlutterBinding.ensureInitialized();\r\n \r\n-  \r\n+\r\n   test('Login test', () async {\r\n     bool expectedResult = true;\r\n     String phoneNumber = \"1234567890\";\r\n     String password = \"password123\";\r\n"
+                },
+                {
+                    "date": 1676546894295,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import 'package:flutter_test/flutter_test.dart';\r\n import 'package:foodex_app/data/remote_data_source/api/export_remote_data.dart';\r\n import 'package:integration_test/integration_test.dart';\r\n \r\n-void main(List<String> args) {\r\n+void main() {\r\n   IntegrationTestWidgetsFlutterBinding.ensureInitialized();\r\n \r\n \r\n   test('Login test', () async {\r\n"
+                },
+                {
+                    "date": 1676546919031,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,8 @@\n \r\n void main() {\r\n   IntegrationTestWidgetsFlutterBinding.ensureInitialized();\r\n \r\n-\r\n   test('Login test', () async {\r\n     bool expectedResult = true;\r\n     String phoneNumber = \"1234567890\";\r\n     String password = \"password123\";\r\n"
+                }
+            ],
+            "date": 1676546794899,
+            "name": "Commit-0",
+            "content": "void main(List<String> args) {\r\n  \r\n}"
+        }
+    ]
+}

@@ -1,0 +1,146 @@
+{
+    "sourceFile": "lib/components/upside.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 32,
+            "patches": [
+                {
+                    "date": 1673001199196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1673003612823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n import 'package:flutter/cupertino.dart';\r\n import 'package:flutter/material.dart';\r\n-import 'package:foodex_app/constant/constants.dart';\r\n \r\n class Upside extends StatelessWidget {\r\n   const Upside({Key? key, required this.imgUrl}) : super(key: key);\r\n   final String imgUrl;\r\n"
+                },
+                {
+                    "date": 1673003623190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import 'package:flutter/cupertino.dart';\r\n import 'package:flutter/material.dart';\r\n+import 'package:foodex_app/constant/constants.dart';\r\n \r\n class Upside extends StatelessWidget {\r\n   const Upside({Key? key, required this.imgUrl}) : super(key: key);\r\n   final String imgUrl;\r\n@@ -12,9 +13,9 @@\n       children: [\r\n         SizedBox(\r\n           width: size.width,\r\n           height: size.height,\r\n-          // color: AppColor.kPrimaryColor,\r\n+          color: AppColor.kPrimaryColor,\r\n           child: Padding(\r\n             padding: const EdgeInsets.only(),\r\n             child: Image.asset(\r\n               imgUrl,\r\n"
+                },
+                {
+                    "date": 1673003629684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   Widget build(BuildContext context) {\r\n     Size size = MediaQuery.of(context).size;\r\n     return Stack(\r\n       children: [\r\n-        SizedBox(\r\n+        Com(\r\n           width: size.width,\r\n           height: size.height,\r\n           color: AppColor.kPrimaryColor,\r\n           child: Padding(\r\n"
+                },
+                {
+                    "date": 1673003637736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,12 +10,12 @@\n   Widget build(BuildContext context) {\r\n     Size size = MediaQuery.of(context).size;\r\n     return Stack(\r\n       children: [\r\n-        Com(\r\n+        Container(\r\n           width: size.width,\r\n           height: size.height,\r\n-          color: AppColor.kPrimaryColor,\r\n+          color: AppColor.,\r\n           child: Padding(\r\n             padding: const EdgeInsets.only(),\r\n             child: Image.asset(\r\n               imgUrl,\r\n"
+                },
+                {
+                    "date": 1673003650541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n       children: [\r\n         Container(\r\n           width: size.width,\r\n           height: size.height,\r\n-          color: AppColor.,\r\n+          color: AppColor.kContentColorLightTheme,\r\n           child: Padding(\r\n             padding: const EdgeInsets.only(),\r\n             child: Image.asset(\r\n               imgUrl,\r\n"
+                },
+                {
+                    "date": 1673003664193,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n       children: [\r\n         Container(\r\n           width: size.width,\r\n           height: size.height,\r\n-          color: AppColor.kContentColorLightTheme,\r\n+          // color: AppColor.kContentColorLightTheme,\r\n           child: Padding(\r\n             padding: const EdgeInsets.only(),\r\n             child: Image.asset(\r\n               imgUrl,\r\n"
+                },
+                {
+                    "date": 1673006639917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n import 'package:flutter/cupertino.dart';\r\n import 'package:flutter/material.dart';\r\n-import 'package:foodex_app/constant/constants.dart';\r\n \r\n class Upside extends StatelessWidget {\r\n   const Upside({Key? key, required this.imgUrl}) : super(key: key);\r\n   final String imgUrl;\r\n@@ -10,11 +9,11 @@\n   Widget build(BuildContext context) {\r\n     Size size = MediaQuery.of(context).size;\r\n     return Stack(\r\n       children: [\r\n-        Container(\r\n+        SizedBox(\r\n           width: size.width,\r\n-          height: size.height,\r\n+          // height: size.height,\r\n           // color: AppColor.kContentColorLightTheme,\r\n           child: Padding(\r\n             padding: const EdgeInsets.only(),\r\n             child: Image.asset(\r\n"
+                },
+                {
+                    "date": 1673006648267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     return Stack(\r\n       children: [\r\n         SizedBox(\r\n           width: size.width,\r\n-          // height: size.height,\r\n+          height: size.height,\r\n           // color: AppColor.kContentColorLightTheme,\r\n           child: Padding(\r\n             padding: const EdgeInsets.only(),\r\n             child: Image.asset(\r\n"
+                },
+                {
+                    "date": 1673006655840,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import 'package:flutter/cupertino.dart';\r\n import 'package:flutter/material.dart';\r\n+import 'package:foodex_app/constant/constants.dart';\r\n \r\n class Upside extends StatelessWidget {\r\n   const Upside({Key? key, required this.imgUrl}) : super(key: key);\r\n   final String imgUrl;\r\n@@ -12,9 +13,9 @@\n       children: [\r\n         SizedBox(\r\n           width: size.width,\r\n           height: size.height,\r\n-          // color: AppColor.kContentColorLightTheme,\r\n+          color: AppColor.kContentColorLightTheme,\r\n           child: Padding(\r\n             padding: const EdgeInsets.only(),\r\n             child: Image.asset(\r\n               imgUrl,\r\n"
+                },
+                {
+                    "date": 1673006661079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   Widget build(BuildContext context) {\r\n     Size size = MediaQuery.of(context).size;\r\n     return Stack(\r\n       children: [\r\n-        SizedBox(\r\n+       (\r\n           width: size.width,\r\n           height: size.height,\r\n           color: AppColor.kContentColorLightTheme,\r\n           child: Padding(\r\n"
+                },
+                {
+                    "date": 1673006668808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   Widget build(BuildContext context) {\r\n     Size size = MediaQuery.of(context).size;\r\n     return Stack(\r\n       children: [\r\n-       (\r\n+        Container(\r\n           width: size.width,\r\n           height: size.height,\r\n           color: AppColor.kContentColorLightTheme,\r\n           child: Padding(\r\n"
+                },
+                {
+                    "date": 1673007374960,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     return Stack(\r\n       children: [\r\n         Container(\r\n           width: size.width,\r\n-          height: size.height,\r\n+          // height: size.height,\r\n           color: AppColor.kContentColorLightTheme,\r\n           child: Padding(\r\n             padding: const EdgeInsets.only(),\r\n             child: Image.asset(\r\n"
+                },
+                {
+                    "date": 1673007593641,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import 'package:flutter/cupertino.dart';\r\n import 'package:flutter/material.dart';\r\n-import 'package:foodex_app/constant/constants.dart';\r\n+import 'package:foodex_app/utils/theme/constants.dart';\r\n \r\n class Upside extends StatelessWidget {\r\n   const Upside({Key? key, required this.imgUrl}) : super(key: key);\r\n   final String imgUrl;\r\n"
+                },
+                {
+                    "date": 1673007874086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n       children: [\r\n         Container(\r\n           width: size.width,\r\n           // height: size.height,\r\n-          color: AppColor.kContentColorLightTheme,\r\n+          color: AppColor.kContentColorDarkTheme,\r\n           child: Padding(\r\n             padding: const EdgeInsets.only(),\r\n             child: Image.asset(\r\n               imgUrl,\r\n"
+                },
+                {
+                    "date": 1673008613162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     return Stack(\r\n       children: [\r\n         Container(\r\n           width: size.width,\r\n-          // height: size.height,\r\n+          height: size.height,\r\n           color: AppColor.kContentColorDarkTheme,\r\n           child: Padding(\r\n             padding: const EdgeInsets.only(),\r\n             child: Image.asset(\r\n"
+                },
+                {
+                    "date": 1673008620126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     return Stack(\r\n       children: [\r\n         Container(\r\n           width: size.width,\r\n-          height: size.height,\r\n+          // height: size.height,\r\n           color: AppColor.kContentColorDarkTheme,\r\n           child: Padding(\r\n             padding: const EdgeInsets.only(),\r\n             child: Image.asset(\r\n"
+                },
+                {
+                    "date": 1673008669906,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     return Stack(\r\n       children: [\r\n         Container(\r\n           width: size.width,\r\n-          // height: size.height,\r\n+          height: size.height,\r\n           color: AppColor.kContentColorDarkTheme,\r\n           child: Padding(\r\n             padding: const EdgeInsets.only(),\r\n             child: Image.asset(\r\n"
+                },
+                {
+                    "date": 1673008676758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     return Stack(\r\n       children: [\r\n         Container(\r\n           width: size.width,\r\n-          height: size.height,\r\n+          height: 100,\r\n           color: AppColor.kContentColorDarkTheme,\r\n           child: Padding(\r\n             padding: const EdgeInsets.only(),\r\n             child: Image.asset(\r\n"
+                },
+                {
+                    "date": 1673008702644,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n       children: [\r\n         Container(\r\n           width: size.width,\r\n           height: 100,\r\n-          color: AppColor.kContentColorDarkTheme,\r\n+          color: AppColor.kContentColorTheme,\r\n           child: Padding(\r\n             padding: const EdgeInsets.only(),\r\n             child: Image.asset(\r\n               imgUrl,\r\n"
+                },
+                {
+                    "date": 1673008724481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,10 +12,10 @@\n     return Stack(\r\n       children: [\r\n         Container(\r\n           width: size.width,\r\n-          height: 100,\r\n-          color: AppColor.kContentColorTheme,\r\n+          height: size.,\r\n+          color: AppColor.kContentColorLightTheme,\r\n           child: Padding(\r\n             padding: const EdgeInsets.only(),\r\n             child: Image.asset(\r\n               imgUrl,\r\n"
+                },
+                {
+                    "date": 1673008736612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     return Stack(\r\n       children: [\r\n         Container(\r\n           width: size.width,\r\n-          height: size.,\r\n+          height: 200,\r\n           color: AppColor.kContentColorLightTheme,\r\n           child: Padding(\r\n             padding: const EdgeInsets.only(),\r\n             child: Image.asset(\r\n"
+                },
+                {
+                    "date": 1673008802900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     return Stack(\r\n       children: [\r\n         Container(\r\n           width: size.width,\r\n-          height: 200,\r\n+          height: size,\r\n           color: AppColor.kContentColorLightTheme,\r\n           child: Padding(\r\n             padding: const EdgeInsets.only(),\r\n             child: Image.asset(\r\n"
+                },
+                {
+                    "date": 1673008833151,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     return Stack(\r\n       children: [\r\n         Container(\r\n           width: size.width,\r\n-          height: size,\r\n+          height: ,\r\n           color: AppColor.kContentColorLightTheme,\r\n           child: Padding(\r\n             padding: const EdgeInsets.only(),\r\n             child: Image.asset(\r\n"
+                },
+                {
+                    "date": 1673008838288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import 'package:flutter/cupertino.dart';\r\n import 'package:flutter/material.dart';\r\n+import 'package:foodex_app/utils/dimension.dart';\r\n import 'package:foodex_app/utils/theme/constants.dart';\r\n \r\n class Upside extends StatelessWidget {\r\n   const Upside({Key? key, required this.imgUrl}) : super(key: key);\r\n@@ -12,9 +13,9 @@\n     return Stack(\r\n       children: [\r\n         Container(\r\n           width: size.width,\r\n-          height: ,\r\n+          height: Dimensions.h,\r\n           color: AppColor.kContentColorLightTheme,\r\n           child: Padding(\r\n             padding: const EdgeInsets.only(),\r\n             child: Image.asset(\r\n"
+                },
+                {
+                    "date": 1673008845265,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     return Stack(\r\n       children: [\r\n         Container(\r\n           width: size.width,\r\n-          height: Dimensions.h,\r\n+          height: Dimensions.height2,\r\n           color: AppColor.kContentColorLightTheme,\r\n           child: Padding(\r\n             padding: const EdgeInsets.only(),\r\n             child: Image.asset(\r\n"
+                },
+                {
+                    "date": 1673009001514,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     return Stack(\r\n       children: [\r\n         Container(\r\n           width: size.width,\r\n-          height: Dimensions.height2,\r\n+          height: Dimensions.height300,\r\n           color: AppColor.kContentColorLightTheme,\r\n           child: Padding(\r\n             padding: const EdgeInsets.only(),\r\n             child: Image.asset(\r\n"
+                },
+                {
+                    "date": 1673009017840,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     return Stack(\r\n       children: [\r\n         Container(\r\n           width: size.width,\r\n-          height: Dimensions.height300,\r\n+          height: ,\r\n           color: AppColor.kContentColorLightTheme,\r\n           child: Padding(\r\n             padding: const EdgeInsets.only(),\r\n             child: Image.asset(\r\n"
+                },
+                {
+                    "date": 1673009220322,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n import 'package:flutter/cupertino.dart';\r\n import 'package:flutter/material.dart';\r\n-import 'package:foodex_app/utils/dimension.dart';\r\n import 'package:foodex_app/utils/theme/constants.dart';\r\n \r\n class Upside extends StatelessWidget {\r\n   const Upside({Key? key, required this.imgUrl}) : super(key: key);\r\n@@ -13,10 +12,10 @@\n     return Stack(\r\n       children: [\r\n         Container(\r\n           width: size.width,\r\n-          height: ,\r\n-          color: AppColor.kContentColorLightTheme,\r\n+          height: size.height,\r\n+          color: AppColor.Theme,\r\n           child: Padding(\r\n             padding: const EdgeInsets.only(),\r\n             child: Image.asset(\r\n               imgUrl,\r\n"
+                },
+                {
+                    "date": 1673009299659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n       children: [\r\n         Container(\r\n           width: size.width,\r\n           height: size.height,\r\n-          color: AppColor.Theme,\r\n+          color: AppColor.kContentColorLightTheme,\r\n           child: Padding(\r\n             padding: const EdgeInsets.only(),\r\n             child: Image.asset(\r\n               imgUrl,\r\n"
+                },
+                {
+                    "date": 1673009330423,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,11 @@\n       children: [\r\n         Container(\r\n           width: size.width,\r\n           height: size.height,\r\n-          color: AppColor.kContentColorLightTheme,\r\n+          color: Theme.of(context)\r\n+              .appBarTheme\r\n+              .backgroundColorAppColor.kContentColorLightTheme,\r\n           child: Padding(\r\n             padding: const EdgeInsets.only(),\r\n             child: Image.asset(\r\n               imgUrl,\r\n"
+                },
+                {
+                    "date": 1673009336976,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,8 @@\n         Container(\r\n           width: size.width,\r\n           height: size.height,\r\n           color: Theme.of(context)\r\n-              .appBarTheme\r\n               .AppColor.kContentColorLightTheme,\r\n           child: Padding(\r\n             padding: const EdgeInsets.only(),\r\n             child: Image.asset(\r\n"
+                },
+                {
+                    "date": 1673009365430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n         Container(\r\n           width: size.width,\r\n           height: size.height,\r\n           color: Theme.of(context)\r\n-              .kContentColorLightTheme,\r\n+              .AppColor.kContentColorLightTheme,\r\n           child: Padding(\r\n             padding: const EdgeInsets.only(),\r\n             child: Image.asset(\r\n               imgUrl,\r\n"
+                }
+            ],
+            "date": 1673001199196,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/cupertino.dart';\r\nimport 'package:flutter/material.dart';\r\nimport 'package:foodex_app/constant/constants.dart';\r\n\r\nclass Upside extends StatelessWidget {\r\n  const Upside({Key? key, required this.imgUrl}) : super(key: key);\r\n  final String imgUrl;\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    Size size = MediaQuery.of(context).size;\r\n    return Stack(\r\n      children: [\r\n        SizedBox(\r\n          width: size.width,\r\n          height: size.height,\r\n          // color: AppColor.kPrimaryColor,\r\n          child: Padding(\r\n            padding: const EdgeInsets.only(),\r\n            child: Image.asset(\r\n              imgUrl,\r\n              alignment: Alignment.topCenter,\r\n            ),\r\n          ),\r\n        ),\r\n        // iconBackButton(context),\r\n      ],\r\n    );\r\n  }\r\n}\r\n\r\n// iconBackButton(BuildContext context) {\r\n//   return IconButton(\r\n//     color: Colors.black,\r\n//     iconSize: 28,\r\n//     icon: const Icon(CupertinoIcons.arrow_left),\r\n//     onPressed: () {\r\n//       Navigator.pop(context);\r\n//     },\r\n//   );\r\n// }\r\n"
+        }
+    ]
+}

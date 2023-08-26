@@ -1,0 +1,106 @@
+{
+    "sourceFile": "lib/screen/screen.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 22,
+            "patches": [
+                {
+                    "date": 1673022895133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1673022947421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n export './login_register/loginScreen.dart';\r\n-\r\n+e\r\n export './verification/verification.dart';\r\n export 'home/home_page.dart';\r\n export 'home/food_menu.dart';\r\n \r\n"
+                },
+                {
+                    "date": 1673022960164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n export './login_register/loginScreen.dart';\r\n-e\r\n+export './login_register/';\r\n export './verification/verification.dart';\r\n export 'home/home_page.dart';\r\n export 'home/food_menu.dart';\r\n \r\n"
+                },
+                {
+                    "date": 1673022965349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n export './login_register/loginScreen.dart';\r\n-export './login_register/';\r\n+export './login_register/signupScreen.dart';\r\n export './verification/verification.dart';\r\n export 'home/home_page.dart';\r\n export 'home/food_menu.dart';\r\n \r\n"
+                },
+                {
+                    "date": 1675092799890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n export 'home/home_page.dart';\r\n export 'home/food_menu.dart';\r\n \r\n //\r\n-export 'package:foodex_app/dashboard.dart';\r\n \r\n+\r\n export './cart/cart.dart';\r\n export './chat/chat.dart';\r\n export './Profile/profile.dart';\r\n"
+                },
+                {
+                    "date": 1675092808810,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n export 'home/home_page.dart';\r\n export 'home/food_menu.dart';\r\n \r\n //\r\n+export 'package:foodex_app/dashboard.dart';\r\n \r\n-\r\n export './cart/cart.dart';\r\n export './chat/chat.dart';\r\n export './Profile/profile.dart';\r\n"
+                },
+                {
+                    "date": 1675092824563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n export './login_register/signupScreen.dart';\r\n export './verification/verification.dart';\r\n export 'home/home_page.dart';\r\n export 'home/food_menu.dart';\r\n+export\r\n \r\n //\r\n export 'package:foodex_app/dashboard.dart';\r\n \r\n"
+                },
+                {
+                    "date": 1675092851259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,12 @@\n export './login_register/loginScreen.dart';\r\n export './login_register/signupScreen.dart';\r\n export './verification/verification.dart';\r\n+\r\n+// Home Page Screen exo\r\n export 'home/home_page.dart';\r\n export 'home/food_menu.dart';\r\n-export\r\n+export 'home/food_file.dart';\r\n \r\n //\r\n export 'package:foodex_app/dashboard.dart';\r\n \r\n"
+                },
+                {
+                    "date": 1675092860155,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n+\r\n+\r\n export './login_register/loginScreen.dart';\r\n export './login_register/signupScreen.dart';\r\n export './verification/verification.dart';\r\n \r\n-// Home Page Screen exo\r\n+// Home Page Screen export\r\n export 'home/home_page.dart';\r\n export 'home/food_menu.dart';\r\n export 'home/food_file.dart';\r\n \r\n"
+                },
+                {
+                    "date": 1675092868949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n-\r\n-\r\n+// Login Register \r\n export './login_register/loginScreen.dart';\r\n export './login_register/signupScreen.dart';\r\n export './verification/verification.dart';\r\n \r\n"
+                },
+                {
+                    "date": 1675092884943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-// Login Register \r\n+// Login Register Screen Export\r\n export './login_register/loginScreen.dart';\r\n export './login_register/signupScreen.dart';\r\n export './verification/verification.dart';\r\n \r\n@@ -8,9 +8,9 @@\n export 'home/food_menu.dart';\r\n export 'home/food_file.dart';\r\n \r\n //\r\n-export 'package:foodex_app/dashboard.dart';\r\n \r\n+\r\n export './cart/cart.dart';\r\n export './chat/chat.dart';\r\n export './Profile/profile.dart';\r\n"
+                },
+                {
+                    "date": 1675092890687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n export './login_register/loginScreen.dart';\r\n export './login_register/signupScreen.dart';\r\n export './verification/verification.dart';\r\n \r\n+export 'package:foodex_app/dashboard.dart';\r\n // Home Page Screen export\r\n export 'home/home_page.dart';\r\n export 'home/food_menu.dart';\r\n export 'home/food_file.dart';\r\n"
+                },
+                {
+                    "date": 1675092899786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n export './login_register/loginScreen.dart';\r\n export './login_register/signupScreen.dart';\r\n export './verification/verification.dart';\r\n \r\n+\r\n export 'package:foodex_app/dashboard.dart';\r\n // Home Page Screen export\r\n export 'home/home_page.dart';\r\n export 'home/food_menu.dart';\r\n"
+                },
+                {
+                    "date": 1675092909681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,17 +2,19 @@\n export './login_register/loginScreen.dart';\r\n export './login_register/signupScreen.dart';\r\n export './verification/verification.dart';\r\n \r\n+// Dashboard Screen Export\r\n+export 'package:foodex_app/dashboard.dart';\r\n \r\n-export 'package:foodex_app/dashboard.dart';\r\n // Home Page Screen export\r\n export 'home/home_page.dart';\r\n export 'home/food_menu.dart';\r\n export 'home/food_file.dart';\r\n \r\n-//\r\n+// \r\n \r\n \r\n+\r\n export './cart/cart.dart';\r\n export './chat/chat.dart';\r\n export './Profile/profile.dart';\r\n"
+                },
+                {
+                    "date": 1675092915810,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,10 @@\n export 'home/food_menu.dart';\r\n export 'home/food_file.dart';\r\n \r\n // \r\n+export '.';\r\n \r\n \r\n-\r\n export './cart/cart.dart';\r\n export './chat/chat.dart';\r\n export './Profile/profile.dart';\r\n"
+                },
+                {
+                    "date": 1675092922713,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n export 'home/food_menu.dart';\r\n export 'home/food_file.dart';\r\n \r\n // \r\n-export '.';\r\n+export './food/';\r\n \r\n \r\n export './cart/cart.dart';\r\n export './chat/chat.dart';\r\n"
+                },
+                {
+                    "date": 1675092929755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,12 @@\n export 'home/food_menu.dart';\r\n export 'home/food_file.dart';\r\n \r\n // \r\n-export './food/';\r\n+export './food/category_detail.dart';\r\n+export './food/specialFood.dart';\r\n \r\n \r\n+\r\n export './cart/cart.dart';\r\n export './chat/chat.dart';\r\n export './Profile/profile.dart';\r\n"
+                },
+                {
+                    "date": 1675092941611,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,10 @@\n \r\n // \r\n export './food/category_detail.dart';\r\n export './food/specialFood.dart';\r\n+export './';\r\n \r\n \r\n-\r\n export './cart/cart.dart';\r\n export './chat/chat.dart';\r\n export './Profile/profile.dart';\r\n"
+                },
+                {
+                    "date": 1675092949583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n \r\n // \r\n export './food/category_detail.dart';\r\n export './food/specialFood.dart';\r\n-export './';\r\n+export './food/popular_food_detail.dart';\r\n \r\n \r\n export './cart/cart.dart';\r\n export './chat/chat.dart';\r\n"
+                },
+                {
+                    "date": 1675092958295,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,13 +10,12 @@\n export 'home/home_page.dart';\r\n export 'home/food_menu.dart';\r\n export 'home/food_file.dart';\r\n \r\n-// \r\n+// Food Screen \r\n export './food/category_detail.dart';\r\n export './food/specialFood.dart';\r\n export './food/popular_food_detail.dart';\r\n \r\n-\r\n export './cart/cart.dart';\r\n export './chat/chat.dart';\r\n export './Profile/profile.dart';\r\n"
+                },
+                {
+                    "date": 1675092972951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,12 +10,13 @@\n export 'home/home_page.dart';\r\n export 'home/food_menu.dart';\r\n export 'home/food_file.dart';\r\n \r\n-// Food Screen \r\n+// Food Screen Export\r\n export './food/category_detail.dart';\r\n export './food/specialFood.dart';\r\n export './food/popular_food_detail.dart';\r\n \r\n+\r\n export './cart/cart.dart';\r\n export './chat/chat.dart';\r\n export './Profile/profile.dart';\r\n"
+                },
+                {
+                    "date": 1675092980342,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,10 @@\n export './food/category_detail.dart';\r\n export './food/specialFood.dart';\r\n export './food/popular_food_detail.dart';\r\n \r\n+// Cart Screen Export\r\n+export './cart/cart.dart';\r\n \r\n-export './cart/cart.dart';\r\n+// Chat Screen Export\r\n export './chat/chat.dart';\r\n export './Profile/profile.dart';\r\n"
+                },
+                {
+                    "date": 1675092996972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,5 +20,10 @@\n export './cart/cart.dart';\r\n \r\n // Chat Screen Export\r\n export './chat/chat.dart';\r\n+\r\n+// Profile Screen Export\r\n export './Profile/profile.dart';\r\n+\r\n+// Order Screen Export\r\n+export\r\n"
+                }
+            ],
+            "date": 1673022895133,
+            "name": "Commit-0",
+            "content": "export './login_register/loginScreen.dart';\r\n\r\nexport './verification/verification.dart';\r\nexport 'home/home_page.dart';\r\nexport 'home/food_menu.dart';\r\n\r\n//\r\nexport 'package:foodex_app/dashboard.dart';\r\n\r\nexport './cart/cart.dart';\r\nexport './chat/chat.dart';\r\nexport './Profile/profile.dart';\r\n"
+        }
+    ]
+}

@@ -1,0 +1,78 @@
+{
+    "sourceFile": "lib/response/cart_response.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 15,
+            "patches": [
+                {
+                    "date": 1675773544303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1675773552414,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,3 @@\n-\r\n-class CartRes\n\\ No newline at end of file\n+class CartResponse {\r\n+  \r\n+}\r\n"
+                },
+                {
+                    "date": 1675773568645,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,17 @@\n class CartResponse {\r\n-  \r\n+  final String message;\r\n+  final int status;\r\n+  final List<Cart> cart;\r\n+\r\n+  CartResponse({this.message, this.status, this.cart});\r\n+\r\n+  factory CartResponse.fromJson(Map<String, dynamic> json) {\r\n+    return CartResponse(\r\n+      message: json['message'],\r\n+      status: json['status'],\r\n+      cart: json['cart'] != null\r\n+          ? (json['cart'] as List).map((i) => Cart.fromJson(i)).toList()\r\n+          : null,\r\n+    );\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1675773573947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,14 +4,6 @@\n   final List<Cart> cart;\r\n \r\n   CartResponse({this.message, this.status, this.cart});\r\n \r\n-  factory CartResponse.fromJson(Map<String, dynamic> json) {\r\n-    return CartResponse(\r\n-      message: json['message'],\r\n-      status: json['status'],\r\n-      cart: json['cart'] != null\r\n-          ? (json['cart'] as List).map((i) => Cart.fromJson(i)).toList()\r\n-          : null,\r\n-    );\r\n-  }\r\n+\r\n }\r\n"
+                },
+                {
+                    "date": 1675773580709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n class CartResponse {\r\n   final String message;\r\n-  final int status;\r\n   final List<Cart> cart;\r\n \r\n   CartResponse({this.message, this.status, this.cart});\r\n \r\n"
+                },
+                {
+                    "date": 1675773587948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n class CartResponse {\r\n   final String message;\r\n-  final List<Cart> cart;\r\n+  final List<Cart> data;\r\n \r\n   CartResponse({this.message, this.status, this.cart});\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1675773610756,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,12 @@\n class CartResponse {\r\n-  final String message;\r\n-  final List<Cart> data;\r\n+  String message;\r\n+  List<Cart> data;\r\n \r\n   CartResponse({this.message, this.status, this.cart});\r\n \r\n+    factory Cart.fromJson(Map<String, dynamic> json) => _$CartFromJson(json);\r\n \r\n+  Map<String, dynamic> toJson() => _$CartToJson(this);\r\n+\r\n+\r\n }\r\n"
+                },
+                {
+                    "date": 1675773617892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n   List<Cart> data;\r\n \r\n   CartResponse({this.message, this.status, this.cart});\r\n \r\n-    factory Cart.fromJson(Map<String, dynamic> json) => _$CartFromJson(json);\r\n+    factory CartResponse.fromJson(Map<String, dynamic> json) => _$CartResponseFromJson(json);\r\n \r\n   Map<String, dynamic> toJson() => _$CartToJson(this);\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1675773630051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n class CartResponse {\r\n   String message;\r\n   List<Cart> data;\r\n \r\n-  CartResponse({this.message, this.status, this.cart});\r\n+  CartResponse({this.message, this.cart});\r\n \r\n     factory CartResponse.fromJson(Map<String, dynamic> json) => _$CartResponseFromJson(json);\r\n \r\n-  Map<String, dynamic> toJson() => _$CartToJson(this);\r\n+  Map<String, dynamic> toJson() => _$CartResponseToJson(this);\r\n \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1675773642323,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n+import 'package:foodex_app/model/cart.dart';\r\n+\r\n class CartResponse {\r\n   String message;\r\n   List<Cart> data;\r\n \r\n-  CartResponse({this.message, this.cart});\r\n+  CartResponse({required this.message, this.cart});\r\n \r\n     factory CartResponse.fromJson(Map<String, dynamic> json) => _$CartResponseFromJson(json);\r\n \r\n   Map<String, dynamic> toJson() => _$CartResponseToJson(this);\r\n"
+                },
+                {
+                    "date": 1675773650598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n class CartResponse {\r\n   String message;\r\n   List<Cart> data;\r\n \r\n-  CartResponse({required this.message, this.cart});\r\n+  CartResponse({required this.message, this.da});\r\n \r\n     factory CartResponse.fromJson(Map<String, dynamic> json) => _$CartResponseFromJson(json);\r\n \r\n   Map<String, dynamic> toJson() => _$CartResponseToJson(this);\r\n"
+                },
+                {
+                    "date": 1675773665433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n class CartResponse {\r\n   String message;\r\n   List<Cart> data;\r\n \r\n-  CartResponse({required this.message, this.da});\r\n+  CartResponse({required this.message, required this.data});\r\n \r\n     factory CartResponse.fromJson(Map<String, dynamic> json) => _$CartResponseFromJson(json);\r\n \r\n   Map<String, dynamic> toJson() => _$CartResponseToJson(this);\r\n"
+                },
+                {
+                    "date": 1675773715316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n import 'package:foodex_app/model/cart.dart';\r\n \r\n+part '';\r\n class CartResponse {\r\n   String message;\r\n   List<Cart> data;\r\n \r\n   CartResponse({required this.message, required this.data});\r\n \r\n-    factory CartResponse.fromJson(Map<String, dynamic> json) => _$CartResponseFromJson(json);\r\n+  factory CartResponse.fromJson(Map<String, dynamic> json) =>\r\n+      _$CartResponseFromJson(json);\r\n \r\n   Map<String, dynamic> toJson() => _$CartResponseToJson(this);\r\n-\r\n-\r\n }\r\n"
+                },
+                {
+                    "date": 1675773723518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import 'package:foodex_app/model/cart.dart';\r\n \r\n-part '';\r\n+part 'cart.g.dart';\r\n class CartResponse {\r\n   String message;\r\n   List<Cart> data;\r\n \r\n"
+                },
+                {
+                    "date": 1675773733017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import 'package:foodex_app/model/cart.dart';\r\n \r\n-part 'cart.g.dart';\r\n+part 'cart_response.g.dart';\r\n class CartResponse {\r\n   String message;\r\n   List<Cart> data;\r\n \r\n"
+                },
+                {
+                    "date": 1675773905971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n part 'cart_response.g.dart';\r\n \r\n class CartResponse {\r\n   String message;\r\n+  bool success;\r\n   List<Cart> data;\r\n \r\n   CartResponse({required this.message, required this.data});\r\n \r\n"
+                }
+            ],
+            "date": 1675773544303,
+            "name": "Commit-0",
+            "content": "\r\nclass CartRes"
+        }
+    ]
+}

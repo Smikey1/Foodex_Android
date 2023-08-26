@@ -1,0 +1,26 @@
+{
+    "sourceFile": "lib/screen/profile/widget/info_widegt.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1676706404086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1676706417988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,18 @@\n-class name extends StatefulWidget {\r\n-  const name({super.key});\r\n+class ProfileInfoWidget\r\n+context.select((SubjectBloc bloc) => bloc) extends StatefulWidget {\r\n+  const ProfileInfoWidget\r\n+  context.select((SubjectBloc bloc) => bloc)({super.key});\r\n \r\n   @override\r\n-  State<name> createState() => _nameState();\r\n+  State<ProfileInfoWidget\r\n+  context.select((SubjectBloc bloc) => bloc)> createState() => _ProfileInfoWidget\r\n+  context.select((SubjectBloc bloc) => bloc)State();\r\n }\r\n \r\n-class _nameState extends State<name> {\r\n+class _ProfileInfoWidget\r\n+context.select((SubjectBloc bloc) => bloc)State extends State<ProfileInfoWidget\r\n+context.select((SubjectBloc bloc) => bloc)> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container();\r\n   }\r\n"
+                },
+                {
+                    "date": 1676706425466,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+import 'package:flutter/material.dart';\r\n+\r\n+class ProfileInfoWidget extends StatefulWidget {\r\n+  const ProfileInfoWidget({super.key});\r\n+\r\n+  @override\r\n+  State<ProfileInfoWidget> createState() => _ProfileInfoWidgetState();\r\n+}\r\n+\r\n+class _ProfileInfoWidgetState extends State<ProfileInfoWidget> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Container();\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1676706404086,
+            "name": "Commit-0",
+            "content": "st"
+        }
+    ]
+}

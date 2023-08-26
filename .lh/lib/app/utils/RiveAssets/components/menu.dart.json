@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/app/utils/RiveAssets/components/menu.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1675365732336,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1675365732336,
+            "name": "Commit-0",
+            "content": "\r\n\r\nimport 'package:foodex_app/app/utils/RiveAssets/components/rive_model.dart';\r\n\r\nclass Menu {\r\n  final String title;\r\n  final RiveModel rive;\r\n\r\n  Menu({required this.title, required this.rive});\r\n}\r\n\r\nList<Menu> sidebarMenus = [\r\n  Menu(\r\n    title: \"Home\",\r\n    rive: RiveModel(\r\n        src: \"assets/RiveAssets/icons.riv\",\r\n        artboard: \"HOME\",\r\n        stateMachineName: \"HOME_interactivity\"),\r\n  ),\r\n  Menu(\r\n    title: \"Search\",\r\n    rive: RiveModel(\r\n        src: \"assets/RiveAssets/icons.riv\",\r\n        artboard: \"SEARCH\",\r\n        stateMachineName: \"SEARCH_Interactivity\"),\r\n  ),\r\n  Menu(\r\n    title: \"Favorites\",\r\n    rive: RiveModel(\r\n        src: \"assets/RiveAssets/icons.riv\",\r\n        artboard: \"LIKE/STAR\",\r\n        stateMachineName: \"STAR_Interactivity\"),\r\n  ),\r\n  Menu(\r\n    title: \"Help\",\r\n    rive: RiveModel(\r\n        src: \"assets/RiveAssets/icons.riv\",\r\n        artboard: \"CHAT\",\r\n        stateMachineName: \"CHAT_Interactivity\"),\r\n  ),\r\n];\r\nList<Menu> sidebarMenus2 = [\r\n  Menu(\r\n    title: \"History\",\r\n    rive: RiveModel(\r\n        src: \"assets/RiveAssets/icons.riv\",\r\n        artboard: \"TIMER\",\r\n        stateMachineName: \"TIMER_Interactivity\"),\r\n  ),\r\n  Menu(\r\n    title: \"Notifications\",\r\n    rive: RiveModel(\r\n        src: \"assets/RiveAssets/icons.riv\",\r\n        artboard: \"BELL\",\r\n        stateMachineName: \"BELL_Interactivity\"),\r\n  ),\r\n];\r\n\r\nList<Menu> bottomNavItems = [\r\n  Menu(\r\n    title: \"Chat\",\r\n    rive: RiveModel(\r\n        src: \"assets/RiveAssets/icons.riv\",\r\n        artboard: \"CHAT\",\r\n        stateMachineName: \"CHAT_Interactivity\"),\r\n  ),\r\n  Menu(\r\n    title: \"Search\",\r\n    rive: RiveModel(\r\n        src: \"assets/RiveAssets/icons.riv\",\r\n        artboard: \"SEARCH\",\r\n        stateMachineName: \"SEARCH_Interactivity\"),\r\n  ),\r\n  Menu(\r\n    title: \"Timer\",\r\n    rive: RiveModel(\r\n        src: \"assets/RiveAssets/icons.riv\",\r\n        artboard: \"TIMER\",\r\n        stateMachineName: \"TIMER_Interactivity\"),\r\n  ),\r\n  Menu(\r\n    title: \"Notification\",\r\n    rive: RiveModel(\r\n        src: \"assets/RiveAssets/icons.riv\",\r\n        artboard: \"BELL\",\r\n        stateMachineName: \"BELL_Interactivity\"),\r\n  ),\r\n  Menu(\r\n    title: \"Profile\",\r\n    rive: RiveModel(\r\n        src: \"assets/RiveAssets/icons.riv\",\r\n        artboard: \"USER\",\r\n        stateMachineName: \"USER_Interactivity\"),\r\n  ),\r\n];\r\n"
+        }
+    ]
+}

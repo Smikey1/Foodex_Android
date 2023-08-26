@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/app/utils/rive/components/animated_bar.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1675364736799,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1675364736799,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\nclass AnimatedBar extends StatelessWidget {\r\n  const AnimatedBar({\r\n    Key? key,\r\n    required this.isActive,\r\n  }) : super(key: key);\r\n\r\n  final bool isActive;\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return AnimatedContainer(\r\n      margin: const EdgeInsets.only(bottom: 2),\r\n      duration: const Duration(milliseconds: 200),\r\n      height: 4,\r\n      width: isActive ? 20 : 0,\r\n      decoration: const BoxDecoration(\r\n          color: Color(0xFF81B4FF),\r\n          borderRadius: BorderRadius.all(\r\n            Radius.circular(12),\r\n          )),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

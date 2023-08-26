@@ -1,0 +1,62 @@
+{
+    "sourceFile": "lib/constant/constants.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1672999546141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1672999553721,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import 'package:flutter/material.dart';\r\n \r\n class AppColor {\r\n-  static const  = Color(0xffe5f6f3);\r\n+  static const kPrimaryColor = Color(0xff);\r\n   static const kButtonColor = Color(0xff07aa8c);\r\n   static const kSecondaryColor = Color(0xffffb039);\r\n   static const kSecondaryBgColor = Color(0xffeef9f1);\r\n   static const kPrimaryLightColor = Color(0xfffeeeee);\r\n"
+                },
+                {
+                    "date": 1672999603087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import 'package:flutter/material.dart';\r\n \r\n class AppColor {\r\n-  static const kPrimaryColor = Color(0xff);\r\n-  static const kButtonColor = Color(0xff07aa8c);\r\n+  static const kPrimaryColor = Color(0xff33A466);\r\n+  static const kButtonColor = Color(0xff#0ACF83);\r\n   static const kSecondaryColor = Color(0xffffb039);\r\n   static const kSecondaryBgColor = Color(0xffeef9f1);\r\n   static const kPrimaryLightColor = Color(0xfffeeeee);\r\n   static const kPrimaryMainColor = Color(0xffffffff);\r\n"
+                },
+                {
+                    "date": 1673000199489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,12 @@\n import 'package:flutter/material.dart';\r\n \r\n class AppColor {\r\n   static const kPrimaryColor = Color(0xff33A466);\r\n-  static const kButtonColor = Color(0xff#0ACF83);\r\n+  static const kButtonColor = Color(0xff0ACF83);\r\n   static const kSecondaryColor = Color(0xffffb039);\r\n   static const kSecondaryBgColor = Color(0xffeef9f1);\r\n   static const kPrimaryLightColor = Color(0xfffeeeee);\r\n   static const kPrimaryMainColor = Color(0xffffffff);\r\n+\r\n+  \r\n }\r\n"
+                },
+                {
+                    "date": 1673000205628,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,6 @@\n   static const kSecondaryBgColor = Color(0xffeef9f1);\r\n   static const kPrimaryLightColor = Color(0xfffeeeee);\r\n   static const kPrimaryMainColor = Color(0xffffffff);\r\n \r\n-  \r\n+  static const \r\n }\r\n"
+                },
+                {
+                    "date": 1673000219706,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,6 @@\n   static const kSecondaryBgColor = Color(0xffeef9f1);\r\n   static const kPrimaryLightColor = Color(0xfffeeeee);\r\n   static const kPrimaryMainColor = Color(0xffffffff);\r\n \r\n-  static const \r\n+  static const mainBg\r\n }\r\n"
+                },
+                {
+                    "date": 1673000226152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,6 @@\n   static const kSecondaryBgColor = Color(0xffeef9f1);\r\n   static const kPrimaryLightColor = Color(0xfffeeeee);\r\n   static const kPrimaryMainColor = Color(0xffffffff);\r\n \r\n-  static const mainBg\r\n+  static const \r\n }\r\n"
+                },
+                {
+                    "date": 1673000232398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,5 @@\n   static const kSecondaryBgColor = Color(0xffeef9f1);\r\n   static const kPrimaryLightColor = Color(0xfffeeeee);\r\n   static const kPrimaryMainColor = Color(0xffffffff);\r\n \r\n-  static const \r\n }\r\n"
+                },
+                {
+                    "date": 1673000583350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,5 +7,6 @@\n   static const kSecondaryBgColor = Color(0xffeef9f1);\r\n   static const kPrimaryLightColor = Color(0xfffeeeee);\r\n   static const kPrimaryMainColor = Color(0xffffffff);\r\n \r\n+  \r\n }\r\n"
+                },
+                {
+                    "date": 1673000591018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,6 @@\n   static const kSecondaryBgColor = Color(0xffeef9f1);\r\n   static const kPrimaryLightColor = Color(0xfffeeeee);\r\n   static const kPrimaryMainColor = Color(0xffffffff);\r\n \r\n-  \r\n+  static const\r\n }\r\n"
+                },
+                {
+                    "date": 1673000599173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,6 @@\n   static const kSecondaryBgColor = Color(0xffeef9f1);\r\n   static const kPrimaryLightColor = Color(0xfffeeeee);\r\n   static const kPrimaryMainColor = Color(0xffffffff);\r\n \r\n-  static const \r\n+  static const bf\r\n }\r\n"
+                },
+                {
+                    "date": 1673000681187,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,6 @@\n   static const kPrimaryColor = Color(0xff33A466);\r\n   static const kButtonColor = Color(0xff0ACF83);\r\n   static const kSecondaryColor = Color(0xffffb039);\r\n   static const bgFillColor = Color(0xff0ACF83);\r\n-  static const secon\r\n+  static const \r\n }\r\n"
+                }
+            ],
+            "date": 1672999546141,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\nclass AppColor {\r\n  static const  = Color(0xffe5f6f3);\r\n  static const kButtonColor = Color(0xff07aa8c);\r\n  static const kSecondaryColor = Color(0xffffb039);\r\n  static const kSecondaryBgColor = Color(0xffeef9f1);\r\n  static const kPrimaryLightColor = Color(0xfffeeeee);\r\n  static const kPrimaryMainColor = Color(0xffffffff);\r\n}\r\n"
+        }
+    ]
+}

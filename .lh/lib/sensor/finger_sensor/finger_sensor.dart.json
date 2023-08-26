@@ -1,0 +1,114 @@
+{
+    "sourceFile": "lib/sensor/finger_sensor/finger_sensor.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 24,
+            "patches": [
+                {
+                    "date": 1676828184321,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1676828192976,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,1 @@\n+class LocalAuth\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676828200586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+class LocalAuth{\r\n+  static \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676828206808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+class LocalAuth{\r\n+  static final \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676828216421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+class LocalAuth{\r\n+  static final _auth = \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676828224429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,5 @@\n+import 'package:local_auth/local_auth.dart';\r\n+\r\n class LocalAuth{\r\n-  static final _auth = \r\n-}\n-class LocalAuth{\r\n-  static final \r\n-}\n-class LocalAuth{\r\n-  static \r\n-}\n\\ No newline at end of file\n-class LocalAuth\n-class\n+  static final _auth = LocalAuthentication()\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676828232282,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n import 'package:local_auth/local_auth.dart';\r\n \r\n-class LocalAuth{\r\n-  static final _auth = LocalAuthentication()\r\n-}\n\\ No newline at end of file\n+class LocalAuth {\r\n+  static final _auth = LocalAuthentication();\r\n+\r\n+  \r\n+}\r\n"
+                },
+                {
+                    "date": 1676828240755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+import 'package:local_auth/local_auth.dart';\r\n+\r\n+class LocalAuth {\r\n+  static final _auth = LocalAuthentication();\r\n+\r\n+  static Future<>\r\n+}\r\n"
+                },
+                {
+                    "date": 1676828246221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+import 'package:local_auth/local_auth.dart';\r\n+\r\n+class LocalAuth {\r\n+  static final _auth = LocalAuthentication();\r\n+\r\n+  static Future<bool> \r\n+}\r\n"
+                },
+                {
+                    "date": 1676828251814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+import 'package:local_auth/local_auth.dart';\r\n+\r\n+class LocalAuth {\r\n+  static final _auth = LocalAuthentication();\r\n+\r\n+  static Future<bool> _can\r\n+}\r\n"
+                },
+                {
+                    "date": 1676828256868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+import 'package:local_auth/local_auth.dart';\r\n+\r\n+class LocalAuth {\r\n+  static final _auth = LocalAuthentication();\r\n+\r\n+  static Future<bool> _canAuth\r\n+}\r\n"
+                },
+                {
+                    "date": 1676828262477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+import 'package:local_auth/local_auth.dart';\r\n+\r\n+class LocalAuth {\r\n+  static final _auth = LocalAuthentication();\r\n+\r\n+  static Future<bool> _canAuthenticate\r\n+}\r\n"
+                },
+                {
+                    "date": 1676828268546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+import 'package:local_auth/local_auth.dart';\r\n+\r\n+class LocalAuth {\r\n+  static final _auth = LocalAuthentication();\r\n+\r\n+  static Future<bool> _canAuthenticate() async\r\n+}\r\n"
+                },
+                {
+                    "date": 1676828276159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+import 'package:local_auth/local_auth.dart';\r\n+\r\n+class LocalAuth {\r\n+  static final _auth = LocalAuthentication();\r\n+\r\n+  static Future<bool> _canAuthenticate() async => await \r\n+}\r\n"
+                },
+                {
+                    "date": 1676828282780,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+import 'package:local_auth/local_auth.dart';\r\n+\r\n+class LocalAuth {\r\n+  static final _auth = LocalAuthentication();\r\n+\r\n+  static Future<bool> _canAuthenticate() async => await _auth.c\r\n+}\r\n"
+                },
+                {
+                    "date": 1676828288806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+import 'package:local_auth/local_auth.dart';\r\n+\r\n+class LocalAuth {\r\n+  static final _auth = LocalAuthentication();\r\n+\r\n+  static Future<bool> _canAuthenticate() async => await _auth.canCheckBiometrics || \r\n+}\r\n"
+                },
+                {
+                    "date": 1676828293944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+import 'package:local_auth/local_auth.dart';\r\n+\r\n+class LocalAuth {\r\n+  static final _auth = LocalAuthentication();\r\n+\r\n+  static Future<bool> _canAuthenticate() async => await _auth.canCheckBiometrics || await \r\n+}\r\n"
+                },
+                {
+                    "date": 1676828301661,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+import 'package:local_auth/local_auth.dart';\r\n+\r\n+class LocalAuth {\r\n+  static final _auth = LocalAuthentication();\r\n+\r\n+  static Future<bool> _canAuthenticate() async => await _auth.canCheckBiometrics || await _auth.isDeviceSupported()\r\n+}\r\n"
+                },
+                {
+                    "date": 1676828310698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,83 +2,11 @@\n \r\n class LocalAuth {\r\n   static final _auth = LocalAuthentication();\r\n \r\n-  static Future<bool> _canAuthenticate() async => await _auth.canCheckBiometrics || await _auth.isDeviceSupported()\r\n-}\r\n-import 'package:local_auth/local_auth.dart';\r\n+  static Future<bool> _canAuthenticate() async =>\r\n+      await _auth.canCheckBiometrics || await _auth.isDeviceSupported();\r\n \r\n-class LocalAuth {\r\n-  static final _auth = LocalAuthentication();\r\n \r\n-  static Future<bool> _canAuthenticate() async => await _auth.canCheckBiometrics || await \r\n-}\r\n-import 'package:local_auth/local_auth.dart';\r\n \r\n-class LocalAuth {\r\n-  static final _auth = LocalAuthentication();\r\n \r\n-  static Future<bool> _canAuthenticate() async => await _auth.canCheckBiometrics || \r\n }\r\n-import 'package:local_auth/local_auth.dart';\r\n-\r\n-class LocalAuth {\r\n-  static final _auth = LocalAuthentication();\r\n-\r\n-  static Future<bool> _canAuthenticate() async => await _auth.c\r\n-}\r\n-import 'package:local_auth/local_auth.dart';\r\n-\r\n-class LocalAuth {\r\n-  static final _auth = LocalAuthentication();\r\n-\r\n-  static Future<bool> _canAuthenticate() async => await \r\n-}\r\n-import 'package:local_auth/local_auth.dart';\r\n-\r\n-class LocalAuth {\r\n-  static final _auth = LocalAuthentication();\r\n-\r\n-  static Future<bool> _canAuthenticate() async\r\n-}\r\n-import 'package:local_auth/local_auth.dart';\r\n-\r\n-class LocalAuth {\r\n-  static final _auth = LocalAuthentication();\r\n-\r\n-  static Future<bool> _canAuthenticate\r\n-}\r\n-import 'package:local_auth/local_auth.dart';\r\n-\r\n-class LocalAuth {\r\n-  static final _auth = LocalAuthentication();\r\n-\r\n-  static Future<bool> _canAuth\r\n-}\r\n-import 'package:local_auth/local_auth.dart';\r\n-\r\n-class LocalAuth {\r\n-  static final _auth = LocalAuthentication();\r\n-\r\n-  static Future<bool> _can\r\n-}\r\n-import 'package:local_auth/local_auth.dart';\r\n-\r\n-class LocalAuth {\r\n-  static final _auth = LocalAuthentication();\r\n-\r\n-  static Future<bool> \r\n-}\r\n-import 'package:local_auth/local_auth.dart';\r\n-\r\n-class LocalAuth {\r\n-  static final _auth = LocalAuthentication();\r\n-\r\n-  static Future<>\r\n-}\r\n-import 'package:local_auth/local_auth.dart';\r\n-\r\n-class LocalAuth {\r\n-  static final _auth = LocalAuthentication();\r\n-\r\n-  \r\n-}\r\n"
+                },
+                {
+                    "date": 1676828315844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import 'package:local_auth/local_auth.dart';\r\n+\r\n+class LocalAuth {\r\n+  static final _auth = LocalAuthentication();\r\n+\r\n+  static Future<bool> _canAuthenticate() async =>\r\n+      await _auth.canCheckBiometrics || await _auth.isDeviceSupported();\r\n+\r\n+\r\n+      \r\n+\r\n+\r\n+\r\n+}\r\n"
+                },
+                {
+                    "date": 1676828322528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import 'package:local_auth/local_auth.dart';\r\n+\r\n+class LocalAuth {\r\n+  static final _auth = LocalAuthentication();\r\n+\r\n+  static Future<bool> _canAuthenticate() async =>\r\n+      await _auth.canCheckBiometrics || await _auth.isDeviceSupported();\r\n+\r\n+\r\n+  static Future<bool> authenticate() async {\r\n+\r\n+\r\n+\r\n+}\r\n"
+                },
+                {
+                    "date": 1676828342276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+import 'package:local_auth/local_auth.dart';\r\n+\r\n+class LocalAuth {\r\n+  static final _auth = LocalAuthentication();\r\n+\r\n+  static Future<bool> _canAuthenticate() async =>\r\n+      await _auth.canCheckBiometrics || await _auth.isDeviceSupported();\r\n+\r\n+  static Future<bool> authenticate() async {\r\n+    if()\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1676828347668,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+import 'package:local_auth/local_auth.dart';\r\n+\r\n+class LocalAuth {\r\n+  static final _auth = LocalAuthentication();\r\n+\r\n+  static Future<bool> _canAuthenticate() async =>\r\n+      await _auth.canCheckBiometrics || await _auth.isDeviceSupported();\r\n+\r\n+  static Future<bool> authenticate() async {\r\n+    if(!await )\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1676828357383,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n   static Future<bool> _canAuthenticate() async =>\r\n       await _auth.canCheckBiometrics || await _auth.isDeviceSupported();\r\n \r\n   static Future<bool> authenticate() async {\r\n-    if(!await _canAuthenticate())\r\n+    if(!await _canAuthenticate()) return\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1676828364109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+import 'package:local_auth/local_auth.dart';\r\n+\r\n+class LocalAuth {\r\n+  static final _auth = LocalAuthentication();\r\n+\r\n+  static Future<bool> _canAuthenticate() async =>\r\n+      await _auth.canCheckBiometrics || await _auth.isDeviceSupported();\r\n+\r\n+  static Future<bool> authenticate() async {\r\n+    if (!await _canAuthenticate()) return false;\r\n+    \r\n+  }\r\n+}\r\n"
+                }
+            ],
+            "date": 1676828184321,
+            "name": "Commit-0",
+            "content": "class"
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "sourceFile": "lib/screen/billing/screen/billing_screen.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1676883489631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1676883495919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+class BillingScreen extends StatefulWidget {\r\n+  const BillingScreen({super.key});\r\n+\r\n+  @override\r\n+  State<BillingScreen> createState() => _BillingScreenState();\r\n+}\r\n+\r\n+class _BillingScreenState extends State<BillingScreen> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Container();\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676883502743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import 'package:flutter/material.dart';\r\n+\r\n class BillingScreen extends StatefulWidget {\r\n   const BillingScreen({super.key});\r\n \r\n   @override\r\n@@ -9,6 +11,5 @@\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container();\r\n   }\r\n-}\n-st\n\\ No newline at end of file\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676883541289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n \r\n class _BillingScreenState extends State<BillingScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return Container();\r\n+    return Cscf;\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676883548208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,22 @@\n+import 'package:flutter/material.dart';\r\n+\r\n+class BillingScreen extends StatefulWidget {\r\n+  const BillingScreen({super.key});\r\n+\r\n+  @override\r\n+  State<BillingScreen> createState() => _BillingScreenState();\r\n+}\r\n+\r\n+class _BillingScreenState extends State<BillingScreen> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Scaffold(\r\n+      appBar: AppBar(\r\n+        title: const Text('Billing Screen'),\r\n+      ),\r\n+      body: const Center(\r\n+        child: Text('Billing Screen'),\r\n+      ),\r\n+    );\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676883892018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,24 +14,9 @@\n       appBar: AppBar(\r\n         title: const Text('Billing Screen'),\r\n       ),\r\n       body: const Center(\r\n-        child: Text('Billing Screen'),\r\n+        child: ,\r\n       ),\r\n     );\r\n   }\r\n-}\n-import 'package:flutter/material.dart';\r\n-\r\n-class BillingScreen extends StatefulWidget {\r\n-  const BillingScreen({super.key});\r\n-\r\n-  @override\r\n-  State<BillingScreen> createState() => _BillingScreenState();\r\n-}\r\n-\r\n-class _BillingScreenState extends State<BillingScreen> {\r\n-  @override\r\n-  Widget build(BuildContext context) {\r\n-    return Cscf;\r\n-  }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676883897285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,8 @@\n     return Scaffold(\r\n       appBar: AppBar(\r\n         title: const Text('Billing Screen'),\r\n       ),\r\n-      body: const Center(\r\n-        child: ,\r\n-      ),\r\n+      body: \r\n     );\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676883903875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n     return Scaffold(\r\n       appBar: AppBar(\r\n         title: const Text('Billing Screen'),\r\n       ),\r\n-      body: Sa\r\n+      body: SafeArea()\r\n     );\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676884002948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n            Container(\r\n               height: 100,\r\n               width: 100,\r\n               color: Colors.red,\r\n-            ),\r\n+          \r\n            ),\r\n            Container(),\r\n             Container(),\r\n             Container(),\r\n"
+                }
+            ],
+            "date": 1676883489631,
+            "name": "Commit-0",
+            "content": "st"
+        }
+    ]
+}

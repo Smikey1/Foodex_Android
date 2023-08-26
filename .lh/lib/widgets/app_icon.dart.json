@@ -1,0 +1,46 @@
+{
+    "sourceFile": "lib/widgets/app_icon.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1673026256707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1673026262924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,8 @@\n-st\n\\ No newline at end of file\n+class name extends StatelessWidget {\r\n+  const name({super.key});\r\n+\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Container();\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1673026271035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n-class name extends StatelessWidget {\r\n-  const name({super.key});\r\n+import 'package:flutter/material.dart';\r\n \r\n+class AppIcon extends StatelessWidget {\r\n+  const AppIcon({super.key});\r\n+\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container();\r\n   }\r\n"
+                },
+                {
+                    "date": 1673026286237,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import 'package:flutter/material.dart';\r\n \r\n class AppIcon extends StatelessWidget {\r\n+  final\r\n   const AppIcon({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n"
+                },
+                {
+                    "date": 1673026292683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,12 @@\n import 'package:flutter/material.dart';\r\n \r\n class AppIcon extends StatelessWidget {\r\n-  final\r\n+  final IconData icon;\r\n+  \r\n   const AppIcon({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container();\r\n\\ No newline at end of file\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1673026298469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n import 'package:flutter/material.dart';\r\n \r\n class AppIcon extends StatelessWidget {\r\n   final IconData icon;\r\n-  \r\n+  final Color\r\n   const AppIcon({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container();\r\n   }\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1673026308045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n import 'package:flutter/material.dart';\r\n \r\n class AppIcon extends StatelessWidget {\r\n   final IconData icon;\r\n-  final Color back\r\n+  final Color backgroundColor;\r\n+  \r\n   const AppIcon({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n"
+                },
+                {
+                    "date": 1673026326170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n class AppIcon extends StatelessWidget {\r\n   final IconData icon;\r\n   final Color backgroundColor;\r\n-  final color \r\n+  final color icon\r\n   const AppIcon({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n"
+                }
+            ],
+            "date": 1673026256707,
+            "name": "Commit-0",
+            "content": "st"
+        }
+    ]
+}

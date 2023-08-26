@@ -1,0 +1,62 @@
+{
+    "sourceFile": "lib/components/under_part.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1672308967143,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1673003981865,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n           title,\r\n           style: TextStyle(\r\n             fontFamily: 'OpenSans',\r\n             fontSize: Dimensions.font14,\r\n-            color: Colors.black,\r\n+            // color: Colors.black,\r\n             fontWeight: FontWeight.w600,\r\n           ),\r\n         ),\r\n         SizedBox(\r\n"
+                },
+                {
+                    "date": 1673004149766,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       children: [\r\n         Text(\r\n           title,\r\n           style: TextStyle(\r\n-            fontFamily: 'OpenSans',\r\n+            fontFamily: '',\r\n             fontSize: Dimensions.font14,\r\n             // color: Colors.black,\r\n             fontWeight: FontWeight.w600,\r\n           ),\r\n"
+                },
+                {
+                    "date": 1673004155391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       children: [\r\n         Text(\r\n           title,\r\n           style: TextStyle(\r\n-            fontFamily: '',\r\n+            fontFamily: 'Roboto',\r\n             fontSize: Dimensions.font14,\r\n             // color: Colors.black,\r\n             fontWeight: FontWeight.w600,\r\n           ),\r\n"
+                },
+                {
+                    "date": 1673004176675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       children: [\r\n         Text(\r\n           title,\r\n           style: TextStyle(\r\n-            fontFamily: 'Roboto',\r\n+            fontFamily: 'OpenSans',\r\n             fontSize: Dimensions.font14,\r\n             // color: Colors.black,\r\n             fontWeight: FontWeight.w600,\r\n           ),\r\n"
+                },
+                {
+                    "date": 1673004188185,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n           title,\r\n           style: TextStyle(\r\n             fontFamily: 'OpenSans',\r\n             fontSize: Dimensions.font14,\r\n-            // color: Colors.black,\r\n+            color: Colors.black,\r\n             fontWeight: FontWeight.w600,\r\n           ),\r\n         ),\r\n         SizedBox(\r\n"
+                },
+                {
+                    "date": 1673004561176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n           title,\r\n           style: TextStyle(\r\n             fontFamily: 'OpenSans',\r\n             fontSize: Dimensions.font14,\r\n-            color: Colors.black,\r\n+            // color: Colors.black,\r\n             fontWeight: FontWeight.w600,\r\n           ),\r\n         ),\r\n         SizedBox(\r\n"
+                },
+                {
+                    "date": 1673007087194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n           title,\r\n           style: TextStyle(\r\n             fontFamily: 'OpenSans',\r\n             fontSize: Dimensions.font14,\r\n-            // color: Colors.black,\r\n+            color: Colors.black,\r\n             fontWeight: FontWeight.w600,\r\n           ),\r\n         ),\r\n         SizedBox(\r\n"
+                },
+                {
+                    "date": 1673007442114,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n           title,\r\n           style: TextStyle(\r\n             fontFamily: 'OpenSans',\r\n             fontSize: Dimensions.font14,\r\n-            color: Colors.black,\r\n+            // color: Colors.black,\r\n             fontWeight: FontWeight.w600,\r\n           ),\r\n         ),\r\n         SizedBox(\r\n"
+                },
+                {
+                    "date": 1673007593636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import 'package:flutter/material.dart';\r\n-import 'package:foodex_app/constant/constants.dart';\r\n+import 'package:foodex_app/utils/theme/constants.dart';\r\n import 'package:foodex_app/utils/dimension.dart';\r\n \r\n class UnderPart extends StatelessWidget {\r\n   const UnderPart(\r\n"
+                },
+                {
+                    "date": 1675078361172,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import 'package:flutter/material.dart';\r\n-import 'package:foodex_app/utils/theme/constants.dart';\r\n+import 'package:foodex_app/app/theme/constants.dart';\r\n import 'package:foodex_app/utils/dimension.dart';\r\n \r\n class UnderPart extends StatelessWidget {\r\n   const UnderPart(\r\n"
+                },
+                {
+                    "date": 1675078400112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import 'package:flutter/material.dart';\r\n import 'package:foodex_app/app/theme/constants.dart';\r\n-import 'package:foodex_app/utils/dimension.dart';\r\n+import 'package:foodex_app/app/utils/dimension.dart';\r\n \r\n class UnderPart extends StatelessWidget {\r\n   const UnderPart(\r\n       {Key? key,\r\n"
+                }
+            ],
+            "date": 1672308967143,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\nimport 'package:foodex_app/constant/constants.dart';\r\nimport 'package:foodex_app/utils/dimension.dart';\r\n\r\nclass UnderPart extends StatelessWidget {\r\n  const UnderPart(\r\n      {Key? key,\r\n      required this.title,\r\n      required this.navigatorText,\r\n      required this.onTap})\r\n      : super(key: key);\r\n  final String title;\r\n  final String navigatorText;\r\n  final Function() onTap;\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Row(\r\n      mainAxisAlignment: MainAxisAlignment.center,\r\n      children: [\r\n        Text(\r\n          title,\r\n          style: TextStyle(\r\n            fontFamily: 'OpenSans',\r\n            fontSize: Dimensions.font14,\r\n            color: Colors.black,\r\n            fontWeight: FontWeight.w600,\r\n          ),\r\n        ),\r\n        SizedBox(\r\n          width: Dimensions.width10,\r\n        ),\r\n        InkWell(\r\n          onTap: () {\r\n            onTap();\r\n          },\r\n          child: Text(\r\n            navigatorText,\r\n            style: TextStyle(\r\n                color: AppColor.kSecondaryColor,\r\n                fontSize: Dimensions.font14,\r\n                fontWeight: FontWeight.w700,\r\n                fontFamily: 'OpenSans'),\r\n          ),\r\n        )\r\n      ],\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

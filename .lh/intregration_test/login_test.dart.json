@@ -1,0 +1,18 @@
+{
+    "sourceFile": "intregration_test/login_test.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1676546351174,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1676546351174,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\nimport 'package:flutter_test/flutter_test.dart';\r\nimport 'package:foodex_app/app/router/routes.dart';\r\n\r\nimport 'package:foodex_app/app/theme/theme.dart';\r\nimport 'package:get/get_navigation/src/root/get_material_app.dart';\r\nimport 'package:integration_test/integration_test.dart';\r\nimport 'package:provider/provider.dart';\r\n\r\nvoid main() {\r\n  IntegrationTestWidgetsFlutterBinding.ensureInitialized();\r\n\r\n  testWidgets('Automate Login User Test', (WidgetTester tester) async {\r\n    await tester.pumpWidget(ChangeNotifierProvider(\r\n        create: (context) => ThemeProvider(),\r\n        builder: (context, _) {\r\n          final themeProvider = Provider.of<ThemeProvider>(context);\r\n          return GetMaterialApp(\r\n            debugShowCheckedModeBanner: false,\r\n            themeMode: themeProvider.themeMode,\r\n            theme: MyThemes.lightTheme,\r\n            darkTheme: MyThemes.darkTheme,\r\n            // home: const WearOsLogin(),\r\n            initialRoute: RouterHelper.loginScreen,\r\n            getPages: RouterHelper.routes,\r\n            // routes: {'/': (context) => const LoginScreen()},\r\n          );\r\n        }));\r\n\r\n    await tester.pumpAndSettle(const Duration(seconds: 8));\r\n    String phoneNumber = \"1234567890\";\r\n    String password = \"password123\";\r\n\r\n    Finder phoneNumberKey = find.byKey(const ValueKey(\"phoneNumberKey\"));\r\n    await tester.enterText(phoneNumberKey, phoneNumber);\r\n\r\n    Finder passwordKey = find.byKey(const ValueKey(\"passwordKey\"));\r\n    await tester.enterText(passwordKey, password);\r\n\r\n    Finder btnLogin = find.byKey(const ValueKey(\"btnLogin\"));\r\n    await tester.tap(btnLogin);\r\n\r\n    await tester.pumpAndSettle(const Duration(seconds: 8));\r\n\r\n    Finder dashboard = find.text(\"Hello Test\");\r\n    // expect(dashboard, findsOneWidget);\r\n    expect(find.text(\"Hello\"), findsOneWidget);\r\n  });\r\n}\r\n"
+        }
+    ]
+}

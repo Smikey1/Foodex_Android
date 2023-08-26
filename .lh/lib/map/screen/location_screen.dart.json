@@ -1,0 +1,74 @@
+{
+    "sourceFile": "lib/map/screen/location_screen.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 14,
+            "patches": [
+                {
+                    "date": 1676288900768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1676288907077,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,13 @@\n-stf\n\\ No newline at end of file\n+class L extends StatefulWidget {\r\n+  const L({super.key});\r\n+\r\n+  @override\r\n+  State<L> createState() => _LState();\r\n+}\r\n+\r\n+class _LState extends State<L> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Container();\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676288917585,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+import 'package:flutter/material.dart';\r\n+\r\n+class LocationScreen extends StatefulWidget {\r\n+  const LocationScreen({super.key});\r\n+\r\n+  @override\r\n+  State<LocationScreen> createState() => _LocationScreenState();\r\n+}\r\n+\r\n+class _LocationScreenState extends State<LocationScreen> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Container();\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676288924751,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+import 'package:flutter/material.dart';\r\n+\r\n+class LocationScreen extends StatefulWidget {\r\n+  const LocationScreen({super.key});\r\n+\r\n+  @override\r\n+  State<LocationScreen> createState() => _LocationScreenState();\r\n+}\r\n+\r\n+class _LocationScreenState extends State<LocationScreen> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Scaffold(\r\n+      \r\n+    );\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676288933599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,19 @@\n+import 'package:flutter/material.dart';\r\n+\r\n+class LocationScreen extends StatefulWidget {\r\n+  const LocationScreen({super.key});\r\n+\r\n+  @override\r\n+  State<LocationScreen> createState() => _LocationScreenState();\r\n+}\r\n+\r\n+class _LocationScreenState extends State<LocationScreen> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Scaffold\r\n+      body: const Center(\r\n+        child: Text('Location Screen'),\r\n+      ),\r\n+    );\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676288946213,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import 'package:flutter/material.dart';\r\n+\r\n+class LocationScreen extends StatefulWidget {\r\n+  const LocationScreen({super.key});\r\n+\r\n+  @override\r\n+  State<LocationScreen> createState() => _LocationScreenState();\r\n+}\r\n+\r\n+class _LocationScreenState extends State<LocationScreen> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return const Scaffold(\r\n+      body: ,\r\n+      ),\r\n+    );\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1676288953441,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+import 'package:flutter/material.dart';\r\n+\r\n+class LocationScreen extends StatefulWidget {\r\n+  const LocationScreen({super.key});\r\n+\r\n+  @override\r\n+  State<LocationScreen> createState() => _LocationScreenState();\r\n+}\r\n+\r\n+class _LocationScreenState extends State<LocationScreen> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return const Scaffold(\r\n+      body:Cloum\r\n+    );\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1676288958646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,19 @@\n+import 'package:flutter/material.dart';\r\n+\r\n+class LocationScreen extends StatefulWidget {\r\n+  const LocationScreen({super.key});\r\n+\r\n+  @override\r\n+  State<LocationScreen> createState() => _LocationScreenState();\r\n+}\r\n+\r\n+class _LocationScreenState extends State<LocationScreen> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return const Scaffold(\r\n+      body:Column(\r\n+        \r\n+      )\r\n+    );\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1676288967316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,20 @@\n+import 'package:flutter/material.dart';\r\n+\r\n+class LocationScreen extends StatefulWidget {\r\n+  const LocationScreen({super.key});\r\n+\r\n+  @override\r\n+  State<LocationScreen> createState() => _LocationScreenState();\r\n+}\r\n+\r\n+class _LocationScreenState extends State<LocationScreen> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Scaffold(\r\n+        body: Column(\r\n+      children: [\r\n+        Text('Location Screen'),\r\n+      ],\r\n+    ));\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1676288976726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+import 'package:flutter/material.dart';\r\n+import 'package:foodex_app/widgets/export_widgets.dart';\r\n+\r\n+class LocationScreen extends StatefulWidget {\r\n+  const LocationScreen({super.key});\r\n+\r\n+  @override\r\n+  State<LocationScreen> createState() => _LocationScreenState();\r\n+}\r\n+\r\n+class _LocationScreenState extends State<LocationScreen> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Scaffold(\r\n+        body: Column(\r\n+      children: [\r\n+        BigText('Location Screen'),\r\n+      ],\r\n+    ));\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1676288987077,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+import 'package:flutter/material.dart';\r\n+import 'package:foodex_app/widgets/export_widgets.dart';\r\n+\r\n+class LocationScreen extends StatefulWidget {\r\n+  const LocationScreen({super.key});\r\n+\r\n+  @override\r\n+  State<LocationScreen> createState() => _LocationScreenState();\r\n+}\r\n+\r\n+class _LocationScreenState extends State<LocationScreen> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Scaffold(\r\n+        body: Column(\r\n+      children: [\r\n+        BigText),\r\n+      ],\r\n+    ));\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1676288998969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+import 'package:flutter/material.dart';\r\n+import 'package:foodex_app/widgets/export_widgets.dart';\r\n+\r\n+class LocationScreen extends StatefulWidget {\r\n+  const LocationScreen({super.key});\r\n+\r\n+  @override\r\n+  State<LocationScreen> createState() => _LocationScreenState();\r\n+}\r\n+\r\n+class _LocationScreenState extends State<LocationScreen> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Scaffold(\r\n+        body: Column(\r\n+      children: [\r\n+        BigText(text: ,),\r\n+      ],\r\n+    ));\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1676289027318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+import 'package:flutter/material.dart';\r\n+import 'package:foodex_app/widgets/export_widgets.dart';\r\n+\r\n+class LocationScreen extends StatefulWidget {\r\n+  const LocationScreen({super.key});\r\n+\r\n+  @override\r\n+  State<LocationScreen> createState() => _LocationScreenState();\r\n+}\r\n+\r\n+class _LocationScreenState extends State<LocationScreen> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Scaffold(\r\n+        body: Column(\r\n+      children: [\r\n+        BigText(text: 'My Location',),\r\n+      ],\r\n+    ));\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1676289033876,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     return Scaffold(\r\n         body: Column(\r\n       children: [\r\n         BigText(text: 'My Location',),\r\n-        \r\n+        sma\r\n       ],\r\n     ));\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1676289040522,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,22 @@\n+import 'package:flutter/material.dart';\r\n+import 'package:foodex_app/widgets/export_widgets.dart';\r\n+\r\n+class LocationScreen extends StatefulWidget {\r\n+  const LocationScreen({super.key});\r\n+\r\n+  @override\r\n+  State<LocationScreen> createState() => _LocationScreenState();\r\n+}\r\n+\r\n+class _LocationScreenState extends State<LocationScreen> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Scaffold(\r\n+        body: Column(\r\n+      children: [\r\n+        BigText(text: 'My Location',),\r\n+        SmallText(text: \"\")\r\n+      ],\r\n+    ));\r\n+  }\r\n+}\r\n"
+                }
+            ],
+            "date": 1676288900768,
+            "name": "Commit-0",
+            "content": "stf"
+        }
+    ]
+}

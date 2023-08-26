@@ -1,0 +1,34 @@
+{
+    "sourceFile": "lib/wearOs/screen/wearOs_profile.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1676026754218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1676026892379,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import 'package:flutter/material.dart';\r\n import 'package:foodex_app/screen/login_register/loginScreen.dart';\r\n+import 'package:foodex_app/wearOs/widget/wearOs_snackbar.dart';\r\n import 'package:foodex_app/widgets/snack_bar.dart';\r\n import 'package:shared_preferences/shared_preferences.dart';\r\n \r\n class ProfileScreen extends StatefulWidget {\r\n"
+                },
+                {
+                    "date": 1676026946819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,16 +3,16 @@\n import 'package:foodex_app/wearOs/widget/wearOs_snackbar.dart';\r\n import 'package:foodex_app/widgets/snack_bar.dart';\r\n import 'package:shared_preferences/shared_preferences.dart';\r\n \r\n-class ProfileScreen extends StatefulWidget {\r\n-  const ProfileScreen({super.key});\r\n+class WearOsProfileScreen extends StatefulWidget {\r\n+  const WearOsProfileScreen({super.key});\r\n \r\n   @override\r\n-  State<ProfileScreen> createState() => _ProfileScreenState();\r\n+  State<WearOsProfileScreen> createState() => _WearOsProfileScreenState();\r\n }\r\n \r\n-class _ProfileScreenState extends State<ProfileScreen> {\r\n+class _WearOsProfileScreenState extends State<WearOsProfileScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Center(\r\n       child: Container(\r\n"
+                },
+                {
+                    "date": 1676026991714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n \r\n class _WearOsProfileScreenState extends State<WearOsProfileScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return widget(\r\n+    return (\r\n       child: Center(\r\n         child: Container(\r\n           child: Column(\r\n             mainAxisAlignment: MainAxisAlignment.center,\r\n"
+                },
+                {
+                    "date": 1676026998964,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n class _WearOsProfileScreenState extends State<WearOsProfileScreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n-      child: Center(\r\n+      body: Center(\r\n         child: Container(\r\n           child: Column(\r\n             mainAxisAlignment: MainAxisAlignment.center,\r\n             children: [\r\n"
+                }
+            ],
+            "date": 1676026754218,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\nimport 'package:foodex_app/screen/login_register/loginScreen.dart';\r\nimport 'package:foodex_app/widgets/snack_bar.dart';\r\nimport 'package:shared_preferences/shared_preferences.dart';\r\n\r\nclass ProfileScreen extends StatefulWidget {\r\n  const ProfileScreen({super.key});\r\n\r\n  @override\r\n  State<ProfileScreen> createState() => _ProfileScreenState();\r\n}\r\n\r\nclass _ProfileScreenState extends State<ProfileScreen> {\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Center(\r\n      child: Container(\r\n        child: Column(\r\n          mainAxisAlignment: MainAxisAlignment.center,\r\n          children: [\r\n            ElevatedButton(\r\n              onPressed: () async {\r\n                SharedPreferences pref = await SharedPreferences.getInstance();\r\n                wearOsShowSnackbar(\r\n                    context, \"Logout Successfully!\", Colors.orange);\r\n                pref.clear();\r\n                Navigator.of(context).pushReplacement(\r\n                  MaterialPageRoute(\r\n                    builder: (_) => const LoginScreen(),\r\n                  ),\r\n                );\r\n              },\r\n              child: const Text(\"Log Out\"),\r\n            ),\r\n          ],\r\n        ),\r\n      ),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}
