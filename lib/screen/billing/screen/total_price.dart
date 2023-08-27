@@ -76,7 +76,7 @@ class _TotalPriceState extends State<TotalPrice> {
                   size: Dimensions.font15,
                 ),
                 SmallText(
-                  text: "Rs. $totalAmount",
+                  text: "\$$totalAmount",
                   size: Dimensions.font15,
                 ),
               ],
@@ -95,7 +95,7 @@ class _TotalPriceState extends State<TotalPrice> {
                   height: Dimensions.height10,
                 ),
                 SmallText(
-                  text: "Rs. $deliveryFee",
+                  text: "\$$deliveryFee",
                   size: Dimensions.font15,
                 ),
               ],
@@ -114,7 +114,7 @@ class _TotalPriceState extends State<TotalPrice> {
                   size: Dimensions.font20,
                 ),
                 BigText(
-                  text: "Rs. $totalAmountWithDeliveryFee",
+                  text: "\$$totalAmountWithDeliveryFee",
                   size: Dimensions.font20,
                   color: AppColor.kErrorColor,
                 ),

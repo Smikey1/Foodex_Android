@@ -61,7 +61,8 @@ class _OrderCancelledPageState extends State<OrderCancelledPage> {
                               const Spacer(),
                               IconTextWidget(
                                 icon: Icons.attach_money,
-                                Text: "Total: ${orderList[index].totalPrice!}",
+                                Text:
+                                    "Total: \$${orderList[index].totalPrice!}",
                                 iconColor: AppColor.kPrimaryColor,
                               ),
                             ]),
@@ -118,7 +119,7 @@ class _OrderCancelledPageState extends State<OrderCancelledPage> {
                                             children: [
                                               SmallText(
                                                   text:
-                                                      " ${orderList[index].orderedQty} items"),
+                                                      "${orderList[index].orderedQty} items"),
                                               SizedBox(
                                                 height: Dimensions.height10,
                                                 child: VerticalDivider(
@@ -141,7 +142,7 @@ class _OrderCancelledPageState extends State<OrderCancelledPage> {
                                             children: [
                                               BigText(
                                                 text:
-                                                    "Rs.${orderList[index].foodId!.price}.0",
+                                                    "\$${orderList[index].foodId!.price}.0",
                                                 color: AppColor.kPrimaryColor,
                                               ),
                                               SizedBox(

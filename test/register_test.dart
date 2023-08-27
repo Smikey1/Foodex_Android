@@ -14,8 +14,7 @@ void main() {
   test("sign Up", () async {
     bool expectedResult = true;
     String fullName = "Hira Datta";
-    String email = "hira@gmail.com";
-    String dob = "1999-09-06";
+    String email = "hira77@gmail.com";
     String phone = "1234567890";
     String password = "Hira@123";
     String avatar = "";
@@ -23,7 +22,7 @@ void main() {
     User user = User(
       fullName,
       email,
-      dob,
+      "",
       phone,
       password,
       avatar,

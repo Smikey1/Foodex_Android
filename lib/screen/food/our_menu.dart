@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:foodex_app/app/constraints/permissions.dart';
 import 'package:foodex_app/app/theme/constants.dart';
 import 'package:foodex_app/app/utils/dimension.dart';
+import 'package:foodex_app/app/utils/notification.dart';
 import 'package:foodex_app/model/export_model.dart';
 import 'package:foodex_app/repository/remote_repository/export_remote_repo.dart';
 import 'package:foodex_app/repository/remote_repository/remote_cart_repository.dart';
 import 'package:foodex_app/response/single_food_response.dart';
 import 'package:foodex_app/screen/export_screen.dart';
 import 'package:foodex_app/widgets/export_widgets.dart';
-import 'package:foodex_app/app/utils/notification.dart';
 import 'package:foodex_app/widgets/snack_bar.dart';
 
 class OurFoodMenu extends StatefulWidget {
@@ -206,7 +206,7 @@ class _OurFoodMenuState extends State<OurFoodMenu> {
                 ),
               ),
               BigText(
-                text: 'Rs. $foodPrice X $qty',
+                text: '\$$foodPrice X $qty',
                 size: Dimensions.font26,
               ),
               InkWell(

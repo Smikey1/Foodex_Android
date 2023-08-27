@@ -61,7 +61,8 @@ class _OrderActivePageState extends State<OrderActivePage> {
                               const Spacer(),
                               IconTextWidget(
                                 icon: Icons.attach_money,
-                                Text: "Total: ${orderList[index].totalPrice!}",
+                                Text:
+                                    "Total: \$${orderList[index].totalPrice!}",
                                 iconColor: AppColor.kPrimaryColor,
                               ),
                             ]),
@@ -141,7 +142,7 @@ class _OrderActivePageState extends State<OrderActivePage> {
                                             children: [
                                               BigText(
                                                 text:
-                                                    "Rs.${orderList[index].foodId!.price}.0",
+                                                    "\$${orderList[index].foodId!.price}.0",
                                                 color: AppColor.kPrimaryColor,
                                               ),
                                               SizedBox(

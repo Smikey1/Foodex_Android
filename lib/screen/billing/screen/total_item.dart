@@ -99,7 +99,7 @@ class _CartItemScreenState extends State<CartItemScreen> {
                                   ),
                                   BigText(
                                     text:
-                                        'Rs.${int.parse(cartList[index].foodId!.price) * cartList[index].quantity!}',
+                                        '\$${int.parse(cartList[index].foodId!.price) * cartList[index].quantity!}',
                                     size: Dimensions.font15,
                                     fontWeight: FontWeight.w500,
                                     color: AppColor.kPrimaryColor,

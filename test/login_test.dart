@@ -14,8 +14,8 @@ void main() {
 
   test('User should be able to log in', () async {
     bool expectedResult = true;
-    String phone = "1234567890";
-    String password = "k1234567890";
+    String phone = "0452369543";
+    String password = "smikey123";
     bool actualResult = await UserAPI().loginUser(phone, password);
     expect(actualResult, expectedResult);
   });

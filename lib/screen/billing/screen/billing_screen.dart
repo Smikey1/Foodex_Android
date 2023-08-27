@@ -223,7 +223,7 @@ class _BillingScreenState extends State<BillingScreen> {
       config: PaymentConfig(
           amount: 1000,
           productIdentity: "1",
-          productName: "nike blazers mid 77",
+          productName: "Foodex",
           mobile: "9808792437"),
       preferences: [PaymentPreference.khalti],
       onSuccess: onSuccess,

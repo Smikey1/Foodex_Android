@@ -270,7 +270,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   SmallText(
-                                    text: "Rs.${searchedFoodList[index].price}",
+                                    text: "\$${searchedFoodList[index].price}",
                                     size: Dimensions.font15 + 3,
                                     color: AppColor.kPrimaryColor,
                                   ),

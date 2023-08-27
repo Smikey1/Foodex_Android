@@ -75,7 +75,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                   BigText(text: widget.receievedFood!.title),
                   const SizedBox(height: 4.0),
                   Text(
-                    "Rs.${widget.receievedFood!.price}",
+                    "\$${widget.receievedFood!.price}",
                     style: const TextStyle(
                       color: Colors.green,
                       fontSize: 15.0,

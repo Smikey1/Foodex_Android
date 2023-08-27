@@ -123,7 +123,7 @@ class _CartScreenState extends State<CartScreen> {
                 color: Colors.black12,
               ),
               child: BigText(
-                text: "Total Rs.$totalAmount",
+                text: "Total \$$totalAmount",
               ),
             ),
             GestureDetector(
@@ -246,7 +246,7 @@ class _CartScreenState extends State<CartScreen> {
                                             children: [
                                               BigText(
                                                   text:
-                                                      'Rs.${int.parse(cartList[index].foodId!.price) * cartList[index].quantity!}',
+                                                      '\$${int.parse(cartList[index].foodId!.price) * cartList[index].quantity!}',
                                                   color: Colors.green),
                                               Container(
                                                 padding: EdgeInsets.only(
@@ -385,7 +385,7 @@ class _CartScreenState extends State<CartScreen> {
                                   children: [
                                     BigText(
                                         text:
-                                            'Rs.${int.parse(cart.foodId!.price) * cart.quantity!}',
+                                            '\$${int.parse(cart.foodId!.price) * cart.quantity!}',
                                         color: Colors.green),
                                     Container(
                                       padding: EdgeInsets.only(

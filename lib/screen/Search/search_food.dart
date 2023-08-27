@@ -265,8 +265,7 @@ class _SearchAllFoodState extends State<SearchAllFood> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   SmallText(
-                                    text:
-                                        "Rs. ${searchedFoodList[index].price}",
+                                    text: "\$${searchedFoodList[index].price}",
                                     size: Dimensions.font17 + 1,
                                     color: AppColor.kPrimaryColor,
                                   ),
