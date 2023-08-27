@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:foodex_app/app/utils/dimension.dart';
-import 'package:foodex_app/dashboard_button.dart';
+import 'package:foodex_app/home_button.dart';
 import 'package:foodex_app/screen/export_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -47,10 +47,8 @@ class _SplashScreenState extends State<SplashScreen>
         Navigator.pushReplacement(context,
             MaterialPageRoute(builder: (context) => const LoginScreen()));
       } else {
-        Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-                builder: (context) => const DashboardButtonScreen()));
+        Navigator.pushReplacement(context,
+            MaterialPageRoute(builder: (context) => const DashboardButton()));
       }
     });
   }

@@ -45,7 +45,7 @@ class _ShakeSensorState extends State<ShakeSensor> {
             themeMode: themeProvider.themeMode,
             theme: MyThemes.lightTheme,
             darkTheme: MyThemes.darkTheme,
-            // home: const BillingScreen(),
+            // home: const WearOsLogin(),
             initialRoute: RouterHelper.splashScreen,
             getPages: RouterHelper.routes,
           );

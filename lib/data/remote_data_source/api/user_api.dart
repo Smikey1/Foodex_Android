@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:foodex_app/app/constraints/api_url.dart';
 import 'package:foodex_app/app/constraints/http_services.dart';
-import 'package:foodex_app/model/user.dart';
+import 'package:foodex_app/model/export_model.dart';
 import 'package:foodex_app/response/login_response.dart';
 import 'package:foodex_app/response/user_response.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -43,7 +43,7 @@ class UserAPI {
       if (response.statusCode == 200) {
         final pref = await SharedPreferences.getInstance();
         pref.setString("token", tokenConstant!);
-        
+
         isLogin = true;
         return isLogin;
       }
@@ -99,8 +99,6 @@ class UserAPI {
   //   }
   //   return isUserUpdated;
   // }
-
-  
 
   Future<bool> updateUserProfileWithImage(User user, File imageFile) async {
     try {
@@ -215,5 +213,53 @@ class UserAPI {
       print(exception);
     }
     return isUserDelete;
+  }
+
+  Future<bool> addToWishlist(String foodId) async {
+    bool isAdded = false;
+    Dio dio = HttpServices().getDioInstance();
+    try {
+      // dio ko response --> server le dine
+      Response response = await dio.post("$wishlistUrl/$foodId",
+          options: Options(headers: {
+            HttpHeaders.authorizationHeader: "Bearer $tokenConstant",
+          }));
+      if (response.statusCode == 200) {
+        isAdded = true;
+        return isAdded;
+      }
+    } catch (exception) {
+      print(exception);
+    }
+    return isAdded;
+  }
+
+  // Wish List
+  Future<List<Food>?> getUserWishlistProduct() async {
+    Dio dio = HttpServices().getDioInstance();
+    List<Food> foodList;
+    try {
+      // dio ko response --> server le dine
+      Response response = await dio.get(wishlistUrl,
+          options: Options(headers: {
+            HttpHeaders.authorizationHeader: "Bearer $tokenConstant",
+          }));
+      // response.data
+
+      final parsed = response.data["data"];
+      print("The food List is:$parsed");
+
+      List<Food> foodList =
+          List<Food>.from(parsed.map((i) => Food.fromJson(i))).toList();
+      loggedInUserWishlist = foodList;
+      // print("The food List is:$foodList!");
+
+      // userResponse = WishlistResponse.fromJson(myResponseData);
+
+      return foodList;
+    } catch (exception) {
+      print(exception);
+    }
+    return null;
   }
 }

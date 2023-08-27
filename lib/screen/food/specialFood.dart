@@ -8,8 +8,9 @@ import 'package:foodex_app/repository/remote_repository/remote_cart_repository.d
 import 'package:foodex_app/response/single_food_response.dart';
 import 'package:foodex_app/screen/export_screen.dart';
 import 'package:foodex_app/widgets/export_widgets.dart';
-import 'package:foodex_app/widgets/newSnackBar.dart';
 import 'package:foodex_app/app/utils/notification.dart';
+import 'package:foodex_app/widgets/snack_bar.dart';
+import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 
 class SpecialFoodDetails extends StatefulWidget {
   final String? receivedFoodId;
@@ -93,9 +94,11 @@ class _SpecialFoodDetailsState extends State<SpecialFoodDetails> {
                             onTap: () {
                               Navigator.pop(context);
                             },
-                            child: const AppIcon(
-                              icon: Icons.arrow_back_ios,
-                              // size: Dimensions.iconSize20,
+                            child: AppIcon(
+                              icon: LineAwesomeIcons.arrow_left,
+                              size: Dimensions.height20 + 20,
+                              iconSize: Dimensions.iconSize20 + 10,
+                              iconColor: AppColor.kSecondaryColor,
                             )),
                         GestureDetector(
                           onTap: () {
@@ -106,20 +109,23 @@ class _SpecialFoodDetailsState extends State<SpecialFoodDetails> {
                           },
                           child: Stack(
                             children: [
-                              const AppIcon(
+                              AppIcon(
                                 icon: Icons.shopping_cart_outlined,
                                 iconColor: AppColor.kSecondaryColor,
+                                size: Dimensions.height20 + 20,
+                                iconSize: Dimensions.iconSize20 + 10,
                               ),
                               isAddedToCart == true
-                                  ? const Positioned(
+                                  ? Positioned(
                                       top: 0,
                                       right: 0,
                                       child: AppIcon(
-                                          icon: Icons.brightness_1,
-                                          backgroundColor: Colors.red,
-                                          iconColor: Colors.red,
-                                          size: 15,
-                                          iconSize: 10))
+                                        icon: Icons.brightness_1,
+                                        backgroundColor: Colors.red,
+                                        iconColor: Colors.red,
+                                        size: Dimensions.height20,
+                                        iconSize: Dimensions.iconSize20,
+                                      ))
                                   : Container(),
                             ],
                           ),
@@ -214,9 +220,9 @@ class _SpecialFoodDetailsState extends State<SpecialFoodDetails> {
                     setState(() {
                       qty > 1
                           ? qty -= 1
-                          : SnackbarWidget().showBlurredSnackBar(
+                          : showSnackbar(
                               context,
-                              "1 Quantity Items Must be selected",
+                              "Quantity  1 Items Must be selected",
                               AppColor.kErrorColor);
                     });
                   },
@@ -269,18 +275,23 @@ class _SpecialFoodDetailsState extends State<SpecialFoodDetails> {
                     notificationMessage:
                         " ${widget.receivedFoodName!} Add to Cart Successfully",
                   );
-                  // ScaffoldMessenger.of(context).showSnackBar(
-                  //   SnackBar(
-                  //       content: const Text("Item added to cart Successfully"),
-                  //       action: SnackBarAction(
-                  //           label: "Undo",
-                  //           onPressed: () {
-                  //             setState(() {
-                  //               deleteProductFromCart(widget.receivedFoodId!);
-                  //               isAddedToCart = false;
-                  //             });
-                  //           })),
-                  // );
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                        backgroundColor: Colors.green,
+                        content: const Text(
+                          "Item added to cart Successfully",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        action: SnackBarAction(
+                            label: "View Cart",
+                            textColor: Colors.white,
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (_) => const CartScreen()));
+                            })),
+                  );
                 },
                 child: BigText(
                   text: 'Rs.${getTotalAmt(foodPrice!, qty)} | Add to cart',

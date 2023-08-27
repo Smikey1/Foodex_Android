@@ -5,7 +5,7 @@ import 'package:foodex_app/app/theme/constants.dart';
 class MyThemes {
   static final darkTheme = ThemeData(
     scaffoldBackgroundColor: AppColor.kContentColorDarkTheme,
-    cardColor: AppColor.kContentColorDarkTheme.withOpacity(0.8),
+    cardColor: AppColor.kContentColorDarkTheme,
 
     colorScheme: const ColorScheme.dark().copyWith(
         primary: AppColor.kPrimaryColor,
@@ -18,7 +18,7 @@ class MyThemes {
 
   static final lightTheme = ThemeData(
       scaffoldBackgroundColor: AppColor.kContentColorLightTheme,
-      cardColor: AppColor.kContentColorLightTheme.withOpacity(0.8),
+      cardColor: AppColor.kContentColorLightTheme,
       colorScheme: const ColorScheme.light().copyWith(
           primary: AppColor.kPrimaryColor,
           secondary: AppColor.kSecondaryColor,

@@ -6,12 +6,12 @@ import 'package:foodex_app/app/constraints/http_services.dart';
 import 'package:foodex_app/response/food_order_response.dart';
 
 class OrderAPI {
-  Future<bool> addFoodToOrder(String foodId, String quantity) async {
+  Future<bool> addFoodToOrder() async {
     bool isFoodAddedToOrder = false;
     Dio dio = HttpServices().getDioInstance();
     try {
       // dio ko response
-      Response response = await dio.post("$orderUrl/insert/$foodId/$quantity",
+      Response response = await dio.post("$orderUrl/insert",
           options: Options(headers: {
             HttpHeaders.authorizationHeader: "Bearer $tokenConstant",
           }));
@@ -70,5 +70,27 @@ class OrderAPI {
       print(exception);
     }
     return isOrderDelete;
+  }
+
+  Future<bool> cancelOrder(String orderId) async {
+    bool isOrderCancelled = false;
+    Dio dio = HttpServices().getDioInstance();
+    try {
+      // dio ko response
+      Response response = await dio.put("$orderUrl/update/$orderId/Cancelled",
+          options: Options(headers: {
+            HttpHeaders.authorizationHeader: "Bearer $tokenConstant",
+          }));
+
+      final OrderResponse orderResponseData =
+          OrderResponse.fromJson(response.data);
+      if (orderResponseData.success == true) {
+        isOrderCancelled = true;
+        return isOrderCancelled;
+      }
+    } catch (exception) {
+      print(exception);
+    }
+    return isOrderCancelled;
   }
 }

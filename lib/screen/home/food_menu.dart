@@ -6,8 +6,8 @@ import 'package:foodex_app/repository/remote_repository/export_remote_repo.dart'
 import 'package:foodex_app/response/food_category_response.dart';
 import 'package:foodex_app/response/food_response.dart';
 import 'package:foodex_app/screen/export_screen.dart';
-import 'package:foodex_app/screen/food/category/category.dart';
 import 'package:foodex_app/screen/food/specialFood.dart';
+import 'package:foodex_app/screen/food_category/screen/category_main.dart';
 
 import '../../widgets/export_widgets.dart';
 
@@ -68,6 +68,7 @@ class SLIDER extends State<FoodListScreen> {
       children: [
         // ======================== Slide Section Start ========================
         // -------------------------Title --------------------------------------
+        // address
         Container(
           margin: EdgeInsets.only(left: Dimensions.width30),
           alignment: Alignment.topLeft,
@@ -169,7 +170,7 @@ class SLIDER extends State<FoodListScreen> {
                             context,
                             MaterialPageRoute(
                                 builder: (_) => SpecialFoodDetails(
-                                      receivedFoodId: foodList[index].id,
+                                      receivedFoodId: foodList[index].id!,
                                       receivedFoodPrice: foodList[index].price,
                                       receivedFoodName: foodList[index].title,
                                     )));
@@ -274,7 +275,7 @@ class SLIDER extends State<FoodListScreen> {
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             List<FoodCategory>? categoryList = snapshot.data!.data!;
-            // print("The Category: -->${categoryList[-1]}");
+            print("The Category: -->${categoryList[0]}");
             return SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Container(
@@ -295,9 +296,9 @@ class SLIDER extends State<FoodListScreen> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => FoodCategoryScreen(
-                                          recievedCategoryId:
-                                              categoryList[index].id!,
+                                    builder: (context) => CategoryScreen(
+                                          recievedFoodCategoryId:
+                                              categoryList[index].id,
                                           recievedFoodCategoryTitle:
                                               categoryList[index]
                                                   .foodCategoryTitle,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foodex_app/repository/remote_repository/export_remote_repo.dart';
-import 'package:foodex_app/wearOs/screen/wearOs_profile.dart';
-import 'package:foodex_app/wearOs/widget/wearOsNotification.dart';
+import 'package:foodex_app/wearOs/screen/wearOs_dashboard.dart';
+
 import 'package:foodex_app/wearOs/widget/wearOs_button.dart';
 import 'package:foodex_app/wearOs/widget/wearOs_input_field.dart';
 import 'package:foodex_app/wearOs/widget/wearOs_password_field.dart';
@@ -38,9 +38,9 @@ class _WearOsLoginState extends State<WearOsLogin> {
 
     if (isNewUserLogin == true) {
       // Success Login
-       WearOsMyNotification.showNotification(
-          notificationTitle: "Login Success",
-          notificationMessage: "Login Successfully");
+      // WearOsMyNotification.showNotification(
+      //     notificationTitle: "Login Success",
+      //     notificationMessage: "Login Successfully");
       wearOsShowSnackbar(
         context,
         "Login Success!",
@@ -49,7 +49,7 @@ class _WearOsLoginState extends State<WearOsLogin> {
       _setDataToSharedPre(
           int.parse(_phoneController.text), _passwordController.text);
       Navigator.push(context,
-          MaterialPageRoute(builder: (context) => const WearOsProfileScreen()));
+          MaterialPageRoute(builder: (context) => const WearOsDashboard()));
     } else {
       // Login Failed
       wearOsShowSnackbar(context, "Invalid Credentials!", Colors.red);

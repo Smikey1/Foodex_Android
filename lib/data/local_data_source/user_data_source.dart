@@ -14,8 +14,8 @@ class UserDataSource {
       return Future.value(0);
     }
   }
-// Get user data
 
+// Get user data
   Future<List<User>> getUser() async {
     try {
       return Future.value(objectBoxInstance.getAllUser());
@@ -30,6 +30,15 @@ class UserDataSource {
       return Future.value(objectBoxInstance.loginUser(phone, password));
     } catch (e) {
       throw Exception(null);
+    }
+  }
+
+  // Offline Login
+  Future addOfflineUser(String phone, String password, User user) async {
+    try {
+      return objectBoxInstance.addAllUser(phone, password, user);
+    } catch (e) {
+      return false;
     }
   }
 }

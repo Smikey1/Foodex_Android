@@ -3,9 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:foodex_app/app/theme/constants.dart';
 import 'package:flutter_verification_code/flutter_verification_code.dart';
-import 'package:foodex_app/screen/export_screen.dart';
-
-import '../export_screen.dart';
+import 'package:foodex_app/dashboard_button.dart';
+import 'package:foodex_app/home_button.dart';
 
 class VerificationScreen extends StatefulWidget {
   const VerificationScreen({Key? key}) : super(key: key);
@@ -50,7 +49,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
     setState(() {
       _isLoading = true;
       Navigator.of(context).push(MaterialPageRoute(
-        builder: (_) => const DashBoardScreen(),
+        builder: (_) => const DashboardButton(),
       ));
     });
 

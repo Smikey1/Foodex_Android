@@ -4,7 +4,6 @@ export './login_register/signupScreen.dart';
 export './verification/verification.dart';
 
 // Dashboard Screen Export
-export 'package:foodex_app/dashboard.dart';
 
 // Home Page Screen export
 export 'home/home_page.dart';

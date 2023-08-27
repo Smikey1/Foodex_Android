@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:foodex_app/app/utils/dimension.dart';
 import 'package:foodex_app/components/export_component.dart';
 import 'package:foodex_app/model/export_model.dart';
+import 'package:foodex_app/repository/local_repository/local_user_repo.dart';
 import 'package:foodex_app/repository/remote_repository/remote_user_repository.dart';
 import 'package:foodex_app/widgets/export_widgets.dart';
 import 'package:foodex_app/widgets/snack_bar.dart';
+import 'package:motion_toast/motion_toast.dart';
 
 import '../export_screen.dart';
 
@@ -18,40 +20,46 @@ class SignUpScreen extends StatefulWidget {
 class _SignUpScreenState extends State<SignUpScreen> {
   // ----------------------- Global key & Controller ---------------------------
   final _formKey = GlobalKey<FormState>();
-  final _emailController = TextEditingController(text: 'hira@gmail.com');
-  final _phoneController = TextEditingController(text: '9808792437');
-  final _passwordController = TextEditingController(text: 'Hira@123');
-  final _fullNameController = TextEditingController(text: 'Hira Datta');
+  final _emailController = TextEditingController();
+  final _phoneController = TextEditingController();
+  final _passwordController = TextEditingController();
+  final _fullNameController = TextEditingController();
   final _dobController = TextEditingController();
   final _avatarController = TextEditingController();
 
   // ------------------------- User data save Function in Object Box-------------------------
-  // _saveUser() async {
-  //   User user = User(_emailController.text, int.parse(_phoneController.text),
-  //       _passwordController.text);
+  _saveUser() async {
+    User user = User(
+      _fullNameController.text,
+      _emailController.text,
+      _dobController.text,
+      _phoneController.text,
+      _passwordController.text,
+      _avatarController.text,
+    );
 
-  //   int status = await UserRepositoryImplementation().addUser(user);
-  //   _showMessage(status);
-  // }
+    int status = await UserRepositoryImplementation().addUser(user);
+    _showMessage(status);
+  }
 
   // ------------------ Motion toast for success or fail -----------------------
-  // _showMessage(int status) {
-  //   if (status > 0) {
-  //     MotionToast.success(
-  //       description: const Text('Successfully Register'),
-  //       onClose: () {
-  //         Navigator.of(context).push(
-  //           MaterialPageRoute(
-  //             builder: (_) => const VerificationScreen(),
-  //           ),
-  //         );
-  //       },
-  //     ).show(context);
-  //   } else {
-  //     MotionToast.error(description: const Text('Fail to register'))
-  //         .show(context);
-  //   }
-  // }
+  _showMessage(int status) {
+    if (status > 0) {
+      MotionToast.success(
+        description: const Text('Successfully Register'),
+        onClose: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (_) => const VerificationScreen(),
+            ),
+          );
+        },
+      ).show(context);
+    } else {
+      MotionToast.error(description: const Text('Fail to register'))
+          .show(context);
+    }
+  }
 
   // ------------------------ Register using API ------------------------------
   _registerUser(User user) async {
@@ -163,6 +171,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             press: () {
                               if (_formKey.currentState!.validate()) {
                                 // _saveUser();
+
                                 final User user = User(
                                   _fullNameController.text,
                                   _emailController.text,
@@ -172,6 +181,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                   _avatarController.text,
                                 );
                                 _registerUser(user);
+
+                                // _saveUser();
                               }
                             },
                           ),

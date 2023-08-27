@@ -27,7 +27,9 @@ class AppIcon extends StatelessWidget {
           color:
               backgroundColor == Colors.white ? Colors.white : backgroundColor),
       child: Icon(icon,
-          color: iconColor == Color(0xFF756d54) ? Color(0xFF756d54) : iconColor ,
+          color: iconColor == const Color(0xFF756d54)
+              ? const Color(0xFF756d54)
+              : iconColor,
           // size: iconSize,
           size: iconSize == 0 ? Dimensions.iconSize20 : iconSize),
     );

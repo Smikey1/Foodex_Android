@@ -63,7 +63,7 @@ class _TotalPriceState extends State<TotalPrice> {
   Widget build(BuildContext context) {
     return Card(
       color: Theme.of(context).scaffoldBackgroundColor,
-      elevation: Dimensions.height10,
+      elevation: Dimensions.height10 - 7,
       child: Padding(
         padding: EdgeInsets.all(Dimensions.height10),
         child: Column(
@@ -101,7 +101,10 @@ class _TotalPriceState extends State<TotalPrice> {
               ],
             ),
             SizedBox(
-              height: Dimensions.height15,
+              height: Dimensions.height10,
+            ),
+            const Divider(
+              thickness: 2,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

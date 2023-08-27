@@ -28,12 +28,12 @@ class _CategoryScreenState extends State<FoodCategoryScreen> {
   @override
   void initState() {
     categoryId = widget.recievedCategoryId;
-    print("The recieved category Id:-->$categoryId");
     super.initState();
   }
 
-  String imageUrl =
-      "https://assets-api.kathmandupost.com/thumb.php?src=https://assets-cdn.kathmandupost.com/uploads/source/news/2022/opinion/shutterstock1358850531-1642092669.jpg&w=900&height=601";
+  // String imageUrl =
+  //     "https://assets-api.kathmandupost.com/thumb.php?src=https://assets-cdn.kathmandupost.com/uploads/source/news/2022/opinion/shutterstock1358850531-1642092669.jpg&w=900&height=601";
+
   List<Food> originalFoodList = [];
   List<Food> searchedFoodList = [];
   final TextEditingController _searchController = TextEditingController();

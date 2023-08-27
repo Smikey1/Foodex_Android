@@ -20,7 +20,7 @@ class _CartItemScreenState extends State<CartItemScreen> {
   Widget build(BuildContext context) {
     return Card(
       color: Theme.of(context).scaffoldBackgroundColor,
-      elevation: Dimensions.height10,
+      elevation: Dimensions.height10 - 7,
       child: Padding(
         padding: EdgeInsets.all(Dimensions.height10),
         child: SingleChildScrollView(
@@ -53,52 +53,64 @@ class _CartItemScreenState extends State<CartItemScreen> {
             cartList = snapshot.data!.data!;
             return SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-              child: Center(
-                child: Row(
-                  children: [
-                    for (int index = 0; index < cartList.length; index++)
-                      Column(children: [
-                        //----------------------- Image Section ------------------------
-                        Container(
-                          width: Dimensions.width100,
-                          height: Dimensions.height100,
-                          decoration: BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.circular(Dimensions.radius20),
-                              // color: AppColor.kPrimaryColor,
-                              image: DecorationImage(
-                                  fit: BoxFit.cover,
-                                  image: NetworkImage(
-                                      cartList[index].foodId!.foodPhoto[0]))),
-                        ),
+              child: Row(
+                children: [
+                  for (int index = 0; index < cartList.length; index++)
+                    Padding(
+                      padding: const EdgeInsets.all(7.0),
+                      child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            //----------------------- Image Section ------------------------
+                            Container(
+                              width: Dimensions.width100,
+                              height: Dimensions.height100,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(
+                                      Dimensions.radius20),
+                                  // color: AppColor.kPrimaryColor,
+                                  image: DecorationImage(
+                                      fit: BoxFit.cover,
+                                      image: NetworkImage(cartList[index]
+                                          .foodId!
+                                          .foodPhoto[0]))),
+                            ),
 
-                        //------------------- Text and icon section --------------------
-                        Padding(
-                          padding: EdgeInsets.only(
-                              left: Dimensions.width10,
-                              right: Dimensions.width10),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              BigText(
-                                text: cartList[index].foodId!.title,
-                                fontWeight: FontWeight.normal,
-                                size: Dimensions.font15,
+                            //------------------- Text and icon section --------------------
+                            Padding(
+                              padding: EdgeInsets.only(
+                                  left: Dimensions.width10,
+                                  right: Dimensions.width10),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  SizedBox(
+                                    width: Dimensions.width100,
+                                    child: Text(
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                      cartList[index].foodId!.title,
+                                      style: TextStyle(
+                                          fontSize: Dimensions.font15,
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                  ),
+                                  BigText(
+                                    text:
+                                        'Rs.${int.parse(cartList[index].foodId!.price) * cartList[index].quantity!}',
+                                    size: Dimensions.font15,
+                                    fontWeight: FontWeight.w500,
+                                    color: AppColor.kPrimaryColor,
+                                    // color: AppColor.kPrimaryColor,
+                                  ),
+                                ],
                               ),
-                              BigText(
-                                text:
-                                    'Rs.${int.parse(cartList[index].foodId!.price) * cartList[index].quantity!}',
-                                size: Dimensions.font15,
-                                fontWeight: FontWeight.w500,
-                                color: AppColor.kPrimaryColor,
-                                // color: AppColor.kPrimaryColor,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ]),
-                  ],
-                ),
+                            ),
+                          ]),
+                    ),
+                ],
               ),
             );
           } else {

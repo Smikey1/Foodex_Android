@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:foodex_app/app/constraints/permissions.dart';
 import 'package:foodex_app/app/theme/constants.dart';
@@ -9,6 +10,7 @@ import 'package:foodex_app/repository/remote_repository/remote_user_repository.d
 import 'package:foodex_app/response/user_response.dart';
 import 'package:foodex_app/screen/profile/widget/input_field.dart';
 import 'package:foodex_app/widgets/export_widgets.dart';
+import 'package:foodex_app/widgets/snack_bar.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
@@ -34,12 +36,12 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
   Widget showUploadedImage(File? pickedImageFile) {
     return Card(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20.0),
-        side: const BorderSide(color: Colors.purple, width: 3.0),
+        borderRadius: BorderRadius.circular(Dimensions.radius20),
+        side: BorderSide(color: Colors.purple, width: Dimensions.width2 + 1),
       ),
       color: Colors.red,
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(20.0),
+        borderRadius: BorderRadius.circular(Dimensions.radius20),
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: Column(
@@ -75,16 +77,12 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
   }
 
   void showAlertDialog(BuildContext context) {
-    showDialog(
+    showModalBottomSheet(
         context: context,
-        barrierDismissible: true,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         builder: (BuildContext context) {
-          return Dialog(
-            backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-            insetPadding: const EdgeInsets.all(12),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10),
-            ),
+          return Padding(
+            padding: EdgeInsets.all(Dimensions.height20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -108,182 +106,151 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             User? userData = snapshot.data!.data!;
-            return Container(
-                padding: EdgeInsets.all(Dimensions.height10),
-                child: Column(children: [
-                  Container(
-                    padding: EdgeInsets.only(top: Dimensions.height25),
-                    color: Theme.of(context).scaffoldBackgroundColor,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Update Profile',
-                          style: TextStyle(
-                            // color: Colors.white,
-                            fontSize: Dimensions.font26,
-                            fontWeight: FontWeight.bold,
+
+            return Column(children: [
+              Center(
+                  child: Container(
+                      padding: EdgeInsets.all(Dimensions.height20),
+                      child: Column(children: [
+                        Stack(
+                          children: [
+                            SizedBox(
+                              width: Dimensions.width30 * 4,
+                              height: Dimensions.height40 * 3,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(
+                                    Dimensions.radius50 * 2),
+                                child: uploadImage == null
+                                    ? Image.network(
+                                        userData.avatar!,
+                                        fit: BoxFit.cover,
+                                        width: double.maxFinite,
+                                      )
+                                    : Image.file(
+                                        uploadImage!,
+                                        fit: BoxFit.cover,
+                                        width: double.maxFinite,
+                                      ),
+                              ),
+                            ),
+                            Positioned(
+                              bottom: 0,
+                              right: 0,
+                              child: Container(
+                                height: Dimensions.height35,
+                                width: Dimensions.width35,
+                                decoration: BoxDecoration(
+                                    color: AppColor.kSecondaryColor,
+                                    borderRadius: BorderRadius.circular(
+                                        Dimensions.radius50 * 2)),
+                                child: GestureDetector(
+                                  onTap: () {
+                                    showAlertDialog(context);
+                                  },
+                                  child: Icon(
+                                    LineAwesomeIcons.camera,
+                                    color: Colors.black,
+                                    size: Dimensions.iconSize20,
+                                  ),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          height: Dimensions.height20,
+                        ),
+                        Form(
+                          key: _formKey,
+                          child: Column(
+                            children: [
+                              InputField(
+                                controller: _fullNameController,
+                                hintText: 'Name',
+                                prefixIcon: LineAwesomeIcons.user,
+                              ),
+                              SizedBox(
+                                height: Dimensions.height20,
+                              ),
+                              InputField(
+                                controller: _emailController,
+                                hintText: 'Email',
+                                readOnly: true,
+                                prefixIcon: LineAwesomeIcons.envelope,
+                              ),
+                              SizedBox(
+                                height: Dimensions.height20,
+                              ),
+                              InputField(
+                                controller: _phoneController,
+                                readOnly: true,
+                                hintText: 'Phone',
+                                prefixIcon: LineAwesomeIcons.phone,
+                              ),
+                              SizedBox(
+                                height: Dimensions.height20,
+                              ),
+                              InputField(
+                                controller: _dobController,
+                                hintText: 'Date of Birth',
+                                prefixIcon: LineAwesomeIcons.calendar,
+                                onTap: () async {
+                                  DateTime? pickedDate = await showDatePicker(
+                                      context: context,
+                                      initialDate: DateTime.now(),
+                                      firstDate: DateTime(1950),
+                                      //DateTime.now() - not to allow to choose before today.
+                                      lastDate: DateTime(2100));
+
+                                  if (pickedDate != null) {
+                                    //pickedDate output format => 2021-03-10 00:00:00.000
+                                    String formattedDate =
+                                        DateFormat('yyyy-MM-dd')
+                                            .format(pickedDate);
+                                    //formatted date output using intl package =>  2021-03-16
+                                    setState(() {
+                                      _dobController.text =
+                                          formattedDate; //set output date to TextField value.
+                                    });
+                                  } else {}
+                                },
+                              ),
+                              SizedBox(
+                                height: Dimensions.height20,
+                              ),
+                              PressButton(
+                                text: 'Update',
+                                press: () async {
+                                  User user = User(
+                                    _fullNameController.text,
+                                    _emailController.text,
+                                    _dobController.text,
+                                    _phoneController.text,
+                                    "",
+                                    "",
+                                  );
+                                  bool result = false;
+                                  uploadImage == null
+                                      ? result = await UserRepository()
+                                          .updateUserProfile(user)
+                                      : result = await UserRepository()
+                                          .updateUserProfileWithImage(
+                                              user, uploadImage!);
+                                  if (result == true) {
+                                    showSuccessDialog(context);
+                                  } else {
+                                    showSnackbar(
+                                        context,
+                                        "Failed to update profile!",
+                                        AppColor.kErrorColor);
+                                  }
+                                },
+                              ),
+                            ],
                           ),
                         ),
-                      ],
-                    ),
-                  ),
-                  const Divider(),
-                  Expanded(
-                      child: SingleChildScrollView(
-                          child: Center(
-                              child: Container(
-                                  padding: EdgeInsets.all(Dimensions.height20),
-                                  child: Column(children: [
-                                    Stack(
-                                      children: [
-                                        SizedBox(
-                                          width: Dimensions.width30 * 4,
-                                          height: Dimensions.height40 * 3,
-                                          child: ClipRRect(
-                                            borderRadius: BorderRadius.circular(
-                                                Dimensions.radius50 * 2),
-                                            child: uploadImage == null
-                                                ? Image.network(
-                                                    userData.avatar!,
-                                                    fit: BoxFit.cover,
-                                                    width: double.maxFinite,
-                                                  )
-                                                : Image.file(
-                                                    uploadImage!,
-                                                    fit: BoxFit.cover,
-                                                    width: double.maxFinite,
-                                                  ),
-                                          ),
-                                        ),
-                                        Positioned(
-                                          bottom: 0,
-                                          right: 0,
-                                          child: Container(
-                                            height: Dimensions.height35,
-                                            width: Dimensions.width35,
-                                            decoration: BoxDecoration(
-                                                color: AppColor.kSecondaryColor,
-                                                borderRadius:
-                                                    BorderRadius.circular(
-                                                        Dimensions.radius50 *
-                                                            2)),
-                                            child: GestureDetector(
-                                              onTap: () {
-                                                // showAlertDialog(context);
-                                                // camera(context);
-                                              },
-                                              child: Icon(
-                                                LineAwesomeIcons.camera,
-                                                color: Colors.black,
-                                                size: Dimensions.iconSize20,
-                                              ),
-                                            ),
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                    SizedBox(
-                                      height: Dimensions.height20,
-                                    ),
-                                    Form(
-                                      key: _formKey,
-                                      child: Column(
-                                        children: [
-                                          InputField(
-                                            controller: _fullNameController,
-                                            hintText: 'Name',
-                                            prefixIcon: LineAwesomeIcons.user,
-                                          ),
-                                          SizedBox(
-                                            height: Dimensions.height20,
-                                          ),
-                                          InputField(
-                                            controller: _emailController,
-                                            hintText: 'Email',
-                                            readOnly: true,
-                                            prefixIcon:
-                                                LineAwesomeIcons.envelope,
-                                          ),
-                                          SizedBox(
-                                            height: Dimensions.height20,
-                                          ),
-                                          InputField(
-                                            controller: _phoneController,
-                                            readOnly: true,
-                                            hintText: 'Phone',
-                                            prefixIcon: LineAwesomeIcons.phone,
-                                          ),
-                                          SizedBox(
-                                            height: Dimensions.height20,
-                                          ),
-                                          InputField(
-                                            controller: _dobController,
-                                            hintText: 'Date of Birth',
-                                            prefixIcon:
-                                                LineAwesomeIcons.calendar,
-                                            onTap: () async {
-                                              DateTime? pickedDate =
-                                                  await showDatePicker(
-                                                      context: context,
-                                                      initialDate:
-                                                          DateTime.now(),
-                                                      firstDate: DateTime(1950),
-                                                      //DateTime.now() - not to allow to choose before today.
-                                                      lastDate: DateTime(2100));
-
-                                              if (pickedDate != null) {
-                                                print(
-                                                    pickedDate); //pickedDate output format => 2021-03-10 00:00:00.000
-                                                String formattedDate =
-                                                    DateFormat('yyyy-MM-dd')
-                                                        .format(pickedDate);
-                                                print(
-                                                    formattedDate); //formatted date output using intl package =>  2021-03-16
-                                                setState(() {
-                                                  _dobController.text =
-                                                      formattedDate; //set output date to TextField value.
-                                                });
-                                              } else {}
-                                            },
-                                          ),
-                                          SizedBox(
-                                            height: Dimensions.height20,
-                                          ),
-                                          PressButton(
-                                            text: 'Update',
-                                            press: () async {
-                                              User user = User(
-                                                  _fullNameController.text,
-                                                  _emailController.text,
-                                                  _dobController.text,
-                                                  _phoneController.text,
-                                                  "",
-                                                  "");
-                                              bool result = false;
-                                              uploadImage == null
-                                                  ? result =
-                                                      await UserRepository()
-                                                          .updateUserProfile(
-                                                              user)
-                                                  : result = await UserRepository()
-                                                      .updateUserProfileWithImage(
-                                                          user, uploadImage!);
-                                              if (result == true) {
-                                                ShowToast.displaySuccessToast(
-                                                    context, "Profile Updated");
-                                              } else {
-                                                ShowToast.displayErrorToast(
-                                                    context,
-                                                    "Failed to update");
-                                              }
-                                            },
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ])))))
-                ]));
+                      ])))
+            ]);
           } else {
             return const Center(
               child: CircularProgressIndicator(),
@@ -295,6 +262,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
   @override
   void initState() {
     setInitialData();
+    setUserProfile();
     super.initState();
   }
 
@@ -308,58 +276,76 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: setUserProfile());
-  }
-
-  Widget camera(BuildContext context) {
     return Scaffold(
-      body: InkWell(
-        onTap: () {
-          showModalBottomSheet(
-            backgroundColor: Colors.grey[300],
-            context: context,
-            isScrollControlled: true,
-            shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.vertical(
-                top: Radius.circular(20),
-              ),
-            ),
-            builder: (context) => Padding(
-              padding: const EdgeInsets.all(20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  ElevatedButton.icon(
-                    onPressed: () {
-                      loadImage(ImageSource.camera);
+        body: SafeArea(
+      child: Padding(
+        padding: EdgeInsets.all(Dimensions.height10),
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                GestureDetector(
+                    onTap: () {
                       Navigator.pop(context);
                     },
-                    icon: const Icon(Icons.camera),
-                    label: const Text('Camera'),
+                    child: AppIcon(
+                      backgroundColor:
+                          Theme.of(context).scaffoldBackgroundColor,
+                      icon: Icons.arrow_back_ios,
+                      iconColor: Theme.of(context).colorScheme.onPrimary,
+                    )),
+                Container(
+                  color: Theme.of(context).scaffoldBackgroundColor,
+                  child: Text(
+                    'Update Profile',
+                    style: TextStyle(
+                      // color: Colors.white,
+                      fontSize: Dimensions.font26,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                  ElevatedButton.icon(
-                    onPressed: () {
-                      loadImage(ImageSource.gallery);
-                      Navigator.pop(context);
-                    },
-                    icon: const Icon(Icons.image),
-                    label: const Text('Gallery'),
-                  )
-                ],
-              ),
+                ),
+                Container(
+                  color: Theme.of(context).scaffoldBackgroundColor,
+                  child: Center(
+                    child: Text(
+                      'Hell',
+                      style: TextStyle(
+                        color: Theme.of(context).scaffoldBackgroundColor,
+                        fontSize: Dimensions.font26,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
-          );
-        },
-        child: const SizedBox(
-          height: 200,
-          width: double.infinity - 500,
-          // child: _img == null
-          //     ? Image.asset(
-          //         'assets/images/upload.jpeg',
-          //       )
-          //     : Image.file(_img!),
+            const Divider(),
+            Expanded(child: SingleChildScrollView(child: setUserProfile())),
+          ],
         ),
       ),
-    );
+    ));
+  }
+
+  void showSuccessDialog(BuildContext context) {
+    AwesomeDialog(
+      width: Dimensions.width100 * 4,
+      context: context,
+      dialogType: DialogType.SUCCES,
+      animType: AnimType.TOPSLIDE,
+      showCloseIcon: true,
+      descTextStyle: TextStyle(fontSize: Dimensions.font15),
+      titleTextStyle: TextStyle(fontSize: Dimensions.font20),
+      buttonsTextStyle:
+          TextStyle(fontSize: Dimensions.font20, color: Colors.white),
+
+      title: "Profile Updated",
+      autoHide: const Duration(seconds: 5),
+      // btnCancelOnPress: () {
+
+      btnOkOnPress: () async {},
+    ).show();
   }
 }

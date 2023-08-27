@@ -73,7 +73,12 @@ class _OurFoodMenuState extends State<OurFoodMenu> {
                           // OR
                           Navigator.pop(context);
                         },
-                        child: const AppIcon(icon: Icons.clear)),
+                        child: AppIcon(
+                          icon: Icons.clear,
+                          size: Dimensions.height20 + 20,
+                          iconSize: Dimensions.iconSize20 + 10,
+                          iconColor: AppColor.kSecondaryColor,
+                        )),
                     const Spacer(),
                     GestureDetector(
                       onTap: () {
@@ -84,20 +89,23 @@ class _OurFoodMenuState extends State<OurFoodMenu> {
                       },
                       child: Stack(
                         children: [
-                          const AppIcon(
+                          AppIcon(
                             icon: Icons.shopping_cart_outlined,
                             iconColor: AppColor.kSecondaryColor,
+                            size: Dimensions.height20 + 20,
+                            iconSize: Dimensions.iconSize20 + 10,
                           ),
                           isAddedToCart == true
-                              ? const Positioned(
+                              ? Positioned(
                                   top: 0,
                                   right: 0,
                                   child: AppIcon(
-                                      icon: Icons.brightness_1,
-                                      backgroundColor: Colors.red,
-                                      iconColor: Colors.red,
-                                      size: 15,
-                                      iconSize: 10))
+                                    icon: Icons.brightness_1,
+                                    backgroundColor: Colors.red,
+                                    iconColor: Colors.red,
+                                    size: Dimensions.height20,
+                                    iconSize: Dimensions.iconSize20,
+                                  ))
                               : Container(),
                         ],
                       ),
@@ -267,19 +275,23 @@ class _OurFoodMenuState extends State<OurFoodMenu> {
                     setState(() {
                       isAddedToCart = result != null ? true : false;
                     });
-                    // ScaffoldMessenger.of(context).showSnackBar(
-                    //   SnackBar(
-                    //       content:
-                    //           const Text("Item added to cart Successfully"),
-                    //       action: SnackBarAction(
-                    //           label: "Undo",
-                    //           onPressed: () {
-                    //             setState(() {
-                    //               deleteProductFromCart(widget.receivedFoodId!);
-                    //               isAddedToCart = false;
-                    //             });
-                    //           })),
-                    // );
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                          backgroundColor: Colors.green,
+                          content: const Text(
+                            "Item added to cart Successfully",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          action: SnackBarAction(
+                              label: "View Cart",
+                              textColor: Colors.white,
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (_) => const CartScreen()));
+                              })),
+                    );
                   },
                   child: BigText(
                     text: 'Rs.${getTotalAmt(foodPrice!, qty)} | Add to cart',

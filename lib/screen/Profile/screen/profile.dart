@@ -5,10 +5,12 @@ import 'package:foodex_app/app/utils/dimension.dart';
 import 'package:foodex_app/model/export_model.dart';
 import 'package:foodex_app/repository/remote_repository/remote_user_repository.dart';
 import 'package:foodex_app/response/user_response.dart';
+import 'package:foodex_app/screen/export_screen.dart';
 import 'package:foodex_app/screen/profile/screen/change_password.dart';
 import 'package:foodex_app/screen/profile/screen/profile_info.dart';
-import 'package:foodex_app/screen/export_screen.dart';
 import 'package:foodex_app/screen/profile/screen/update_profile.dart';
+import 'package:foodex_app/screen/skleton.dart/screen/profile_skleton.dart';
+import 'package:foodex_app/screen/wishList/screen/wish_list.dart';
 import 'package:foodex_app/widgets/export_widgets.dart';
 import 'package:foodex_app/widgets/snack_bar.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
@@ -53,6 +55,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               // SizedBox(height: Dimensions.height20),
               SizedBox(
                 width: Dimensions.width100 * 2,
+                height: Dimensions.height45,
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.push(
@@ -64,7 +67,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       backgroundColor: AppColor.kSecondaryColor,
                       side: BorderSide.none,
                       shape: const StadiumBorder()),
-                  child: const Text('Edit Profile'),
+                  child: Text(
+                    'Edit Profile',
+                    style: TextStyle(fontSize: Dimensions.font15),
+                  ),
                 ),
               ),
               SizedBox(height: Dimensions.height20),
@@ -81,6 +87,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   icon: LineAwesomeIcons.user_circle,
                 ),
               ),
+              SizedBox(height: Dimensions.height10 - 7),
               GestureDetector(
                 onTap: () {
                   Navigator.push(
@@ -95,16 +102,27 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   endIcon: true,
                 ),
               ),
+              SizedBox(height: Dimensions.height10 - 7),
               const ProfileMenuWidget(
                 title: "Address",
                 icon: LineAwesomeIcons.map_marker,
               ),
-              const ProfileMenuWidget(
-                title: "favorite",
-                bgColor: AppColor.kErrorColor,
-                iconColor: AppColor.kErrorColor,
-                icon: LineAwesomeIcons.heart,
+              SizedBox(height: Dimensions.height10 - 7),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const WishListScreen()));
+                },
+                child: const ProfileMenuWidget(
+                  title: "favorite",
+                  bgColor: AppColor.kErrorColor,
+                  iconColor: AppColor.kErrorColor,
+                  icon: LineAwesomeIcons.heart,
+                ),
               ),
+
               GestureDetector(
                 onTap: () {
                   Navigator.push(
@@ -118,12 +136,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   icon: LineAwesomeIcons.history,
                 ),
               ),
-              ProfileMenuWidget(
-                title: "Dark Mode",
-                iconColor: isDark ? Colors.white : Colors.black,
-                icon: isDark ? LineAwesomeIcons.sun : LineAwesomeIcons.moon,
-                endIcon: false,
+              SizedBox(height: Dimensions.height10 - 7),
+              GestureDetector(
+                onTap: () {
+                  const ChangeThemeButtonWidget();
+                },
+                child: ProfileMenuWidget(
+                  title: "Dark Mode",
+                  iconColor: isDark ? Colors.white : Colors.black,
+                  icon: isDark ? LineAwesomeIcons.sun : LineAwesomeIcons.moon,
+                  endIcon: false,
+                ),
               ),
+              SizedBox(height: Dimensions.height10 - 7),
               const Divider(),
               GestureDetector(
                 onTap: () async {
@@ -201,8 +226,30 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ],
             );
           } else {
-            return const Center(
-              child: CircularProgressIndicator(),
+            return Center(
+              child: Column(
+                children: [
+                  ProfileSkelton(
+                    width: Dimensions.width30 * 4,
+                    height: Dimensions.height40 * 3,
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  const ProfileSkelton(
+                    width: 150,
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  const ProfileSkelton(
+                    width: 100,
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                ],
+              ),
             );
           }
         });
@@ -217,14 +264,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       title: "Log Out",
       desc: "Are you sure you want to log out?",
       autoHide: const Duration(seconds: 3),
-      btnCancelOnPress: () {
-        Navigator.of(context).pop();
-        // Navigator.of(context).pushReplacement(
-        //   MaterialPageRoute(
-        //     builder: (_) => const ProfileScreen(),
-        //   ),
-        // );
-      },
+      btnCancelOnPress: () {},
       btnOkOnPress: () async {
         SharedPreferences pref = await SharedPreferences.getInstance();
         showSnackbar(context, "Logout Successfully!", Colors.orange);

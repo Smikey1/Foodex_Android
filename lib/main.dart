@@ -5,6 +5,8 @@ import 'package:foodex_app/app/theme/constants.dart';
 import 'package:foodex_app/helper/objectbox.dart';
 import 'package:foodex_app/sensor/shake_sensor/shake_sensor.dart';
 import 'package:foodex_app/state/objectbox_state.dart';
+import 'package:khalti_flutter/khalti_flutter.dart';
+import 'dart:async';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,11 +39,31 @@ Future<void> main() async {
       .then((value) => runApp(const MyApp()));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
   Widget build(BuildContext context) {
-    return const ShakeSensor();
+    return KhaltiScope(
+        enabledDebugging: true,
+        publicKey: "test_public_key_bcbec49746364b548f9cf8ab6f0e097d",
+        builder: (context, navigatorKey) {
+          return MaterialApp(
+              navigatorKey: navigatorKey,
+              supportedLocales: const [
+                Locale('en', 'US'),
+                Locale('ne', 'NP'),
+              ],
+              localizationsDelegates: const [
+                KhaltiLocalizations.delegate,
+              ],
+              debugShowCheckedModeBanner: false,
+              home: const ShakeSensor());
+        });
   }
 }

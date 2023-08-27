@@ -4,7 +4,6 @@ import 'package:foodex_app/app/constraints/permissions.dart';
 import 'package:foodex_app/app/theme/constants.dart';
 import 'package:foodex_app/app/utils/dimension.dart';
 import 'package:foodex_app/app/utils/notification.dart';
-import 'package:foodex_app/dashboard_button.dart';
 import 'package:foodex_app/model/order.dart';
 import 'package:foodex_app/repository/remote_repository/food_order_repository.dart';
 import 'package:foodex_app/response/food_order_response.dart';
@@ -22,7 +21,7 @@ class _OrderActivePageState extends State<OrderActivePage> {
   List<Order> orderList = [];
   FutureBuilder<OrderResponse?> getAllOrder() {
     return FutureBuilder<OrderResponse?>(
-        future: OrderRepository().getAllOrder(ORDER_PENDING),
+        future: OrderRepository().getAllOrder(ORDER_COMPLETED),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             orderList = snapshot.data!.data!;
@@ -56,12 +55,13 @@ class _OrderActivePageState extends State<OrderActivePage> {
                                 right: Dimensions.width20,
                                 bottom: Dimensions.width10),
                             child: Row(children: [
-                              BigText(text: "Order Id: 12345"),
+                              BigText(
+                                  text:
+                                      "Order Id: ${generateOrderId(orderList[index].id!)}"),
                               const Spacer(),
                               IconTextWidget(
                                 icon: Icons.attach_money,
-                                Text:
-                                    "Total: ${orderList[index].foodId!.price}",
+                                Text: "Total: ${orderList[index].totalPrice!}",
                                 iconColor: AppColor.kPrimaryColor,
                               ),
                             ]),
@@ -118,7 +118,7 @@ class _OrderActivePageState extends State<OrderActivePage> {
                                             children: [
                                               SmallText(
                                                   text:
-                                                      " ${orderList[index].orderedQuantity} items"),
+                                                      " ${orderList[index].orderedQty} items"),
                                               SizedBox(
                                                 height: Dimensions.height10,
                                                 child: VerticalDivider(
@@ -192,7 +192,8 @@ class _OrderActivePageState extends State<OrderActivePage> {
                             children: [
                               ElevatedButton(
                                 onPressed: () {
-                                  showAlertDialog(context);
+                                  showAlertDialog(
+                                      context, orderList[index].id!);
                                 },
                                 style: ElevatedButton.styleFrom(
                                   side: const BorderSide(color: Colors.red),
@@ -242,12 +243,17 @@ class _OrderActivePageState extends State<OrderActivePage> {
         });
   }
 
+  String generateOrderId(String orderId) {
+    String lastFiveChar = orderId.substring(orderId.length - 5);
+    return lastFiveChar;
+  }
+
   @override
   Widget build(BuildContext context) {
     return getAllOrder();
   }
 
-  void showAlertDialog(BuildContext context) {
+  void showAlertDialog(BuildContext context, String orderId) {
     AwesomeDialog(
       context: context,
       dialogType: DialogType.WARNING,
@@ -255,15 +261,15 @@ class _OrderActivePageState extends State<OrderActivePage> {
       showCloseIcon: true,
       title: "Cancel Order",
       desc: "Are you sure to cancel this Order?",
-      autoHide: const Duration(seconds: 3),
       btnCancelOnPress: () {
-        Navigator.of(context).pop();
+        // Navigator.of(context).pop();
       },
       btnOkOnPress: () async {
+        await OrderRepository().cancelOrder(orderId);
+        showSuccessDialog(context);
         MyNotification.showNotification(
             notificationTitle: "Order Canceled",
-            notificationMessage: "Your Order has been Successfully");
-        showSuccessDialog(context);
+            notificationMessage: "Your Order has been Cancelled");
       },
     ).show();
   }
@@ -278,11 +284,12 @@ class _OrderActivePageState extends State<OrderActivePage> {
       desc: "Your order has been Canceled!",
       autoHide: const Duration(seconds: 3),
       btnOkOnPress: () async {
-        Navigator.of(context).pushReplacement(
-          MaterialPageRoute(
-            builder: (_) => const DashboardButtonScreen(),
-          ),
-        );
+        // Navigator.of(context).pop();
+        // Navigator.of(context).pushReplacement(
+        //   MaterialPageRoute(
+        //     builder: (_) => const DashboardButton(),
+        //   ),
+        // );
       },
     ).show();
   }

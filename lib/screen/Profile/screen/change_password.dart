@@ -26,7 +26,8 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
         body: SafeArea(
       child: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(left: 10, right: 10),
+          padding: EdgeInsets.only(
+              left: Dimensions.height10, right: Dimensions.height10),
           child: Container(
             padding: EdgeInsets.only(top: Dimensions.height30 / 2),
             child: Column(
@@ -82,15 +83,15 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                   height: Dimensions.height20,
                 ),
                 Container(
-                  width: 100,
-                  height: 100,
+                  width: Dimensions.width150 * 2,
+                  height: Dimensions.height150 * 2,
                   padding: EdgeInsets.only(left: Dimensions.width20),
                   alignment: Alignment.centerLeft,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
                         fit: BoxFit.cover,
                         image: NetworkImage(
-                            "https://assets8.lottiefiles.com/packages/lf20_qj1esxnx.json")),
+                            "https://res.cloudinary.com/dymp3ozdm/image/upload/v1676929752/foodex/Logo/Artboard_1_x9yky0.png")),
                   ),
                 ),
                 Form(

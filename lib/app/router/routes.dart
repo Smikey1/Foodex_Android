@@ -1,4 +1,5 @@
 import 'package:foodex_app/dashboard_button.dart';
+import 'package:foodex_app/home_button.dart';
 import 'package:foodex_app/screen/export_screen.dart';
 import 'package:foodex_app/screen/food/category_detail.dart';
 import 'package:foodex_app/screen/splash_screen/splashScreen.dart';
@@ -32,7 +33,7 @@ class RouterHelper {
 
   static List<GetPage> routes = [
     GetPage(name: splashScreen, page: () => const SplashScreen()),
-    GetPage(name: initial, page: () => const DashboardButtonScreen()),
+    GetPage(name: initial, page: () => const DashboardButton()),
 
     GetPage(
         name: loginScreen,
@@ -49,25 +50,10 @@ class RouterHelper {
         transition: Transition.fade),
 
     GetPage(
-        name: dashboardScreen,
-        page: () {
-          return const DashBoardScreen();
-        },
-        transition: Transition.fade),
-
-    GetPage(
         name: dashboardButton,
         page: () {
-          return const DashboardButtonScreen();
+          return const DashboardButton();
         }),
-
-    GetPage(
-      name: dashboard,
-      page: () {
-        return const DashBoardScreen();
-      },
-      // transition: Transition.fade
-    ),
 
     // --------- Special Food
     // GetPage(

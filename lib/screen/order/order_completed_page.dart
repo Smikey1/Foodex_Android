@@ -5,8 +5,9 @@ import 'package:foodex_app/app/theme/constants.dart';
 import 'package:foodex_app/app/utils/dimension.dart';
 import 'package:foodex_app/model/order.dart';
 import 'package:foodex_app/repository/remote_repository/food_order_repository.dart';
+import 'package:foodex_app/repository/remote_repository/remote_cart_repository.dart';
 import 'package:foodex_app/response/food_order_response.dart';
-import 'package:foodex_app/screen/billing/screen/billing_screen.dart';
+import 'package:foodex_app/screen/cart/cart.dart';
 import 'package:foodex_app/screen/food/specialFood.dart';
 import 'package:foodex_app/widgets/big_text.dart';
 import 'package:foodex_app/widgets/icon_text.dart';
@@ -37,7 +38,7 @@ class _OrderCompletedPageState extends State<OrderCompletedPage> {
                         context,
                         MaterialPageRoute(
                             builder: (_) => SpecialFoodDetails(
-                                receivedFoodId: orderList[index].foodId!.id,
+                                receivedFoodId: orderList[index].foodId!.id!,
                                 receivedFoodPrice:
                                     orderList[index].foodId!.price,
                                 receivedFoodName:
@@ -57,12 +58,13 @@ class _OrderCompletedPageState extends State<OrderCompletedPage> {
                                 right: Dimensions.width20,
                                 bottom: Dimensions.width10),
                             child: Row(children: [
-                              BigText(text: "Order Id: 12345"),
+                              BigText(
+                                  text:
+                                      "Order Id: ${generateOrderId(orderList[index].id!)}"),
                               const Spacer(),
                               IconTextWidget(
                                 icon: Icons.attach_money,
-                                Text:
-                                    "Total: ${orderList[index].foodId!.price}",
+                                Text: "Total: ${orderList[index].totalPrice!}",
                                 iconColor: AppColor.kPrimaryColor,
                               ),
                             ]),
@@ -119,7 +121,7 @@ class _OrderCompletedPageState extends State<OrderCompletedPage> {
                                             children: [
                                               SmallText(
                                                   text:
-                                                      " ${orderList[index].orderedQuantity} items"),
+                                                      " ${orderList[index].orderedQty} items"),
                                               SizedBox(
                                                 height: Dimensions.height10,
                                                 child: VerticalDivider(
@@ -210,7 +212,10 @@ class _OrderCompletedPageState extends State<OrderCompletedPage> {
                               ),
                               ElevatedButton(
                                 onPressed: () {
-                                  showAlertDialog(context);
+                                  showAlertDialog(
+                                      context,
+                                      orderList[index].foodId!.id!,
+                                      "${orderList[index].orderedQty}");
                                 },
                                 style: ElevatedButton.styleFrom(
                                   side: const BorderSide(color: Colors.green),
@@ -245,12 +250,17 @@ class _OrderCompletedPageState extends State<OrderCompletedPage> {
         });
   }
 
+  String generateOrderId(String orderId) {
+    String lastFiveChar = orderId.substring(orderId.length - 5);
+    return lastFiveChar;
+  }
+
   @override
   Widget build(BuildContext context) {
     return getAllOrder();
   }
 
-  void showAlertDialog(BuildContext context) {
+  void showAlertDialog(BuildContext context, String foodId, String quantity) {
     AwesomeDialog(
       context: context,
       dialogType: DialogType.WARNING,
@@ -259,13 +269,12 @@ class _OrderCompletedPageState extends State<OrderCompletedPage> {
       title: "Order Again",
       desc: "Do you want to order this food again?",
       autoHide: const Duration(seconds: 3),
-      btnCancelOnPress: () {
-        Navigator.of(context).pop();
-      },
+      btnCancelOnPress: () {},
       btnOkOnPress: () async {
+        await CartRepository().addProductToCart(foodId, quantity);
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (_) => const BillingScreen(),
+            builder: (_) => const CartScreen(),
           ),
         );
       },

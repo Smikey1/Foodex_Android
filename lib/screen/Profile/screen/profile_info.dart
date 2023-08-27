@@ -19,13 +19,14 @@ class ProfileInfoScreen extends StatefulWidget {
 }
 
 class _ProfileInfoScreenState extends State<ProfileInfoScreen> {
-  var emptyDOB = "Add your DOB";
+  var emptyDOB = "yy-m-d";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.only(left: 10, right: 10),
+          padding: EdgeInsets.only(
+              left: Dimensions.height10, right: Dimensions.height10),
           child: Container(
             padding: EdgeInsets.only(top: Dimensions.height30 / 2),
 
@@ -94,6 +95,7 @@ class _ProfileInfoScreenState extends State<ProfileInfoScreen> {
                     children: [
                       SizedBox(
                         width: Dimensions.width150,
+                        height: Dimensions.height45,
                         child: ElevatedButton(
                           onPressed: () {
                             Navigator.push(
@@ -106,8 +108,10 @@ class _ProfileInfoScreenState extends State<ProfileInfoScreen> {
                               backgroundColor: AppColor.kSecondaryColor,
                               side: BorderSide.none,
                               shape: const StadiumBorder()),
-                          child: const Text('Edit Profile',
-                              style: TextStyle(color: Colors.white)),
+                          child: Text('Edit Profile',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: Dimensions.font15)),
                         ),
                       ),
                       SizedBox(
@@ -115,6 +119,7 @@ class _ProfileInfoScreenState extends State<ProfileInfoScreen> {
                       ),
                       SizedBox(
                         width: Dimensions.width150,
+                        height: Dimensions.height45,
                         child: ElevatedButton(
                           onPressed: () {
                             showAlertDialog(context);
@@ -123,9 +128,11 @@ class _ProfileInfoScreenState extends State<ProfileInfoScreen> {
                               backgroundColor: AppColor.kErrorColor,
                               side: BorderSide.none,
                               shape: const StadiumBorder()),
-                          child: const Text(
+                          child: Text(
                             'Delete Profile',
-                            style: TextStyle(color: Colors.white),
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: Dimensions.font15),
                           ),
                         ),
                       ),
@@ -195,16 +202,21 @@ class _ProfileInfoScreenState extends State<ProfileInfoScreen> {
 
   void showAlertDialog(BuildContext context) {
     AwesomeDialog(
+      width: Dimensions.width100 * 4,
       context: context,
       dialogType: DialogType.WARNING,
       animType: AnimType.TOPSLIDE,
       showCloseIcon: true,
       title: "Delete Profile",
+      titleTextStyle: TextStyle(fontSize: Dimensions.font20),
       desc: "Your account will be delete permanently!!",
+      descTextStyle: TextStyle(fontSize: Dimensions.font15),
       autoHide: const Duration(seconds: 3),
-      btnCancelOnPress: () {
-        Navigator.of(context).pop();
-      },
+      buttonsTextStyle: TextStyle(
+        fontSize: Dimensions.font17,
+        color: Colors.white,
+      ),
+      btnCancelOnPress: () {},
       btnOkOnPress: () async {
         await UserRepository().deleteUserProfile();
         showSnackbar(context, "Account Delete Successfully", Colors.green);

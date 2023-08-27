@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:foodex_app/app/router/routes.dart';
 import 'package:foodex_app/app/theme/constants.dart';
 import 'package:foodex_app/app/utils/dimension.dart';
+import 'package:foodex_app/app/utils/notification.dart';
 import 'package:foodex_app/model/cart.dart';
 import 'package:foodex_app/repository/remote_repository/remote_cart_repository.dart';
 import 'package:foodex_app/response/food_cart_response.dart';
@@ -125,30 +126,28 @@ class _CartScreenState extends State<CartScreen> {
                 text: "Total Rs.$totalAmount",
               ),
             ),
-            Container(
-              padding: EdgeInsets.only(
-                  top: Dimensions.height20,
-                  bottom: Dimensions.height20,
-                  left: Dimensions.width20,
-                  right: Dimensions.width20),
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(Dimensions.radius20),
-                  color: Theme.of(context).colorScheme.primary),
-              child: GestureDetector(
-                onTap: () {
-                  if (totalAmount == 0) {
-                    showSnackbar(
-                        context,
-                        "Your cart is empty. Please add some item!",
-                        Colors.red);
-                  } else {
-                    Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(
-                        builder: (_) => const BillingScreen(),
-                      ),
-                    );
-                  }
-                },
+            GestureDetector(
+              onTap: () {
+                if (totalAmount == 0) {
+                  showSnackbar(context,
+                      "Your cart is empty. Please add some item!", Colors.red);
+                } else {
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(
+                      builder: (_) => const BillingScreen(),
+                    ),
+                  );
+                }
+              },
+              child: Container(
+                padding: EdgeInsets.only(
+                    top: Dimensions.height20,
+                    bottom: Dimensions.height20,
+                    left: Dimensions.width20,
+                    right: Dimensions.width20),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(Dimensions.radius20),
+                    color: Theme.of(context).colorScheme.primary),
                 child: BigText(
                   text: 'Checkout',
                   color: Colors.white,
@@ -399,15 +398,6 @@ class _CartScreenState extends State<CartScreen> {
                                             Dimensions.radius20),
                                         color: Theme.of(context)
                                             .scaffoldBackgroundColor,
-                                        // boxShadow: [
-                                        //   BoxShadow(
-                                        //     color:
-                                        //         Colors.grey.withOpacity(0.5),
-                                        //     spreadRadius: 1,
-                                        //     blurRadius: 7,
-                                        //     offset: const Offset(0, 3),
-                                        //   ),
-                                        // ]
                                       ),
                                       child: Row(children: [
                                         const Text('Qty:',
@@ -456,6 +446,12 @@ class _CartScreenState extends State<CartScreen> {
                                 cartList = cloneCartList;
                                 setTotalCartAmt();
                               });
+                              MyNotification.showNotification(
+                                notificationTitle: "Cart",
+                                notificationMessage:
+                                    "${cart.foodId!.title} removed from cart",
+                              );
+
                               Navigator.of(context).pop();
                             }
                           }),

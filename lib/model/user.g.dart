@@ -13,6 +13,9 @@ User _$UserFromJson(Map<String, dynamic> json) => User(
       json['phone'] as String?,
       json['password'] as String?,
       json['avatar'] as String?,
+      foodWishlist: (json['foodWishlist'] as List<dynamic>?)
+          ?.map((e) => Food.fromJson(e as Map<String, dynamic>))
+          .toList(),
       userId: json['userId'] as int? ?? 0,
     );
 
@@ -24,4 +27,5 @@ Map<String, dynamic> _$UserToJson(User instance) => <String, dynamic>{
       'phone': instance.phone,
       'password': instance.password,
       'avatar': instance.avatar,
+      'foodWishlist': instance.foodWishlist,
     };

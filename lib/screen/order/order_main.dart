@@ -32,8 +32,9 @@ class _OrderScreenState extends State<OrderScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       appBar: AppBar(
+        automaticallyImplyLeading: false,
+
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         title: Container(
             margin: const EdgeInsets.only(top: 10),

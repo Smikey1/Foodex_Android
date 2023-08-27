@@ -48,14 +48,14 @@ class _ProfilePasswordFieldState extends State<ProfilePasswordField> {
           contentPadding: EdgeInsets.symmetric(vertical: Dimensions.height22),
           enabledBorder: OutlineInputBorder(
             borderSide:
-                const BorderSide(color: AppColor.kPrimaryColor, width: 2),
+                BorderSide(color: AppColor.kPrimaryColor, width: Dimensions.width2),
             borderRadius: BorderRadius.circular(Dimensions.radius30),
           ),
           filled: true,
           fillColor: Theme.of(context).scaffoldBackgroundColor,
           focusedBorder: OutlineInputBorder(
               borderSide:
-                  const BorderSide(color: AppColor.kSecondaryColor, width: 2),
+                   BorderSide(color: AppColor.kSecondaryColor, width: Dimensions.width2),
               borderRadius: BorderRadius.circular(Dimensions.radius30)),
           errorText: widget.validator != null ? null : widget.errorText,
           errorStyle: TextStyle(fontSize: Dimensions.font14),
@@ -79,7 +79,7 @@ class _ProfilePasswordFieldState extends State<ProfilePasswordField> {
           hintStyle: TextStyle(
               fontFamily: 'OpenSans',
               color: Theme.of(context).colorScheme.onPrimary,
-              fontSize: Dimensions.font12),
+              fontSize: Dimensions.font17),
           suffixIcon: Padding(
             padding: EdgeInsets.only(right: Dimensions.height8),
             child: IconButton(

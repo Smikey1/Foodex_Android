@@ -10,7 +10,7 @@ class Order {
   String? id;
   User? userId;
   Food? foodId;
-  int? orderedQuantity;
+  int? orderedQty;
   int? totalPrice;
   String? deliveryStatusMessage;
   String? deliveryDate;
@@ -19,7 +19,7 @@ class Order {
       {this.id,
       this.userId,
       this.foodId,
-      this.orderedQuantity,
+      this.orderedQty,
       this.totalPrice,
       this.deliveryStatusMessage,
       this.deliveryDate});

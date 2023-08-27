@@ -35,7 +35,7 @@ class _OrderCancelledPageState extends State<OrderCancelledPage> {
                         context,
                         MaterialPageRoute(
                             builder: (_) => SpecialFoodDetails(
-                                receivedFoodId: orderList[index].foodId!.id,
+                                receivedFoodId: orderList[index].foodId!.id!,
                                 receivedFoodPrice:
                                     orderList[index].foodId!.price,
                                 receivedFoodName:
@@ -55,12 +55,13 @@ class _OrderCancelledPageState extends State<OrderCancelledPage> {
                                 right: Dimensions.width20,
                                 bottom: Dimensions.width10),
                             child: Row(children: [
-                              BigText(text: "Order Id: 12345"),
+                              BigText(
+                                  text:
+                                      "Order Id: ${generateOrderId(orderList[index].id!)}"),
                               const Spacer(),
                               IconTextWidget(
                                 icon: Icons.attach_money,
-                                Text:
-                                    "Total: ${orderList[index].foodId!.price}",
+                                Text: "Total: ${orderList[index].totalPrice!}",
                                 iconColor: AppColor.kPrimaryColor,
                               ),
                             ]),
@@ -117,7 +118,7 @@ class _OrderCancelledPageState extends State<OrderCancelledPage> {
                                             children: [
                                               SmallText(
                                                   text:
-                                                      " ${orderList[index].orderedQuantity} items"),
+                                                      " ${orderList[index].orderedQty} items"),
                                               SizedBox(
                                                 height: Dimensions.height10,
                                                 child: VerticalDivider(
@@ -196,6 +197,11 @@ class _OrderCancelledPageState extends State<OrderCancelledPage> {
             return const Center(child: CircularProgressIndicator());
           }
         });
+  }
+
+  String generateOrderId(String orderId) {
+    String lastFiveChar = orderId.substring(orderId.length - 5);
+    return lastFiveChar;
   }
 
   @override
