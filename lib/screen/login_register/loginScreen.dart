@@ -1,16 +1,16 @@
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
+import 'package:foodex_app/app/theme/constants.dart';
+import 'package:foodex_app/app/utils/dimension.dart';
+import 'package:foodex_app/app/utils/notification.dart';
 import 'package:foodex_app/components/export_component.dart';
 import 'package:foodex_app/dashboard_button.dart';
-import 'package:foodex_app/repository/remote_repository/remote_user_repository.dart';
-import 'package:foodex_app/app/theme/constants.dart';
 import 'package:foodex_app/repository/local_repository/local_user_repo.dart';
-import 'package:foodex_app/app/utils/dimension.dart';
-
+import 'package:foodex_app/repository/remote_repository/remote_user_repository.dart';
 import 'package:foodex_app/widgets/export_widgets.dart';
-import 'package:foodex_app/app/utils/notification.dart';
 import 'package:foodex_app/widgets/snack_bar.dart';
 import 'package:motion_toast/motion_toast.dart';
+
 import '../export_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -45,7 +45,7 @@ class _LoginScreenState extends State<LoginScreen> {
   // ----------------------- Global key & Controller ---------------------------
   final _formKey = GlobalKey<FormState>();
   final _phoneController = TextEditingController(text: "9808792437");
-  final _passwordController = TextEditingController(text: "password123");
+  final _passwordController = TextEditingController(text: "Hira@123");
 
   // ------------------------- Login Function with Object Box ------------------
   _loginUserWithObjectBox() async {

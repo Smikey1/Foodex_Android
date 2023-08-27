@@ -274,7 +274,7 @@ class SLIDER extends State<FoodListScreen> {
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             List<FoodCategory>? categoryList = snapshot.data!.data!;
-            print("The Category: -->${categoryList[0]}");
+            // print("The Category: -->${categoryList[-1]}");
             return SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Container(

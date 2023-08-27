@@ -15,11 +15,11 @@ class HttpServices {
   Dio getDioInstance() {
     if (_dio == null) {
       // naya dio/ i mean network call garne yuta object banau dio ko
-      _dio = Dio(BaseOptions(baseUrl: baseUrl, connectTimeout: 5000));
+      _dio = Dio(BaseOptions(baseUrl: baseUrl, connectTimeout: 10000));
 
       // adding interceptor for developer
-      // _dio?.interceptors
-      //     .add(DioLoggingInterceptor(level: Level.body, compact: false));
+      _dio?.interceptors
+          .add(DioLoggingInterceptor(level: Level.body, compact: false));
 
       return _dio!;
     } else {

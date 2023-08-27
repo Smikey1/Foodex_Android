@@ -2,18 +2,10 @@
 // const baseUrl = "http://localhost:5000/";
 
 // --> only for your android (localhost --> 10.0.2.2)
-const baseUrl = "http://10.0.2.2:5000/";
+const baseUrl = "http://10.0.2.2:5050/";
 
 // --> only for your android real device
 // const baseUrl = "http://172.26.0.127:5000/";
-
-// my home
-// const baseUrl = "http://192.168.1.68:5000/";
-
-// nilesh router
-// const baseUrl = "http://192.168.1.101:5000/";
-
-// const baseUrl = "http://localhost:5000/";
 
 // other urls
 const loginUrl = "user/login";

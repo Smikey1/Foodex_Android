@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:foodex_app/app/utils/dimension.dart';
 import 'package:foodex_app/components/export_component.dart';
 import 'package:foodex_app/model/export_model.dart';
 import 'package:foodex_app/repository/remote_repository/remote_user_repository.dart';
-import 'package:foodex_app/app/utils/dimension.dart';
 import 'package:foodex_app/widgets/export_widgets.dart';
 import 'package:foodex_app/widgets/snack_bar.dart';
 
@@ -18,10 +18,10 @@ class SignUpScreen extends StatefulWidget {
 class _SignUpScreenState extends State<SignUpScreen> {
   // ----------------------- Global key & Controller ---------------------------
   final _formKey = GlobalKey<FormState>();
-  final _emailController = TextEditingController(text: 'karma@gmail.com');
+  final _emailController = TextEditingController(text: 'hira@gmail.com');
   final _phoneController = TextEditingController(text: '9808792437');
-  final _passwordController = TextEditingController(text: 'password123');
-  final _fullNameController = TextEditingController(text: 'Karma Gurung');
+  final _passwordController = TextEditingController(text: 'Hira@123');
+  final _fullNameController = TextEditingController(text: 'Hira Datta');
   final _dobController = TextEditingController();
   final _avatarController = TextEditingController();
 

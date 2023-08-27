@@ -6,18 +6,18 @@ void main() {
   test('User should be able to login', () async {
     bool expectedResult = true;
     String phone = "1234567890";
-    String password = "k1234567890";
+    String password = "Hira@123";
     bool? actualResult = await UserRepository().loginUser(phone, password);
     expect(actualResult, expectedResult);
   });
 
   test("sign Up", () async {
     bool expectedResult = true;
-    String fullName = "karma";
-    String email = "karma@gmail.com";
-    String dob = "2021-09-09";
-    String phone = "1234567990";
-    String password = "k1234567890";
+    String fullName = "Hira Datta";
+    String email = "hira@gmail.com";
+    String dob = "1999-09-06";
+    String phone = "1234567890";
+    String password = "Hira@123";
     String avatar = "";
 
     User user = User(

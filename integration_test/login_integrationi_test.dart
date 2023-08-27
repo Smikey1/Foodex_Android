@@ -9,15 +9,6 @@ import 'package:provider/provider.dart';
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
-  // test('Demo', () async {
-  //   bool expectedResult = true;
-  //   String phoneNumber = "9808792437";
-  //   String password = "password123";
-  //   bool actualResult = await UserAPI().loginUser(phoneNumber, password);
-
-  //   expect(actualResult, expectedResult);
-  // });
-
   testWidgets('Automate Login User Test', (WidgetTester tester) async {
     await tester.pumpWidget(ChangeNotifierProvider(
         create: (context) => ThemeProvider(),
